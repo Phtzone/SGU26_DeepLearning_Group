@@ -1,0 +1,61 @@
+{
+    "data": {
+        "input_dir": "../../data",
+        "train_file": "train.csv",
+        "target": "SalePrice",
+        "validation_size": 0.2,
+        "random_state": 42
+    },
+    "experiment": {
+        "expr_dir": "../",
+        "expr_name": "house_price_v1",
+        "best_model_file": "best_model.pt",
+        "params_file": "params.json",
+        "save_figures": true,
+        "images_dir": "images",
+        "figure_dpi": 150,
+        "submission_file": "submission.csv",
+        "submission_dir": "../../submissions",
+        "tuning_results_file": "tuning_results.csv"
+    },
+    "wandb": {
+        "mode": "disabled",
+        "project": "house-price-pytorch"
+    },
+    "train": {
+        "hidden1": 128,
+        "hidden2": 64,
+        "learning_rate": 0.001,
+        "batch_size": 32,
+        "epochs": 100
+    },
+    "tuning": [
+        {
+            "name": "small",
+            "hidden1": 64,
+            "hidden2": 32,
+            "learning_rate": 0.001,
+            "batch_size": 32,
+            "epochs": 100
+        },
+        {
+            "name": "medium",
+            "hidden1": 128,
+            "hidden2": 64,
+            "learning_rate": 0.001,
+            "batch_size": 32,
+            "epochs": 100
+        },
+        {
+            "name": "large",
+            "hidden1": 256,
+            "hidden2": 128,
+            "learning_rate": 0.001,
+            "batch_size": 32,
+            "epochs": 100
+        }
+    ],
+    "evaluation": {
+        "metric": "RMSE"
+    }
+}
