@@ -1,0 +1,45 @@
+{
+  "experiment": "B",
+  "swept_value": 1,
+  "seed": 43,
+  "model": {
+    "hidden_sizes": [
+      1
+    ],
+    "activation": "tanh",
+    "input_scale": [
+      2.0,
+      4.0
+    ]
+  },
+  "training_config": {
+    "seed": 43,
+    "batch_size": 64,
+    "max_epochs": 500,
+    "learning_rate": 0.001,
+    "patience": 40,
+    "min_delta": 1e-08,
+    "weight_decay": 0.0,
+    "device": "cpu"
+  },
+  "epochs_completed": 223,
+  "best_epoch": 183,
+  "best_validation_mse": 0.0029234918542206285,
+  "train_metrics": {
+    "mse": 0.003443233435973525,
+    "mae": 0.0401935912668705,
+    "rmse": 0.05867907032370567
+  },
+  "validation_metrics": {
+    "mse": 0.0029234918765723705,
+    "mae": 0.0376291424036026,
+    "rmse": 0.05406932532787323
+  },
+  "test_metrics": {
+    "mse": 0.00401279516518116,
+    "mae": 0.0427875816822052,
+    "rmse": 0.06334662437438965
+  },
+  "training_seconds": 6.660204099999987,
+  "device_used": "cpu"
+}
