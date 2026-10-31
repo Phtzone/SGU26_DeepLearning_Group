@@ -1,0 +1,65 @@
+{
+  "experiment": "C",
+  "value": 3,
+  "seed": 44,
+  "training_samples": 2000,
+  "hidden_width": 10,
+  "hidden_layers": 3,
+  "activation": "tanh",
+  "batch_size": 64,
+  "learning_rate": 0.001,
+  "max_epochs": 500,
+  "patience": 40,
+  "epochs_completed": 500,
+  "best_epoch": 490,
+  "best_validation_mse": 7.247318928421009e-06,
+  "train_mse": 8.185925253201276e-06,
+  "validation_mse": 7.247319445014e-06,
+  "test_mse": 1.046892339218175e-05,
+  "test_mae": 0.0025906176306307316,
+  "test_rmse": 0.003235571552067995,
+  "training_seconds": 20.085564200000135,
+  "device": "cpu",
+  "run_dir": "results\\experiments\\C\\runs\\C_0003_seed44",
+  "parameter_count": 261,
+  "model": {
+    "hidden_sizes": [
+      10,
+      10,
+      10
+    ],
+    "activation": "tanh",
+    "input_scale": [
+      2.0,
+      4.0
+    ]
+  },
+  "training_config": {
+    "seed": 44,
+    "batch_size": 64,
+    "max_epochs": 500,
+    "learning_rate": 0.001,
+    "patience": 40,
+    "min_delta": 1e-08,
+    "weight_decay": 0.0,
+    "device": "cpu"
+  },
+  "optimizer": "Adam",
+  "metrics": {
+    "train": {
+      "mse": 8.185925253201276e-06,
+      "mae": 0.0022603145334869623,
+      "rmse": 0.002861105604097247
+    },
+    "validation": {
+      "mse": 7.247319445014e-06,
+      "mae": 0.002155710244551301,
+      "rmse": 0.002692084526643157
+    },
+    "test": {
+      "mse": 1.046892339218175e-05,
+      "mae": 0.0025906176306307316,
+      "rmse": 0.003235571552067995
+    }
+  }
+}

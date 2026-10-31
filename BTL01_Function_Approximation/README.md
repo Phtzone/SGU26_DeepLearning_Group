@@ -50,29 +50,3 @@ For A/B/C experiment scripts, `training.py` exposes `load_csv_dataset`,
 `TrainingConfig`, `train_model`, `evaluate_model`, and `load_checkpoint`.
 Experiment A can use `load_csv_dataset("data/train.csv", limit=N)` to train on
 the first `N` rows while keeping the validation and test splits fixed.
-
-## Run Experiments A and B
-
-Run the prescribed training-size and hidden-width sweeps with three seeds:
-
-```powershell
-python run_experiments_ab.py
-```
-
-Experiment A varies training size from 200 to 2,000 in steps of 200, with a
-10-neuron single hidden layer. Experiment B varies the width from 1 to 10,
-using the full 2,000-row training set and one hidden layer. Both keep the
-validation set, test set, activation, batch size, optimizer, learning rate,
-epoch limit, and early-stopping rule fixed. Defaults are seeds 42, 43, and 44;
-batch size 64; Adam at `1e-3`; tanh activation; up to 500 epochs; and patience
-40. Use `--help` to select seeds or override run settings.
-
-Each configuration records its parameters, epoch-level train/validation
-losses, and validation-selected weights under `results\experiments\<A|B>\runs\`.
-`runs.csv` contains individual measurements; `summary.csv` reports mean and
-sample standard deviation across seeds. Experiment A writes
-`experiment_a_test_errors.png`; Experiment B writes train/validation/test MSE
-and test-MAE plots. Test metrics are calculated only after each run's best
-checkpoint has been selected using validation MSE.
-See [results/experiments/ANALYSIS.md](results/experiments/ANALYSIS.md) for the
-three-seed A/B results, figures, and interpretation.
