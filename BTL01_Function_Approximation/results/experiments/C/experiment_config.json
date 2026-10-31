@@ -1,0 +1,42 @@
+{
+  "experiment": "C",
+  "depths": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "hidden_width": 10,
+  "activation": "tanh",
+  "optimizer": "Adam",
+  "training_config": {
+    "seed": 42,
+    "batch_size": 64,
+    "max_epochs": 500,
+    "learning_rate": 0.001,
+    "patience": 40,
+    "min_delta": 1e-08,
+    "weight_decay": 0.0,
+    "device": "cpu"
+  },
+  "training_samples": 2000,
+  "validation_samples": 500,
+  "test_samples": 100,
+  "torch_threads": 1,
+  "environment": {
+    "python": "3.12.0",
+    "torch": "2.14.0+cpu",
+    "numpy": "2.2.6",
+    "platform": "Windows-11-10.0.26300-SP0"
+  },
+  "dataset_sha256": {
+    "train.csv": "6ce9e77c804761dc356532d5b863707a43f82c0f5d5850d7252526d679e1d4e6",
+    "validation.csv": "8b40ebf553944ad8b58e96c07ed40cb31c2b62074db8a035bfe75bdbe87acba4",
+    "test.csv": "e10145fe5c87c2d9934e0d6eba2797f1cfe3b2c5f529e0d1729f647f6d8ec691"
+  }
+}
