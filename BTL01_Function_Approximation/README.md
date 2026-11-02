@@ -50,3 +50,47 @@ For A/B/C experiment scripts, `training.py` exposes `load_csv_dataset`,
 `TrainingConfig`, `train_model`, `evaluate_model`, and `load_checkpoint`.
 Experiment A can use `load_csv_dataset("data/train.csv", limit=N)` to train on
 the first `N` rows while keeping the validation and test splits fixed.
+
+## Run Experiments A and B
+
+Run the training-size and hidden-width sweeps with three seeds:
+
+```powershell
+python run_experiments_ab.py
+```
+
+Experiment A varies training size from 200 to 2,000 in steps of 200, with a
+10-neuron single hidden layer. Experiment B varies the width from 1 to 10,
+using the full 2,000-row training set and one hidden layer. Both keep the data
+splits and other training settings fixed. Defaults are seeds 42, 43, and 44;
+batch size 64; Adam at `1e-3`; tanh activation; up to 500 epochs; and patience
+40. Use `python run_experiments_ab.py --help` to select seeds or override run
+settings.
+
+Each run records its configuration, epoch-level train/validation losses, and
+validation-selected checkpoint under `results\experiments\<A|B>\runs\`.
+`runs.csv` contains individual measurements; `summary.csv` reports mean and
+sample standard deviation across seeds. Experiment A writes a test-error plot;
+Experiment B writes train/validation/test MSE and test-MAE plots. Test metrics
+are calculated after the checkpoint has been selected using validation MSE.
+See [results/experiments/ANALYSIS.md](results/experiments/ANALYSIS.md) for
+results and discussion.
+
+## Run Experiment C
+
+Vary hidden-layer depth while keeping each layer at 10 neurons:
+
+```powershell
+python run_experiments_c.py
+```
+
+By default, the script tests depths 1–4 with seeds 42, 43, and 44, using the
+same fixed data splits and baseline training settings. It selects each
+checkpoint using validation MSE and evaluates the test set afterward. Use
+`python run_experiments_c.py --help` to override depths, seeds, width, or
+training settings.
+
+Results are written to `results\experiments\C\`: individual run checkpoints,
+metrics, loss histories, prediction plots/CSVs, aggregate `runs.csv` and
+`summary.csv`, plus convergence and error/time plots. The generated `analysis.md`
+summarizes the protocol and findings.
