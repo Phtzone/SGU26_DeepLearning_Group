@@ -1,0 +1,223 @@
+{
+  "run_id": "20261108T160216Z_0a3a1cc1",
+  "fold_id": 3,
+  "training_seed": 42,
+  "subjects": {
+    "fold_id": 3,
+    "test": [
+      "S7",
+      "S4",
+      "S11"
+    ],
+    "train": [
+      "S10",
+      "S16",
+      "S9",
+      "S8",
+      "S17",
+      "S15",
+      "S2",
+      "S3",
+      "S13"
+    ],
+    "validation": [
+      "S5",
+      "S6",
+      "S14"
+    ]
+  },
+  "started_at": "2026-11-08T16:02:16.940122+00:00",
+  "manifest_checksum": "239949dfebabd802091d14a4494d2216aee9809b0e2993dacdbdfbcdc7133f2c",
+  "effective_config": {
+    "experiment": {
+      "id": "E1_CNN",
+      "model": "cnn1d",
+      "status": "implemented"
+    },
+    "split": {
+      "protocol": "grouped_subject_wise_5fold",
+      "manifest": "splits/grouped_5fold_seed42.json",
+      "split_seed": 42
+    },
+    "data": {
+      "sampling_rate": 32,
+      "window_seconds": 30,
+      "stride_seconds": 15,
+      "sensors": [
+        "ACC",
+        "BVP",
+        "EDA"
+      ],
+      "labels": [
+        1,
+        2,
+        3
+      ],
+      "max_windows_per_subject": null
+    },
+    "training": {
+      "seeds": [
+        42
+      ],
+      "max_epochs": 100,
+      "batch_size": 32,
+      "optimizer": "adam",
+      "learning_rate": 0.001,
+      "weight_decay": 0.0001,
+      "loss": "weighted_cross_entropy",
+      "early_stopping_patience": 15,
+      "early_stopping_min_delta": 0.001,
+      "gradient_clip_norm": 1.0
+    },
+    "selection": {
+      "metric": "val_macro_f1",
+      "mode": "max",
+      "tie_breaker": "val_loss"
+    },
+    "runtime": {
+      "device": "auto",
+      "num_workers": 0,
+      "deterministic": true,
+      "parallel_folds": 1,
+      "torch_threads": 2
+    },
+    "logging": {
+      "log_every_iteration": true,
+      "log_every_epoch": true,
+      "flush_each_iteration": true,
+      "console": {
+        "enabled": true,
+        "progress": "auto"
+      }
+    },
+    "tracking": {
+      "backend": "tensorboard",
+      "strict": false,
+      "local": {
+        "enabled": true
+      },
+      "tensorboard": {
+        "enabled": true,
+        "log_every_epoch": true,
+        "log_every_batch": true,
+        "batch_log_frequency": 1,
+        "flush_secs": 10,
+        "max_queue": 10,
+        "log_figures": true
+      }
+    }
+  },
+  "attempts": [
+    {
+      "attempt_id": "20261108T160216Z_b563f4e6",
+      "started_at": "2026-11-08T16:02:16.940157+00:00"
+    }
+  ],
+  "status": "completed",
+  "logging_schema_version": 2,
+  "device": "cpu",
+  "architecture": "CNN1D(\n  (network): Sequential(\n    (0): Conv1d(5, 32, kernel_size=(7,), stride=(1,), padding=(3,))\n    (1): BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)\n    (2): ReLU()\n    (3): MaxPool1d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)\n    (4): Conv1d(32, 64, kernel_size=(5,), stride=(1,), padding=(2,))\n    (5): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)\n    (6): ReLU()\n    (7): MaxPool1d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)\n    (8): Conv1d(64, 128, kernel_size=(3,), stride=(1,), padding=(1,))\n    (9): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)\n    (10): ReLU()\n    (11): AdaptiveAvgPool1d(output_size=1)\n    (12): Flatten(start_dim=1, end_dim=-1)\n    (13): Linear(in_features=128, out_features=64, bias=True)\n    (14): ReLU()\n    (15): Dropout(p=0.3, inplace=False)\n    (16): Linear(in_features=64, out_features=3, bias=True)\n  )\n)",
+  "trainable_parameters": 45059,
+  "window_counts": {
+    "train": 1283,
+    "validation": 427,
+    "test": 426
+  },
+  "label_distribution": {
+    "train": [
+      687,
+      388,
+      208
+    ],
+    "validation": [
+      232,
+      126,
+      69
+    ],
+    "test": [
+      231,
+      126,
+      69
+    ]
+  },
+  "class_weights": [
+    0.6225133538246155,
+    1.102233648300171,
+    2.0560896396636963
+  ],
+  "cache_keys": {
+    "S10": "de4128ba94f79113be75f69429f91f9477089e7fdf6402a53e1f14542ddfe034",
+    "S16": "3da701d1e163420ac731dcf57368d42429fba4e2c6799bb22b2e605c83051057",
+    "S9": "02837b6c2a1aa0ce03bb39f0336656cbe0a26f997b6cddaf05751e15535bc990",
+    "S8": "572441a567aa8916d5e7e044bdd02b1f923cf125f7ef3ae686e7ea9c8d9735ee",
+    "S17": "65d058f4d25613bc4c2d984150cae3bac531e682acbc75a91a1fcfc1765eeee0",
+    "S15": "a43e0c901b870e8ea2c109b3661668c5e40020755f1bff2603665040d78868aa",
+    "S2": "4b4618036f8b5c1bd79eaabcc734dbdfae53f5c2af898f31bfb6e6bd0c88523d",
+    "S3": "c8d67fe6e3a8d9694b3d0c91df070abc42e846930eecebaad3c9dfbedd1dd338",
+    "S13": "ac59e446425ff936f282a2fdc654073af414f18b280f6bce4a6a8d3cb7a326c8",
+    "S5": "e522913156377c9f80b4fbbbb6b774b48cdc9a8bc4a4d5fd1f42caddc35995ba",
+    "S6": "56519462107a00d392558a7bc1e2d3d6de31ca2c5ae44cd3111aa6988beb8583",
+    "S14": "4880d406968ea18f51bc560cf2ef4371e782872913bd3dcc423c227fdaff991c",
+    "S7": "43f690f5743cc9d90f9062fc0abc88afadf081d2582864db297c320c819ad405",
+    "S4": "b360bd61fe213dd1a9c066f661088437fcf7bc6408d5864b5726c47f8a30793f",
+    "S11": "dd5f15f87e1f71bbedd86fe132f63cf3d307fd887830897c9f623683cf454683"
+  },
+  "ended_at": "2026-11-08T16:09:01.848562+00:00",
+  "completed_epochs": 27,
+  "best_epoch": 12,
+  "best_val_macro_f1": 0.5121061829469955,
+  "test_metrics": {
+    "macro_f1": 0.5049385020006945,
+    "balanced_accuracy": 0.514534579751971,
+    "accuracy": 0.528169014084507,
+    "precision_per_class": [
+      0.5812807881773399,
+      0.5096774193548387,
+      0.4117647058823529
+    ],
+    "recall_per_class": [
+      0.5108225108225108,
+      0.626984126984127,
+      0.4057971014492754
+    ],
+    "f1_per_class": [
+      0.543778801843318,
+      0.5622775800711743,
+      0.40875912408759124
+    ],
+    "support": [
+      231,
+      126,
+      69
+    ],
+    "confusion_matrix": [
+      [
+        118,
+        73,
+        40
+      ],
+      [
+        47,
+        79,
+        0
+      ],
+      [
+        38,
+        3,
+        28
+      ]
+    ],
+    "label_order": [
+      "baseline",
+      "stress",
+      "amusement"
+    ],
+    "absent_classes": [],
+    "loss": 1.3872590563556517
+  },
+  "training_duration_seconds": 404.88665089999995,
+  "checkpoints": {
+    "best": "D:\\Deep_learning_group\\Projects\\DL13-WESAD\\runs\\experiment_e1\\20261108T154303Z_474b38f9\\seed_42\\fold_03\\checkpoints\\best.pt",
+    "last": "D:\\Deep_learning_group\\Projects\\DL13-WESAD\\runs\\experiment_e1\\20261108T154303Z_474b38f9\\seed_42\\fold_03\\checkpoints\\last.pt"
+  }
+}

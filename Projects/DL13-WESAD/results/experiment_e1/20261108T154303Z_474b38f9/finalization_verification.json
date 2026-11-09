@@ -1,0 +1,99 @@
+{
+  "status": "passed",
+  "verified_at": "2026-11-09T04:25:43.406776+00:00",
+  "group_id": "20261108T154303Z_474b38f9",
+  "changed_existing_files": [
+    "README.md",
+    "experiments/e1_cnn/README.md",
+    "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/generation_manifest.json",
+    "results/experiment_e1/20261108T154303Z_474b38f9/experiment_manifest.json",
+    "scripts/run_grouped_cv.py",
+    "src/evaluation/aggregation.py",
+    "src/evaluation/enhanced_visualization.py",
+    "tests/test_aggregation.py",
+    "tests/test_manual_runner.py",
+    "tests/test_visualization_upgrade.py"
+  ],
+  "all_other_original_files_sha256_unchanged": true,
+  "dataset_cache_stat_entries_unchanged": 125,
+  "previous_audit_archives_sha256_unchanged": {
+    "D:\\Deep_learning_group\\Projects\\DL13-WESAD-professional-audit-20261108T154303Z_474b38f9.zip": "afb7b83a88c91d3498cd52341dd57852e0fffa595a8b36f19a00478ee3cf5c35"
+  },
+  "readme_checks": [
+    {
+      "path": "README.md",
+      "sha256": "7980e9317e61ae490e5ea1ca090169a720536237ac6fde5ea8426c7c233c4d57",
+      "valid_local_links": 25
+    },
+    {
+      "path": "experiments/e1_cnn/README.md",
+      "sha256": "28058805f6e7046b720f2554c75af9df7f06c8ebe383c7f7b91a743fc4916a8e",
+      "valid_local_links": 27
+    }
+  ],
+  "command_checks": [
+    {
+      "arguments": [
+        "-m",
+        "scripts.run_grouped_cv",
+        "--experiment",
+        "experiments/e1_cnn/config.yaml",
+        "--dry-run"
+      ],
+      "exit_code": 0,
+      "training_executed": false
+    },
+    {
+      "arguments": [
+        "-m",
+        "scripts.run_grouped_cv",
+        "--help"
+      ],
+      "exit_code": 0,
+      "training_executed": false
+    },
+    {
+      "arguments": [
+        "-m",
+        "tensorboard.main",
+        "--help"
+      ],
+      "exit_code": 0,
+      "training_executed": false
+    },
+    {
+      "arguments": [
+        "-m",
+        "scripts.verify_e1_baseline",
+        "--help"
+      ],
+      "exit_code": 0,
+      "training_executed": false
+    }
+  ],
+  "pytest": {
+    "tests": 52,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 2,
+    "passed": 50,
+    "skipped_tests": [
+      {
+        "test": "tests.test_tensorboard_tracking::test_tracking_preserves_original_model_weights",
+        "reason": "Original runtime source snapshot unavailable."
+      },
+      {
+        "test": "tests.test_tracking_upgrade::test_historical_regression_unchanged",
+        "reason": "Historical E1 artifacts are not available in this checkout."
+      }
+    ],
+    "interpreter": "D:\\Deep_learning_group\\.venv_new\\Scripts\\python.exe",
+    "python": "3.14.6 | packaged by Anaconda, Inc. | (main, Jul  9 2026, 14:29:05) [MSC v.1942 64 bit (AMD64)]",
+    "pytest_version": "9.1.1",
+    "method": "Pure-Python pytest/dependencies copied into a temporary tool directory; PYTEST_DISABLE_PLUGIN_AUTOLOAD=1; original .venv_new unchanged.",
+    "training_environment_pip_check": "No broken requirements found."
+  },
+  "no_real_training_executed": true,
+  "no_git_mutations": true,
+  "no_new_zip_created": true
+}

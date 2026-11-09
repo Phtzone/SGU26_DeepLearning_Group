@@ -1,0 +1,1097 @@
+{
+  "status": "passed",
+  "verified_at": "2026-11-09T04:22:24.257102+00:00",
+  "official_directory": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86",
+  "figure_count": 131,
+  "file_count": 262,
+  "rendered_figures": 7,
+  "byte_identical_reused_figures": 124,
+  "original_v1_preserved": true,
+  "changes": [
+    {
+      "figure": "cross_fold/seed_42/best_epoch",
+      "old_title": "Seed 42 | OOF test | Best epoch by fold",
+      "new_title": "Seed 42 | Training | Best epoch by fold"
+    },
+    {
+      "figure": "cross_fold/seed_42/completed_epochs",
+      "old_title": "Seed 42 | OOF test | Completed epochs by fold",
+      "new_title": "Seed 42 | Training | Completed epochs by fold"
+    },
+    {
+      "figure": "cross_fold/seed_42/training_duration_seconds",
+      "old_title": "Seed 42 | OOF test | Training duration (seconds) by fold",
+      "new_title": "Seed 42 | Training | Training duration (seconds) by fold"
+    },
+    {
+      "figure": "cross_fold/seed_42/learning_loss",
+      "old_title": "Seed 42 | OOF test | Learning curves across folds",
+      "new_title": "Seed 42 | Train / Validation | Weighted CE loss learning curves across folds"
+    },
+    {
+      "figure": "cross_fold/seed_42/learning_macro_f1",
+      "old_title": "Seed 42 | OOF test | Learning curves across folds",
+      "new_title": "Seed 42 | Train / Validation | Macro-F1 learning curves across folds"
+    },
+    {
+      "figure": "cross_fold/seed_42/learning_balanced_accuracy",
+      "old_title": "Seed 42 | OOF test | Learning curves across folds",
+      "new_title": "Seed 42 | Train / Validation | Balanced accuracy learning curves across folds"
+    },
+    {
+      "figure": "cross_fold/seed_42/learning_accuracy",
+      "old_title": "Seed 42 | OOF test | Learning curves across folds",
+      "new_title": "Seed 42 | Train / Validation | Accuracy learning curves across folds"
+    }
+  ],
+  "files": [
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_01/loss.png",
+      "sha256": "0ef5579b116fcaaf4a30f28680515b3493fcdc115c5444e98f33c3b49f660737"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_01/loss.svg",
+      "sha256": "adf80797a09f599193331360c3ecf5321b7bec939150a673a71f1645ddaa3fa4"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_01/accuracy.png",
+      "sha256": "627de5751422fcb8c457908132c563ead90f43ce07c30151122b5270fe192836"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_01/accuracy.svg",
+      "sha256": "be20dc201b9ce5a19489fe9d6ac358ceb67c750283eaeb41f4091d8dc38f7393"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_01/macro_f1.png",
+      "sha256": "56a35bd3e941577a5f0923510600ccbc239d7ee1bb7c252e9d9d2d13ff1efd4e"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_01/macro_f1.svg",
+      "sha256": "e9237aeee68a58de48b759540688f8c7e1317fee2fe662eaab1a82013990a992"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_01/balanced_accuracy.png",
+      "sha256": "a27470ec9a1a62684e9bafc00e8210eabbc91f84da7b5048e2064cd065493d4c"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_01/balanced_accuracy.svg",
+      "sha256": "ce7d3b96469789e0a4c6028742c88c113cf38976b890d5cdc8158a4c53d8921d"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_01/batch_loss.png",
+      "sha256": "f6f6e1782ffbbcd70fbc9e219409e8c088133239bc8ca42ee17c4b1af589cbfa"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_01/batch_loss.svg",
+      "sha256": "9c8c5fa5d4354dd25369715f6f15e85c826981cc68168dac7e2bff04ae2c9225"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_01/gradient_norm.png",
+      "sha256": "d6154b22cdc5607ff6e0b9d262e66fbfb51be6736135f09cce4a5c1d417a6c95"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_01/gradient_norm.svg",
+      "sha256": "a896818e4a7e48ca93c49c3f8c1c1c05a6a5a52dcc3b79115ffeb47a8b0104cf"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_01/learning_rate.png",
+      "sha256": "4d473bcb0878e214e1d19f44a52983c3601554e8781a1a24f6a1d80325a31bf3"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_01/learning_rate.svg",
+      "sha256": "b5161e45d672081ff9f936323d1d5d15a15c6e5f9dd3ca0a51bb0802bfe95101"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_01/macro_f1_gap.png",
+      "sha256": "8c55068d24b52c57f0da3be124393f479ab39701fd092362902e511de7a6fe72"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_01/macro_f1_gap.svg",
+      "sha256": "1794458f152f4d0ceed51bd35dcbb90038ca0928a0f9ef3f807f792e6db32358"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_01/epoch_duration.png",
+      "sha256": "564aef407553280972cccfc42fce8e99177185c00b2bb8fab99277629d563b08"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_01/epoch_duration.svg",
+      "sha256": "bd6c542217ba0523263ee6218aebf60b89d6b0f3f70421ab649455ba110ef843"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/confusion_matrices/seed_42/fold_01/raw.png",
+      "sha256": "4f3d409a246f5e50a7e4b2cfc60ddfe13e4947a646c0ebfdc5e8080bba7cdb9b"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/confusion_matrices/seed_42/fold_01/raw.svg",
+      "sha256": "5ff4c0dd3054fe54669e1156f3df99dca766661c2e96990919df04faa485effe"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/confusion_matrices/seed_42/fold_01/normalized.png",
+      "sha256": "a3e410a765b1ae470a9a9807dfd496f743ff806a55a8eaaa36f325b1f1f2173e"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/confusion_matrices/seed_42/fold_01/normalized.svg",
+      "sha256": "2ffdc8d07873e620dd04c172d74f5e1f622b6d0b7f5e9bd55e28d31aa3b50cc9"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/class_metrics/seed_42/fold_01/precision_recall_f1.png",
+      "sha256": "9e1d36c75c862e9fe9c2940fd952e81a8e9d6a97ff05d8326ecddfa1faf23868"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/class_metrics/seed_42/fold_01/precision_recall_f1.svg",
+      "sha256": "41e1d305aea5d6de58970c6216443bc4a32e849de0ce35fa0595d82c52409432"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/class_metrics/seed_42/fold_01/label_distribution.png",
+      "sha256": "750a082106bdef923f6b1bd7d063a07ee2b826ac3c80bf3d147b749dfec1405c"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/class_metrics/seed_42/fold_01/label_distribution.svg",
+      "sha256": "307ddf4bb2f08e10f803d91ec607ed2ea53cc480029aec92ed77ef8bd2ef039f"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_02/loss.png",
+      "sha256": "990b9019e27b8da8f06535681fdc85e800b0b6626623002886e5d70833bd1273"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_02/loss.svg",
+      "sha256": "aed863374785704bb975659af5e71325ff09e6c29b126535e686a274ba55a79c"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_02/accuracy.png",
+      "sha256": "185939f77c86ca3c939f61f0d0598547c5d7029f345295d1e499ef65217edb0d"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_02/accuracy.svg",
+      "sha256": "439317b57827cf62c3190b7e030060753dab1ff940ddc25165d8fa0d7f1e0ef9"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_02/macro_f1.png",
+      "sha256": "826f04307dfa518e869afad972fdef3cabfa8e7f63252af4dbc76d23c0603b06"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_02/macro_f1.svg",
+      "sha256": "4f27f59be6a749772a07c6b5c98c43cd7bcd4b4ca12bfe61109f4acfc64b9751"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_02/balanced_accuracy.png",
+      "sha256": "8e0375067165a0e700b432ed56d4afb73220ab47d20b2f4361555e0f05959607"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_02/balanced_accuracy.svg",
+      "sha256": "7fbd10d397a43714808f3ce91780bb9b7cdfa5e0ce2873eb6760840621e10b96"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_02/batch_loss.png",
+      "sha256": "8046c2ae3e6645ca502d59df8b2ef9c968b9dcd1e7fa82fb45e6d3ebf075a20e"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_02/batch_loss.svg",
+      "sha256": "e592002f7406ab649d1e97672525b8298b721b04a310fa99c03a3d0510801329"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_02/gradient_norm.png",
+      "sha256": "d15abd486019fc8a967efe1b18bbf1e599f793f223461c94e8236947295cf9c8"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_02/gradient_norm.svg",
+      "sha256": "aba31af645b20362a23bb54e63934854579c4a6754757419914ca5218cc16fa3"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_02/learning_rate.png",
+      "sha256": "efdd309e132d35f90cb8cbf450d84e42c8f29b9c026d13ec26bb89d082199d79"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_02/learning_rate.svg",
+      "sha256": "fe26f5370a072f77c66e5b56c5889bd4ca4c431aaeebcf04988e917617f1efa5"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_02/macro_f1_gap.png",
+      "sha256": "b82b5c028ac182fc0b6e07ef890228bd3f1953f36ff6a8a06affcb26417d00a1"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_02/macro_f1_gap.svg",
+      "sha256": "f33739699bef4074602d2f1836d5baa54161ac157a2a698f3489334eab4b7736"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_02/epoch_duration.png",
+      "sha256": "ee927c8cb5769c950476987c2a8d0bd144058fd364fcea1b104848e5f80ca801"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_02/epoch_duration.svg",
+      "sha256": "c368c71fa3104e09f4f2e3e8dfa38d23498e237bc3144f38585e9ee55dcaa704"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/confusion_matrices/seed_42/fold_02/raw.png",
+      "sha256": "1d00bc8bb7f98e89511a96d608b5abaaa45e6b4c15debfea765224be2bb3b731"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/confusion_matrices/seed_42/fold_02/raw.svg",
+      "sha256": "93aed60c70e90ac9be592c2e8f777e7dfcf65353ed304f82fbd64ef2c37fbf73"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/confusion_matrices/seed_42/fold_02/normalized.png",
+      "sha256": "8304979140de3611a44c5569a5fffa1f5ff1b716262d0d5bf52c3a66d2e1b704"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/confusion_matrices/seed_42/fold_02/normalized.svg",
+      "sha256": "2d275c8fcc1b5340fd077d9ff06f9167921c01e0d90660d929f022a9b930c8f9"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/class_metrics/seed_42/fold_02/precision_recall_f1.png",
+      "sha256": "55027bf33913ab7743b42be40a3abfc6fbf524dffd74f6fbd8aec26ddf5435ef"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/class_metrics/seed_42/fold_02/precision_recall_f1.svg",
+      "sha256": "02136065a28221cc4e49939c52447ed8d1b4b5d5e434d2af9efc729a8b26eefa"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/class_metrics/seed_42/fold_02/label_distribution.png",
+      "sha256": "29ddc000a7d3069ab93e307e0d69d66aef7a99b0e06b7a5c44bd5c22d98e9662"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/class_metrics/seed_42/fold_02/label_distribution.svg",
+      "sha256": "c6dc0052d947d8bd1c527f59337ed10f831f25ede2903dde1e4a337aff590ebb"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_03/loss.png",
+      "sha256": "2e30e99a995483fa572f1ecf1b9e79f38963d58be748b46e1f8e2a442e003697"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_03/loss.svg",
+      "sha256": "012880c1893f9b1bc8b2fd3162bef06a43c2d83efacefbd2f9186c26378f6373"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_03/accuracy.png",
+      "sha256": "3f5719ae88c83b7615b5c65b38d5844025250c88a661e7bd6b028ee936f0ff72"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_03/accuracy.svg",
+      "sha256": "3098489c243a5257a1bfbd582b1a92c1dcd388f53a002816b09e7da92e027029"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_03/macro_f1.png",
+      "sha256": "235baa1150899addc4380d8b5d882f28112d4e584457e12fc2fcd5712fca3fdb"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_03/macro_f1.svg",
+      "sha256": "a1281b15fc829f7b32a9d0f54db65e22db701a4082814b42a9403da941d398ac"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_03/balanced_accuracy.png",
+      "sha256": "39ce9bea7cbd745f3ad239f31fd59c80476b9deb9caba8371fb3bcae2f74873b"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_03/balanced_accuracy.svg",
+      "sha256": "0a2289791b5d3337e8986f2f0250d2bac428331449638f961ff0720e8d952215"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_03/batch_loss.png",
+      "sha256": "eb6f52d1b85848080c5c70616c83bd46d162fea743ff0f6e8a8421e8a75c622a"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_03/batch_loss.svg",
+      "sha256": "2ce32c9bfb8e69ecd4ecd6e5df66160cad6fb353299efc45674a9e8f2b3a9e8d"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_03/gradient_norm.png",
+      "sha256": "14ec8ae0648a8036cc33fe55bf49a5d57e7530f156bdbc80b8e3d79831a3cb86"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_03/gradient_norm.svg",
+      "sha256": "2378ea0bae0f3c9b6d24ab1ecceaea4479bfcc26033c168c04f21d9d06d0f626"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_03/learning_rate.png",
+      "sha256": "9484d3469344c3d633e6fbebe24ab00051b9e4d7bdae7a92f5b7b297fccb07ff"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_03/learning_rate.svg",
+      "sha256": "aaea82afa443420384baa1994a4bed9b2274693bfe688b49eb40594c52bb25c9"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_03/macro_f1_gap.png",
+      "sha256": "40dd552844c08074a110351d22d58332847ed7e69a8285007a5ddce84551086d"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_03/macro_f1_gap.svg",
+      "sha256": "5d6bf5b57e73c400495d1db38cd2016e8acca4f83e08bf23132abd74d9676c48"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_03/epoch_duration.png",
+      "sha256": "7b6192252c6f2103b8b89a0751e858c0955bb9ee8b66270484e87b4f041a99b2"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_03/epoch_duration.svg",
+      "sha256": "1cb9386a1ee2d53c7522f5403cf23212d53ac1efa51b2bd762a3bcf6ed2be4f7"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/confusion_matrices/seed_42/fold_03/raw.png",
+      "sha256": "06b62d409209283c619f178dad212b78ed9a85672c8e34473aa2afa302b275b6"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/confusion_matrices/seed_42/fold_03/raw.svg",
+      "sha256": "ba6250c82b25b2eb0fd506d179b6a4f0279f8430c18b580b2ec2f7624bfc3092"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/confusion_matrices/seed_42/fold_03/normalized.png",
+      "sha256": "433a7b53132992745adeca160626cc2872e43b32a31519f729423168e37d9891"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/confusion_matrices/seed_42/fold_03/normalized.svg",
+      "sha256": "f0e16688af54c45869f1e527073b2bc672677dcdee392702b6950f3a033ebd93"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/class_metrics/seed_42/fold_03/precision_recall_f1.png",
+      "sha256": "936727cfcfe94eb976baa3500c13ff2896744962d6e83bac7be411b45137b59c"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/class_metrics/seed_42/fold_03/precision_recall_f1.svg",
+      "sha256": "5feb50530dc733c04d2632d5ea6a0b1183d9d9f97d63860c1535abadd6342462"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/class_metrics/seed_42/fold_03/label_distribution.png",
+      "sha256": "e278e93e1727820ccec8363b55568078a41012bc99ba50bbfadca5790b5b53a4"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/class_metrics/seed_42/fold_03/label_distribution.svg",
+      "sha256": "0d8fc72831ba2b952dab7f02e2313cfceace2fbff0b65cfeaa7ed6ac058d80d0"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_04/loss.png",
+      "sha256": "646140b07669c4fce0525d4400d1b129c6e9b17554654119e6346d0547215155"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_04/loss.svg",
+      "sha256": "6eb48e97b5ed9118b8fa9b5b5529875c3c4428eaa25b756e8e676685cf268353"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_04/accuracy.png",
+      "sha256": "6c64c03834dd2c3e42bccdb52d376cdc1f835c623b33cef4305340a0f9fdea27"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_04/accuracy.svg",
+      "sha256": "4416c5a777bed9a1aec13053c2ad5afb4c8cef1d63a2e7bc69e0f99228df6970"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_04/macro_f1.png",
+      "sha256": "e8b3dbc64a54b4b25e363ae2900ef2954240f009fb90f03cf4d70eb464c8675c"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_04/macro_f1.svg",
+      "sha256": "38ad49062c1a5ca0a1c9f43a10e15a92dddd96847bcf9d8ae78a0c21940f76f1"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_04/balanced_accuracy.png",
+      "sha256": "df4b186da5f4311b0e3b433a1f6459b9e05c2b7ca29e9d64ac4bbb02a708b772"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_04/balanced_accuracy.svg",
+      "sha256": "5489013e9b5094eb4a42e401c2c5426d6b7718428a6f728bfc1959001b4ff7c6"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_04/batch_loss.png",
+      "sha256": "03eca09e9ce1231320aa44dd899d6a66a0e117506e042aa088172508c1a33d04"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_04/batch_loss.svg",
+      "sha256": "e8b5039b1222183270dfb5fadd2a2f9d3d9d37b0bb71446a9b5e58b4c6750bd7"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_04/gradient_norm.png",
+      "sha256": "531e6c2286f873e9991f48765339892ccd8c12e0a562860c1c21539c3a8058ad"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_04/gradient_norm.svg",
+      "sha256": "6f8f4a41c50cdc71fd10bfca5a4baf0d8f6b0e38e9012526ddca60316b1aa229"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_04/learning_rate.png",
+      "sha256": "7f644c9bbf5c9cff0564cb282fea01e58bee080384103ea78dd0b198dd98af09"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_04/learning_rate.svg",
+      "sha256": "cb0fe8a41bc60eaa5b9365aa9fb351524d3923df232bd49cefce5dc6d65574e4"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_04/macro_f1_gap.png",
+      "sha256": "8ab020b08f5d664b980865ecbd75367bd10b179736039dc82b71b86cf5e5c105"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_04/macro_f1_gap.svg",
+      "sha256": "a07b0e2893feac5b1fa3ff59dbcb7335a6d7ebfe7af8081321a7d3cd604d371f"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_04/epoch_duration.png",
+      "sha256": "e42edcf26243d4778f4fdc967ee44b6e21d65ea1b5bdc3a0e53c6984ac958c8d"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_04/epoch_duration.svg",
+      "sha256": "ebc87962ddea90725707de64cdf85d265152b3a1428cc8b9ee9c46d49f75cbff"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/confusion_matrices/seed_42/fold_04/raw.png",
+      "sha256": "6bd2acef454a5569a802bf584b95f5039d029d5f1d686193c3fbf7893c5596dd"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/confusion_matrices/seed_42/fold_04/raw.svg",
+      "sha256": "2fc4e9396b12b07bce13d863c457d3398c173930aa958ba372feeac6900662e4"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/confusion_matrices/seed_42/fold_04/normalized.png",
+      "sha256": "80c9674c4377df7796bfe89ed8ffc10f159d3e8321e72fa27250343febc05c4e"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/confusion_matrices/seed_42/fold_04/normalized.svg",
+      "sha256": "6b18361574c44640cd80f9b1684a1ae0eb61d4bd70bb9b415b193fc0729e2857"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/class_metrics/seed_42/fold_04/precision_recall_f1.png",
+      "sha256": "4d8fb792dfe26020eb0c6f19259650c31fbfa95f5b63fa371240d25ed0e00cac"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/class_metrics/seed_42/fold_04/precision_recall_f1.svg",
+      "sha256": "f7283b9df19d8a193919d64c2027254ab5549b701fa4a83ea0d10d8e2780c9a9"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/class_metrics/seed_42/fold_04/label_distribution.png",
+      "sha256": "769dc4f4236c4b2e3f5916d1b380d80071448eeb7691473b44288ffb230df9d2"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/class_metrics/seed_42/fold_04/label_distribution.svg",
+      "sha256": "8e7eeb6f327ebb753f7c9531ba1aaea90cb207eb66c32ba5fc8c58931fa2ad63"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_05/loss.png",
+      "sha256": "211584ad8778bea005ec06f716ef75a04f81b935e1a0fbc1794eabf0a827f20b"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_05/loss.svg",
+      "sha256": "c168316d8605372888bb0096c6fb3b7fa90bf3f33acbcb307ab68a62e36ac6e4"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_05/accuracy.png",
+      "sha256": "93a69aea53317733e71d7b3805a9ff08187509154bf72a0b8419c2d627b74a41"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_05/accuracy.svg",
+      "sha256": "ecfdb8ceeb7d207dd366cfc40c663e982e1f3d07b1b16f7fbc194699bd20fd69"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_05/macro_f1.png",
+      "sha256": "1f55972dbca34e35dcc71554cb2d1bc08c5cfa4d71c709cbe0a6e8079122f0e8"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_05/macro_f1.svg",
+      "sha256": "587d593a4269dd0a0d62c52b63119296b94ba6c0ddff4c4f139c3235b23718e6"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_05/balanced_accuracy.png",
+      "sha256": "4c217f09208b73fec35baef30e8f875a243e9ef5b81a8d78f75777a141e6200e"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_05/balanced_accuracy.svg",
+      "sha256": "ddc406d9e797fc29a3aa4964a6c0b170c59efa181de5877b04a26d8b15863e2b"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_05/batch_loss.png",
+      "sha256": "48970e44ff7f79822b0654d3110ed7fc10cfecae42b84015e91e9774189180db"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_05/batch_loss.svg",
+      "sha256": "ac22541c2e85c05a093eef8c7c01e651fe3064c37cf516a05d17d101ca49f06a"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_05/gradient_norm.png",
+      "sha256": "bb4b5c354b044235f59acece481b053a1b544b18216b6cc4e75866e480223fde"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_05/gradient_norm.svg",
+      "sha256": "6b68e032c4768c8614dcdd5a6eab402e068de41f68593646f1929ae9cfe20362"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_05/learning_rate.png",
+      "sha256": "6f611e90bbec67b202fbd561edc14c458f3bfe36dd644dffc4de41ea78d925b1"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_05/learning_rate.svg",
+      "sha256": "e41c9a833e878de49f06d9e6bf9f62aac4ee0bb7c1cf26eb1580f208ff4e6c7d"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_05/macro_f1_gap.png",
+      "sha256": "df0fee00557f3475c6cb17e3ba164e63bb26b2a25a8d4ad03ce4fc2365cfc7f5"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_05/macro_f1_gap.svg",
+      "sha256": "3e5338506cebc03974e680e82f3cc4e988f2fcf5d2ed9c0b267964101387829b"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_05/epoch_duration.png",
+      "sha256": "653eb4145d3711e7f786788bc7f6980fbe144740774fcd9a42afab68fafc138c"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/training/seed_42/fold_05/epoch_duration.svg",
+      "sha256": "32e1585c75619b4596fb88c04c53555e30680b5b3379404bfc10c93091643e58"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/confusion_matrices/seed_42/fold_05/raw.png",
+      "sha256": "22b60e82d366d1b243975e1e6f14104c1e9fc628c02f7f56a0ca1aace8d9caf6"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/confusion_matrices/seed_42/fold_05/raw.svg",
+      "sha256": "1c8431ea41cb8de3e819494d014cea73c9bbb79f2d45cdefc1342494959573e1"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/confusion_matrices/seed_42/fold_05/normalized.png",
+      "sha256": "b06a7f413b7cffcc7b501c983df7d4cb16bca1ff0edc7559908cec56178e7fdb"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/confusion_matrices/seed_42/fold_05/normalized.svg",
+      "sha256": "adacaa57f62a0d2be0e83d34759cff0c9079d4ab96b0464126a06f90d1c494ae"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/class_metrics/seed_42/fold_05/precision_recall_f1.png",
+      "sha256": "262d6376017f9966980631e6bff28c2881335f3227bf6725b37f92ae3d572df9"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/class_metrics/seed_42/fold_05/precision_recall_f1.svg",
+      "sha256": "d9246e9c1367ff8e764f0469d5e7023b6b60744b18e05fc97f5efca7e183ab53"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/class_metrics/seed_42/fold_05/label_distribution.png",
+      "sha256": "050e9496ca1090de650286a68a20167df6bb5d53ef77b7d38360988c22c4ee64"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/class_metrics/seed_42/fold_05/label_distribution.svg",
+      "sha256": "c6f604049fa6c858941dc15cd08bfc30c1d6551a1d570eb37ab0680c1308cd0c"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/subject_metrics/seed_42/S2/confusion_raw.png",
+      "sha256": "cfb6b578ca3275877f99a4ee383381c224dcee56610791023a20a481e7554aa1"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/subject_metrics/seed_42/S2/confusion_raw.svg",
+      "sha256": "6588b3bc08846364362943b0f9724bcfaa548925d1d98bfe46be0202119c8c48"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/subject_metrics/seed_42/S2/confusion_normalized.png",
+      "sha256": "806908f8bd6ef72cf594f6ed202d832fe893a766da910c0f0b936635a5d81443"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/subject_metrics/seed_42/S2/confusion_normalized.svg",
+      "sha256": "86df26d6e9c142f9d843ba19e5fa66bb75957536c3b9d9e1165a3beead94079b"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/subject_metrics/seed_42/S3/confusion_raw.png",
+      "sha256": "7ec2dd6d828306cdabd6c07a7ebbc51976b3af736d609a01f1907dcf22d853f2"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/subject_metrics/seed_42/S3/confusion_raw.svg",
+      "sha256": "f26aeca5a754ef2ee3db17bc0d4fc94f80a60c5399c101ae49b5264630e07e6b"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/subject_metrics/seed_42/S3/confusion_normalized.png",
+      "sha256": "707a74be6b92d328610714712a0d81084d1ad462023d48e0f9673f6d24b2a451"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/subject_metrics/seed_42/S3/confusion_normalized.svg",
+      "sha256": "7346ca49e676eae4aee38e642b0b4dc590ea9bc893f4f9f67f7debe1ed680301"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/subject_metrics/seed_42/S4/confusion_raw.png",
+      "sha256": "a382c30ad3391b53e7593c25821368c51bc21aecfa27eec260cd56a846d06a00"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/subject_metrics/seed_42/S4/confusion_raw.svg",
+      "sha256": "3ca328600f5b308d047cfa4eff2478cd1a55dca66f02bdd783906b6acf4ca12e"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/subject_metrics/seed_42/S4/confusion_normalized.png",
+      "sha256": "607b449b12b9853d17a388869bff315df043eb9d82340afc501fba5e1783b3e1"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/subject_metrics/seed_42/S4/confusion_normalized.svg",
+      "sha256": "c494405b3d137c34bccc4f30105ee81bc32bde8d843d3594763b379c97307ebf"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/subject_metrics/seed_42/S5/confusion_raw.png",
+      "sha256": "b56bb0856ffab6ca4512e415534c092037f8ec31a4117e5731632f4d0fce83cd"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/subject_metrics/seed_42/S5/confusion_raw.svg",
+      "sha256": "4ea8d563779909afb1a0346fbb396bb72d9bdd7c2342458546ca6cf7ad543239"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/subject_metrics/seed_42/S5/confusion_normalized.png",
+      "sha256": "fcd85210e0ce786ec1be51b72e014373c1804ea2c4e5c345b4cd69122cf5526f"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/subject_metrics/seed_42/S5/confusion_normalized.svg",
+      "sha256": "57962299f0d02d7d28bc7198fd083a7e1b8ce6a377d4cbbb15765dbf4c0cd776"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/subject_metrics/seed_42/S6/confusion_raw.png",
+      "sha256": "bfcc8980cd7fa1fe5b9d516aa605f75df835ad778a4a5cea1581e707c94f5a18"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/subject_metrics/seed_42/S6/confusion_raw.svg",
+      "sha256": "2fbc4b2d64b7625a9bac03dba812cb403f33e0473a8e0a596bebe2d665382cee"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/subject_metrics/seed_42/S6/confusion_normalized.png",
+      "sha256": "baa05896946f52f899c2ea76cf12297f7129fe8b3ee487300cc97622e3167961"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/subject_metrics/seed_42/S6/confusion_normalized.svg",
+      "sha256": "652664ad2444d93b21c4a207eb033c913fd4d745e192d1914fb1839d528eda81"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/subject_metrics/seed_42/S7/confusion_raw.png",
+      "sha256": "cdd00a1ef930dc6d8084df96840dc66bdf0e5c42023c5e0624bc32322f582e9f"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/subject_metrics/seed_42/S7/confusion_raw.svg",
+      "sha256": "5ca3fd278e7a27b1fe6949cce9c4228c4f96e4224b6291e3f7ffe9a900da50ff"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/subject_metrics/seed_42/S7/confusion_normalized.png",
+      "sha256": "2de9eb513711bf03f3e3eef69ffcba4fe519a5c362c444d4147a83708a973f7f"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/subject_metrics/seed_42/S7/confusion_normalized.svg",
+      "sha256": "33799ba702f561cd0b166a4752bc10a0822797a37c16e51bb4a7fd4ad01b755c"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/error_analysis/seed_42/S8/confusion_raw.png",
+      "sha256": "3c9357568b6931bfab2688ab8f52d58ef0f3ed5f52c3f7e9abc6de3d56602f55"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/error_analysis/seed_42/S8/confusion_raw.svg",
+      "sha256": "a6169a976139b07c6c288a1a452b597167a37c4909bd25a1303e343e9594878d"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/error_analysis/seed_42/S8/confusion_normalized.png",
+      "sha256": "af55d50ae10928b9848ae3f14d021abb8a2fe5e746e3ca8b1f4000fc3f598cf4"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/error_analysis/seed_42/S8/confusion_normalized.svg",
+      "sha256": "f8dd18d146617117ff8e23ea93d23f17b1591ac1d985dee1382aadb9c107c020"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/subject_metrics/seed_42/S9/confusion_raw.png",
+      "sha256": "7d8639a67f76f4b3f17ad4f72db541b302138185ffe0625fae012027842aff80"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/subject_metrics/seed_42/S9/confusion_raw.svg",
+      "sha256": "2f975cb4c8fc12169c397fa2687c0627b859a1c38e93d781157eb1d34291b545"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/subject_metrics/seed_42/S9/confusion_normalized.png",
+      "sha256": "76a8e12f78c448b560447840aedd3373a40717f2a6fef9f3f0eb86dd36bae38c"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/subject_metrics/seed_42/S9/confusion_normalized.svg",
+      "sha256": "aa8845a7b2cf99ddd0d4a31d4754466e66a00ab3f7988c9de8b415e230467cf9"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/subject_metrics/seed_42/S10/confusion_raw.png",
+      "sha256": "c3d9db73ee5659251a5c2799b11c34f72c94333194463a66538e2dc44abbe87a"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/subject_metrics/seed_42/S10/confusion_raw.svg",
+      "sha256": "962755dc7eab5b5bfb1b26ba986893be8e32693dd80dc00a346384c1197ecb52"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/subject_metrics/seed_42/S10/confusion_normalized.png",
+      "sha256": "66d789e5480a7662ca934108bf7d0b8de7b983edd0a494c640d5799115935746"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/subject_metrics/seed_42/S10/confusion_normalized.svg",
+      "sha256": "44ef832fb8c1ac3abf0fc746ae9e94bf75de74051b7c0ca8f3df0b7698001ab1"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/subject_metrics/seed_42/S11/confusion_raw.png",
+      "sha256": "4bd153abdc18890be22e931208c3cfabff89587e34e46e83ea70ce0b5e9f2de1"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/subject_metrics/seed_42/S11/confusion_raw.svg",
+      "sha256": "a8a2fe06bb4f973dfc75948ea8d4a8f402050d67d144547c3baad98ebfe3b1bd"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/subject_metrics/seed_42/S11/confusion_normalized.png",
+      "sha256": "b8daf6303e26b60344ec03c48ea787edbd3b1b45de5b0ca563002229c3c9212e"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/subject_metrics/seed_42/S11/confusion_normalized.svg",
+      "sha256": "394b03c1a1275059b443b65469cdb7959d49202b345c8717c315e88267526c8a"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/subject_metrics/seed_42/S13/confusion_raw.png",
+      "sha256": "0140e2783175a861797e4d97a92d1791443d0ce82475065d32beb2a41a65751c"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/subject_metrics/seed_42/S13/confusion_raw.svg",
+      "sha256": "1cea2bc4683e767105e7d6b603e1db85575904670fa37041241770e161be2b26"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/subject_metrics/seed_42/S13/confusion_normalized.png",
+      "sha256": "ae86488db013fc189c7993e97ff4881d2796610d08c7ebaee7cacd6fd56d406f"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/subject_metrics/seed_42/S13/confusion_normalized.svg",
+      "sha256": "8f2b3ec24d70c9dedc0bcddfa9e3fe78259a7e0ab51852d25f6809380fd06ed7"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/subject_metrics/seed_42/S14/confusion_raw.png",
+      "sha256": "1352bb04132a4e7ee8aefb8dcee6c482196e152acb1466f7defa3d81947f0019"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/subject_metrics/seed_42/S14/confusion_raw.svg",
+      "sha256": "d36995369c759a0535f4467a028a414db15f3bd297688345576d7c1ac7d45692"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/subject_metrics/seed_42/S14/confusion_normalized.png",
+      "sha256": "d8596f520f9093d96ee6cc3b138a3c5d46afeb064122340e3e5b9a6aff192cb6"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/subject_metrics/seed_42/S14/confusion_normalized.svg",
+      "sha256": "ae0277fe624dcdc9ac8e40feb9d4bd18966f37b7e5696ec6702e766c86f784c8"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/subject_metrics/seed_42/S15/confusion_raw.png",
+      "sha256": "89e1b10289d448a536db50e1b380abeaf30dbd67a43fdc735e52a6598b1ec548"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/subject_metrics/seed_42/S15/confusion_raw.svg",
+      "sha256": "863589b92f4cf0559509729fa0115cdddc018ece99f62069e4b650814421a07e"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/subject_metrics/seed_42/S15/confusion_normalized.png",
+      "sha256": "c901449ec95e2eda83653ed6325ce967d763ba202907e760d9ed3f1bae2348a1"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/subject_metrics/seed_42/S15/confusion_normalized.svg",
+      "sha256": "38c3dea8ca0c44a3a581927545aeef185a244f1e40375c4f0121ecf942e77315"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/subject_metrics/seed_42/S16/confusion_raw.png",
+      "sha256": "ae532584fbdd84518f8eee88df047036372d46034e29b0783cf7dfe002c09f0c"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/subject_metrics/seed_42/S16/confusion_raw.svg",
+      "sha256": "5d0d95b863be9a5df7a9c0a59a7eae22e5cb3ab5aa40c68eaf61a9de9bdc68ab"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/subject_metrics/seed_42/S16/confusion_normalized.png",
+      "sha256": "244ea19282d51ba36aaba8286ed74da47511944504ea5c0e7087bde08a27ebb7"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/subject_metrics/seed_42/S16/confusion_normalized.svg",
+      "sha256": "15ae9cb50e52c935aa2846d013548be40fd1cccb98cad71ef20786246ef37ab0"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/subject_metrics/seed_42/S17/confusion_raw.png",
+      "sha256": "5a77b4c0ca1f2beaf9c0a05fdc36147583777cddbe526ce71e0fc272423d9cac"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/subject_metrics/seed_42/S17/confusion_raw.svg",
+      "sha256": "00c347e86add63b4aa2e5ecbca0acb15418ad1b109ac78a474eafe7ba53aa3ec"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/subject_metrics/seed_42/S17/confusion_normalized.png",
+      "sha256": "cec88989d88f5d886d3ebb3599348411105ab7d7860daa421b69ac7dabafa4a6"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/subject_metrics/seed_42/S17/confusion_normalized.svg",
+      "sha256": "d66c1c2a6480c6669eb20c46f1a989f72cddb43e81c07281866a7006871d805f"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/subject_metrics/seed_42/macro_f1.png",
+      "sha256": "229f2359747707bcd484a33ccb95abc4f6543e36f9d8b31d9f160403a03e0204"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/subject_metrics/seed_42/macro_f1.svg",
+      "sha256": "32c638725449584c8386c045344af60657979211ec5f8df732c96c4cbdddea98"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/cross_fold/seed_42/macro_f1.png",
+      "sha256": "07f1b811beb8a91d3e3b8fb0d4dc1726836273912426316a6f6e0af04628f8d3"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/cross_fold/seed_42/macro_f1.svg",
+      "sha256": "7334b9fb327e35c06d267c03ce7eefee1d33e7f688ada1a5b16d3ebab18471a5"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/subject_metrics/seed_42/balanced_accuracy.png",
+      "sha256": "1fa75af437c0105b27e89e47a695a3fb1f3222701ac9b1a083292282e42ca756"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/subject_metrics/seed_42/balanced_accuracy.svg",
+      "sha256": "50061e5ab819ead91c16b13c51f713dd1d37a78ef1a2b21f9315d23dd10eced8"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/cross_fold/seed_42/balanced_accuracy.png",
+      "sha256": "cd7aa1c9482fcb169d9897009b4223bc6ecbc11c683b6fb1da0af09c9b45e29e"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/cross_fold/seed_42/balanced_accuracy.svg",
+      "sha256": "75dee505efdd44cc953794a47830a82a389296f680ad5fec1dd594bc5277423e"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/subject_metrics/seed_42/accuracy.png",
+      "sha256": "2e65de1c6460512465271d6a164106830f9b1163f207cc83a7f31905c87a9d30"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/subject_metrics/seed_42/accuracy.svg",
+      "sha256": "97d36440ba85f02216a52810e932265744e51eb8ffdedde972fc744f188b9f3b"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/cross_fold/seed_42/accuracy.png",
+      "sha256": "f3860ebebcc98370644da9a3ce95756077e6ebabe8e9ce006e928fc2e330cb67"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/cross_fold/seed_42/accuracy.svg",
+      "sha256": "917ef4f590cf6680ece257f3666afaa40c8e33938ab697c816ac271cc8a20b52"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/subject_metrics/seed_42/class_f1_heatmap.png",
+      "sha256": "fd90e29ec039c9ee51e199724e02ecf845a54da6bf2bbb29575a29a8675490fc"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/subject_metrics/seed_42/class_f1_heatmap.svg",
+      "sha256": "5269a087c4a571c4891f4823aafa001233604fe7b3d44f1899dcf56ad5f3bd6b"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/subject_metrics/seed_42/class_f1.png",
+      "sha256": "841f8f51a702e157f90d76cdf2153a8ff81d6ab522c6e16a3bc15282e3e30bf5"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/subject_metrics/seed_42/class_f1.svg",
+      "sha256": "64a2cdd2d82cb8e201918877909f6fcf70c3ecf2dada7f8b1d01fec6d6ba4871"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/cross_fold/seed_42/class_f1_heatmap.png",
+      "sha256": "a9a936098aa4452be5d46b9320d7519676e8e0187f51fff689dc3a38caf60fe6"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/cross_fold/seed_42/class_f1_heatmap.svg",
+      "sha256": "3fc3177bbb617cbb2a3b87fdc22f9c402df265aaa8c7b0788b1ea87428746d47"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/cross_fold/seed_42/class_f1.png",
+      "sha256": "7d31593a89d1a2b212bf7faf74372964e0488890764463a4e8220f92e5d5dd0e"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/cross_fold/seed_42/class_f1.svg",
+      "sha256": "23284bfb4a241d9e708b29ef74ca4320a8fb8bbb6e36f1246a7bbeb31dc53454"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/cross_fold/seed_42/metrics_boxplot.png",
+      "sha256": "9eca8f41f64a2b3f95c8bef6284f76c1a0f1bf062e245054d0bc29ddd54b1ec4"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/cross_fold/seed_42/metrics_boxplot.svg",
+      "sha256": "f5cdee86f6278bfeae167971fa54fa3561c7857727a2d89bc499f8d6afe12c17"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/cross_fold/seed_42/best_epoch.png",
+      "sha256": "b46d9ceed8e12226af2dde9a4def0344f1edbacece82409eed65b90392fd6cf7"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/cross_fold/seed_42/best_epoch.svg",
+      "sha256": "3a67889118fa8ddbcdfd043a8c6dce336c4a0b9bb76d54c8e4bd2b0b2b73ed2c"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/cross_fold/seed_42/completed_epochs.png",
+      "sha256": "5421ba77bb01424d4b139208ed46bf5058d3332431600ce2ed664e4235351614"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/cross_fold/seed_42/completed_epochs.svg",
+      "sha256": "66486e71f8db1a61f974a5760d1a99752ce30272359f0608e44158cab7abfd02"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/cross_fold/seed_42/training_duration_seconds.png",
+      "sha256": "4bfb47284901a9ccf620079bfd37a244ec4e925a39c7e8b69e7cc7ab7c4b2ee0"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/cross_fold/seed_42/training_duration_seconds.svg",
+      "sha256": "f8f2fa139446c72b6b68e1f2b9da7324d7d68a8ba1375995548b747df5b6086a"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/cross_fold/seed_42/aggregate_confusion_raw.png",
+      "sha256": "8768e62f09e342f8b0d051ba40edf0e5d03c7611660500d021942aec5de62529"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/cross_fold/seed_42/aggregate_confusion_raw.svg",
+      "sha256": "d308c5fb1a88ed587eac29dd99a6b67d86a668600c3efaf9527d3d66b86ca14e"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/cross_fold/seed_42/aggregate_confusion_normalized.png",
+      "sha256": "6e812631a96f63fd0f4f8763aaea5c8aa7f5e972f665885f9a5e173bfd1db1f5"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/cross_fold/seed_42/aggregate_confusion_normalized.svg",
+      "sha256": "6808c0fe3e2d4ee1c4738272948c1abc3534e59db3b2537595c2e43afd48867f"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/cross_fold/seed_42/learning_loss.png",
+      "sha256": "7191eacb90c1e63b0adfd1a72d3a51be2950168535569a70ab8a9e39d127dced"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/cross_fold/seed_42/learning_loss.svg",
+      "sha256": "810808a11dc609709fcaf79459984dbe496f14e8a757f4ced2b9ca75f37a19e9"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/cross_fold/seed_42/learning_macro_f1.png",
+      "sha256": "3de5820f00d5fd7faf4dd60de4df5386d334785dd87b602f83e89b37ab4416bc"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/cross_fold/seed_42/learning_macro_f1.svg",
+      "sha256": "5ddfa253f646853124cfe0d19ddb73df5770182caa6b0c3330cf7bd32abb6cad"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/cross_fold/seed_42/learning_balanced_accuracy.png",
+      "sha256": "78f8615a4e963f23eed0b714e7f7c033cac668eab0be8f633f8f3aeab6d26f47"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/cross_fold/seed_42/learning_balanced_accuracy.svg",
+      "sha256": "97c3155985e212b749782560f726c3b1a77080109559021fd14ade7d9c4bf5f4"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/cross_fold/seed_42/learning_accuracy.png",
+      "sha256": "f3d3a1db3989f2ffab3e75d056e7d8b06148d261ad658fdfb96e67df892cd127"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/cross_fold/seed_42/learning_accuracy.svg",
+      "sha256": "aa3ae006abb83a14572a1b470f3c4fca89f1a2a0ef3b38bc997d17b67c422895"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/error_analysis/seed_42/S8/class_f1.png",
+      "sha256": "4d735eec6aa6a1795669f9a2a56f6d85d61528030d2d9b81091a8cb9159c030c"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/error_analysis/seed_42/S8/class_f1.svg",
+      "sha256": "047871c40be51682af8466bcbf5559f8b8e570e8b82daaf8dbc90fe5f8b379be"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/error_analysis/seed_42/S8/label_distribution.png",
+      "sha256": "aa44fbd14152bcf7872fb135725a1922ffd7556d0b0a5fd79d3cfaf2c523b0fa"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/error_analysis/seed_42/S8/label_distribution.svg",
+      "sha256": "9c824441a1cd58a189ab39823e059f959d26b7b751e8e4a3111a572a0f884f7b"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/error_analysis/seed_42/S8/confidence_distribution.png",
+      "sha256": "8a2ddd8cbc9ce8b08aed5b85fc4636eb9fcbd23044bc2b671e4da2f1f1f680d0"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/error_analysis/seed_42/S8/confidence_distribution.svg",
+      "sha256": "b2acce33e6111520283201001a647126972eef39fd49e4042988cb89628045ea"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/error_analysis/seed_42/S8/label_timeline.png",
+      "sha256": "f533f121f8d08c98f51649e32c5f885d3355e9bad751d94a0ee625f9d92fc036"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/error_analysis/seed_42/S8/label_timeline.svg",
+      "sha256": "bfb966a57cab271f12ad2b6551e910dede8a9c01b68c262107691335416fdf24"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/error_analysis/seed_42/S8/comparison.png",
+      "sha256": "701b0dcf4458465b96d23a20d086416a16f93808a67010794cd633fd26e6fe3e"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/error_analysis/seed_42/S8/comparison.svg",
+      "sha256": "555f4e9644c1002feb1ab00499eec0b3833e84668ebd9a09d0fb0249583f14db"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/dataset/windows_by_subject.png",
+      "sha256": "8ac9b2e9007e6197c42d21b2f82d20c61f0933b5586ca48858395a90274c1c0f"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/dataset/windows_by_subject.svg",
+      "sha256": "54dfd3d7c0b19c04dccd4f24b8471fd00944ef4de1964172390ac05f0e0e5446"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/dataset/class_distribution.png",
+      "sha256": "15de1fe9ce9a76ed50309500a6ccb0d49d4b5e1c8ea5c688249edb924c33eb57"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/dataset/class_distribution.svg",
+      "sha256": "56ca0f8f16e85de10df609ff2b5e0b49e25ae5cee4fea98a24501f8085bd3ea2"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/dataset/class_distribution_by_subject.png",
+      "sha256": "43a07429529f58176a575cc8cea4c7dacb5b78e2f45c2130150ebb1d1670e23b"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/dataset/class_distribution_by_subject.svg",
+      "sha256": "cfa8c22c129843181395cddf65042b0d36e72fe2f2ee1b7803784d0f8f433332"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/dataset/split_distribution_fold_01.png",
+      "sha256": "7e18195a45b0e608d8b750d1354025f286e52cce6711e9e14549cb64bf08384d"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/dataset/split_distribution_fold_01.svg",
+      "sha256": "6d45063135a0f1e19ace5be29c6da998a7cad7e1bd22515d2c808c415b1f1abf"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/dataset/split_distribution_fold_02.png",
+      "sha256": "48dab116c5bf10c94080afd21a5617bcb323ea1f3066001a01b1fb094a62f5f7"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/dataset/split_distribution_fold_02.svg",
+      "sha256": "e84009775864aa416b4a4167fd2eddc856e1230b8b21179c4845126d740c9483"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/dataset/split_distribution_fold_03.png",
+      "sha256": "1667b9fd6ba90e5697a5d77677a2bf125aa859804c3a6cac0ed62c681eb046cb"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/dataset/split_distribution_fold_03.svg",
+      "sha256": "e2128ec420277de8321c31d1ae3f52f3dde5398a59fc352f5d53c19d94a1faab"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/dataset/split_distribution_fold_04.png",
+      "sha256": "487e32de2534dac06fe0daa9dfbf83980f427f6506614de23088fd42d5cbbdc7"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/dataset/split_distribution_fold_04.svg",
+      "sha256": "46e2663d6706564fc2113af4bea9061f4c87c7282419be28adb28de4945aa316"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/dataset/split_distribution_fold_05.png",
+      "sha256": "494aa0cca42a5a00ec6ac1e7505b2541eab6dec3bc786d114c359778761c2882"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/dataset/split_distribution_fold_05.svg",
+      "sha256": "6616e30fd4688bc376a711d2dbe1be0131c49bb26d7353f13d7dd92ebb4ee38e"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/dataset/preprocessing_window_counts.png",
+      "sha256": "3714112ff8dd4d407715f2ebe2c04dbf28c7fe48a6634d78b1e31dfe6f9b5405"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/dataset/preprocessing_window_counts.svg",
+      "sha256": "f5269fe67a23914f839a2eb724dbc77861785eeaf61989fb2d9d1763422d0d13"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/dataset/physiological_signals.png",
+      "sha256": "32760a8d0ad5b94404662cc9644e25b093b99b554b0b22d8f3afbfe2c49e82c1"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/dataset/physiological_signals.svg",
+      "sha256": "ca0a3f710c0ac57074f04357f319fe42e2c10fdca4aa808c1cea04f40606d20f"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/dataset/sliding_window_segmentation.png",
+      "sha256": "ddca16366a7136afcf5776b9960542247bdb1dadf654fcd4e6c724e304c92a97"
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/enhanced_visualizations/scientific-v2_44c886afdd32da86/dataset/sliding_window_segmentation.svg",
+      "sha256": "f33803061866c53c7a80404c9337ded880f75405e0b2029b0a55bc6787d7e208"
+    }
+  ]
+}

@@ -1,0 +1,868 @@
+{
+  "status": "passed",
+  "verified_at": "2026-11-09T04:22:15.245436+00:00",
+  "group_id": "20261108T154303Z_474b38f9",
+  "completed_folds": 5,
+  "epochs": 137,
+  "iterations": 5554,
+  "oof_windows": 2136,
+  "pooled_oof": {
+    "macro_f1": 0.45000014134414124,
+    "balanced_accuracy": 0.4547364549300494,
+    "accuracy": 0.5065543071161048,
+    "precision_per_class": [
+      0.6576305220883534,
+      0.48533724340175954,
+      0.2096069868995633
+    ],
+    "recall_per_class": [
+      0.5695652173913044,
+      0.5171875,
+      0.2774566473988439
+    ],
+    "f1_per_class": [
+      0.6104380242311277,
+      0.5007564296520424,
+      0.23880597014925373
+    ],
+    "support": [
+      1150,
+      640,
+      346
+    ],
+    "confusion_matrix": [
+      [
+        655,
+        244,
+        251
+      ],
+      [
+        198,
+        331,
+        111
+      ],
+      [
+        143,
+        107,
+        96
+      ]
+    ],
+    "label_order": [
+      "baseline",
+      "stress",
+      "amusement"
+    ],
+    "absent_classes": []
+  },
+  "fold_mean_std": {
+    "macro_f1": {
+      "mean": 0.44932062333276307,
+      "std": 0.09326574166690163,
+      "n": 5
+    },
+    "balanced_accuracy": {
+      "mean": 0.4566782703172653,
+      "std": 0.08855884106428624,
+      "n": 5
+    },
+    "accuracy": {
+      "mean": 0.5071531379264351,
+      "std": 0.11166584964367277,
+      "n": 5
+    }
+  },
+  "folds": [
+    {
+      "fold_id": 1,
+      "training_seed": 42,
+      "run_id": "20261108T154525Z_415f3ec3",
+      "completed_epochs": 46,
+      "best_epoch": 31,
+      "iterations": 1840,
+      "normalization_train_only_recomputed": true,
+      "class_weights_train_only_recomputed": true,
+      "validation_selection_replayed": true,
+      "accuracy": 0.6078886310904872,
+      "macro_f1": 0.5051830373601917,
+      "balanced_accuracy": 0.4926904050700931
+    },
+    {
+      "fold_id": 2,
+      "training_seed": 42,
+      "run_id": "20261108T155759Z_d140c13e",
+      "completed_epochs": 17,
+      "best_epoch": 2,
+      "iterations": 680,
+      "normalization_train_only_recomputed": true,
+      "class_weights_train_only_recomputed": true,
+      "validation_selection_replayed": true,
+      "accuracy": 0.3210161662817552,
+      "macro_f1": 0.2896879348042139,
+      "balanced_accuracy": 0.30414593698175785
+    },
+    {
+      "fold_id": 3,
+      "training_seed": 42,
+      "run_id": "20261108T160216Z_0a3a1cc1",
+      "completed_epochs": 27,
+      "best_epoch": 12,
+      "iterations": 1107,
+      "normalization_train_only_recomputed": true,
+      "class_weights_train_only_recomputed": true,
+      "validation_selection_replayed": true,
+      "accuracy": 0.528169014084507,
+      "macro_f1": 0.5049385020006945,
+      "balanced_accuracy": 0.514534579751971
+    },
+    {
+      "fold_id": 4,
+      "training_seed": 42,
+      "run_id": "20261108T160903Z_daa4fbd2",
+      "completed_epochs": 23,
+      "best_epoch": 8,
+      "iterations": 943,
+      "normalization_train_only_recomputed": true,
+      "class_weights_train_only_recomputed": true,
+      "validation_selection_replayed": true,
+      "accuracy": 0.5035128805620609,
+      "macro_f1": 0.4422671353601179,
+      "balanced_accuracy": 0.45651777285960193
+    },
+    {
+      "fold_id": 5,
+      "training_seed": 42,
+      "run_id": "20261108T161554Z_16fb51a8",
+      "completed_epochs": 24,
+      "best_epoch": 9,
+      "iterations": 984,
+      "normalization_train_only_recomputed": true,
+      "class_weights_train_only_recomputed": true,
+      "validation_selection_replayed": true,
+      "accuracy": 0.5751789976133651,
+      "macro_f1": 0.5045265071385975,
+      "balanced_accuracy": 0.515502656922903
+    }
+  ],
+  "subjects": [
+    {
+      "subject_id": "S10",
+      "fold_id": 1,
+      "training_seed": 42,
+      "windows": 147,
+      "accuracy": 0.6598639455782312,
+      "macro_f1": 0.6169929007552112,
+      "balanced_accuracy": 0.622996183588228
+    },
+    {
+      "subject_id": "S16",
+      "fold_id": 1,
+      "training_seed": 42,
+      "windows": 143,
+      "accuracy": 0.6643356643356644,
+      "macro_f1": 0.5201251303441085,
+      "balanced_accuracy": 0.5447498238195913
+    },
+    {
+      "subject_id": "S9",
+      "fold_id": 1,
+      "training_seed": 42,
+      "windows": 141,
+      "accuracy": 0.49645390070921985,
+      "macro_f1": 0.2681992337164751,
+      "balanced_accuracy": 0.30303030303030304
+    },
+    {
+      "subject_id": "S8",
+      "fold_id": 2,
+      "training_seed": 42,
+      "windows": 142,
+      "accuracy": 0.04225352112676056,
+      "macro_f1": 0.030303030303030304,
+      "balanced_accuracy": 0.02631578947368421
+    },
+    {
+      "subject_id": "S17",
+      "fold_id": 2,
+      "training_seed": 42,
+      "windows": 147,
+      "accuracy": 0.5510204081632653,
+      "macro_f1": 0.3543224987533433,
+      "balanced_accuracy": 0.3782812931749102
+    },
+    {
+      "subject_id": "S15",
+      "fold_id": 2,
+      "training_seed": 42,
+      "windows": 144,
+      "accuracy": 0.3611111111111111,
+      "macro_f1": 0.37404696593474696,
+      "balanced_accuracy": 0.5043290043290044
+    },
+    {
+      "subject_id": "S7",
+      "fold_id": 3,
+      "training_seed": 42,
+      "windows": 142,
+      "accuracy": 0.2676056338028169,
+      "macro_f1": 0.14074074074074075,
+      "balanced_accuracy": 0.1623931623931624
+    },
+    {
+      "subject_id": "S4",
+      "fold_id": 3,
+      "training_seed": 42,
+      "windows": 140,
+      "accuracy": 0.5285714285714286,
+      "macro_f1": 0.5900924472353043,
+      "balanced_accuracy": 0.6700991609458429
+    },
+    {
+      "subject_id": "S11",
+      "fold_id": 3,
+      "training_seed": 42,
+      "windows": 144,
+      "accuracy": 0.7847222222222222,
+      "macro_f1": 0.7298400839985048,
+      "balanced_accuracy": 0.7040278562017693
+    },
+    {
+      "subject_id": "S5",
+      "fold_id": 4,
+      "training_seed": 42,
+      "windows": 142,
+      "accuracy": 0.43661971830985913,
+      "macro_f1": 0.31332189822755857,
+      "balanced_accuracy": 0.4230769230769231
+    },
+    {
+      "subject_id": "S6",
+      "fold_id": 4,
+      "training_seed": 42,
+      "windows": 142,
+      "accuracy": 0.5492957746478874,
+      "macro_f1": 0.5325016578043468,
+      "balanced_accuracy": 0.6206474684735555
+    },
+    {
+      "subject_id": "S14",
+      "fold_id": 4,
+      "training_seed": 42,
+      "windows": 143,
+      "accuracy": 0.5244755244755245,
+      "macro_f1": 0.2556525002345436,
+      "balanced_accuracy": 0.3348390739695088
+    },
+    {
+      "subject_id": "S2",
+      "fold_id": 5,
+      "training_seed": 42,
+      "windows": 137,
+      "accuracy": 0.6788321167883211,
+      "macro_f1": 0.6013535711939023,
+      "balanced_accuracy": 0.5849869936826458
+    },
+    {
+      "subject_id": "S3",
+      "fold_id": 5,
+      "training_seed": 42,
+      "windows": 138,
+      "accuracy": 0.4855072463768116,
+      "macro_f1": 0.36771825530860863,
+      "balanced_accuracy": 0.4250714128762909
+    },
+    {
+      "subject_id": "S13",
+      "fold_id": 5,
+      "training_seed": 42,
+      "windows": 144,
+      "accuracy": 0.5625,
+      "macro_f1": 0.46989592320966356,
+      "balanced_accuracy": 0.5265151515151515
+    }
+  ],
+  "checkpoints": [
+    {
+      "path": "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_01/checkpoints/best.pt",
+      "size_bytes": 599685,
+      "sha256": "697c2485d0e6d5c8fe4670c861f1e04a5acdf1ad3751015cdc0c82071076238a",
+      "kind": "best",
+      "epoch": 31,
+      "fold_id": 1,
+      "training_seed": 42,
+      "run_id": "20261108T154525Z_415f3ec3",
+      "weights_only_load": true,
+      "strict_architecture_match": true
+    },
+    {
+      "path": "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_01/checkpoints/last.pt",
+      "size_bytes": 799098,
+      "sha256": "d8e7c5cdd466e34b9438a699ced64ed9a16de4953c4635d299c31e574848ac5e",
+      "kind": "last",
+      "epoch": 46,
+      "fold_id": 1,
+      "training_seed": 42,
+      "run_id": "20261108T154525Z_415f3ec3",
+      "weights_only_load": true,
+      "strict_architecture_match": true
+    },
+    {
+      "path": "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_02/checkpoints/best.pt",
+      "size_bytes": 581381,
+      "sha256": "e0fb106b07e4a68dc683c9e20400b133c665eb287efce37fa5c23f9d42df927d",
+      "kind": "best",
+      "epoch": 2,
+      "fold_id": 2,
+      "training_seed": 42,
+      "run_id": "20261108T155759Z_d140c13e",
+      "weights_only_load": true,
+      "strict_architecture_match": true
+    },
+    {
+      "path": "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_02/checkpoints/last.pt",
+      "size_bytes": 780794,
+      "sha256": "7683c349596380d9b08e7ca3de286493a57dca45a625e08d51aa0c0162283467",
+      "kind": "last",
+      "epoch": 17,
+      "fold_id": 2,
+      "training_seed": 42,
+      "run_id": "20261108T155759Z_d140c13e",
+      "weights_only_load": true,
+      "strict_architecture_match": true
+    },
+    {
+      "path": "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_03/checkpoints/best.pt",
+      "size_bytes": 587717,
+      "sha256": "3f6fe0fecb5c5ebd76a7c4bbcda100fea5a514760021b8da04100b6bd89ef388",
+      "kind": "best",
+      "epoch": 12,
+      "fold_id": 3,
+      "training_seed": 42,
+      "run_id": "20261108T160216Z_0a3a1cc1",
+      "weights_only_load": true,
+      "strict_architecture_match": true
+    },
+    {
+      "path": "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_03/checkpoints/last.pt",
+      "size_bytes": 787066,
+      "sha256": "1050c5e5be842124f48030f44ccdec1bb47da329c98bd54be8b6340f1586738c",
+      "kind": "last",
+      "epoch": 27,
+      "fold_id": 3,
+      "training_seed": 42,
+      "run_id": "20261108T160216Z_0a3a1cc1",
+      "weights_only_load": true,
+      "strict_architecture_match": true
+    },
+    {
+      "path": "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_04/checkpoints/best.pt",
+      "size_bytes": 585157,
+      "sha256": "dc6411b0134b23d03e16dace211f04221a86628c7d99c294409a61d6c3d578ff",
+      "kind": "best",
+      "epoch": 8,
+      "fold_id": 4,
+      "training_seed": 42,
+      "run_id": "20261108T160903Z_daa4fbd2",
+      "weights_only_load": true,
+      "strict_architecture_match": true
+    },
+    {
+      "path": "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_04/checkpoints/last.pt",
+      "size_bytes": 784570,
+      "sha256": "b2d9332578e45c4c7cac234a4b33f9f4abf7c1413beda5a83cba219df735afc3",
+      "kind": "last",
+      "epoch": 23,
+      "fold_id": 4,
+      "training_seed": 42,
+      "run_id": "20261108T160903Z_daa4fbd2",
+      "weights_only_load": true,
+      "strict_architecture_match": true
+    },
+    {
+      "path": "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_05/checkpoints/best.pt",
+      "size_bytes": 585797,
+      "sha256": "74fa17df13844f9e625550cb744abec72a9f3416b5428e1add6574b5735a3820",
+      "kind": "best",
+      "epoch": 9,
+      "fold_id": 5,
+      "training_seed": 42,
+      "run_id": "20261108T161554Z_16fb51a8",
+      "weights_only_load": true,
+      "strict_architecture_match": true
+    },
+    {
+      "path": "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_05/checkpoints/last.pt",
+      "size_bytes": 785210,
+      "sha256": "13403ce4bdbec56fa539f6f04892860f4826a4240fede4385954d76155754871",
+      "kind": "last",
+      "epoch": 24,
+      "fold_id": 5,
+      "training_seed": 42,
+      "run_id": "20261108T161554Z_16fb51a8",
+      "weights_only_load": true,
+      "strict_architecture_match": true
+    }
+  ],
+  "tensorboard": [
+    {
+      "fold_id": 1,
+      "event_files": [
+        "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_01/tensorboard/batches/events.out.tfevents.1794152755.DESKTOP-3Q2FPVI.2988.1.93e9cfaefba1",
+        "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_01/tensorboard/epochs/events.out.tfevents.1794152755.DESKTOP-3Q2FPVI.2988.0.a55a52a18ef3",
+        "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_01/tensorboard/evaluation/events.out.tfevents.1794152755.DESKTOP-3Q2FPVI.2988.2.10019f7b773f"
+      ],
+      "epoch_steps": 46,
+      "batch_steps": 1840,
+      "scalar_values_match_csv": true,
+      "tolerance": {
+        "rtol": 1e-06,
+        "atol": 1e-06
+      }
+    },
+    {
+      "fold_id": 2,
+      "event_files": [
+        "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_02/tensorboard/batches/events.out.tfevents.1794153480.DESKTOP-3Q2FPVI.2988.4.e692c31ba9c8",
+        "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_02/tensorboard/epochs/events.out.tfevents.1794153480.DESKTOP-3Q2FPVI.2988.3.0c6284ed631a",
+        "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_02/tensorboard/evaluation/events.out.tfevents.1794153480.DESKTOP-3Q2FPVI.2988.5.bbce4c3dea0c"
+      ],
+      "epoch_steps": 17,
+      "batch_steps": 680,
+      "scalar_values_match_csv": true,
+      "tolerance": {
+        "rtol": 1e-06,
+        "atol": 1e-06
+      }
+    },
+    {
+      "fold_id": 3,
+      "event_files": [
+        "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_03/tensorboard/batches/events.out.tfevents.1794153737.DESKTOP-3Q2FPVI.2988.7.dec611650e0e",
+        "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_03/tensorboard/epochs/events.out.tfevents.1794153737.DESKTOP-3Q2FPVI.2988.6.4041df6329b0",
+        "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_03/tensorboard/evaluation/events.out.tfevents.1794153737.DESKTOP-3Q2FPVI.2988.8.3e01f60ae6bf"
+      ],
+      "epoch_steps": 27,
+      "batch_steps": 1107,
+      "scalar_values_match_csv": true,
+      "tolerance": {
+        "rtol": 1e-06,
+        "atol": 1e-06
+      }
+    },
+    {
+      "fold_id": 4,
+      "event_files": [
+        "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_04/tensorboard/batches/events.out.tfevents.1794154143.DESKTOP-3Q2FPVI.2988.10.3ff640ece070",
+        "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_04/tensorboard/epochs/events.out.tfevents.1794154143.DESKTOP-3Q2FPVI.2988.9.d6556b6cca25",
+        "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_04/tensorboard/evaluation/events.out.tfevents.1794154143.DESKTOP-3Q2FPVI.2988.11.41a86bbe2b41"
+      ],
+      "epoch_steps": 23,
+      "batch_steps": 943,
+      "scalar_values_match_csv": true,
+      "tolerance": {
+        "rtol": 1e-06,
+        "atol": 1e-06
+      }
+    },
+    {
+      "fold_id": 5,
+      "event_files": [
+        "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_05/tensorboard/batches/events.out.tfevents.1794154556.DESKTOP-3Q2FPVI.2988.13.566a957b68a1",
+        "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_05/tensorboard/epochs/events.out.tfevents.1794154556.DESKTOP-3Q2FPVI.2988.12.a38b251993cf",
+        "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_05/tensorboard/evaluation/events.out.tfevents.1794154556.DESKTOP-3Q2FPVI.2988.14.b89561a0207f"
+      ],
+      "epoch_steps": 24,
+      "batch_steps": 984,
+      "scalar_values_match_csv": true,
+      "tolerance": {
+        "rtol": 1e-06,
+        "atol": 1e-06
+      }
+    }
+  ],
+  "subject_leakage": false,
+  "split_checksum": "239949dfebabd802091d14a4494d2216aee9809b0e2993dacdbdfbcdc7133f2c",
+  "dataset": {
+    "cache_path": "D:\\Deep_learning_group\\Projects\\DL13-WESAD\\data\\processed\\c369cd27d24abb09",
+    "subjects": [
+      {
+        "subject_id": "S2",
+        "cache_key": "4b4618036f8b5c1bd79eaabcc734dbdfae53f5c2af898f31bfb6e6bd0c88523d",
+        "preprocessing_version": "wrist-interval-labels-v1",
+        "raw_sha256_recorded_at_preprocessing": "36ef5e8afc0f91998eefba7c12fc9fa97b7b07198cbec0126917d7abb436ca23",
+        "cache_files": {
+          "windows.npy": "f71ab245ce84ff590684072018d2a4eac2d4585126a0ca51228ac5cea2bf13c3",
+          "windows.csv": "03c094bb974fe356adb866fdad21ba79412e076bb5450feb1cba2ce63f44dd1e"
+        },
+        "shape": [
+          137,
+          5,
+          960
+        ]
+      },
+      {
+        "subject_id": "S3",
+        "cache_key": "c8d67fe6e3a8d9694b3d0c91df070abc42e846930eecebaad3c9dfbedd1dd338",
+        "preprocessing_version": "wrist-interval-labels-v1",
+        "raw_sha256_recorded_at_preprocessing": "5c8bd4a82af029c082e610bca28a011fca2ae3b23e14a18458ebb5990be4015e",
+        "cache_files": {
+          "windows.npy": "6204daf69b782de41ca5f027d690d8d9053e4dec0b078826bd0bf645521bad2f",
+          "windows.csv": "2a9b187c66a2e479bba3bf05a44b75865d3a474179a4a1395beffbae6c9cf657"
+        },
+        "shape": [
+          138,
+          5,
+          960
+        ]
+      },
+      {
+        "subject_id": "S4",
+        "cache_key": "b360bd61fe213dd1a9c066f661088437fcf7bc6408d5864b5726c47f8a30793f",
+        "preprocessing_version": "wrist-interval-labels-v1",
+        "raw_sha256_recorded_at_preprocessing": "0f0740a79388723360ff12b4f47c465665ea7827d1399b18ac43908daac17900",
+        "cache_files": {
+          "windows.npy": "e5841f54be9d2ae48d6d96c594cc03458500d8be1a52927bf2e34fb23e7ea490",
+          "windows.csv": "eeae191ed439b06844ea66700ff58ae67cb57b9f31f4317ed9d406d6f743db3a"
+        },
+        "shape": [
+          140,
+          5,
+          960
+        ]
+      },
+      {
+        "subject_id": "S5",
+        "cache_key": "e522913156377c9f80b4fbbbb6b774b48cdc9a8bc4a4d5fd1f42caddc35995ba",
+        "preprocessing_version": "wrist-interval-labels-v1",
+        "raw_sha256_recorded_at_preprocessing": "74bd187e3a9c1ca4259af52d04974c8e7ff7dc49ceea7e269f499ca98fe6d8ec",
+        "cache_files": {
+          "windows.npy": "68b17fac3ea7f810d395aefcea66ad3c4f0a55340581a546c584582ef9c893f1",
+          "windows.csv": "c8456320172fa3768ac37ba741762e97076fc534570ba1f5e7799c859b439eef"
+        },
+        "shape": [
+          142,
+          5,
+          960
+        ]
+      },
+      {
+        "subject_id": "S6",
+        "cache_key": "56519462107a00d392558a7bc1e2d3d6de31ca2c5ae44cd3111aa6988beb8583",
+        "preprocessing_version": "wrist-interval-labels-v1",
+        "raw_sha256_recorded_at_preprocessing": "8aa9bf57b69f4fe5bce06c550230857627c3f05befa2f787151646bb29ee8f62",
+        "cache_files": {
+          "windows.npy": "aa8f1bcd550ab60a02ad50aa13e3a6a8e6c927322c57dfe295101515b38fab93",
+          "windows.csv": "90b9a43601e40d9555892427d44f7757de5689a0d967595970f4a0bf6e507580"
+        },
+        "shape": [
+          142,
+          5,
+          960
+        ]
+      },
+      {
+        "subject_id": "S7",
+        "cache_key": "43f690f5743cc9d90f9062fc0abc88afadf081d2582864db297c320c819ad405",
+        "preprocessing_version": "wrist-interval-labels-v1",
+        "raw_sha256_recorded_at_preprocessing": "9cb62705ae7f53dca327a9a00a6f9fdabf5128d449174ab37594658e912cb6d8",
+        "cache_files": {
+          "windows.npy": "a28c05025481aff42c3aceb090f895fb8abc469783ae79c5d51fb6e68f74d512",
+          "windows.csv": "f20d65cb7f2b29537ddd4aa507c6173be2e88f273c7ad0c5c91affa1d7499131"
+        },
+        "shape": [
+          142,
+          5,
+          960
+        ]
+      },
+      {
+        "subject_id": "S8",
+        "cache_key": "572441a567aa8916d5e7e044bdd02b1f923cf125f7ef3ae686e7ea9c8d9735ee",
+        "preprocessing_version": "wrist-interval-labels-v1",
+        "raw_sha256_recorded_at_preprocessing": "dac1141dac11d56b3641be982f45da63f05e9d74154f59e6ea0cdcf47fc72710",
+        "cache_files": {
+          "windows.npy": "414e73e3049d6b7afd5a175a64535a30618684a98dfe5546d0a655ee44ddf433",
+          "windows.csv": "0cf2a9b523965d837f73fc69712a639c936dc05a05b4ffcb701f0028d2ac0430"
+        },
+        "shape": [
+          142,
+          5,
+          960
+        ]
+      },
+      {
+        "subject_id": "S9",
+        "cache_key": "02837b6c2a1aa0ce03bb39f0336656cbe0a26f997b6cddaf05751e15535bc990",
+        "preprocessing_version": "wrist-interval-labels-v1",
+        "raw_sha256_recorded_at_preprocessing": "24dc004e201bd541f092989443f0a29ebf89e4a227a80bb6b6d1987255039544",
+        "cache_files": {
+          "windows.npy": "97493b383077e2ed26da186d13447139cef0505aab7cef23231a6ad15eb62ab0",
+          "windows.csv": "932d07156adb0dc4de7b6c053b7bef7b4a58984e1c5e2d7775e27c81f7429ba0"
+        },
+        "shape": [
+          141,
+          5,
+          960
+        ]
+      },
+      {
+        "subject_id": "S10",
+        "cache_key": "de4128ba94f79113be75f69429f91f9477089e7fdf6402a53e1f14542ddfe034",
+        "preprocessing_version": "wrist-interval-labels-v1",
+        "raw_sha256_recorded_at_preprocessing": "41da29c68366f33650f3d41a6be78107bf6942929c3bb0ef46238078ddddee9f",
+        "cache_files": {
+          "windows.npy": "d99f7654ee0dd535c7a494f6d80508aac7cfda03cdf84aa0cba5fc70edaf5e27",
+          "windows.csv": "a3bedbbf4eae48c866f7713ea21b0fd7d18bb4969d168000cd6f8ba6b20ec093"
+        },
+        "shape": [
+          147,
+          5,
+          960
+        ]
+      },
+      {
+        "subject_id": "S11",
+        "cache_key": "dd5f15f87e1f71bbedd86fe132f63cf3d307fd887830897c9f623683cf454683",
+        "preprocessing_version": "wrist-interval-labels-v1",
+        "raw_sha256_recorded_at_preprocessing": "f39557a8d660b10154936f51debf2926aea7ebb9b26a168858f59502f914d8f7",
+        "cache_files": {
+          "windows.npy": "70371f6d288d7e9733f733a88809b52c93f1d7a1c860b84e14199bcad3d461af",
+          "windows.csv": "e7eb1014c257f81c1e68e5261b39af7b84348579a052bec48f3708aa86d6bfbf"
+        },
+        "shape": [
+          144,
+          5,
+          960
+        ]
+      },
+      {
+        "subject_id": "S13",
+        "cache_key": "ac59e446425ff936f282a2fdc654073af414f18b280f6bce4a6a8d3cb7a326c8",
+        "preprocessing_version": "wrist-interval-labels-v1",
+        "raw_sha256_recorded_at_preprocessing": "772fb490f19b279e49367271e009fc10d3a3ca1e3456df0d68b9063a73992066",
+        "cache_files": {
+          "windows.npy": "b3964b83516c82214d20ecffae0dc9f7f165797321271cf7b2d99b9637288dcc",
+          "windows.csv": "5a8de7ee3b7d29ca1982e0552622b208349b4128d2c03a8fcaf142148cab8da1"
+        },
+        "shape": [
+          144,
+          5,
+          960
+        ]
+      },
+      {
+        "subject_id": "S14",
+        "cache_key": "4880d406968ea18f51bc560cf2ef4371e782872913bd3dcc423c227fdaff991c",
+        "preprocessing_version": "wrist-interval-labels-v1",
+        "raw_sha256_recorded_at_preprocessing": "e7bd33c57538319a25c6d53e6a9fb6c1abd12800cfc64bb63275d89de8d2fd60",
+        "cache_files": {
+          "windows.npy": "cb9843e2473d3d8891e91d29fc47b8b492a7a911a6df2b42e3cd0be5a1ced5b3",
+          "windows.csv": "910f1c907b1f8e927531969a3a570e74db991e9f505413c9a52a0d87e937f260"
+        },
+        "shape": [
+          143,
+          5,
+          960
+        ]
+      },
+      {
+        "subject_id": "S15",
+        "cache_key": "a43e0c901b870e8ea2c109b3661668c5e40020755f1bff2603665040d78868aa",
+        "preprocessing_version": "wrist-interval-labels-v1",
+        "raw_sha256_recorded_at_preprocessing": "1ea573bc6b45ba79fb134f9460d691b86176f60dce23420dc514c28017d4049c",
+        "cache_files": {
+          "windows.npy": "f0e02b2dbd2ffd29f657db047b3ab919c9a83cba0637440cb2412b8be5c02015",
+          "windows.csv": "10a4b6fd2d04dfcfd216b67d90c0fa8e3a24886d84b999003b4fbf0702b6add5"
+        },
+        "shape": [
+          144,
+          5,
+          960
+        ]
+      },
+      {
+        "subject_id": "S16",
+        "cache_key": "3da701d1e163420ac731dcf57368d42429fba4e2c6799bb22b2e605c83051057",
+        "preprocessing_version": "wrist-interval-labels-v1",
+        "raw_sha256_recorded_at_preprocessing": "f65cf40cada75c3e9f5813276d7dcc90359c3b06dec41d68656c0a6e61dbc575",
+        "cache_files": {
+          "windows.npy": "f572d453a0557a4f98943bb196052a434da1ddc29ca366b3aa292a1692344d7a",
+          "windows.csv": "e54d8086de918894f39c0ae91186df95eb9fc5261da6485b0830e354a3ee261e"
+        },
+        "shape": [
+          143,
+          5,
+          960
+        ]
+      },
+      {
+        "subject_id": "S17",
+        "cache_key": "65d058f4d25613bc4c2d984150cae3bac531e682acbc75a91a1fcfc1765eeee0",
+        "preprocessing_version": "wrist-interval-labels-v1",
+        "raw_sha256_recorded_at_preprocessing": "3315796a75227d54d7b0056736f671484fd2fb85afffa65818fd76aeff2920fa",
+        "cache_files": {
+          "windows.npy": "9bacf0ed24f642b187539190118c652f75e07b4cc1ce59e3b8852e960dfcc8f6",
+          "windows.csv": "467e30e61c1e182f8b0e3475380505c6e74143c1ae7bb38ab000e78970f029f3"
+        },
+        "shape": [
+          147,
+          5,
+          960
+        ]
+      }
+    ],
+    "raw_files_not_loaded_or_modified": true
+  },
+  "source_snapshot_hashes_verified": 55,
+  "source_snapshot_fingerprint": "3cbd4c006e0c9219502543985634c0926f5624a12a0e676e7abe08a2d40214e8",
+  "protected_run_artifact_hashes": {
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_01/config.yaml": "4bfc36c9f3dc6e581f24c24e2c2ba5a2bec9071494c5800fce58bd101fcf4a4f",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_01/metadata.json": "51d9c2c25c47352861b5e997eedfb3e0f8ef2860162ee5221e09a213cb7c6182",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_01/normalization.json": "368af75d7fe1b8502873d06f01ad923071e128f8d5cb34238536a8731c4b2195",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_01/tracking_identity.json": "cc7c718c627dc8b71a92dbada28b52b4f2722dbe9c8f9511dd989c64480c057f",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_01/checkpoints/best.pt": "697c2485d0e6d5c8fe4670c861f1e04a5acdf1ad3751015cdc0c82071076238a",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_01/checkpoints/last.pt": "d8e7c5cdd466e34b9438a699ced64ed9a16de4953c4635d299c31e574848ac5e",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_01/logs/epochs.csv": "19cc585f348468a2f476743af01d0313398727ec67a72f234b19692e5eb58a85",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_01/logs/errors.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_01/logs/events.jsonl": "9c305e43f8b939013c47683deef10f624d27a9c1d95de9a0d7cbe6886d15a836",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_01/logs/iterations.csv": "a4a0edffc88e21b05928e577b242c0f58516ee85b7a5415719928cc1c705cc40",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_01/logs/training.log": "1c3a6661ba97476f8d40d36c3f9e6f96f18f4e6375d302698e50fe7f6c358197",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_01/logs/validation.csv": "f93085869577a14f2096547edde620207b76c3a8d336339bb70c3c79bd44cd51",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_01/metrics/best_validation.json": "0b40c061124ac8db1fe14468c7f1db9a5d878ae4ebd44d0974f1419fb8a74157",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_01/metrics/classification_report.json": "99cb1743cd0651a8cc8eb0f89089ff2ba2682d5154f7152ce4aadfd76538c65b",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_01/metrics/confusion_matrix.csv": "771f8025bb1b8c1e6144052485914dd1a0c1fddf57e9916c6d00540f4fc3c353",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_01/metrics/predictions.csv": "ff78464bfae5d048c629d515658b046d21c00427816de5ae740e66daf7e361a3",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_01/metrics/subject_metrics.csv": "f73fab3c273668054cacb73afbd9e46107f6bbda8565394b7db8ba2de5671776",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_01/metrics/test.json": "7f5d453f981f07d35eed691a0089eae7838d39970ec1ad6ab5e2b1d74715010d",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_01/plots/confusion_matrix.png": "5200c63e00fa83d71919be3b104c1d7ba48feb3672c89997fd22ce876e37202e",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_01/plots/loss_curve.png": "6a0bac69d4f3fedfd5cf0ddec97408cf7bdf2ef0a4f36ed23c0c29b02b391c4a",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_01/plots/macro_f1_curve.png": "00b0706ae78b3b7d2669d4832bafd43b3ad444cee4ea7e8936ed8b4de3873b59",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_01/tensorboard/batches/events.out.tfevents.1794152755.DESKTOP-3Q2FPVI.2988.1.93e9cfaefba1": "e1a47f9aeac0af886a16c9297d850db3ead67604ddfca6c3f921a86e9faf137a",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_01/tensorboard/epochs/events.out.tfevents.1794152755.DESKTOP-3Q2FPVI.2988.0.a55a52a18ef3": "9b2bfef93f7d15aeb8f5be878bf3a131118b007feb3403f15378e0c77e5805ca",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_01/tensorboard/evaluation/events.out.tfevents.1794152755.DESKTOP-3Q2FPVI.2988.2.10019f7b773f": "dbedb43ef2c828fb13699980b97eb97443c4338de2d8ad1d87d5d9939f458dc8",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_02/config.yaml": "4bfc36c9f3dc6e581f24c24e2c2ba5a2bec9071494c5800fce58bd101fcf4a4f",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_02/metadata.json": "64a2b70a1eb3a41d6356be8c6670ab9df65fda92355a03051cad5d856a69031b",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_02/normalization.json": "7a6a6c030a68bf2ddd312bd591636496bf2fbd0dd05b961fccc2762f2b1220c2",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_02/tracking_identity.json": "c7b4c91d4db3e3ed58c8c21df4a5bf854409d16b866838605754b930abbc50ab",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_02/checkpoints/best.pt": "e0fb106b07e4a68dc683c9e20400b133c665eb287efce37fa5c23f9d42df927d",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_02/checkpoints/last.pt": "7683c349596380d9b08e7ca3de286493a57dca45a625e08d51aa0c0162283467",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_02/logs/epochs.csv": "f54de2acb1b9924b733deead8d2e4b2d2c6dc0f3ac8c04238164f483af714c96",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_02/logs/errors.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_02/logs/events.jsonl": "363561cf267e2f8fef3de75307341d95f7116716dc749658eb2ee937b783d91c",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_02/logs/iterations.csv": "1e80af91cd00a3eeae834fd0c4dcf052631054b5c6503280c96a836549f2cfb5",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_02/logs/training.log": "81a5fdacaa84f7c0a4b86a50fb1dec02784d09902abbc44662a60e88ee949a15",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_02/logs/validation.csv": "e6a5b7e80782b44f007f2cc0e3d4c78108d13fbb512434bb29fec6e3e4349c7c",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_02/metrics/best_validation.json": "77c25786f482437daf1a12ecb3b1923ea4fa5d0ffc6dacb742c90009797bc424",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_02/metrics/classification_report.json": "1d08a5da1231cf32898e5bc130914c8987a7dc1144f2bfe78abfa8a6bc0164a5",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_02/metrics/confusion_matrix.csv": "bddafaf1a0ba4546efbddd2dc72c37a6f1553c21260b3e87c6ab15a9faaba87b",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_02/metrics/predictions.csv": "ea51279235476d354095e4e2fdd4ea81753713530012adabb8dc0e2aa130996a",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_02/metrics/subject_metrics.csv": "4d3a6d0f86f894b2acf248fa6bf77f29ae4f9180ad766add2790b5cf81e385ab",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_02/metrics/test.json": "7dad9a54a820d8269bc32cea6915b549e1c62a51d4720a943d81513c48f998d6",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_02/plots/confusion_matrix.png": "cdca97ce4732a66058d891a5aa7b3110de9e0aa1c9c844988eb8e1c7444a4b0b",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_02/plots/loss_curve.png": "4ec01f9c34a0e8b3bedb6e4b9aaff3f63b853bc50cf04de0dd4de0e859a9f573",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_02/plots/macro_f1_curve.png": "835fb59861873bc405a9cf2b5ce49e199e6f0ac7a9948c3544b128cd631b229d",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_02/tensorboard/batches/events.out.tfevents.1794153480.DESKTOP-3Q2FPVI.2988.4.e692c31ba9c8": "1546e85bc21214d92690850df182800c266b52db4d57cafeb85ffbf7c71072b3",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_02/tensorboard/epochs/events.out.tfevents.1794153480.DESKTOP-3Q2FPVI.2988.3.0c6284ed631a": "8cf75d737819ed810cf1f8682242ac35e6c8e1a145df3300b4098313c40fcf58",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_02/tensorboard/evaluation/events.out.tfevents.1794153480.DESKTOP-3Q2FPVI.2988.5.bbce4c3dea0c": "c6574b0555252702868304fd55d94d34dd0a539ea8b55d33334f94d44e743059",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_03/config.yaml": "4bfc36c9f3dc6e581f24c24e2c2ba5a2bec9071494c5800fce58bd101fcf4a4f",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_03/metadata.json": "e87931a34697a4f5eeb5654475702612071246c632f371d756d46c290b46313d",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_03/normalization.json": "990b4b3293798fcea0fb501153ca0004d8e1d2162a67f1c3ebff14850a69cd66",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_03/tracking_identity.json": "46f531de3703de62781cc155d2b6b6ec1edbce6b77a2ff05bcb0b9b5a7f487ee",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_03/checkpoints/best.pt": "3f6fe0fecb5c5ebd76a7c4bbcda100fea5a514760021b8da04100b6bd89ef388",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_03/checkpoints/last.pt": "1050c5e5be842124f48030f44ccdec1bb47da329c98bd54be8b6340f1586738c",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_03/logs/epochs.csv": "0fb2c0a28e8e641c65812d9ede8cba33d3e3d0ae7191c572cc6d93eaaf603285",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_03/logs/errors.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_03/logs/events.jsonl": "f1e1f59e98f05577490a60c4c3d65cb774f9e96ac167edbd667921c4d8ab677a",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_03/logs/iterations.csv": "8c959d69aff4add3ff1616f44f71fb33e6546dba0c5110546d5f49d08275441f",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_03/logs/training.log": "6aa3c0c00480ed24cf408c442e92c3e3ce0c56a49cd35225648f90ed03728761",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_03/logs/validation.csv": "31aff6f58c846f178fea038b59131d657b1f1277ca58ee843de0fb6d30bb366c",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_03/metrics/best_validation.json": "3f651f3ca9632605b82f8bfa4a0c572b01050ac07bd7d71b686757f563e533f3",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_03/metrics/classification_report.json": "24ffd369dfa2f86f05c54697663e8b531b6c95f850d89bf1aaaad0df37864507",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_03/metrics/confusion_matrix.csv": "d63cd1465fcda14a4156979275fb25b601ee484ae02686e5c6d18f4cc51361d1",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_03/metrics/predictions.csv": "9f1322245a880d2fff9a6e534554b3c71c317ebdd4b43d95c61e877229f25106",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_03/metrics/subject_metrics.csv": "8804e1ac5e569087532e1c2a3dd4c12ea8afb8953cf392bd722d415bb02f60a7",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_03/metrics/test.json": "8c28e8f413753e8101c4bcb630f8cac054b8b74a97444fd814332304b4149407",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_03/plots/confusion_matrix.png": "4c48a4e0b76031cb25534bb22d45dc12f461082ff20ef38b8b31762359d55fcc",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_03/plots/loss_curve.png": "76031963d4af6fbd83db15efbb8f74057cd0105d439afc81208fafe0dc5ddb96",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_03/plots/macro_f1_curve.png": "50933efdbde74fa3e7075916a4e125df8a87103cf825f5699965de7af0eb4aa6",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_03/tensorboard/batches/events.out.tfevents.1794153737.DESKTOP-3Q2FPVI.2988.7.dec611650e0e": "5bc62275645b9dbd81097b3ec689c34962b9e7150668002a38763a593ba9358b",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_03/tensorboard/epochs/events.out.tfevents.1794153737.DESKTOP-3Q2FPVI.2988.6.4041df6329b0": "f108e40118d69616a3f2c0c7364b80a6ba89ca25b33c66f6fd141dc313f06fa5",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_03/tensorboard/evaluation/events.out.tfevents.1794153737.DESKTOP-3Q2FPVI.2988.8.3e01f60ae6bf": "b378d579de3bd166429f1a3a07f61a29862e5e3299ad7a1dc80f4e691cb5b495",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_04/config.yaml": "4bfc36c9f3dc6e581f24c24e2c2ba5a2bec9071494c5800fce58bd101fcf4a4f",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_04/metadata.json": "e2a142cbdfeb1c48d49d837c2e394c8ccb98e5c6a4367cf4a216160ee56d3305",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_04/normalization.json": "694c3346f3052c63f7b96510d22af3ee956adf147ea058e7c3edc3e441afa57d",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_04/tracking_identity.json": "8d0d37686944f155d5ef4c24167e087e517b82b91cb3d82a28839b49868b3bc3",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_04/checkpoints/best.pt": "dc6411b0134b23d03e16dace211f04221a86628c7d99c294409a61d6c3d578ff",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_04/checkpoints/last.pt": "b2d9332578e45c4c7cac234a4b33f9f4abf7c1413beda5a83cba219df735afc3",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_04/logs/epochs.csv": "23742173bcc769654d7b728369ba5c3cd8cdbff804c8579a72d422f1bcda3fb9",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_04/logs/errors.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_04/logs/events.jsonl": "3df758720f07a4c7ee10e5769cc9ff8d03f90064f10da861be82d852f4e02b22",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_04/logs/iterations.csv": "5f5ce210fd8af26af868c1085510474bcdf8aa65f6d3065fd8994cdca6f13f39",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_04/logs/training.log": "ebfadfce8671afcc25cb470da4089be3e3fb270c869347b6d0685dacf9d30aa7",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_04/logs/validation.csv": "54cc3267c6ab39bbec2fb53ae07d99680c959e1c8b46b4cb818ee7b212644a07",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_04/metrics/best_validation.json": "d06edce62942774b73d85a3ca803a0d2ae1cca9f7ee3880ba82b7bdd4169531a",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_04/metrics/classification_report.json": "07830f59db74160a026a21929ae8b6b75c78b7210c27ad65cfe7a1b5448b9579",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_04/metrics/confusion_matrix.csv": "852ccef618d0312faa6d0cabe1bf2203036dbbcd195c3002685c611a24255e7f",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_04/metrics/predictions.csv": "55a2dbf36d14294e747e9efdf8a03f543b4a1db42865fc85b226e27de6ddd8b0",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_04/metrics/subject_metrics.csv": "7f385c0e0a59d650f6751da8908012e1a4819703f146515bcf3156263bc04a66",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_04/metrics/test.json": "2d8a534ebf4511a04b735ef4abd07fe0962fbd9055c9dad5caed96f269cf9f07",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_04/plots/confusion_matrix.png": "35c61b9beb94e9b838930113a6c5daade2b588d36bba652413f9fbe4e9426a31",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_04/plots/loss_curve.png": "760e1b309cfa7010c5f7b5d427c9d050ac268b143f0d2a0a64f4776a19f6a1af",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_04/plots/macro_f1_curve.png": "7450dced39e30ed43776b4bccd83a7de3d84aebdb80babd9bd27f1b6c8183a5b",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_04/tensorboard/batches/events.out.tfevents.1794154143.DESKTOP-3Q2FPVI.2988.10.3ff640ece070": "3b7cfc873bf342ce22b476c62b0ddace06ddf81353704d5363a47188a114a04c",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_04/tensorboard/epochs/events.out.tfevents.1794154143.DESKTOP-3Q2FPVI.2988.9.d6556b6cca25": "7703cb553a856a0d6a20d30ad4fb2ce316469aab4f67bd3aa4f42d4be5d12d36",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_04/tensorboard/evaluation/events.out.tfevents.1794154143.DESKTOP-3Q2FPVI.2988.11.41a86bbe2b41": "96e94207ef50774314eda8ee787cea7690ba84255475252aa24b890b5e82c16d",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_05/config.yaml": "4bfc36c9f3dc6e581f24c24e2c2ba5a2bec9071494c5800fce58bd101fcf4a4f",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_05/metadata.json": "69d97f3ba51559c16b3fce2327c2e6ce78d3ca65dfe3bf0e3d5467af57f835bd",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_05/normalization.json": "08e6812fbfa249dbcd3e7bcbc11acd708ff3a1608dd63a0e312c922073be0267",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_05/tracking_identity.json": "9b82444d81513306a6aa15a3befe3fd4c5b24d16c79f1cf8e994880f747e8eef",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_05/checkpoints/best.pt": "74fa17df13844f9e625550cb744abec72a9f3416b5428e1add6574b5735a3820",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_05/checkpoints/last.pt": "13403ce4bdbec56fa539f6f04892860f4826a4240fede4385954d76155754871",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_05/logs/epochs.csv": "fa3b0c8f55b6ea01c45960bd87d191c45b15131455acc87e2cabe60f86a138ea",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_05/logs/errors.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_05/logs/events.jsonl": "0fdebef512bb3f6f72d284b186ef278042590fd9abce7779a5ba2cdeb2c860f2",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_05/logs/iterations.csv": "43e1b702de617b2ea1ef918616925e17633074b7454de7d4b0e112c5b71c329b",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_05/logs/training.log": "68fe9c3cf35b4c6ecc09c8d23e3f421e725f794b96176c206a23c9bd9054c0dc",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_05/logs/validation.csv": "31712a5e4c2000bc05a1b4967e2173592357e0759e5eb3daa0e941642dfef071",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_05/metrics/best_validation.json": "7b9c1b4832547dcc4797b2d440784c2abb6e46464ca8b4bbdffb7c13571b4a4b",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_05/metrics/classification_report.json": "9864e6db1290d22028fe91572b737bf3c6b2d8f2689d62cec3009d52b10f484b",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_05/metrics/confusion_matrix.csv": "19c742fae74f4020ba4bb8f8eefea3bc21f888665f49f64e0e067137333e302a",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_05/metrics/predictions.csv": "78ca3a3920188fcb1188aab82eba0771543394d03a2596d16ceadf45a1101df1",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_05/metrics/subject_metrics.csv": "8bf5442c86b6face54ecab5ad5aaf04592cc293ed6c6f8ddba9de2ad1ac87ec4",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_05/metrics/test.json": "8fd582baa60644372ccd8318cb2c0458e3889578d93429b811289549b498b815",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_05/plots/confusion_matrix.png": "06709cc5f32c1386e2e5ed3b0d67e380779d216a3a2ee04102cc6777889a3344",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_05/plots/loss_curve.png": "049e1e83897e714e69666e2465fd9bcc6de92eaf401fd682345af44b2bf7fb7e",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_05/plots/macro_f1_curve.png": "c47e0309df96db73de0a8f04a08a74d0a4a4c3582397e30f92551f3b1de7bb45",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_05/tensorboard/batches/events.out.tfevents.1794154556.DESKTOP-3Q2FPVI.2988.13.566a957b68a1": "e588a194ca5a9b686e3330426bba806530103725d00c6e0e7654a09680d326a5",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_05/tensorboard/epochs/events.out.tfevents.1794154556.DESKTOP-3Q2FPVI.2988.12.a38b251993cf": "5d89eaaf5e0b995fc239553b0c034d941584964162024f2cf542a5612b70eb42",
+    "runs/experiment_e1/20261108T154303Z_474b38f9/seed_42/fold_05/tensorboard/evaluation/events.out.tfevents.1794154556.DESKTOP-3Q2FPVI.2988.14.b89561a0207f": "55fba1c5c677fe27e13c92dd69bacca85ed69d0199158226f0f3b65495284829"
+  },
+  "test_selection_evidence": [
+    "Validation selection replayed from committed logs.",
+    "Trainer consumes Test only after loading the selected best checkpoint.",
+    "tests/test_resume.py::test_test_not_used_for_checkpoint_selection"
+  ],
+  "dependencies_recorded_at_training": {
+    "python": "3.14.6 | packaged by Anaconda, Inc. | (main, Jul  9 2026, 14:29:05) [MSC v.1942 64 bit (AMD64)]",
+    "executable": "D:\\Deep_learning_group\\.venv_new\\Scripts\\python.exe",
+    "os": "Windows-11-10.0.26300-SP0",
+    "cpu": "Intel64 Family 6 Model 142 Stepping 10, GenuineIntel",
+    "cpu_count": 4,
+    "ram_total": 12762271744,
+    "ram_available": 4242604032,
+    "cuda_version": null,
+    "gpu": null,
+    "packages": {
+      "torch": "2.14.0",
+      "numpy": "2.5.3",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.1",
+      "PyYAML": "6.0.3",
+      "matplotlib": "3.11.2",
+      "psutil": "7.2.2",
+      "pytest": null,
+      "tensorboard": "2.21.0"
+    },
+    "git_commit": "705e8957d8c1421e0ca087fce54fc1633fffe0c5",
+    "git_dirty": true
+  }
+}

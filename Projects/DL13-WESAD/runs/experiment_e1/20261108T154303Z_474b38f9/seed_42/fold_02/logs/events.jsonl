@@ -1,0 +1,74 @@
+{"timestamp": "2026-11-08T15:57:59.718571+00:00", "event": "fold_start", "run_id": "20261108T155759Z_d140c13e", "attempt_id": "20261108T155759Z_fb80e04b", "fold_id": 2, "seed": 42, "device": "cpu"}
+{"timestamp": "2026-11-08T15:58:00.119340+00:00", "event": "preprocessing", "train_subjects": ["S10", "S16", "S9", "S5", "S6", "S14", "S2", "S3", "S13"], "validation_subjects": ["S7", "S4", "S11"], "test_subjects": ["S8", "S17", "S15"], "window_counts": {"train": 1277, "validation": 426, "test": 433}}
+{"timestamp": "2026-11-08T15:58:00.161901+00:00", "event": "model", "parameters": 45059}
+{"timestamp": "2026-11-08T15:58:00.264084+00:00", "event": "epoch_start", "epoch": 1, "attempt_id": "20261108T155759Z_fb80e04b"}
+{"timestamp": "2026-11-08T15:58:15.173752+00:00", "event": "validation_completed", "epoch": 1, "val_macro_f1": 0.5470666275858876, "val_loss": 1.0141537831779859}
+{"timestamp": "2026-11-08T15:58:15.174891+00:00", "event": "checkpoint_saved", "epoch": 1, "best": true}
+{"timestamp": "2026-11-08T15:58:15.176004+00:00", "event": "epoch_end", "epoch": 1, "train_online_loss": 0.7734610115656682, "val_macro_f1": 0.5470666275858876, "best_epoch": 1}
+{"timestamp": "2026-11-08T15:58:15.177277+00:00", "event": "epoch_start", "epoch": 2, "attempt_id": "20261108T155759Z_fb80e04b"}
+{"timestamp": "2026-11-08T15:58:27.150236+00:00", "event": "validation_completed", "epoch": 2, "val_macro_f1": 0.687362730445067, "val_loss": 0.8853873227049336}
+{"timestamp": "2026-11-08T15:58:27.151652+00:00", "event": "checkpoint_saved", "epoch": 2, "best": true}
+{"timestamp": "2026-11-08T15:58:27.152681+00:00", "event": "epoch_end", "epoch": 2, "train_online_loss": 0.510376744558316, "val_macro_f1": 0.687362730445067, "best_epoch": 2}
+{"timestamp": "2026-11-08T15:58:27.153734+00:00", "event": "epoch_start", "epoch": 3, "attempt_id": "20261108T155759Z_fb80e04b"}
+{"timestamp": "2026-11-08T15:58:39.903266+00:00", "event": "validation_completed", "epoch": 3, "val_macro_f1": 0.6459072446402129, "val_loss": 0.9444646194055603}
+{"timestamp": "2026-11-08T15:58:39.904558+00:00", "event": "checkpoint_saved", "epoch": 3, "best": false}
+{"timestamp": "2026-11-08T15:58:39.906074+00:00", "event": "epoch_end", "epoch": 3, "train_online_loss": 0.46219086150188293, "val_macro_f1": 0.6459072446402129, "best_epoch": 2}
+{"timestamp": "2026-11-08T15:58:39.907324+00:00", "event": "epoch_start", "epoch": 4, "attempt_id": "20261108T155759Z_fb80e04b"}
+{"timestamp": "2026-11-08T15:58:56.919101+00:00", "event": "validation_completed", "epoch": 4, "val_macro_f1": 0.5631923352921782, "val_loss": 1.2891050982582941}
+{"timestamp": "2026-11-08T15:58:56.920788+00:00", "event": "checkpoint_saved", "epoch": 4, "best": false}
+{"timestamp": "2026-11-08T15:58:56.928052+00:00", "event": "epoch_end", "epoch": 4, "train_online_loss": 0.3827910626329594, "val_macro_f1": 0.5631923352921782, "best_epoch": 2}
+{"timestamp": "2026-11-08T15:58:56.932536+00:00", "event": "epoch_start", "epoch": 5, "attempt_id": "20261108T155759Z_fb80e04b"}
+{"timestamp": "2026-11-08T15:59:09.769378+00:00", "event": "validation_completed", "epoch": 5, "val_macro_f1": 0.4822331838412839, "val_loss": 1.1563366637006522}
+{"timestamp": "2026-11-08T15:59:09.770531+00:00", "event": "checkpoint_saved", "epoch": 5, "best": false}
+{"timestamp": "2026-11-08T15:59:09.776032+00:00", "event": "epoch_end", "epoch": 5, "train_online_loss": 0.4139174904200209, "val_macro_f1": 0.4822331838412839, "best_epoch": 2}
+{"timestamp": "2026-11-08T15:59:09.777406+00:00", "event": "epoch_start", "epoch": 6, "attempt_id": "20261108T155759Z_fb80e04b"}
+{"timestamp": "2026-11-08T15:59:22.461712+00:00", "event": "validation_completed", "epoch": 6, "val_macro_f1": 0.6126096126096127, "val_loss": 1.1991979512320816}
+{"timestamp": "2026-11-08T15:59:22.462968+00:00", "event": "checkpoint_saved", "epoch": 6, "best": false}
+{"timestamp": "2026-11-08T15:59:22.464078+00:00", "event": "epoch_end", "epoch": 6, "train_online_loss": 0.3840853918639505, "val_macro_f1": 0.6126096126096127, "best_epoch": 2}
+{"timestamp": "2026-11-08T15:59:22.465485+00:00", "event": "epoch_start", "epoch": 7, "attempt_id": "20261108T155759Z_fb80e04b"}
+{"timestamp": "2026-11-08T15:59:34.322261+00:00", "event": "validation_completed", "epoch": 7, "val_macro_f1": 0.4996744280919767, "val_loss": 1.2673069765577938}
+{"timestamp": "2026-11-08T15:59:34.323602+00:00", "event": "checkpoint_saved", "epoch": 7, "best": false}
+{"timestamp": "2026-11-08T15:59:34.324772+00:00", "event": "epoch_end", "epoch": 7, "train_online_loss": 0.402486467288768, "val_macro_f1": 0.4996744280919767, "best_epoch": 2}
+{"timestamp": "2026-11-08T15:59:34.325937+00:00", "event": "epoch_start", "epoch": 8, "attempt_id": "20261108T155759Z_fb80e04b"}
+{"timestamp": "2026-11-08T15:59:47.699286+00:00", "event": "validation_completed", "epoch": 8, "val_macro_f1": 0.5971242378997138, "val_loss": 1.3070813996848583}
+{"timestamp": "2026-11-08T15:59:47.700578+00:00", "event": "checkpoint_saved", "epoch": 8, "best": false}
+{"timestamp": "2026-11-08T15:59:47.701876+00:00", "event": "epoch_end", "epoch": 8, "train_online_loss": 0.35994015806775803, "val_macro_f1": 0.5971242378997138, "best_epoch": 2}
+{"timestamp": "2026-11-08T15:59:47.734319+00:00", "event": "epoch_start", "epoch": 9, "attempt_id": "20261108T155759Z_fb80e04b"}
+{"timestamp": "2026-11-08T16:00:04.534051+00:00", "event": "validation_completed", "epoch": 9, "val_macro_f1": 0.6520498387303265, "val_loss": 1.1938241600475983}
+{"timestamp": "2026-11-08T16:00:04.539512+00:00", "event": "checkpoint_saved", "epoch": 9, "best": false}
+{"timestamp": "2026-11-08T16:00:04.540835+00:00", "event": "epoch_end", "epoch": 9, "train_online_loss": 0.3228432499228223, "val_macro_f1": 0.6520498387303265, "best_epoch": 2}
+{"timestamp": "2026-11-08T16:00:04.542108+00:00", "event": "epoch_start", "epoch": 10, "attempt_id": "20261108T155759Z_fb80e04b"}
+{"timestamp": "2026-11-08T16:00:20.602749+00:00", "event": "validation_completed", "epoch": 10, "val_macro_f1": 0.6070158754637126, "val_loss": 1.1844833071826528}
+{"timestamp": "2026-11-08T16:00:20.604024+00:00", "event": "checkpoint_saved", "epoch": 10, "best": false}
+{"timestamp": "2026-11-08T16:00:20.605097+00:00", "event": "epoch_end", "epoch": 10, "train_online_loss": 0.3242814393697264, "val_macro_f1": 0.6070158754637126, "best_epoch": 2}
+{"timestamp": "2026-11-08T16:00:20.606355+00:00", "event": "epoch_start", "epoch": 11, "attempt_id": "20261108T155759Z_fb80e04b"}
+{"timestamp": "2026-11-08T16:00:35.650431+00:00", "event": "validation_completed", "epoch": 11, "val_macro_f1": 0.6574790688296129, "val_loss": 1.0285871735251693}
+{"timestamp": "2026-11-08T16:00:35.651717+00:00", "event": "checkpoint_saved", "epoch": 11, "best": false}
+{"timestamp": "2026-11-08T16:00:35.652904+00:00", "event": "epoch_end", "epoch": 11, "train_online_loss": 0.3098368196949488, "val_macro_f1": 0.6574790688296129, "best_epoch": 2}
+{"timestamp": "2026-11-08T16:00:35.654014+00:00", "event": "epoch_start", "epoch": 12, "attempt_id": "20261108T155759Z_fb80e04b"}
+{"timestamp": "2026-11-08T16:00:51.182675+00:00", "event": "validation_completed", "epoch": 12, "val_macro_f1": 0.6772829722784501, "val_loss": 1.143214888650593}
+{"timestamp": "2026-11-08T16:00:51.183814+00:00", "event": "checkpoint_saved", "epoch": 12, "best": false}
+{"timestamp": "2026-11-08T16:00:51.184903+00:00", "event": "epoch_end", "epoch": 12, "train_online_loss": 0.32315977378435784, "val_macro_f1": 0.6772829722784501, "best_epoch": 2}
+{"timestamp": "2026-11-08T16:00:51.188015+00:00", "event": "epoch_start", "epoch": 13, "attempt_id": "20261108T155759Z_fb80e04b"}
+{"timestamp": "2026-11-08T16:01:11.642354+00:00", "event": "validation_completed", "epoch": 13, "val_macro_f1": 0.5300709399333253, "val_loss": 1.4924916731421887}
+{"timestamp": "2026-11-08T16:01:11.643537+00:00", "event": "checkpoint_saved", "epoch": 13, "best": false}
+{"timestamp": "2026-11-08T16:01:11.644596+00:00", "event": "epoch_end", "epoch": 13, "train_online_loss": 0.29648805465735895, "val_macro_f1": 0.5300709399333253, "best_epoch": 2}
+{"timestamp": "2026-11-08T16:01:11.662469+00:00", "event": "epoch_start", "epoch": 14, "attempt_id": "20261108T155759Z_fb80e04b"}
+{"timestamp": "2026-11-08T16:01:27.795395+00:00", "event": "validation_completed", "epoch": 14, "val_macro_f1": 0.662184137712158, "val_loss": 1.521598902560006}
+{"timestamp": "2026-11-08T16:01:27.796678+00:00", "event": "checkpoint_saved", "epoch": 14, "best": false}
+{"timestamp": "2026-11-08T16:01:27.797807+00:00", "event": "epoch_end", "epoch": 14, "train_online_loss": 0.26411555420400834, "val_macro_f1": 0.662184137712158, "best_epoch": 2}
+{"timestamp": "2026-11-08T16:01:27.799717+00:00", "event": "epoch_start", "epoch": 15, "attempt_id": "20261108T155759Z_fb80e04b"}
+{"timestamp": "2026-11-08T16:01:41.945935+00:00", "event": "validation_completed", "epoch": 15, "val_macro_f1": 0.6240030021042798, "val_loss": 1.3371406705107511}
+{"timestamp": "2026-11-08T16:01:41.947411+00:00", "event": "checkpoint_saved", "epoch": 15, "best": false}
+{"timestamp": "2026-11-08T16:01:41.948667+00:00", "event": "epoch_end", "epoch": 15, "train_online_loss": 0.2914069109668814, "val_macro_f1": 0.6240030021042798, "best_epoch": 2}
+{"timestamp": "2026-11-08T16:01:41.949897+00:00", "event": "epoch_start", "epoch": 16, "attempt_id": "20261108T155759Z_fb80e04b"}
+{"timestamp": "2026-11-08T16:01:56.469654+00:00", "event": "validation_completed", "epoch": 16, "val_macro_f1": 0.4612002857121818, "val_loss": 2.238951047325036}
+{"timestamp": "2026-11-08T16:01:56.471242+00:00", "event": "checkpoint_saved", "epoch": 16, "best": false}
+{"timestamp": "2026-11-08T16:01:56.472783+00:00", "event": "epoch_end", "epoch": 16, "train_online_loss": 0.2474970324740567, "val_macro_f1": 0.4612002857121818, "best_epoch": 2}
+{"timestamp": "2026-11-08T16:01:56.474219+00:00", "event": "epoch_start", "epoch": 17, "attempt_id": "20261108T155759Z_fb80e04b"}
+{"timestamp": "2026-11-08T16:02:12.125244+00:00", "event": "validation_completed", "epoch": 17, "val_macro_f1": 0.4302866099417823, "val_loss": 2.24094132212176}
+{"timestamp": "2026-11-08T16:02:12.126420+00:00", "event": "checkpoint_saved", "epoch": 17, "best": false}
+{"timestamp": "2026-11-08T16:02:12.127682+00:00", "event": "epoch_end", "epoch": 17, "train_online_loss": 0.253679198551738, "val_macro_f1": 0.4302866099417823, "best_epoch": 2}
+{"timestamp": "2026-11-08T16:02:12.129187+00:00", "event": "early_stopping", "epoch": 17, "patience": 15}
+{"timestamp": "2026-11-08T16:02:15.469346+00:00", "event": "test_completed", "macro_f1": 0.2896879348042139, "balanced_accuracy": 0.30414593698175785}
+{"timestamp": "2026-11-08T16:02:15.471303+00:00", "event": "fold_end", "status": "completed"}

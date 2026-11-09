@@ -1,0 +1,41 @@
+{
+  "status": "passed",
+  "purpose": "synthetic_event_smoke_no_training",
+  "real_data_training_executed": false,
+  "output": "D:\\Deep_learning_group\\Projects\\DL13-WESAD\\results\\tensorboard_upgrade\\smoke_events\\20261108T143723Z_2ac1f653",
+  "epoch_scalar_tags": [
+    "train/online_loss",
+    "train/eval_loss",
+    "train/accuracy",
+    "train/macro_f1",
+    "train/balanced_accuracy",
+    "val/loss",
+    "val/accuracy",
+    "val/macro_f1",
+    "val/balanced_accuracy",
+    "optimization/learning_rate",
+    "selection/best_epoch",
+    "selection/best_val_macro_f1",
+    "selection/early_stopping_counter",
+    "val/class_0/precision",
+    "val/class_1/precision",
+    "val/class_2/precision",
+    "val/class_0/recall",
+    "val/class_1/recall",
+    "val/class_2/recall",
+    "val/class_0/f1",
+    "val/class_1/f1",
+    "val/class_2/f1"
+  ],
+  "batch_steps": [
+    1,
+    2
+  ],
+  "evaluation_images": [
+    "test/confusion_raw",
+    "test/confusion_normalized",
+    "test/per_class_f1"
+  ],
+  "train_accuracy": 0.6,
+  "val_accuracy": 0.2
+}
