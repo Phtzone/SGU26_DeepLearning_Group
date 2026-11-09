@@ -1,0 +1,41 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv*/
+venv/
+.mypy_cache/
+.ruff_cache/
+.deepeval/
+node_modules/
+wandb/
+*.egg-info/
+.env
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+data/interim/*
+!data/interim/.gitkeep
+# Raw and preprocessed physiological copies outside the normal data tree.
+*.pkl
+*.pickle
+*.npy
+*.npz
+*.h5
+*.hdf5
+*.mat
+*.edf
+*.bdf
+
+# Synthetic smoke logging is not a scientific training run.
+results/tensorboard_upgrade/smoke_events/
+
+# Preserve real runs/results/checkpoints/events/figures for research audit.
+*.pyc
+*.pyo
+*.tmp
+*.temp
+*.swp
+*.swo
+.DS_Store
+Thumbs.db

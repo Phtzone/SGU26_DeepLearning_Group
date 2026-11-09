@@ -1,0 +1,23 @@
+# Local WESAD copies outside Projects; never publish the raw dataset.
+/WESAD/
+/WESAD.zip
+/.venv_new/
+/.venv/
+/.venv-*/
+
+# Credentials and developer machine state.
+**/.env
+**/.env.*
+!**/.env.example
+**/.netrc
+**/_netrc
+**/wandb_api_key
+**/credentials.json
+**/secrets.json
+**/id_rsa
+**/id_ed25519
+**/*.pem
+**/*.p12
+**/*.pfx
+
+# Research outputs are intentionally NOT ignored here.

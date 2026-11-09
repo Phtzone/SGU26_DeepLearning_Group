@@ -1,0 +1,10 @@
+# Preserve exact bytes for finalized evidence, source snapshots and registry
+# hashes. In particular, do not apply Windows autocrlf or external LFS filters.
+* -text -filter
+*.pt binary -filter
+*.pth binary -filter
+*.ckpt binary -filter
+*.safetensors binary -filter
+*.png binary -filter
+*.zip binary -filter
+events.out.tfevents.* binary -filter
