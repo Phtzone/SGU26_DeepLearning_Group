@@ -1,0 +1,2 @@
+# Optional local TensorBoard backend. TensorFlow is not required.
+tensorboard>=2.21,<2.22
