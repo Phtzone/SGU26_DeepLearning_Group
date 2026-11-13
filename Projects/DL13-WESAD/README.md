@@ -1,5 +1,7 @@
 # DL13-WESAD — Nhận diện trạng thái stress từ tín hiệu sinh lý
 
+Nhật ký làm việc và thí nghiệm: mở [sổ Excel](experiments/journal/research_journal.xlsx) và [hướng dẫn ghi nhật ký, debug, log, nơi chạy tiếp](experiments/journal/README.md). Sổ đã có dòng E1 tổng hợp từ artifacts; các lần làm tiếp cần bổ sung ngày thực tế, GROUP_ID và liên kết minh chứng.
+
 Dự án sử dụng PyTorch để phân loại ba trạng thái **baseline, stress và amusement** từ tín hiệu cảm biến cổ tay WESAD. Mục tiêu là đánh giá khả năng tổng quát hóa sang người chưa xuất hiện trong huấn luyện, đồng thời xây dựng quy trình thực nghiệm có thể truy xuất từ cấu hình, split, logs đến dự đoán. TensorBoard trình bày diễn biến huấn luyện; dữ liệu gốc của kết quả vẫn là các CSV/JSON và checkpoints cục bộ.
 
 ## 1. Mục tiêu nghiên cứu và tiến độ
