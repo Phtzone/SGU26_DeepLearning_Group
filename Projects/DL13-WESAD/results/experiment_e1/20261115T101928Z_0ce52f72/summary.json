@@ -1,0 +1,96 @@
+{
+  "status": "completed",
+  "completed_folds": 5,
+  "expected_folds": 5,
+  "missing_folds": [],
+  "group_id": "20261115T101928Z_0ce52f72",
+  "manifest_checksum": "239949dfebabd802091d14a4494d2216aee9809b0e2993dacdbdfbcdc7133f2c",
+  "per_seed": {
+    "42": {
+      "fold_level": {
+        "macro_f1": {
+          "mean": 0.4636179324783942,
+          "std": 0.10608204594053418,
+          "n": 5
+        },
+        "balanced_accuracy": {
+          "mean": 0.4672980280006075,
+          "std": 0.09915823459159055,
+          "n": 5
+        },
+        "accuracy": {
+          "mean": 0.5227426210438685,
+          "std": 0.12024521388829086,
+          "n": 5
+        }
+      },
+      "subject_level": {
+        "macro_f1": {
+          "mean": 0.42420334395166537,
+          "std": 0.2106417079097912,
+          "n": 15
+        },
+        "balanced_accuracy": {
+          "mean": 0.4664466928120811,
+          "std": 0.20372118329665845,
+          "n": 15
+        },
+        "accuracy": {
+          "mean": 0.5221371708894563,
+          "std": 0.18898379595187584,
+          "n": 15
+        }
+      },
+      "pooled_oof": {
+        "macro_f1": 0.4622693865788796,
+        "balanced_accuracy": 0.4653789687526179,
+        "accuracy": 0.522003745318352,
+        "precision_per_class": [
+          0.663147792706334,
+          0.5070422535211268,
+          0.21978021978021978
+        ],
+        "recall_per_class": [
+          0.6008695652173913,
+          0.50625,
+          0.28901734104046245
+        ],
+        "f1_per_class": [
+          0.6304744525547445,
+          0.506645817044566,
+          0.24968789013732834
+        ],
+        "support": [
+          1150,
+          640,
+          346
+        ],
+        "confusion_matrix": [
+          [
+            691,
+            210,
+            249
+          ],
+          [
+            210,
+            324,
+            106
+          ],
+          [
+            141,
+            105,
+            100
+          ]
+        ],
+        "label_order": [
+          "baseline",
+          "stress",
+          "amusement"
+        ],
+        "absent_classes": []
+      },
+      "oof_windows": 2136,
+      "training_duration_seconds": 547.8970473000008
+    }
+  }
+}

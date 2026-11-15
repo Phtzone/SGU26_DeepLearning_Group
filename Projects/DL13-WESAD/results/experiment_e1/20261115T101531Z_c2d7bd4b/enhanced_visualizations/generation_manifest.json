@@ -1,0 +1,2954 @@
+{
+  "status": "completed",
+  "group_id": "20261115T101531Z_c2d7bd4b",
+  "style_version": "scientific-v2",
+  "generated_at": "2026-11-15T10:23:12.224508+00:00",
+  "source_hashes": {
+    "runs/experiment_e1/20261115T101531Z_c2d7bd4b/experiment_manifest.json": "44e1372b900e92c83fa1445be17ced4f2c669cccc0fbf022ecd77eb33919ab8d",
+    "runs/experiment_e1/20261115T101531Z_c2d7bd4b/seed_42/fold_01/checkpoints/last.pt": "f1d488ab8d55df2801577347e96bc3da60cb1fc9558a55ec5ee8e0aaeae32963",
+    "runs/experiment_e1/20261115T101531Z_c2d7bd4b/seed_42/fold_01/logs/epochs.csv": "57b90e09397b80d1a15893e845e8a982614428acc8463afd727460be2d962636",
+    "runs/experiment_e1/20261115T101531Z_c2d7bd4b/seed_42/fold_01/logs/iterations.csv": "c47d4555686f7235b4b21b60f5bba29ded578558a9999f5b518f78b06ba22412",
+    "runs/experiment_e1/20261115T101531Z_c2d7bd4b/seed_42/fold_01/logs/validation.csv": "f74f674389606036d76d316be68fe352ec5244a4a4863aa428452bd7ffa9bca9",
+    "runs/experiment_e1/20261115T101531Z_c2d7bd4b/seed_42/fold_01/metadata.json": "fb489a6375ed005871dcd112aa47c651da033d993cae9c24af98357654ac1f8e",
+    "runs/experiment_e1/20261115T101531Z_c2d7bd4b/seed_42/fold_01/metrics/predictions.csv": "a6b9f8a6070510d0c96e595d2df02562f807d1ac70aa46d885ed476cc542c7f5",
+    "runs/experiment_e1/20261115T101531Z_c2d7bd4b/seed_42/fold_01/metrics/test.json": "5ad872e57077e9cba824e324f37c98ff98e74bb07a6eda526270c8cbe12dfbfe",
+    "runs/experiment_e1/20261115T101531Z_c2d7bd4b/seed_42/fold_02/checkpoints/last.pt": "4769177a412ff2aa8c16edfff3bb37cfea3179bb2694243184c545374e374b98",
+    "runs/experiment_e1/20261115T101531Z_c2d7bd4b/seed_42/fold_02/logs/epochs.csv": "00e2df1b398dea4d36e04601411e4639d44fffb9aac0531cfa97e0ff6d148311",
+    "runs/experiment_e1/20261115T101531Z_c2d7bd4b/seed_42/fold_02/logs/iterations.csv": "aabd45c1c983151b3e01e3e51b586a7c94e38ae2cc756eab1232cc3aebbb8d58",
+    "runs/experiment_e1/20261115T101531Z_c2d7bd4b/seed_42/fold_02/logs/validation.csv": "379f75a1815aba0a51745dddd5515e83a93c8760ad3b34f803d09c9d09a10c8d",
+    "runs/experiment_e1/20261115T101531Z_c2d7bd4b/seed_42/fold_02/metadata.json": "4f456994bee862a807ba68d60234bfd92af460728ba33b9b7012c564a60aedc7",
+    "runs/experiment_e1/20261115T101531Z_c2d7bd4b/seed_42/fold_02/metrics/predictions.csv": "07e0f5729e692500425d4e7ef84ae22a29d49f8408b0c831b7426fcf482c2700",
+    "runs/experiment_e1/20261115T101531Z_c2d7bd4b/seed_42/fold_02/metrics/test.json": "5dc991c100aa184d8f61b396e22a8657a704798dbb1ea1431a9e7c369ab2443e",
+    "runs/experiment_e1/20261115T101531Z_c2d7bd4b/seed_42/fold_03/checkpoints/last.pt": "1488c1f9876ce52f9022748ff0ba7985aacf55550e00f2d3a4b7ca29acd9b92e",
+    "runs/experiment_e1/20261115T101531Z_c2d7bd4b/seed_42/fold_03/logs/epochs.csv": "00b642a06e1ca02e7cac9b3d41d42e0363cb07f55370f181b8ec57e9c219cd68",
+    "runs/experiment_e1/20261115T101531Z_c2d7bd4b/seed_42/fold_03/logs/iterations.csv": "d40289423df8b651341ac0a7b2f456eba486fa7b70785a0d07531544dbd40b1d",
+    "runs/experiment_e1/20261115T101531Z_c2d7bd4b/seed_42/fold_03/logs/validation.csv": "15c59e9917fdd008a142cbffde086c69a609bc128a4667736ea21dfafa3c40bf",
+    "runs/experiment_e1/20261115T101531Z_c2d7bd4b/seed_42/fold_03/metadata.json": "965d2b3becbb3f0ecfd295190103a31e87be79dfcf554e7e91f1f8a4e9bfd45e",
+    "runs/experiment_e1/20261115T101531Z_c2d7bd4b/seed_42/fold_03/metrics/predictions.csv": "9aea08ebbb8a80b858d84e7dd060299b21baf7cb65387109e4729eb932d460f4",
+    "runs/experiment_e1/20261115T101531Z_c2d7bd4b/seed_42/fold_03/metrics/test.json": "94d6b5f948509cfc10f19f53e353ffad9f229d80a557a6a278d740bb82bcba98",
+    "runs/experiment_e1/20261115T101531Z_c2d7bd4b/seed_42/fold_04/checkpoints/last.pt": "f8e46852d7a6fcc48fada3aa9a20dc93532a9e8f209cb6309fac6b7d134050b9",
+    "runs/experiment_e1/20261115T101531Z_c2d7bd4b/seed_42/fold_04/logs/epochs.csv": "8303788264d1179e016efe577fc71625a122ebe8b0fcd44767e9fee02d898458",
+    "runs/experiment_e1/20261115T101531Z_c2d7bd4b/seed_42/fold_04/logs/iterations.csv": "579531d4a671f4e816ff4956ab55c4e44039a1919fea115129b2d4752449cdb9",
+    "runs/experiment_e1/20261115T101531Z_c2d7bd4b/seed_42/fold_04/logs/validation.csv": "53106c3dc35597faad514701b04e8fee74e14b3b5f086140db1765fdf620dbb4",
+    "runs/experiment_e1/20261115T101531Z_c2d7bd4b/seed_42/fold_04/metadata.json": "c0d1224fcb786c0d77347fbe95f8968b3319414117efc981f83bcbfb0c06c3e0",
+    "runs/experiment_e1/20261115T101531Z_c2d7bd4b/seed_42/fold_04/metrics/predictions.csv": "4ef5b6018467413519981f7e33e991d60d1617fa17826fd6117c9a0c2b27ae54",
+    "runs/experiment_e1/20261115T101531Z_c2d7bd4b/seed_42/fold_04/metrics/test.json": "a6450096703bbc7cbc5b3214c38438ea9177ab2e40dd42369b13fccdc37c62f7",
+    "runs/experiment_e1/20261115T101531Z_c2d7bd4b/seed_42/fold_05/checkpoints/last.pt": "be9932f9517ab2772c116b3ca58a6085b9238318f600283c7cd6b387bff769c7",
+    "runs/experiment_e1/20261115T101531Z_c2d7bd4b/seed_42/fold_05/logs/epochs.csv": "fa2572103c3f25a971af527a344b8b99d3d6236131418e9ec40f448bb1edaa0c",
+    "runs/experiment_e1/20261115T101531Z_c2d7bd4b/seed_42/fold_05/logs/iterations.csv": "a0ca8e40b34cce1f2f67288f306889fa99201e94746bd3578af75bbe1cfeb0b7",
+    "runs/experiment_e1/20261115T101531Z_c2d7bd4b/seed_42/fold_05/logs/validation.csv": "163bc6c8f4d74de268a68626e4a630ce9c86e1d4bd5d4d8b85cb91a07472691a",
+    "runs/experiment_e1/20261115T101531Z_c2d7bd4b/seed_42/fold_05/metadata.json": "6c89fef1f11031f3b763250421d69e0d586f8f5dd98e6e4494e75eb5d05bfbde",
+    "runs/experiment_e1/20261115T101531Z_c2d7bd4b/seed_42/fold_05/metrics/predictions.csv": "b01b146561bc5f4194bcd93994bb490eba3c4cafdf3bdfd167954daa8626f5e2",
+    "runs/experiment_e1/20261115T101531Z_c2d7bd4b/seed_42/fold_05/metrics/test.json": "1e3564710869e8de883c108b9208cd650902e7497b011a4fe916eabe346dff18",
+    "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\processed\\c369cd27d24abb09\\S10\\metadata.json": "eb8aab9a559bb5417f9815615c019b3123569c49e88d53c7a9b3e76177af1a07",
+    "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\processed\\c369cd27d24abb09\\S10\\windows.csv": "a3bedbbf4eae48c866f7713ea21b0fd7d18bb4969d168000cd6f8ba6b20ec093",
+    "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\processed\\c369cd27d24abb09\\S10\\windows.npy": "d99f7654ee0dd535c7a494f6d80508aac7cfda03cdf84aa0cba5fc70edaf5e27",
+    "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\processed\\c369cd27d24abb09\\S11\\metadata.json": "d428b44f61e7028b0a53cd26911390dc4e63500a4b8555eb7808d6ab360414cc",
+    "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\processed\\c369cd27d24abb09\\S11\\windows.csv": "e7eb1014c257f81c1e68e5261b39af7b84348579a052bec48f3708aa86d6bfbf",
+    "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\processed\\c369cd27d24abb09\\S11\\windows.npy": "70371f6d288d7e9733f733a88809b52c93f1d7a1c860b84e14199bcad3d461af",
+    "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\processed\\c369cd27d24abb09\\S13\\metadata.json": "e4c2cf9251428d2e767540adbb84d6e3af08866a3e622da53902a333ae417add",
+    "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\processed\\c369cd27d24abb09\\S13\\windows.csv": "5a8de7ee3b7d29ca1982e0552622b208349b4128d2c03a8fcaf142148cab8da1",
+    "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\processed\\c369cd27d24abb09\\S13\\windows.npy": "b3964b83516c82214d20ecffae0dc9f7f165797321271cf7b2d99b9637288dcc",
+    "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\processed\\c369cd27d24abb09\\S14\\metadata.json": "e57cf8bf69a41a0a687bbac913a61c6780ba22de44330f4104abe9f9cffc73a3",
+    "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\processed\\c369cd27d24abb09\\S14\\windows.csv": "910f1c907b1f8e927531969a3a570e74db991e9f505413c9a52a0d87e937f260",
+    "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\processed\\c369cd27d24abb09\\S14\\windows.npy": "cb9843e2473d3d8891e91d29fc47b8b492a7a911a6df2b42e3cd0be5a1ced5b3",
+    "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\processed\\c369cd27d24abb09\\S15\\metadata.json": "fb0f5b6204e4b38d21a26d7e8b55de105b5d5f68cb4846178ec4c276c1060a2a",
+    "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\processed\\c369cd27d24abb09\\S15\\windows.csv": "10a4b6fd2d04dfcfd216b67d90c0fa8e3a24886d84b999003b4fbf0702b6add5",
+    "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\processed\\c369cd27d24abb09\\S15\\windows.npy": "f0e02b2dbd2ffd29f657db047b3ab919c9a83cba0637440cb2412b8be5c02015",
+    "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\processed\\c369cd27d24abb09\\S16\\metadata.json": "a44afcfbe29610b7724866bd1fe6fdc1d72d2752759cc14f9ef35fe431d68ef7",
+    "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\processed\\c369cd27d24abb09\\S16\\windows.csv": "e54d8086de918894f39c0ae91186df95eb9fc5261da6485b0830e354a3ee261e",
+    "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\processed\\c369cd27d24abb09\\S16\\windows.npy": "f572d453a0557a4f98943bb196052a434da1ddc29ca366b3aa292a1692344d7a",
+    "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\processed\\c369cd27d24abb09\\S17\\metadata.json": "5d0925e71877990743f80993ce26c27b858a3f157efca54be04aa9e500ba7670",
+    "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\processed\\c369cd27d24abb09\\S17\\windows.csv": "467e30e61c1e182f8b0e3475380505c6e74143c1ae7bb38ab000e78970f029f3",
+    "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\processed\\c369cd27d24abb09\\S17\\windows.npy": "9bacf0ed24f642b187539190118c652f75e07b4cc1ce59e3b8852e960dfcc8f6",
+    "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\processed\\c369cd27d24abb09\\S2\\metadata.json": "da66708fec2c8ffda9be52fb99b88af24e65f59b1f7487ccd5a6d9148119109d",
+    "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\processed\\c369cd27d24abb09\\S2\\windows.csv": "03c094bb974fe356adb866fdad21ba79412e076bb5450feb1cba2ce63f44dd1e",
+    "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\processed\\c369cd27d24abb09\\S2\\windows.npy": "f71ab245ce84ff590684072018d2a4eac2d4585126a0ca51228ac5cea2bf13c3",
+    "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\processed\\c369cd27d24abb09\\S3\\metadata.json": "774ebe4cb88ea1473851c089952a09809f9197bf2f94064b70d83204074daaee",
+    "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\processed\\c369cd27d24abb09\\S3\\windows.csv": "2a9b187c66a2e479bba3bf05a44b75865d3a474179a4a1395beffbae6c9cf657",
+    "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\processed\\c369cd27d24abb09\\S3\\windows.npy": "6204daf69b782de41ca5f027d690d8d9053e4dec0b078826bd0bf645521bad2f",
+    "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\processed\\c369cd27d24abb09\\S4\\metadata.json": "1a82c88161a766e55ed3cb71e1e67363c8057601899eda4b01010d6342ef56cc",
+    "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\processed\\c369cd27d24abb09\\S4\\windows.csv": "eeae191ed439b06844ea66700ff58ae67cb57b9f31f4317ed9d406d6f743db3a",
+    "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\processed\\c369cd27d24abb09\\S4\\windows.npy": "e5841f54be9d2ae48d6d96c594cc03458500d8be1a52927bf2e34fb23e7ea490",
+    "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\processed\\c369cd27d24abb09\\S5\\metadata.json": "286af3466abd277a9349f08850c3642d1aae6c330aabf3b916a8c5da11a9d76a",
+    "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\processed\\c369cd27d24abb09\\S5\\windows.csv": "c8456320172fa3768ac37ba741762e97076fc534570ba1f5e7799c859b439eef",
+    "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\processed\\c369cd27d24abb09\\S5\\windows.npy": "68b17fac3ea7f810d395aefcea66ad3c4f0a55340581a546c584582ef9c893f1",
+    "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\processed\\c369cd27d24abb09\\S6\\metadata.json": "90d6203f90b6135d9ec07d7961a99a9706b2b3b34adf87b60533c49bdd29b4c9",
+    "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\processed\\c369cd27d24abb09\\S6\\windows.csv": "90b9a43601e40d9555892427d44f7757de5689a0d967595970f4a0bf6e507580",
+    "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\processed\\c369cd27d24abb09\\S6\\windows.npy": "aa8f1bcd550ab60a02ad50aa13e3a6a8e6c927322c57dfe295101515b38fab93",
+    "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\processed\\c369cd27d24abb09\\S7\\metadata.json": "75cc75345c4b2940ac654eabb3dc74ca9b581d1b3633a4bf7ef46c9501b30229",
+    "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\processed\\c369cd27d24abb09\\S7\\windows.csv": "f20d65cb7f2b29537ddd4aa507c6173be2e88f273c7ad0c5c91affa1d7499131",
+    "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\processed\\c369cd27d24abb09\\S7\\windows.npy": "a28c05025481aff42c3aceb090f895fb8abc469783ae79c5d51fb6e68f74d512",
+    "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\processed\\c369cd27d24abb09\\S8\\metadata.json": "6c97c6fb6319d1b23aec20bed6b799700527a945b30febd03fb7a8159587c3ab",
+    "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\processed\\c369cd27d24abb09\\S8\\windows.csv": "0cf2a9b523965d837f73fc69712a639c936dc05a05b4ffcb701f0028d2ac0430",
+    "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\processed\\c369cd27d24abb09\\S8\\windows.npy": "414e73e3049d6b7afd5a175a64535a30618684a98dfe5546d0a655ee44ddf433",
+    "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\processed\\c369cd27d24abb09\\S9\\metadata.json": "9b460f9ad189f0472766e1ddc771f19196b9bee9c2afc93dee3d8649a7cc598d",
+    "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\processed\\c369cd27d24abb09\\S9\\windows.csv": "932d07156adb0dc4de7b6c053b7bef7b4a58984e1c5e2d7775e27c81f7429ba0",
+    "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\processed\\c369cd27d24abb09\\S9\\windows.npy": "97493b383077e2ed26da186d13447139cef0505aab7cef23231a6ad15eb62ab0",
+    "src/evaluation/enhanced_visualization.py": "e92189b9cb885fc3541fe2371bee6c760aa9059d42e4d6fd3f95e187ef09a17a"
+  },
+  "images": [
+    {
+      "figure": "training/seed_42/fold_01/loss",
+      "title": "Seed 42 | Fold 01 | Train vs validation loss",
+      "files": [
+        {
+          "path": "training/seed_42/fold_01/loss.png",
+          "sha256": "207444b0370515d0b02ef5dc74169fdc041a09d900c5e7079c7fec097f82c2f4"
+        },
+        {
+          "path": "training/seed_42/fold_01/loss.svg",
+          "sha256": "82cdc2830b9aae9e5f5aacc1e25084d4aad60ffa50efa19132a66fc7b3ab1cf2"
+        }
+      ]
+    },
+    {
+      "figure": "training/seed_42/fold_01/accuracy",
+      "title": "Seed 42 | Fold 01 | Train vs validation accuracy",
+      "files": [
+        {
+          "path": "training/seed_42/fold_01/accuracy.png",
+          "sha256": "bb32309a16c3a9256c4c026aecdcc576e4c38913c71c4056c2da864edd81a024"
+        },
+        {
+          "path": "training/seed_42/fold_01/accuracy.svg",
+          "sha256": "57f9c141b93dcd75197f08f1ef6a92271309ccf43d80b85b6889056f5a4af946"
+        }
+      ]
+    },
+    {
+      "figure": "training/seed_42/fold_01/macro_f1",
+      "title": "Seed 42 | Fold 01 | Train vs validation macro f1",
+      "files": [
+        {
+          "path": "training/seed_42/fold_01/macro_f1.png",
+          "sha256": "89fdb1c1f57c1f5af0bf1e44efdbdde27c0af330b7633f4689a3b6db0b63af73"
+        },
+        {
+          "path": "training/seed_42/fold_01/macro_f1.svg",
+          "sha256": "4ddc020794e52a9494374e4a8dc2d2e2b8efed5a2ef6666451df06823165164f"
+        }
+      ]
+    },
+    {
+      "figure": "training/seed_42/fold_01/balanced_accuracy",
+      "title": "Seed 42 | Fold 01 | Train vs validation balanced accuracy",
+      "files": [
+        {
+          "path": "training/seed_42/fold_01/balanced_accuracy.png",
+          "sha256": "c76f97206623398f5a98e27d74a1d03d30855767aef2442f5ec3114898f829ac"
+        },
+        {
+          "path": "training/seed_42/fold_01/balanced_accuracy.svg",
+          "sha256": "e2b886bde5f90e8880b93970640c4a864d81b360953ab640ec224455d34cdba7"
+        }
+      ]
+    },
+    {
+      "figure": "training/seed_42/fold_01/batch_loss",
+      "title": "Seed 42 | Fold 01 | batch loss",
+      "files": [
+        {
+          "path": "training/seed_42/fold_01/batch_loss.png",
+          "sha256": "e894ffaa3e13050ae890edc0592c589c3ff739ae7da1f5829f08750012f43ef5"
+        },
+        {
+          "path": "training/seed_42/fold_01/batch_loss.svg",
+          "sha256": "1d0613ef8c82943cdc73753c77b6fc870642efc908256af371b9832b17ca2f9c"
+        }
+      ]
+    },
+    {
+      "figure": "training/seed_42/fold_01/gradient_norm",
+      "title": "Seed 42 | Fold 01 | gradient norm",
+      "files": [
+        {
+          "path": "training/seed_42/fold_01/gradient_norm.png",
+          "sha256": "451159a8375a1eb9f81996f6edcc85f376ee2104fd9a063c8a344e4c5fd1bceb"
+        },
+        {
+          "path": "training/seed_42/fold_01/gradient_norm.svg",
+          "sha256": "293e9f7b615c51657f2bcc7b79296671bed5c1497692b169f2506a4fd103bbb2"
+        }
+      ]
+    },
+    {
+      "figure": "training/seed_42/fold_01/learning_rate",
+      "title": "Seed 42 | Fold 01 | Learning rate",
+      "files": [
+        {
+          "path": "training/seed_42/fold_01/learning_rate.png",
+          "sha256": "43381f2720a509eab4f4203f677435c2cc5c1e499cf2bf1937ce71f31a4763ac"
+        },
+        {
+          "path": "training/seed_42/fold_01/learning_rate.svg",
+          "sha256": "f8205f0aa00b7b327aca6bdb259970be8618fb3a0c59ab25ed1d4e4319ac4207"
+        }
+      ]
+    },
+    {
+      "figure": "training/seed_42/fold_01/macro_f1_gap",
+      "title": "Seed 42 | Fold 01 | Train-validation gap",
+      "files": [
+        {
+          "path": "training/seed_42/fold_01/macro_f1_gap.png",
+          "sha256": "b31a6271996bc7ebf86557c4750bfeb98e262a2f8013b776263222d0ee9ce6ae"
+        },
+        {
+          "path": "training/seed_42/fold_01/macro_f1_gap.svg",
+          "sha256": "628fa7f93a3938e67d99c6a09ef6ebd7c23596466ad3461e25f829d8d4be87b2"
+        }
+      ]
+    },
+    {
+      "figure": "training/seed_42/fold_01/epoch_duration",
+      "title": "Seed 42 | Fold 01 | Epoch duration",
+      "files": [
+        {
+          "path": "training/seed_42/fold_01/epoch_duration.png",
+          "sha256": "eef4ac77a45eaee9ab1c4a7b13fd47f9c270adb95936cd88ae43347c2a98e0c4"
+        },
+        {
+          "path": "training/seed_42/fold_01/epoch_duration.svg",
+          "sha256": "281fdb00f8822c81426caa71bd87c8f7a83e9f74d999fb452eba35f0672a32a6"
+        }
+      ]
+    },
+    {
+      "figure": "confusion_matrices/seed_42/fold_01/raw",
+      "title": "Seed 42 | Fold 01 | Test confusion matrix",
+      "files": [
+        {
+          "path": "confusion_matrices/seed_42/fold_01/raw.png",
+          "sha256": "c5bf40d17d69da8f9d2a34a68a6ee4076d070e534d1ad791f272a38b215f1de9"
+        },
+        {
+          "path": "confusion_matrices/seed_42/fold_01/raw.svg",
+          "sha256": "ecdd9360a812edfae96026ae5e8b43141b999f09013b95d580d829a7cd158dcf"
+        }
+      ]
+    },
+    {
+      "figure": "confusion_matrices/seed_42/fold_01/normalized",
+      "title": "Seed 42 | Fold 01 | Test row-normalized confusion matrix",
+      "files": [
+        {
+          "path": "confusion_matrices/seed_42/fold_01/normalized.png",
+          "sha256": "05a7b443c5f03d2a080aa69e0325bafaf120406654fcd318e938ab19e45165ea"
+        },
+        {
+          "path": "confusion_matrices/seed_42/fold_01/normalized.svg",
+          "sha256": "3a3c60b9562cc7f753bd9a4e73bd2641158a498ecbaf20c4003dc0bcce88ca17"
+        }
+      ]
+    },
+    {
+      "figure": "class_metrics/seed_42/fold_01/precision_recall_f1",
+      "title": "Seed 42 | Fold 01 | Test | Per-class performance",
+      "files": [
+        {
+          "path": "class_metrics/seed_42/fold_01/precision_recall_f1.png",
+          "sha256": "2b0d4d82e97ec0c0dd9f516f86d7dd6932cb844507af45bfa5c30bd145587278"
+        },
+        {
+          "path": "class_metrics/seed_42/fold_01/precision_recall_f1.svg",
+          "sha256": "24c864b47ee94196d9622f9e586232195bad155c0d1d3cce4941fc920267de29"
+        }
+      ]
+    },
+    {
+      "figure": "class_metrics/seed_42/fold_01/label_distribution",
+      "title": "Seed 42 | Fold 01 | Test | Label distribution",
+      "files": [
+        {
+          "path": "class_metrics/seed_42/fold_01/label_distribution.png",
+          "sha256": "3fc49aa92ec63734826bea96952361fa51192bce127f7572b97f60b5f82b7fd7"
+        },
+        {
+          "path": "class_metrics/seed_42/fold_01/label_distribution.svg",
+          "sha256": "70a38abc54f992f73420289cad5760087c0cd0e12134e768ea46b9820e5ca26c"
+        }
+      ]
+    },
+    {
+      "figure": "training/seed_42/fold_02/loss",
+      "title": "Seed 42 | Fold 02 | Train vs validation loss",
+      "files": [
+        {
+          "path": "training/seed_42/fold_02/loss.png",
+          "sha256": "e4157f97c0ba1f1e6501d14f684f4e3e22d52955dff2433e81a7f498f6387a0d"
+        },
+        {
+          "path": "training/seed_42/fold_02/loss.svg",
+          "sha256": "9373786136d7a5ad6ad7755daed74e698791c6eaa36b309e1971811135ee307e"
+        }
+      ]
+    },
+    {
+      "figure": "training/seed_42/fold_02/accuracy",
+      "title": "Seed 42 | Fold 02 | Train vs validation accuracy",
+      "files": [
+        {
+          "path": "training/seed_42/fold_02/accuracy.png",
+          "sha256": "acbbccff409703ca955afe285ec915ce03b15392d42f923377ae9dcbf7199c69"
+        },
+        {
+          "path": "training/seed_42/fold_02/accuracy.svg",
+          "sha256": "d2a1bd88734de3d9d2fe86430391c5e2c34dc6bd8c8888367592a5e539b522f7"
+        }
+      ]
+    },
+    {
+      "figure": "training/seed_42/fold_02/macro_f1",
+      "title": "Seed 42 | Fold 02 | Train vs validation macro f1",
+      "files": [
+        {
+          "path": "training/seed_42/fold_02/macro_f1.png",
+          "sha256": "0c59b927d5dbbc6a2699134a3a230baa71d5cee06fd0b56c9ea421dd429996b2"
+        },
+        {
+          "path": "training/seed_42/fold_02/macro_f1.svg",
+          "sha256": "e01e3be3afa2a05e5edd0d674ccb057dac74a3004ae0fb63b61c95eca9ab843c"
+        }
+      ]
+    },
+    {
+      "figure": "training/seed_42/fold_02/balanced_accuracy",
+      "title": "Seed 42 | Fold 02 | Train vs validation balanced accuracy",
+      "files": [
+        {
+          "path": "training/seed_42/fold_02/balanced_accuracy.png",
+          "sha256": "073efc45b11edf383d32feb5559d101eb32ba3d6f421302f015d41b1a8a9b45b"
+        },
+        {
+          "path": "training/seed_42/fold_02/balanced_accuracy.svg",
+          "sha256": "1ee82645d54eec7d1aeec8bac9cd7022268e72c4b862f7f34c5fa828779b006e"
+        }
+      ]
+    },
+    {
+      "figure": "training/seed_42/fold_02/batch_loss",
+      "title": "Seed 42 | Fold 02 | batch loss",
+      "files": [
+        {
+          "path": "training/seed_42/fold_02/batch_loss.png",
+          "sha256": "cc7ae8fa698b0e17d024575cf67980f81b2cef594037fe9114be83eabec75706"
+        },
+        {
+          "path": "training/seed_42/fold_02/batch_loss.svg",
+          "sha256": "0bf14bb866e438654cedd223f2c21f3948f18a59458c72408d2addad46dcaef9"
+        }
+      ]
+    },
+    {
+      "figure": "training/seed_42/fold_02/gradient_norm",
+      "title": "Seed 42 | Fold 02 | gradient norm",
+      "files": [
+        {
+          "path": "training/seed_42/fold_02/gradient_norm.png",
+          "sha256": "9fc0cf7916ee727764e90ed0ea928fdbc4781e371d064347803f59e6261f0eca"
+        },
+        {
+          "path": "training/seed_42/fold_02/gradient_norm.svg",
+          "sha256": "4d9fd8d465883dd9b75a03318c16ce1550eac8d68f69ad333a72b699f9a2c035"
+        }
+      ]
+    },
+    {
+      "figure": "training/seed_42/fold_02/learning_rate",
+      "title": "Seed 42 | Fold 02 | Learning rate",
+      "files": [
+        {
+          "path": "training/seed_42/fold_02/learning_rate.png",
+          "sha256": "5eba983a51b286b1e7c53a51cbdea84bcb095ce1af0869b6994bd327fb02bfdc"
+        },
+        {
+          "path": "training/seed_42/fold_02/learning_rate.svg",
+          "sha256": "440e2d67f187ca6ee974da9ecf41ce25ffe4c1338bb83774679ec923cce519d0"
+        }
+      ]
+    },
+    {
+      "figure": "training/seed_42/fold_02/macro_f1_gap",
+      "title": "Seed 42 | Fold 02 | Train-validation gap",
+      "files": [
+        {
+          "path": "training/seed_42/fold_02/macro_f1_gap.png",
+          "sha256": "beb613adc70c48fcabb5399377a1b00c6e8f5ee5247e0672088abeabb072c752"
+        },
+        {
+          "path": "training/seed_42/fold_02/macro_f1_gap.svg",
+          "sha256": "2f8957e6c2121a78031c09ccb61f26ca336146200e948b0cc1dd4797d45cf00a"
+        }
+      ]
+    },
+    {
+      "figure": "training/seed_42/fold_02/epoch_duration",
+      "title": "Seed 42 | Fold 02 | Epoch duration",
+      "files": [
+        {
+          "path": "training/seed_42/fold_02/epoch_duration.png",
+          "sha256": "44d322b4f3a00af11e7948f9de88c8b9f7ab0193d0a88280c920069769602123"
+        },
+        {
+          "path": "training/seed_42/fold_02/epoch_duration.svg",
+          "sha256": "35347297f7cb3910d1526f4ff3b90ee64a3bf1eca935a13450c44ac5cfde24fc"
+        }
+      ]
+    },
+    {
+      "figure": "confusion_matrices/seed_42/fold_02/raw",
+      "title": "Seed 42 | Fold 02 | Test confusion matrix",
+      "files": [
+        {
+          "path": "confusion_matrices/seed_42/fold_02/raw.png",
+          "sha256": "ade7d47a9af0fd45c1a52d3b5bd189c99fa439901907533cb999d1e32cd14450"
+        },
+        {
+          "path": "confusion_matrices/seed_42/fold_02/raw.svg",
+          "sha256": "288255bd3c72215b40139d9c02c5eca455b5fc9c05e94b9f367a9927d5187736"
+        }
+      ]
+    },
+    {
+      "figure": "confusion_matrices/seed_42/fold_02/normalized",
+      "title": "Seed 42 | Fold 02 | Test row-normalized confusion matrix",
+      "files": [
+        {
+          "path": "confusion_matrices/seed_42/fold_02/normalized.png",
+          "sha256": "af1474340abe3b144141de4faf6799f4b8be71c46d212db9a32974e25bb549a8"
+        },
+        {
+          "path": "confusion_matrices/seed_42/fold_02/normalized.svg",
+          "sha256": "891e01edc1262a84a59097b82923757ff0b7ba024e71a4719ba7c40aef86db3d"
+        }
+      ]
+    },
+    {
+      "figure": "class_metrics/seed_42/fold_02/precision_recall_f1",
+      "title": "Seed 42 | Fold 02 | Test | Per-class performance",
+      "files": [
+        {
+          "path": "class_metrics/seed_42/fold_02/precision_recall_f1.png",
+          "sha256": "a0a664f3517231ae5201c0a45a1ce3bfcee73ae8b615eca41ddeaae2433cfbf8"
+        },
+        {
+          "path": "class_metrics/seed_42/fold_02/precision_recall_f1.svg",
+          "sha256": "00272053b2b2d1e945e10b80c3a053d1476e5289c7a9fc05c2969f9dda459851"
+        }
+      ]
+    },
+    {
+      "figure": "class_metrics/seed_42/fold_02/label_distribution",
+      "title": "Seed 42 | Fold 02 | Test | Label distribution",
+      "files": [
+        {
+          "path": "class_metrics/seed_42/fold_02/label_distribution.png",
+          "sha256": "eab87b9240800e8458cfcc16bc2993b66bb7a2629e0ce1448284464f89b4a501"
+        },
+        {
+          "path": "class_metrics/seed_42/fold_02/label_distribution.svg",
+          "sha256": "17190ee67f49ffbdf2b41b5a5b4f6a150735369cc4b6e9034730a0954ba6f9bb"
+        }
+      ]
+    },
+    {
+      "figure": "training/seed_42/fold_03/loss",
+      "title": "Seed 42 | Fold 03 | Train vs validation loss",
+      "files": [
+        {
+          "path": "training/seed_42/fold_03/loss.png",
+          "sha256": "4bac96987516f27cce568a9e74484f645958975d111a779cd2110c14777b76bd"
+        },
+        {
+          "path": "training/seed_42/fold_03/loss.svg",
+          "sha256": "31637a59707220ebf2ebf18bcfa3ce0563ef4b45501aa266a2b8084c614916d5"
+        }
+      ]
+    },
+    {
+      "figure": "training/seed_42/fold_03/accuracy",
+      "title": "Seed 42 | Fold 03 | Train vs validation accuracy",
+      "files": [
+        {
+          "path": "training/seed_42/fold_03/accuracy.png",
+          "sha256": "7ba5cca9fe3f0187c28f10ca4babcc03faedd8a6bea260a69e890d9accfd52a1"
+        },
+        {
+          "path": "training/seed_42/fold_03/accuracy.svg",
+          "sha256": "b3b994017511728e76b99365f505f09221eb1a6a9ec2c17de4de710d0a25b27a"
+        }
+      ]
+    },
+    {
+      "figure": "training/seed_42/fold_03/macro_f1",
+      "title": "Seed 42 | Fold 03 | Train vs validation macro f1",
+      "files": [
+        {
+          "path": "training/seed_42/fold_03/macro_f1.png",
+          "sha256": "0e13d16ddb0438d91ee675fd7ca7029e8507032eff88bd134ec67e0765ac32e4"
+        },
+        {
+          "path": "training/seed_42/fold_03/macro_f1.svg",
+          "sha256": "9cec376fc5e0444755a4cad98693168ee346cb93d1ed5167b45eebf4b7a52676"
+        }
+      ]
+    },
+    {
+      "figure": "training/seed_42/fold_03/balanced_accuracy",
+      "title": "Seed 42 | Fold 03 | Train vs validation balanced accuracy",
+      "files": [
+        {
+          "path": "training/seed_42/fold_03/balanced_accuracy.png",
+          "sha256": "66fc4d98bc53e5b140ebdad530095a80244e42a84600673370b682f7d0ac7aee"
+        },
+        {
+          "path": "training/seed_42/fold_03/balanced_accuracy.svg",
+          "sha256": "f99f4bd3ea3211c79291f20b5d531c6569b118db8a29752907410c0a11f1f076"
+        }
+      ]
+    },
+    {
+      "figure": "training/seed_42/fold_03/batch_loss",
+      "title": "Seed 42 | Fold 03 | batch loss",
+      "files": [
+        {
+          "path": "training/seed_42/fold_03/batch_loss.png",
+          "sha256": "1fe79800f1ef15a90a748985d6384fea3f4b6b74407245882871ea1e427f1d84"
+        },
+        {
+          "path": "training/seed_42/fold_03/batch_loss.svg",
+          "sha256": "175bf703b6840426da8fe5197d9fc739fbd8dfb76dc1c6d849d3b3e3afb53ec7"
+        }
+      ]
+    },
+    {
+      "figure": "training/seed_42/fold_03/gradient_norm",
+      "title": "Seed 42 | Fold 03 | gradient norm",
+      "files": [
+        {
+          "path": "training/seed_42/fold_03/gradient_norm.png",
+          "sha256": "11218a3abb5fd5ba7686c6a2b8d1ed737dfbd1955d30caa7c0ad8c36d9d0a2d6"
+        },
+        {
+          "path": "training/seed_42/fold_03/gradient_norm.svg",
+          "sha256": "a0e104007c201e5bd5fcdc882881b7ecbbc1a7cda8975dd2b39eefe478e22f09"
+        }
+      ]
+    },
+    {
+      "figure": "training/seed_42/fold_03/learning_rate",
+      "title": "Seed 42 | Fold 03 | Learning rate",
+      "files": [
+        {
+          "path": "training/seed_42/fold_03/learning_rate.png",
+          "sha256": "cc298b88cfec34701d84da1bce933805d6948e23f23f6d92a9a2310684c11694"
+        },
+        {
+          "path": "training/seed_42/fold_03/learning_rate.svg",
+          "sha256": "77d616ffbb699ea4ec76d5a5acefbd5a84a7676fd3b46ea691f6555047b519e0"
+        }
+      ]
+    },
+    {
+      "figure": "training/seed_42/fold_03/macro_f1_gap",
+      "title": "Seed 42 | Fold 03 | Train-validation gap",
+      "files": [
+        {
+          "path": "training/seed_42/fold_03/macro_f1_gap.png",
+          "sha256": "d7bba2a72eefeb01e86301114ff2eaae2ae970b6bccba8ddc73aabf0cf7c264d"
+        },
+        {
+          "path": "training/seed_42/fold_03/macro_f1_gap.svg",
+          "sha256": "c316ffb63b259c7fa1dd3e97008c46c5bf8532992d8b01fed549616bb096a72b"
+        }
+      ]
+    },
+    {
+      "figure": "training/seed_42/fold_03/epoch_duration",
+      "title": "Seed 42 | Fold 03 | Epoch duration",
+      "files": [
+        {
+          "path": "training/seed_42/fold_03/epoch_duration.png",
+          "sha256": "b6c2c4555e96ad2281f2bd538f65c143adec0b8c4a2b8ad0633c3f6a6341307e"
+        },
+        {
+          "path": "training/seed_42/fold_03/epoch_duration.svg",
+          "sha256": "fe88aa8204de0c696372474677d0d2a4e89bd1fecd0d9c5b3212226dd75307e1"
+        }
+      ]
+    },
+    {
+      "figure": "confusion_matrices/seed_42/fold_03/raw",
+      "title": "Seed 42 | Fold 03 | Test confusion matrix",
+      "files": [
+        {
+          "path": "confusion_matrices/seed_42/fold_03/raw.png",
+          "sha256": "10a477580a912f40e2cac93c159bd633cfb495410f78a7d2bec2a33af6890d32"
+        },
+        {
+          "path": "confusion_matrices/seed_42/fold_03/raw.svg",
+          "sha256": "3fc7055f49f40ace623dc913822f55e5acacc90984f6c3e5d43e5011566676f0"
+        }
+      ]
+    },
+    {
+      "figure": "confusion_matrices/seed_42/fold_03/normalized",
+      "title": "Seed 42 | Fold 03 | Test row-normalized confusion matrix",
+      "files": [
+        {
+          "path": "confusion_matrices/seed_42/fold_03/normalized.png",
+          "sha256": "8816316688e3f49980cf1c416b3f17e2e26e8cc7cfeec243068dd1c9f0e59419"
+        },
+        {
+          "path": "confusion_matrices/seed_42/fold_03/normalized.svg",
+          "sha256": "22c6cfed04d3819ac1758ed89eb77a09baf90bcf45c77ebd5ebbcb7eaf4027aa"
+        }
+      ]
+    },
+    {
+      "figure": "class_metrics/seed_42/fold_03/precision_recall_f1",
+      "title": "Seed 42 | Fold 03 | Test | Per-class performance",
+      "files": [
+        {
+          "path": "class_metrics/seed_42/fold_03/precision_recall_f1.png",
+          "sha256": "a1b0deb9f169fe8c6f1d3b98fe05d775fe3fe96d8097f8da0c841339ff1dcd7e"
+        },
+        {
+          "path": "class_metrics/seed_42/fold_03/precision_recall_f1.svg",
+          "sha256": "9a0c27def1a42d5e227de6b870872488efc00982c01f92903e47036b682584fe"
+        }
+      ]
+    },
+    {
+      "figure": "class_metrics/seed_42/fold_03/label_distribution",
+      "title": "Seed 42 | Fold 03 | Test | Label distribution",
+      "files": [
+        {
+          "path": "class_metrics/seed_42/fold_03/label_distribution.png",
+          "sha256": "28b60e162eca20f3f56974b12bd7605d60c2bf95501314310fa0f095f766c201"
+        },
+        {
+          "path": "class_metrics/seed_42/fold_03/label_distribution.svg",
+          "sha256": "1acb7649d7aedbda5ad7eb6adfee36f1c3ac6d35c633116630aa6ecf43ebd4b7"
+        }
+      ]
+    },
+    {
+      "figure": "training/seed_42/fold_04/loss",
+      "title": "Seed 42 | Fold 04 | Train vs validation loss",
+      "files": [
+        {
+          "path": "training/seed_42/fold_04/loss.png",
+          "sha256": "634acda8bea7760ab194ee5af1b93bcbb3267b21e3963540a3d24033abe28d4f"
+        },
+        {
+          "path": "training/seed_42/fold_04/loss.svg",
+          "sha256": "7da32fc323f5fec543fa0bb5bdebee3981a463b41b948f5dbf9551f16323287a"
+        }
+      ]
+    },
+    {
+      "figure": "training/seed_42/fold_04/accuracy",
+      "title": "Seed 42 | Fold 04 | Train vs validation accuracy",
+      "files": [
+        {
+          "path": "training/seed_42/fold_04/accuracy.png",
+          "sha256": "da7f8272c8176696a19007374b41c077d87b61a1f71c196c7207b9af7fad3ac6"
+        },
+        {
+          "path": "training/seed_42/fold_04/accuracy.svg",
+          "sha256": "fc45b3c8ae5c4e388186e1add569fc05be35a450c04d017a2c2afec4f056ff21"
+        }
+      ]
+    },
+    {
+      "figure": "training/seed_42/fold_04/macro_f1",
+      "title": "Seed 42 | Fold 04 | Train vs validation macro f1",
+      "files": [
+        {
+          "path": "training/seed_42/fold_04/macro_f1.png",
+          "sha256": "d814f334ee5cbcf18035379b324cd3dfea7fd014a4c823e6ccd9c08ec45403aa"
+        },
+        {
+          "path": "training/seed_42/fold_04/macro_f1.svg",
+          "sha256": "0971c832e36d4e7ca3c960c5b92a2160dc95e35e0e13b4e9d3ab2d64aa95b5ee"
+        }
+      ]
+    },
+    {
+      "figure": "training/seed_42/fold_04/balanced_accuracy",
+      "title": "Seed 42 | Fold 04 | Train vs validation balanced accuracy",
+      "files": [
+        {
+          "path": "training/seed_42/fold_04/balanced_accuracy.png",
+          "sha256": "9c3e1ce3f5e707cb875ffb7a23cdc8702375087e86da3289ae3f1bff64fe31e2"
+        },
+        {
+          "path": "training/seed_42/fold_04/balanced_accuracy.svg",
+          "sha256": "adeef19dc3d3413284828b6e1c3d22b7c89c7f5fdb0d801f811b518e5ea6172e"
+        }
+      ]
+    },
+    {
+      "figure": "training/seed_42/fold_04/batch_loss",
+      "title": "Seed 42 | Fold 04 | batch loss",
+      "files": [
+        {
+          "path": "training/seed_42/fold_04/batch_loss.png",
+          "sha256": "94ebd729ec3b29a1d0044a52a671b0150127cf73f8b15b3139601f046e6ed2f2"
+        },
+        {
+          "path": "training/seed_42/fold_04/batch_loss.svg",
+          "sha256": "b451de9fc00c21aa97f3d6b3273be7d89f45f77e6a332e4725ba790dae7a79e6"
+        }
+      ]
+    },
+    {
+      "figure": "training/seed_42/fold_04/gradient_norm",
+      "title": "Seed 42 | Fold 04 | gradient norm",
+      "files": [
+        {
+          "path": "training/seed_42/fold_04/gradient_norm.png",
+          "sha256": "5fff11128b25d2f307a1ae4c79f07d16a8122210f2cfdd1c30bf7b47c51fcb31"
+        },
+        {
+          "path": "training/seed_42/fold_04/gradient_norm.svg",
+          "sha256": "d92cd39c1a8ab8f9a8d1cf63fad332277f4760b772e191d291d11609c5acc701"
+        }
+      ]
+    },
+    {
+      "figure": "training/seed_42/fold_04/learning_rate",
+      "title": "Seed 42 | Fold 04 | Learning rate",
+      "files": [
+        {
+          "path": "training/seed_42/fold_04/learning_rate.png",
+          "sha256": "cb08e79878dd973560a28cd48f7f9ddf7a51f68bdfbf0e85ecfd1a700f306586"
+        },
+        {
+          "path": "training/seed_42/fold_04/learning_rate.svg",
+          "sha256": "fd5932ea33ce2fce43a7fc462b6796f2e8187066167f0d12977d3594acdc4bfc"
+        }
+      ]
+    },
+    {
+      "figure": "training/seed_42/fold_04/macro_f1_gap",
+      "title": "Seed 42 | Fold 04 | Train-validation gap",
+      "files": [
+        {
+          "path": "training/seed_42/fold_04/macro_f1_gap.png",
+          "sha256": "ff797e5796c263e7652cd1cfdbf8eecfe5c2023d9da3cee2683f2cd8e523b9c1"
+        },
+        {
+          "path": "training/seed_42/fold_04/macro_f1_gap.svg",
+          "sha256": "c5dbf0f59f2bbbe569dfda03472ccfab46bd8b606ebc4745cc28fb0761c9b08f"
+        }
+      ]
+    },
+    {
+      "figure": "training/seed_42/fold_04/epoch_duration",
+      "title": "Seed 42 | Fold 04 | Epoch duration",
+      "files": [
+        {
+          "path": "training/seed_42/fold_04/epoch_duration.png",
+          "sha256": "e51bf4bc92aa30a49d891cc5a32a6885c8944a5a5abfdbbe38dcf9e8270fc2e7"
+        },
+        {
+          "path": "training/seed_42/fold_04/epoch_duration.svg",
+          "sha256": "6f0abb78c42cc02345bb5741f1fbea484af241549a45ac6046578cf5ff2c87d2"
+        }
+      ]
+    },
+    {
+      "figure": "confusion_matrices/seed_42/fold_04/raw",
+      "title": "Seed 42 | Fold 04 | Test confusion matrix",
+      "files": [
+        {
+          "path": "confusion_matrices/seed_42/fold_04/raw.png",
+          "sha256": "dfd9aef501be4b1c62ef9a957278199d0063c599afdfdf38b8f07d123697c245"
+        },
+        {
+          "path": "confusion_matrices/seed_42/fold_04/raw.svg",
+          "sha256": "2dfb2b9dfcebc8ba0e5794f86fbeede9dcb4957753dc6254a0745dd5e17a8e7a"
+        }
+      ]
+    },
+    {
+      "figure": "confusion_matrices/seed_42/fold_04/normalized",
+      "title": "Seed 42 | Fold 04 | Test row-normalized confusion matrix",
+      "files": [
+        {
+          "path": "confusion_matrices/seed_42/fold_04/normalized.png",
+          "sha256": "dde2a0b42dc497414cf13abcb6c403ce90254928f2d824b682b8b0319ce02053"
+        },
+        {
+          "path": "confusion_matrices/seed_42/fold_04/normalized.svg",
+          "sha256": "d1589bd1c4ff889837f159821e99fb02ed398d97708604370ff9d0d833d0f44f"
+        }
+      ]
+    },
+    {
+      "figure": "class_metrics/seed_42/fold_04/precision_recall_f1",
+      "title": "Seed 42 | Fold 04 | Test | Per-class performance",
+      "files": [
+        {
+          "path": "class_metrics/seed_42/fold_04/precision_recall_f1.png",
+          "sha256": "d0139c9fffabf8b9dbb960381c37d3b72f0870b71c970a248839e10fc6e5b531"
+        },
+        {
+          "path": "class_metrics/seed_42/fold_04/precision_recall_f1.svg",
+          "sha256": "f42e7ccf00b5eaa5688a5cdba98213a01d55e87ad2637668c251e0fb843fc17f"
+        }
+      ]
+    },
+    {
+      "figure": "class_metrics/seed_42/fold_04/label_distribution",
+      "title": "Seed 42 | Fold 04 | Test | Label distribution",
+      "files": [
+        {
+          "path": "class_metrics/seed_42/fold_04/label_distribution.png",
+          "sha256": "bf67414917cf353f9d798aadece20dd6a4d091be4285778a91b402178dbcbd9f"
+        },
+        {
+          "path": "class_metrics/seed_42/fold_04/label_distribution.svg",
+          "sha256": "209c0ca5e9f3d7e948de13901dd8137fb4f309952f23b8fe6b5cc5bd9ea09caf"
+        }
+      ]
+    },
+    {
+      "figure": "training/seed_42/fold_05/loss",
+      "title": "Seed 42 | Fold 05 | Train vs validation loss",
+      "files": [
+        {
+          "path": "training/seed_42/fold_05/loss.png",
+          "sha256": "ea7635768df2c41628a93e3eb222bf079d9ac450ee91d2a97f9cf1ced5cdb9bf"
+        },
+        {
+          "path": "training/seed_42/fold_05/loss.svg",
+          "sha256": "ec1262659b392291259ff51ab6d4352ab97ff24bd0e0fc970f67aaba3ee61889"
+        }
+      ]
+    },
+    {
+      "figure": "training/seed_42/fold_05/accuracy",
+      "title": "Seed 42 | Fold 05 | Train vs validation accuracy",
+      "files": [
+        {
+          "path": "training/seed_42/fold_05/accuracy.png",
+          "sha256": "93ae63cb6855aa2568682b229be3ef1b1fbb47ac422923fd1d747d211776a297"
+        },
+        {
+          "path": "training/seed_42/fold_05/accuracy.svg",
+          "sha256": "9eaeb9323f3c2931f40e607a6156b139cc93ce83f29e3d05d88428a2c38ce87c"
+        }
+      ]
+    },
+    {
+      "figure": "training/seed_42/fold_05/macro_f1",
+      "title": "Seed 42 | Fold 05 | Train vs validation macro f1",
+      "files": [
+        {
+          "path": "training/seed_42/fold_05/macro_f1.png",
+          "sha256": "b4802dada60ce95ff4275739f53b942f060f7b3e4f5b84f96f57dc808d776563"
+        },
+        {
+          "path": "training/seed_42/fold_05/macro_f1.svg",
+          "sha256": "99cdc71d61dc53e70af89f3f6ef7c17383bb48e0fcccc5dd665cbc10838d7e88"
+        }
+      ]
+    },
+    {
+      "figure": "training/seed_42/fold_05/balanced_accuracy",
+      "title": "Seed 42 | Fold 05 | Train vs validation balanced accuracy",
+      "files": [
+        {
+          "path": "training/seed_42/fold_05/balanced_accuracy.png",
+          "sha256": "58569ae1873315790a5675bebee2e43ec3357ffde9e4957b1bcebaa840ada15e"
+        },
+        {
+          "path": "training/seed_42/fold_05/balanced_accuracy.svg",
+          "sha256": "334bc9213667f72f9460706654fc6747fd07b08597cb3278fc6a286521a76221"
+        }
+      ]
+    },
+    {
+      "figure": "training/seed_42/fold_05/batch_loss",
+      "title": "Seed 42 | Fold 05 | batch loss",
+      "files": [
+        {
+          "path": "training/seed_42/fold_05/batch_loss.png",
+          "sha256": "5697aca991c160a1619186efa24ef2d12afde855724c0dc0bb9c5fa9701cc665"
+        },
+        {
+          "path": "training/seed_42/fold_05/batch_loss.svg",
+          "sha256": "21fc4558a56b72486f020c5cf324b5f5838415780dbd462d0f659ca54e53e3d4"
+        }
+      ]
+    },
+    {
+      "figure": "training/seed_42/fold_05/gradient_norm",
+      "title": "Seed 42 | Fold 05 | gradient norm",
+      "files": [
+        {
+          "path": "training/seed_42/fold_05/gradient_norm.png",
+          "sha256": "9b73702e1ae0a73ce9b75ca394371a0fe3e015bbf0d81e0567df317f7c59b774"
+        },
+        {
+          "path": "training/seed_42/fold_05/gradient_norm.svg",
+          "sha256": "c1dea6e0a2c8589734d6c57b711c280452ba4988f111cd81c4cd79acf6651c6c"
+        }
+      ]
+    },
+    {
+      "figure": "training/seed_42/fold_05/learning_rate",
+      "title": "Seed 42 | Fold 05 | Learning rate",
+      "files": [
+        {
+          "path": "training/seed_42/fold_05/learning_rate.png",
+          "sha256": "587e4ebc5a6e39feecb005c998ac60e7f59183408911e977e979f1e8e89fadc0"
+        },
+        {
+          "path": "training/seed_42/fold_05/learning_rate.svg",
+          "sha256": "1b0e156df38e340385b345a7c60a576099cc8f3e493bc7d26fa0a9debd334444"
+        }
+      ]
+    },
+    {
+      "figure": "training/seed_42/fold_05/macro_f1_gap",
+      "title": "Seed 42 | Fold 05 | Train-validation gap",
+      "files": [
+        {
+          "path": "training/seed_42/fold_05/macro_f1_gap.png",
+          "sha256": "8a0894abfb5d0405e9c57641c0e9b7405f9a22d79dfa9e68c6323db2308ea94d"
+        },
+        {
+          "path": "training/seed_42/fold_05/macro_f1_gap.svg",
+          "sha256": "d0434ddef5b2263bd53ec609d23824fdb7b545e934275a3b9136950fdaea4129"
+        }
+      ]
+    },
+    {
+      "figure": "training/seed_42/fold_05/epoch_duration",
+      "title": "Seed 42 | Fold 05 | Epoch duration",
+      "files": [
+        {
+          "path": "training/seed_42/fold_05/epoch_duration.png",
+          "sha256": "9b175d9c11cbdb37383f21eabaaf708a3acc90c580be7333994f3910b8391225"
+        },
+        {
+          "path": "training/seed_42/fold_05/epoch_duration.svg",
+          "sha256": "521d218738e2d3b8b1508f72af6520f6b3feed97331a57f1d9d6acec0a671f6a"
+        }
+      ]
+    },
+    {
+      "figure": "confusion_matrices/seed_42/fold_05/raw",
+      "title": "Seed 42 | Fold 05 | Test confusion matrix",
+      "files": [
+        {
+          "path": "confusion_matrices/seed_42/fold_05/raw.png",
+          "sha256": "df219c461e0404f5a53cc2cfc5ff1bef072e93c9ad94da0fef72f6e2061e6007"
+        },
+        {
+          "path": "confusion_matrices/seed_42/fold_05/raw.svg",
+          "sha256": "b24e8f073beeb1e9a5e2b084a5c36a9a1c79ce6ef82e8f79dcab68ab29df9bb3"
+        }
+      ]
+    },
+    {
+      "figure": "confusion_matrices/seed_42/fold_05/normalized",
+      "title": "Seed 42 | Fold 05 | Test row-normalized confusion matrix",
+      "files": [
+        {
+          "path": "confusion_matrices/seed_42/fold_05/normalized.png",
+          "sha256": "01b71ad9739cd0052a6a9ad18674bd67efb5cae24f50f8ea32da19512cb5815c"
+        },
+        {
+          "path": "confusion_matrices/seed_42/fold_05/normalized.svg",
+          "sha256": "fca387bd5deaa2a3f83ee1e24b552e4a43de8acc694460fd924497ccb9407378"
+        }
+      ]
+    },
+    {
+      "figure": "class_metrics/seed_42/fold_05/precision_recall_f1",
+      "title": "Seed 42 | Fold 05 | Test | Per-class performance",
+      "files": [
+        {
+          "path": "class_metrics/seed_42/fold_05/precision_recall_f1.png",
+          "sha256": "57ed2f77de4c56a0dfc94c88f6881e0a75af10185c3652cfd16b69c2d567d442"
+        },
+        {
+          "path": "class_metrics/seed_42/fold_05/precision_recall_f1.svg",
+          "sha256": "eabb22bdcfc1cd89c38d35f4c262c71d2aa814f6dbb99d59e6a17158109720f0"
+        }
+      ]
+    },
+    {
+      "figure": "class_metrics/seed_42/fold_05/label_distribution",
+      "title": "Seed 42 | Fold 05 | Test | Label distribution",
+      "files": [
+        {
+          "path": "class_metrics/seed_42/fold_05/label_distribution.png",
+          "sha256": "a9d58a5932015bafbf25a49e704cbec3561070b487a41933e7c30f2486077322"
+        },
+        {
+          "path": "class_metrics/seed_42/fold_05/label_distribution.svg",
+          "sha256": "b34233d0d234509d0321b8f330aacf1b92df13a680496089b1098343a6636ed9"
+        }
+      ]
+    },
+    {
+      "figure": "subject_metrics/seed_42/S2/confusion_raw",
+      "title": "Seed 42 | OOF test | S2 confusion matrix",
+      "files": [
+        {
+          "path": "subject_metrics/seed_42/S2/confusion_raw.png",
+          "sha256": "66c70ed10173231b75d325670d6504197818247e520fc45a2d4d87983b4e8ce8"
+        },
+        {
+          "path": "subject_metrics/seed_42/S2/confusion_raw.svg",
+          "sha256": "21abb3305701eed8639d5ab72bcaa1b8244392035197221a8e48dd887b704842"
+        }
+      ]
+    },
+    {
+      "figure": "subject_metrics/seed_42/S2/confusion_normalized",
+      "title": "Seed 42 | OOF test | S2 row-normalized confusion matrix",
+      "files": [
+        {
+          "path": "subject_metrics/seed_42/S2/confusion_normalized.png",
+          "sha256": "8ae0ce9aed1b02783ff28a1d94fd3a4ff2974b51a7383916291d41e27d3c9c07"
+        },
+        {
+          "path": "subject_metrics/seed_42/S2/confusion_normalized.svg",
+          "sha256": "ae57d11ae9393bacb254e9373c20e93e4763ab720abf354643aac017b3cb2b5e"
+        }
+      ]
+    },
+    {
+      "figure": "subject_metrics/seed_42/S3/confusion_raw",
+      "title": "Seed 42 | OOF test | S3 confusion matrix",
+      "files": [
+        {
+          "path": "subject_metrics/seed_42/S3/confusion_raw.png",
+          "sha256": "0629f42a631c04bdba41f900816b2406bd83c426c511f439da19437a608c50e9"
+        },
+        {
+          "path": "subject_metrics/seed_42/S3/confusion_raw.svg",
+          "sha256": "0adf1e7b608a1fb97eef184752a66171978db0d1d1bc14b9300af4a8507d3f1e"
+        }
+      ]
+    },
+    {
+      "figure": "subject_metrics/seed_42/S3/confusion_normalized",
+      "title": "Seed 42 | OOF test | S3 row-normalized confusion matrix",
+      "files": [
+        {
+          "path": "subject_metrics/seed_42/S3/confusion_normalized.png",
+          "sha256": "d158e58675a79a746b23af8a3e435749a5bb9e14202697895101316183d1e109"
+        },
+        {
+          "path": "subject_metrics/seed_42/S3/confusion_normalized.svg",
+          "sha256": "208c5940db2e92f5f2bd611d6d2c751a9a0710d209f792be3471ad62368d364d"
+        }
+      ]
+    },
+    {
+      "figure": "subject_metrics/seed_42/S4/confusion_raw",
+      "title": "Seed 42 | OOF test | S4 confusion matrix",
+      "files": [
+        {
+          "path": "subject_metrics/seed_42/S4/confusion_raw.png",
+          "sha256": "32d144cf73eae7d6f6d07e46fdafb025fce7b5175dd7795f67dc994fddb129f2"
+        },
+        {
+          "path": "subject_metrics/seed_42/S4/confusion_raw.svg",
+          "sha256": "99f8d27bc05941808169177fd2e4f7b6520fd5ac7c316d76ccd5561f3c1d47f7"
+        }
+      ]
+    },
+    {
+      "figure": "subject_metrics/seed_42/S4/confusion_normalized",
+      "title": "Seed 42 | OOF test | S4 row-normalized confusion matrix",
+      "files": [
+        {
+          "path": "subject_metrics/seed_42/S4/confusion_normalized.png",
+          "sha256": "b6bd4e4d9c1c6a808170932e56824cd6d8050e0b1cd81879d83b2671a49c1bbf"
+        },
+        {
+          "path": "subject_metrics/seed_42/S4/confusion_normalized.svg",
+          "sha256": "25f5b5d9f3048c87ab7ab602cc236181a7e86354c7a9f2e430bf89121195ba49"
+        }
+      ]
+    },
+    {
+      "figure": "subject_metrics/seed_42/S5/confusion_raw",
+      "title": "Seed 42 | OOF test | S5 confusion matrix",
+      "files": [
+        {
+          "path": "subject_metrics/seed_42/S5/confusion_raw.png",
+          "sha256": "d72e8ac95519a4e8eb0ba62ab3b6713231e96edbe714f80e6e9cc48407de0654"
+        },
+        {
+          "path": "subject_metrics/seed_42/S5/confusion_raw.svg",
+          "sha256": "ca851a0710282369e005175fb76000de452ae95cb890ae1b9dbe7004a35b963c"
+        }
+      ]
+    },
+    {
+      "figure": "subject_metrics/seed_42/S5/confusion_normalized",
+      "title": "Seed 42 | OOF test | S5 row-normalized confusion matrix",
+      "files": [
+        {
+          "path": "subject_metrics/seed_42/S5/confusion_normalized.png",
+          "sha256": "910a2eda965f9dd0c89206cdc553b8ab5d0952ae4c28fc4ec84c23240139d565"
+        },
+        {
+          "path": "subject_metrics/seed_42/S5/confusion_normalized.svg",
+          "sha256": "415316856aead65900388cf71a5b48092d2121e31b61b80d317409637199ac9c"
+        }
+      ]
+    },
+    {
+      "figure": "subject_metrics/seed_42/S6/confusion_raw",
+      "title": "Seed 42 | OOF test | S6 confusion matrix",
+      "files": [
+        {
+          "path": "subject_metrics/seed_42/S6/confusion_raw.png",
+          "sha256": "89c3ff49ba662d3bee8c5a87141936cbc36251b507e21d6a3418c873937e46c6"
+        },
+        {
+          "path": "subject_metrics/seed_42/S6/confusion_raw.svg",
+          "sha256": "56519f25a84e639b06b7735106e2d0a5db4b53d6a8aa2c90d8e708c91b09f437"
+        }
+      ]
+    },
+    {
+      "figure": "subject_metrics/seed_42/S6/confusion_normalized",
+      "title": "Seed 42 | OOF test | S6 row-normalized confusion matrix",
+      "files": [
+        {
+          "path": "subject_metrics/seed_42/S6/confusion_normalized.png",
+          "sha256": "23139ed1accb3a675b4e3d47a168967d064b8e72de1be13f5bd831147eef438d"
+        },
+        {
+          "path": "subject_metrics/seed_42/S6/confusion_normalized.svg",
+          "sha256": "e4cc9c9ee666048c5427059bb8f8033d130acdf058e2754e64c5cd04a8000c42"
+        }
+      ]
+    },
+    {
+      "figure": "subject_metrics/seed_42/S7/confusion_raw",
+      "title": "Seed 42 | OOF test | S7 confusion matrix",
+      "files": [
+        {
+          "path": "subject_metrics/seed_42/S7/confusion_raw.png",
+          "sha256": "a50072e7860219c942888c2403f491e810d3f15b4414053a5b3034a0efd3c6e3"
+        },
+        {
+          "path": "subject_metrics/seed_42/S7/confusion_raw.svg",
+          "sha256": "128f5ee10e3d12132a14b196186451c6de9846c75bb95e3ac2bbbbf74be098e5"
+        }
+      ]
+    },
+    {
+      "figure": "subject_metrics/seed_42/S7/confusion_normalized",
+      "title": "Seed 42 | OOF test | S7 row-normalized confusion matrix",
+      "files": [
+        {
+          "path": "subject_metrics/seed_42/S7/confusion_normalized.png",
+          "sha256": "96c256e59cdc19e4b8cb83d1dae4dd26d655e77ecb0426a35cb50d26fbf6f990"
+        },
+        {
+          "path": "subject_metrics/seed_42/S7/confusion_normalized.svg",
+          "sha256": "629818ee63ed85afa48cf03d3a4f2e726fb8bb040625c18401083bb7ff4800a5"
+        }
+      ]
+    },
+    {
+      "figure": "error_analysis/seed_42/S8/confusion_raw",
+      "title": "Seed 42 | OOF test | S8 confusion matrix",
+      "files": [
+        {
+          "path": "error_analysis/seed_42/S8/confusion_raw.png",
+          "sha256": "24ffc6000bda7ed79dbdf5540b862a55fcb3f4d6074c5ac95fd1f1db0edc0745"
+        },
+        {
+          "path": "error_analysis/seed_42/S8/confusion_raw.svg",
+          "sha256": "e8827d90fd871fd54150db4cfa2b6d15c16005ecb1dc9c77bc9bc06de904b110"
+        }
+      ]
+    },
+    {
+      "figure": "error_analysis/seed_42/S8/confusion_normalized",
+      "title": "Seed 42 | OOF test | S8 row-normalized confusion matrix",
+      "files": [
+        {
+          "path": "error_analysis/seed_42/S8/confusion_normalized.png",
+          "sha256": "a6598f945622e5480af1caa89024af8a16876478d011d9d431776a937d50f7b3"
+        },
+        {
+          "path": "error_analysis/seed_42/S8/confusion_normalized.svg",
+          "sha256": "a2895c8740d9dd6299fba3851d6999b30d855a3c524dc35ba91318a912752c08"
+        }
+      ]
+    },
+    {
+      "figure": "subject_metrics/seed_42/S9/confusion_raw",
+      "title": "Seed 42 | OOF test | S9 confusion matrix",
+      "files": [
+        {
+          "path": "subject_metrics/seed_42/S9/confusion_raw.png",
+          "sha256": "8e09f6d3879a99d74da248cff3b52e1d7adee509cf63847f4105538994ae2532"
+        },
+        {
+          "path": "subject_metrics/seed_42/S9/confusion_raw.svg",
+          "sha256": "fc005704fa0f49f794c5c1e237d9f19f6e94b8b1a5381aace0e385df80852092"
+        }
+      ]
+    },
+    {
+      "figure": "subject_metrics/seed_42/S9/confusion_normalized",
+      "title": "Seed 42 | OOF test | S9 row-normalized confusion matrix",
+      "files": [
+        {
+          "path": "subject_metrics/seed_42/S9/confusion_normalized.png",
+          "sha256": "802eb6121a4c2130bb45e236ac64947bd2bee91569684845039ebf5e1b3539f6"
+        },
+        {
+          "path": "subject_metrics/seed_42/S9/confusion_normalized.svg",
+          "sha256": "e52dcd2c268e9b841566684921b5543a7fc6ff8a368d36389f1f95b482d13b4e"
+        }
+      ]
+    },
+    {
+      "figure": "subject_metrics/seed_42/S10/confusion_raw",
+      "title": "Seed 42 | OOF test | S10 confusion matrix",
+      "files": [
+        {
+          "path": "subject_metrics/seed_42/S10/confusion_raw.png",
+          "sha256": "4333b5941e3f534d5eb5291c7b262fd1de55908db53e3e40f231e14f1c8fe7c4"
+        },
+        {
+          "path": "subject_metrics/seed_42/S10/confusion_raw.svg",
+          "sha256": "8879abd30ac8d83093fd5fdff8f8e6c063084478415c02a4395cc0cd995bed42"
+        }
+      ]
+    },
+    {
+      "figure": "subject_metrics/seed_42/S10/confusion_normalized",
+      "title": "Seed 42 | OOF test | S10 row-normalized confusion matrix",
+      "files": [
+        {
+          "path": "subject_metrics/seed_42/S10/confusion_normalized.png",
+          "sha256": "83bef3f9861fad15574f1497de6a4fcec2e4141f24f5b75d25749ab8a41e8b51"
+        },
+        {
+          "path": "subject_metrics/seed_42/S10/confusion_normalized.svg",
+          "sha256": "d74f5b7d4e894cbaf2ca1e9ab29f6986365d80b72d2a18b9dbf3e4d9935c6424"
+        }
+      ]
+    },
+    {
+      "figure": "subject_metrics/seed_42/S11/confusion_raw",
+      "title": "Seed 42 | OOF test | S11 confusion matrix",
+      "files": [
+        {
+          "path": "subject_metrics/seed_42/S11/confusion_raw.png",
+          "sha256": "f1e16b1f6752e0951e2a7b39bf07bc6cf505865f88775d16e5709bdf9bcf47e1"
+        },
+        {
+          "path": "subject_metrics/seed_42/S11/confusion_raw.svg",
+          "sha256": "dca5794213e5c16fad150c600c8dee03359a776651f7234b2c4244329053cb32"
+        }
+      ]
+    },
+    {
+      "figure": "subject_metrics/seed_42/S11/confusion_normalized",
+      "title": "Seed 42 | OOF test | S11 row-normalized confusion matrix",
+      "files": [
+        {
+          "path": "subject_metrics/seed_42/S11/confusion_normalized.png",
+          "sha256": "b342e120dafb86c2557b2f8dfe2f3ba02071c112e1380294ac570e9e403d674e"
+        },
+        {
+          "path": "subject_metrics/seed_42/S11/confusion_normalized.svg",
+          "sha256": "ec6a219b19b2bb56d3f9d06478e00f1ec5e2bd1a3ec5cf4f85e38b69e77ef13e"
+        }
+      ]
+    },
+    {
+      "figure": "subject_metrics/seed_42/S13/confusion_raw",
+      "title": "Seed 42 | OOF test | S13 confusion matrix",
+      "files": [
+        {
+          "path": "subject_metrics/seed_42/S13/confusion_raw.png",
+          "sha256": "982be27ea3de88fef50fe94a7b7a51b28d882e76b91e3f127ef7e914d486a793"
+        },
+        {
+          "path": "subject_metrics/seed_42/S13/confusion_raw.svg",
+          "sha256": "b031e5a9a76cea8bedede3ce9f266b8636b99ad6693f2cc7ff9056c0a5ea2840"
+        }
+      ]
+    },
+    {
+      "figure": "subject_metrics/seed_42/S13/confusion_normalized",
+      "title": "Seed 42 | OOF test | S13 row-normalized confusion matrix",
+      "files": [
+        {
+          "path": "subject_metrics/seed_42/S13/confusion_normalized.png",
+          "sha256": "fb64e919b4241f138d50dcde45f5529747ac52f93aca0c019adc878fe29e03ee"
+        },
+        {
+          "path": "subject_metrics/seed_42/S13/confusion_normalized.svg",
+          "sha256": "0b023e79caf8b31552160c52a3b4307f0503149ca925013013305acde52d7d29"
+        }
+      ]
+    },
+    {
+      "figure": "subject_metrics/seed_42/S14/confusion_raw",
+      "title": "Seed 42 | OOF test | S14 confusion matrix",
+      "files": [
+        {
+          "path": "subject_metrics/seed_42/S14/confusion_raw.png",
+          "sha256": "7928907d952c7e44d943f0e0efbe49e5ae255c4fe0f25927b831adb2fc7ba290"
+        },
+        {
+          "path": "subject_metrics/seed_42/S14/confusion_raw.svg",
+          "sha256": "5fc2700c6e92d68ee060fe1db14c8d6fde836800b3ce9f9051da6684f2b17b43"
+        }
+      ]
+    },
+    {
+      "figure": "subject_metrics/seed_42/S14/confusion_normalized",
+      "title": "Seed 42 | OOF test | S14 row-normalized confusion matrix",
+      "files": [
+        {
+          "path": "subject_metrics/seed_42/S14/confusion_normalized.png",
+          "sha256": "ddfe6302769a619877785ebb20f280302c39a3189cb154f42b41ab7ee82032f4"
+        },
+        {
+          "path": "subject_metrics/seed_42/S14/confusion_normalized.svg",
+          "sha256": "898c1f0024325a84ac5ee72529a85e3f6915178d04ca4a57e85ae17ecfeda6c9"
+        }
+      ]
+    },
+    {
+      "figure": "subject_metrics/seed_42/S15/confusion_raw",
+      "title": "Seed 42 | OOF test | S15 confusion matrix",
+      "files": [
+        {
+          "path": "subject_metrics/seed_42/S15/confusion_raw.png",
+          "sha256": "9d487fa1186bfcc3e0aa929331f810b389b2d81200ca5951266de38ef5034b33"
+        },
+        {
+          "path": "subject_metrics/seed_42/S15/confusion_raw.svg",
+          "sha256": "ff3f831d4bc9263010edd343e6dcd9665aaeb8c0ebe06a85dc88dab864466a0d"
+        }
+      ]
+    },
+    {
+      "figure": "subject_metrics/seed_42/S15/confusion_normalized",
+      "title": "Seed 42 | OOF test | S15 row-normalized confusion matrix",
+      "files": [
+        {
+          "path": "subject_metrics/seed_42/S15/confusion_normalized.png",
+          "sha256": "9c234806998697d13e05e4d4fca23d0635633878c1fab0b66b369bea4369d42f"
+        },
+        {
+          "path": "subject_metrics/seed_42/S15/confusion_normalized.svg",
+          "sha256": "a337befdef92d97a4004a9a69879d041c7ad2d86c5a3753eac19769933b826c0"
+        }
+      ]
+    },
+    {
+      "figure": "subject_metrics/seed_42/S16/confusion_raw",
+      "title": "Seed 42 | OOF test | S16 confusion matrix",
+      "files": [
+        {
+          "path": "subject_metrics/seed_42/S16/confusion_raw.png",
+          "sha256": "9292fb1b16905a3121f236f40bfdc53fccdfdc3a98b2e3cc75505bbe084a1757"
+        },
+        {
+          "path": "subject_metrics/seed_42/S16/confusion_raw.svg",
+          "sha256": "d5d9d5c0f1c7805c27d983a2da5a7e4b50519e5e5b543e5533421040e02a0e50"
+        }
+      ]
+    },
+    {
+      "figure": "subject_metrics/seed_42/S16/confusion_normalized",
+      "title": "Seed 42 | OOF test | S16 row-normalized confusion matrix",
+      "files": [
+        {
+          "path": "subject_metrics/seed_42/S16/confusion_normalized.png",
+          "sha256": "b280950dff1c85d9441a1bb6b01fd5d7b2b4db66e6b4ea43fb46c9c5bd55b79d"
+        },
+        {
+          "path": "subject_metrics/seed_42/S16/confusion_normalized.svg",
+          "sha256": "07da83b5a1ed1602fef9e05120c2d608a075d96789bf21dd3a4dd20e1b0be8c9"
+        }
+      ]
+    },
+    {
+      "figure": "subject_metrics/seed_42/S17/confusion_raw",
+      "title": "Seed 42 | OOF test | S17 confusion matrix",
+      "files": [
+        {
+          "path": "subject_metrics/seed_42/S17/confusion_raw.png",
+          "sha256": "292f5a2c0fccd664567546a774132f416197ad38dceaf2b9e24bc0ddee35d6dd"
+        },
+        {
+          "path": "subject_metrics/seed_42/S17/confusion_raw.svg",
+          "sha256": "daac2e77b243475a973f859861e9e8d30b2bd1522bba578e168e0cceaa631260"
+        }
+      ]
+    },
+    {
+      "figure": "subject_metrics/seed_42/S17/confusion_normalized",
+      "title": "Seed 42 | OOF test | S17 row-normalized confusion matrix",
+      "files": [
+        {
+          "path": "subject_metrics/seed_42/S17/confusion_normalized.png",
+          "sha256": "496c606ab8e6cb7c1dbb955b2835cb282d62fd6739e3a61aa4cb9900b9119acb"
+        },
+        {
+          "path": "subject_metrics/seed_42/S17/confusion_normalized.svg",
+          "sha256": "70d6065051246ccf029be6e49b586960429dde45b91e1136c975c67095c73108"
+        }
+      ]
+    },
+    {
+      "figure": "subject_metrics/seed_42/macro_f1",
+      "title": "Seed 42 | OOF test | Macro-F1 by subject",
+      "files": [
+        {
+          "path": "subject_metrics/seed_42/macro_f1.png",
+          "sha256": "03362512c3427d39895b375fc4e583c6ef5c8f5f5341083c28050d227e66f9c1"
+        },
+        {
+          "path": "subject_metrics/seed_42/macro_f1.svg",
+          "sha256": "e3fbc5e784495551ceb1e043e1318b0ec1ac43d9cb70042dc7b9683b7c742eaa"
+        }
+      ]
+    },
+    {
+      "figure": "cross_fold/seed_42/macro_f1",
+      "title": "Seed 42 | OOF test | Macro-F1 by fold",
+      "files": [
+        {
+          "path": "cross_fold/seed_42/macro_f1.png",
+          "sha256": "07cf7b85aa93412a5b0f13cc9aad425a8934d4a060e2cd9d6c53236fe94e76c5"
+        },
+        {
+          "path": "cross_fold/seed_42/macro_f1.svg",
+          "sha256": "496434144c2fbe1ee5d6c5d7a046a5fdf3bc434e06b6384c61e7e55eac68428d"
+        }
+      ]
+    },
+    {
+      "figure": "subject_metrics/seed_42/balanced_accuracy",
+      "title": "Seed 42 | OOF test | Balanced accuracy by subject",
+      "files": [
+        {
+          "path": "subject_metrics/seed_42/balanced_accuracy.png",
+          "sha256": "7cb16c3c48086799bb5ec025a312fc8eddc8edde306a5ed7bc3255911965d613"
+        },
+        {
+          "path": "subject_metrics/seed_42/balanced_accuracy.svg",
+          "sha256": "58658d670a84174007a95d93d0ee56f01c4f58d9ecce2ea4c11e7e446f9b9688"
+        }
+      ]
+    },
+    {
+      "figure": "cross_fold/seed_42/balanced_accuracy",
+      "title": "Seed 42 | OOF test | Balanced accuracy by fold",
+      "files": [
+        {
+          "path": "cross_fold/seed_42/balanced_accuracy.png",
+          "sha256": "f1f547f6809479487ac0b2936e1f6752446791387a33fdc195cf5935e15cd29d"
+        },
+        {
+          "path": "cross_fold/seed_42/balanced_accuracy.svg",
+          "sha256": "a53a2a7308e4319c3e4b0a25f1edff467e3619237e48e00e3f2c3cff307f104f"
+        }
+      ]
+    },
+    {
+      "figure": "subject_metrics/seed_42/accuracy",
+      "title": "Seed 42 | OOF test | Accuracy by subject",
+      "files": [
+        {
+          "path": "subject_metrics/seed_42/accuracy.png",
+          "sha256": "48d34b4b51a6c4a3ff04ef9c54bf974dc90b24768541c46d2a5daf45387bfe0c"
+        },
+        {
+          "path": "subject_metrics/seed_42/accuracy.svg",
+          "sha256": "caf0ca700a5ca9e487da3943bf4065df1ff3e16371a07375dd87b6a2b66c8234"
+        }
+      ]
+    },
+    {
+      "figure": "cross_fold/seed_42/accuracy",
+      "title": "Seed 42 | OOF test | Accuracy by fold",
+      "files": [
+        {
+          "path": "cross_fold/seed_42/accuracy.png",
+          "sha256": "5a16088269d5cfe811b27cda7ad9b31924925d950205548e15b10575788c16e1"
+        },
+        {
+          "path": "cross_fold/seed_42/accuracy.svg",
+          "sha256": "ab4df9b0bf8b110f05c8be685325ce5966505f664df86f0cdd02ea33514256d5"
+        }
+      ]
+    },
+    {
+      "figure": "subject_metrics/seed_42/class_f1_heatmap",
+      "title": "Seed 42 | OOF test | Subject x class F1",
+      "files": [
+        {
+          "path": "subject_metrics/seed_42/class_f1_heatmap.png",
+          "sha256": "cb57801256b1824b5b089844f4d74dfa49edea5b3eee840fe8e1b3b30642ec89"
+        },
+        {
+          "path": "subject_metrics/seed_42/class_f1_heatmap.svg",
+          "sha256": "b98b2e56d424d64d16331454ab3f993737c78cea439bd619abcd5f00149d196e"
+        }
+      ]
+    },
+    {
+      "figure": "subject_metrics/seed_42/class_f1",
+      "title": "Seed 42 | OOF test | Per-class F1 by subject",
+      "files": [
+        {
+          "path": "subject_metrics/seed_42/class_f1.png",
+          "sha256": "2ad8852d672d71d71e802998b64d4ca5081a3cba06920a6368af1bd6ce7be6c3"
+        },
+        {
+          "path": "subject_metrics/seed_42/class_f1.svg",
+          "sha256": "cda1e4d4651522fd4aa0ca678aac584c943c5661034946836e412c3e8ebff270"
+        }
+      ]
+    },
+    {
+      "figure": "cross_fold/seed_42/class_f1_heatmap",
+      "title": "Seed 42 | OOF test | Fold x class F1",
+      "files": [
+        {
+          "path": "cross_fold/seed_42/class_f1_heatmap.png",
+          "sha256": "4f3dd2a2a49f5b65cd50bef1a9f3dabb5f19ca98cc32f1affe7f021de83bda40"
+        },
+        {
+          "path": "cross_fold/seed_42/class_f1_heatmap.svg",
+          "sha256": "a019c5c6875bbe2d02605a69af796c3bd7a2cc507f79893f56054ce1244a7cee"
+        }
+      ]
+    },
+    {
+      "figure": "cross_fold/seed_42/class_f1",
+      "title": "Seed 42 | OOF test | Per-class F1 by fold",
+      "files": [
+        {
+          "path": "cross_fold/seed_42/class_f1.png",
+          "sha256": "d310eebacf02b149e64d7dfc4383c7ba850bbb4bc56c43fb53ea9064927c06fd"
+        },
+        {
+          "path": "cross_fold/seed_42/class_f1.svg",
+          "sha256": "f05e168de0f76c914b690fe69b62da5cdcdb351c70f72e26e911fb4e1c3b746c"
+        }
+      ]
+    },
+    {
+      "figure": "cross_fold/seed_42/metrics_boxplot",
+      "title": "Seed 42 | OOF test | Distribution across 5 folds",
+      "files": [
+        {
+          "path": "cross_fold/seed_42/metrics_boxplot.png",
+          "sha256": "923cb969deb5b567ea63493d1ba7ade025ad4550853463ec55e4de3301e9cb6d"
+        },
+        {
+          "path": "cross_fold/seed_42/metrics_boxplot.svg",
+          "sha256": "4c7a65c4d30ae436f2fe49150d343007471b1f043891f3a19c8bd059d97eb7aa"
+        }
+      ]
+    },
+    {
+      "figure": "cross_fold/seed_42/best_epoch",
+      "title": "Seed 42 | Training | Best epoch by fold",
+      "files": [
+        {
+          "path": "cross_fold/seed_42/best_epoch.png",
+          "sha256": "33c681eddc839ff0ed5da7358655bdb0e49bc7967c93762e0ef2b9d3ca6010fb"
+        },
+        {
+          "path": "cross_fold/seed_42/best_epoch.svg",
+          "sha256": "5ae830b9ad0208bf785a2ea6d41679a013a62d3dbb0b0921760408e56e607ffe"
+        }
+      ]
+    },
+    {
+      "figure": "cross_fold/seed_42/completed_epochs",
+      "title": "Seed 42 | Training | Completed epochs by fold",
+      "files": [
+        {
+          "path": "cross_fold/seed_42/completed_epochs.png",
+          "sha256": "f186605523c08e919132a5065c4be005ba573858825a5cccc01981705f48fd73"
+        },
+        {
+          "path": "cross_fold/seed_42/completed_epochs.svg",
+          "sha256": "c9e11b0e067340c2b7fb875cdb60ee5cefc93a00e39cd7b4b45f0ad80048d0ff"
+        }
+      ]
+    },
+    {
+      "figure": "cross_fold/seed_42/training_duration_seconds",
+      "title": "Seed 42 | Training | Training duration (seconds) by fold",
+      "files": [
+        {
+          "path": "cross_fold/seed_42/training_duration_seconds.png",
+          "sha256": "8816289c2b521ec4054e9570bd9739ff0e4e28eabc2053a4f79a2b64c6f0d8af"
+        },
+        {
+          "path": "cross_fold/seed_42/training_duration_seconds.svg",
+          "sha256": "8a9abf277189c1dabba1ee8e287f9ba8cee22c68ce5aefb8ceae0e459e131ee4"
+        }
+      ]
+    },
+    {
+      "figure": "cross_fold/seed_42/aggregate_confusion_raw",
+      "title": "Seed 42 | OOF test | Pooled confusion matrix",
+      "files": [
+        {
+          "path": "cross_fold/seed_42/aggregate_confusion_raw.png",
+          "sha256": "2f1bb67e81ed14887db097f089ca02c3607d8487166028ff001e507b3d4f420b"
+        },
+        {
+          "path": "cross_fold/seed_42/aggregate_confusion_raw.svg",
+          "sha256": "b4bbf61e4e3f33194ad6cc80d8f95bdfd40573f161c4381a3afeb9993ca88993"
+        }
+      ]
+    },
+    {
+      "figure": "cross_fold/seed_42/aggregate_confusion_normalized",
+      "title": "Seed 42 | OOF test | Pooled confusion matrix",
+      "files": [
+        {
+          "path": "cross_fold/seed_42/aggregate_confusion_normalized.png",
+          "sha256": "2e0c51a453da156a1dfc1f1040c9cc6e4c366db482f1253b32a1b1f65ebd2b37"
+        },
+        {
+          "path": "cross_fold/seed_42/aggregate_confusion_normalized.svg",
+          "sha256": "7dd73f4662dd18bd837780586df77a464e404dea5fea1d23e26ff386f72843fb"
+        }
+      ]
+    },
+    {
+      "figure": "cross_fold/seed_42/learning_loss",
+      "title": "Seed 42 | Train / Validation | Weighted CE loss learning curves across folds",
+      "files": [
+        {
+          "path": "cross_fold/seed_42/learning_loss.png",
+          "sha256": "fde77892fd1befa4fa6c55fc03f9ec019e5e392e7a2574894fea27595fee2bc4"
+        },
+        {
+          "path": "cross_fold/seed_42/learning_loss.svg",
+          "sha256": "e470546ca4a6c433410446c790109831818feee4e2ebf143187bc22fb3cf99ec"
+        }
+      ]
+    },
+    {
+      "figure": "cross_fold/seed_42/learning_macro_f1",
+      "title": "Seed 42 | Train / Validation | Macro-F1 learning curves across folds",
+      "files": [
+        {
+          "path": "cross_fold/seed_42/learning_macro_f1.png",
+          "sha256": "0744e0b642d11667ede6b479761b7dba1900b352824c12e88448ab2e7837dd71"
+        },
+        {
+          "path": "cross_fold/seed_42/learning_macro_f1.svg",
+          "sha256": "b89568c6ffc87cb63088486b6ba0b7aef494950e8ba6b904d6f4d5866d9cf85b"
+        }
+      ]
+    },
+    {
+      "figure": "cross_fold/seed_42/learning_balanced_accuracy",
+      "title": "Seed 42 | Train / Validation | Balanced accuracy learning curves across folds",
+      "files": [
+        {
+          "path": "cross_fold/seed_42/learning_balanced_accuracy.png",
+          "sha256": "f147d021fa750bc4f2f04fac7e005443c7723b214b098d7c8603bb45d8da0bc4"
+        },
+        {
+          "path": "cross_fold/seed_42/learning_balanced_accuracy.svg",
+          "sha256": "22b14c76e420b4b77a41af385e5531091760a7c807dff12c64180a5f6b9c85a6"
+        }
+      ]
+    },
+    {
+      "figure": "cross_fold/seed_42/learning_accuracy",
+      "title": "Seed 42 | Train / Validation | Accuracy learning curves across folds",
+      "files": [
+        {
+          "path": "cross_fold/seed_42/learning_accuracy.png",
+          "sha256": "b254272dcb9f2dc6b5aaafc4205bbd15b34a151af27943bec7fc0df5215fe5ec"
+        },
+        {
+          "path": "cross_fold/seed_42/learning_accuracy.svg",
+          "sha256": "69e7e57af8d052278dc32de679098c9af64b46332dc880d145029907cacfd5a8"
+        }
+      ]
+    },
+    {
+      "figure": "error_analysis/seed_42/S8/class_f1",
+      "title": "Seed 42 | S8 | OOF test | Per-class F1",
+      "files": [
+        {
+          "path": "error_analysis/seed_42/S8/class_f1.png",
+          "sha256": "d9d916428a6edda0c942ac5a2a8812ccc4560e6769cd423785eff90be47a57ce"
+        },
+        {
+          "path": "error_analysis/seed_42/S8/class_f1.svg",
+          "sha256": "40db950f51d069192a4983f478424b9e476d72674689a6520c40c09429186de7"
+        }
+      ]
+    },
+    {
+      "figure": "error_analysis/seed_42/S8/label_distribution",
+      "title": "Seed 42 | S8 | OOF test | True vs predicted labels",
+      "files": [
+        {
+          "path": "error_analysis/seed_42/S8/label_distribution.png",
+          "sha256": "cc08401fcf4438819d73fb79062e20928fc8c02097744eda036c4635bc51b485"
+        },
+        {
+          "path": "error_analysis/seed_42/S8/label_distribution.svg",
+          "sha256": "ae8849acc758dd3aca307710672cc8d76031749a43229487a2a2f553ffaaefb2"
+        }
+      ]
+    },
+    {
+      "figure": "error_analysis/seed_42/S8/confidence_distribution",
+      "title": "Seed 42 | S8 | OOF test | Prediction confidence",
+      "files": [
+        {
+          "path": "error_analysis/seed_42/S8/confidence_distribution.png",
+          "sha256": "f5459d9d1f85c8cde0124888de8d6a3061e3496666e565857d4f0eb6c057da78"
+        },
+        {
+          "path": "error_analysis/seed_42/S8/confidence_distribution.svg",
+          "sha256": "0044d55866e45798740f29c75d2c0bd43ea3ce64060ba400515b9f283891ea50"
+        }
+      ]
+    },
+    {
+      "figure": "error_analysis/seed_42/S8/label_timeline",
+      "title": "Seed 42 | S8 | OOF test | True vs predicted timeline (gaps preserved)",
+      "files": [
+        {
+          "path": "error_analysis/seed_42/S8/label_timeline.png",
+          "sha256": "b0124ed649a838c23cc9e16d783ee5fa7578ba81e52bd7a4774136440bfa1c3c"
+        },
+        {
+          "path": "error_analysis/seed_42/S8/label_timeline.svg",
+          "sha256": "646bbb44c73b20ac11f3e297f2f309a0d65ad4613342094ae43f54e81e0da403"
+        }
+      ]
+    },
+    {
+      "figure": "error_analysis/seed_42/S8/comparison",
+      "title": "Seed 42 | S8 | OOF test | S8 vs other subjects",
+      "files": [
+        {
+          "path": "error_analysis/seed_42/S8/comparison.png",
+          "sha256": "629cb0ba5f344acd2ca3912426484002dec1779671645eac129977c50418144c"
+        },
+        {
+          "path": "error_analysis/seed_42/S8/comparison.svg",
+          "sha256": "26643ebec11f8aafbdf4f592378739a31ec80421ce47a11cacceeca47f6ce0ec"
+        }
+      ]
+    },
+    {
+      "figure": "dataset/windows_by_subject",
+      "title": "Dataset | Valid windows by subject",
+      "files": [
+        {
+          "path": "dataset/windows_by_subject.png",
+          "sha256": "2e1319ec981c72964ad16ddd5caad84d3849d0b0e3b5750a92480bf13ad7f321"
+        },
+        {
+          "path": "dataset/windows_by_subject.svg",
+          "sha256": "9a952f3560f31fdc17efd8428d1bad0677db50af53f20e9da62cf4069d7bae67"
+        }
+      ]
+    },
+    {
+      "figure": "dataset/class_distribution",
+      "title": "Dataset | Class distribution",
+      "files": [
+        {
+          "path": "dataset/class_distribution.png",
+          "sha256": "8399aaa9d25c829230952d78e07a27fa9fb69a72081428952add775714855af9"
+        },
+        {
+          "path": "dataset/class_distribution.svg",
+          "sha256": "f6e712432daea5ef38a0db76f65df2013995de76d12e08039c88466d2686ff66"
+        }
+      ]
+    },
+    {
+      "figure": "dataset/class_distribution_by_subject",
+      "title": "Dataset | Class distribution by subject",
+      "files": [
+        {
+          "path": "dataset/class_distribution_by_subject.png",
+          "sha256": "644f0424fd0a7a9e0f87c72e14faa76b62e7a4ba034934b71e4bdb73842ab350"
+        },
+        {
+          "path": "dataset/class_distribution_by_subject.svg",
+          "sha256": "3f3d319afada6e07260170088f0fe0ee5a3583f9bf22d3147cdda5238f4ed0ea"
+        }
+      ]
+    },
+    {
+      "figure": "dataset/split_distribution_fold_01",
+      "title": "Dataset | Fold 01 split class counts",
+      "files": [
+        {
+          "path": "dataset/split_distribution_fold_01.png",
+          "sha256": "68b80082829d9125b713872b47fe69cee363baf2688eedebbd1495544389633a"
+        },
+        {
+          "path": "dataset/split_distribution_fold_01.svg",
+          "sha256": "27e881630a37d70dd9d765d93896b92b8b2ac8d88b9889522194c36765dae7e5"
+        }
+      ]
+    },
+    {
+      "figure": "dataset/split_distribution_fold_02",
+      "title": "Dataset | Fold 02 split class counts",
+      "files": [
+        {
+          "path": "dataset/split_distribution_fold_02.png",
+          "sha256": "456f9afa5bcaceac6a1ce4b96799b14566d1188597e1b8329af784018cdb982b"
+        },
+        {
+          "path": "dataset/split_distribution_fold_02.svg",
+          "sha256": "63f2c2224ffa4e419b21996f29a8487d3c8b61561de7a0726faad134743cc2b7"
+        }
+      ]
+    },
+    {
+      "figure": "dataset/split_distribution_fold_03",
+      "title": "Dataset | Fold 03 split class counts",
+      "files": [
+        {
+          "path": "dataset/split_distribution_fold_03.png",
+          "sha256": "bf0234c9c58740a4733e87b31dcb2297e7967ec29f8b9b9f5362694585c56ab0"
+        },
+        {
+          "path": "dataset/split_distribution_fold_03.svg",
+          "sha256": "ba494bd206e2c1c06260e40eb16502b3da92af0bd84222b4e81ce6fa4825ab4f"
+        }
+      ]
+    },
+    {
+      "figure": "dataset/split_distribution_fold_04",
+      "title": "Dataset | Fold 04 split class counts",
+      "files": [
+        {
+          "path": "dataset/split_distribution_fold_04.png",
+          "sha256": "1f185bc206790695c791af4bcd980b30860f16d20ed1b73d96bfa2a3ea0f3b0e"
+        },
+        {
+          "path": "dataset/split_distribution_fold_04.svg",
+          "sha256": "0e5d4c011a48b06f0c73c71926dfe07148be4430ea6e6e45108f239cc830fb3b"
+        }
+      ]
+    },
+    {
+      "figure": "dataset/split_distribution_fold_05",
+      "title": "Dataset | Fold 05 split class counts",
+      "files": [
+        {
+          "path": "dataset/split_distribution_fold_05.png",
+          "sha256": "68ffb463485c5b1f53e22dde136060a94772d7d6fa4ddfedd9dd471a5c19b0e9"
+        },
+        {
+          "path": "dataset/split_distribution_fold_05.svg",
+          "sha256": "1010324542b8b48f6c0f0b13ed27f040b9a2ef24fd537ad546e44a90153cd70b"
+        }
+      ]
+    },
+    {
+      "figure": "dataset/preprocessing_window_counts",
+      "title": "Dataset | Preprocessing counts and separate global-grid audit",
+      "files": [
+        {
+          "path": "dataset/preprocessing_window_counts.png",
+          "sha256": "f5dbaa10117e9049d28d0fd3e6f8186d6b04446cd9aef8799712a70902758e12"
+        },
+        {
+          "path": "dataset/preprocessing_window_counts.svg",
+          "sha256": "6946d3212e5653658e497bd893631cdcbda772d06928c7b25bde3c9699a0ddfc"
+        }
+      ]
+    },
+    {
+      "figure": "dataset/physiological_signals",
+      "title": "Dataset | S8 | Resampled, unnormalized wrist signals",
+      "files": [
+        {
+          "path": "dataset/physiological_signals.png",
+          "sha256": "1c7dd22c595b44411cdea7897fbd496f7232ffb10ef3c4dcd8a9d104c3114ad1"
+        },
+        {
+          "path": "dataset/physiological_signals.svg",
+          "sha256": "d0fe1993d5fd3ad34471d7f89cab8df836d20cd3bcc19e3e7a81b7849a703097"
+        }
+      ]
+    },
+    {
+      "figure": "dataset/sliding_window_segmentation",
+      "title": "Dataset | S8 | Actual window intervals (overlap retained)",
+      "files": [
+        {
+          "path": "dataset/sliding_window_segmentation.png",
+          "sha256": "7aadd4db8b5fc34b718fba5023fecf2ee03abbb4ffa0ce7c1972461860b5dce6"
+        },
+        {
+          "path": "dataset/sliding_window_segmentation.svg",
+          "sha256": "ab24ad551d2f05a994267514f84c9d1895b5b7afca23d631901416a9ccbe81c1"
+        }
+      ]
+    }
+  ],
+  "skipped": [],
+  "metrics_by_seed": {
+    "42": {
+      "folds": {
+        "1": {
+          "macro_f1": 0.5352233240105093,
+          "balanced_accuracy": 0.5199139467310725,
+          "accuracy": 0.62877030162413,
+          "precision_per_class": [
+            0.7903930131004366,
+            0.77,
+            0.12745098039215685
+          ],
+          "recall_per_class": [
+            0.7835497835497836,
+            0.5877862595419847,
+            0.18840579710144928
+          ],
+          "f1_per_class": [
+            0.7869565217391304,
+            0.6666666666666666,
+            0.15204678362573099
+          ],
+          "support": [
+            231,
+            131,
+            69
+          ],
+          "confusion_matrix": [
+            [
+              181,
+              0,
+              50
+            ],
+            [
+              15,
+              77,
+              39
+            ],
+            [
+              33,
+              23,
+              13
+            ]
+          ],
+          "label_order": [
+            "baseline",
+            "stress",
+            "amusement"
+          ],
+          "absent_classes": [],
+          "loss": 3.836373272131698
+        },
+        "2": {
+          "macro_f1": 0.28803333209697957,
+          "balanced_accuracy": 0.30269666161943903,
+          "accuracy": 0.3187066974595843,
+          "precision_per_class": [
+            0.5384615384615384,
+            0.32,
+            0.12169312169312169
+          ],
+          "recall_per_class": [
+            0.39565217391304347,
+            0.1791044776119403,
+            0.3333333333333333
+          ],
+          "f1_per_class": [
+            0.45614035087719296,
+            0.22966507177033493,
+            0.17829457364341086
+          ],
+          "support": [
+            230,
+            134,
+            69
+          ],
+          "confusion_matrix": [
+            [
+              91,
+              28,
+              111
+            ],
+            [
+              55,
+              24,
+              55
+            ],
+            [
+              23,
+              23,
+              23
+            ]
+          ],
+          "label_order": [
+            "baseline",
+            "stress",
+            "amusement"
+          ],
+          "absent_classes": [],
+          "loss": 2.083135318029511
+        },
+        "3": {
+          "macro_f1": 0.5763589676633155,
+          "balanced_accuracy": 0.5646004559048037,
+          "accuracy": 0.6338028169014085,
+          "precision_per_class": [
+            0.6509090909090909,
+            0.8472222222222222,
+            0.379746835443038
+          ],
+          "recall_per_class": [
+            0.7748917748917749,
+            0.48412698412698413,
+            0.43478260869565216
+          ],
+          "f1_per_class": [
+            0.7075098814229249,
+            0.6161616161616161,
+            0.40540540540540543
+          ],
+          "support": [
+            231,
+            126,
+            69
+          ],
+          "confusion_matrix": [
+            [
+              179,
+              11,
+              41
+            ],
+            [
+              57,
+              61,
+              8
+            ],
+            [
+              39,
+              0,
+              30
+            ]
+          ],
+          "label_order": [
+            "baseline",
+            "stress",
+            "amusement"
+          ],
+          "absent_classes": [],
+          "loss": 1.2907303106585244
+        },
+        "4": {
+          "macro_f1": 0.4137211959069093,
+          "balanced_accuracy": 0.43105133940966023,
+          "accuracy": 0.47306791569086654,
+          "precision_per_class": [
+            0.6123595505617978,
+            0.418848167539267,
+            0.22413793103448276
+          ],
+          "recall_per_class": [
+            0.4698275862068966,
+            0.6349206349206349,
+            0.18840579710144928
+          ],
+          "f1_per_class": [
+            0.5317073170731708,
+            0.5047318611987381,
+            0.2047244094488189
+          ],
+          "support": [
+            232,
+            126,
+            69
+          ],
+          "confusion_matrix": [
+            [
+              109,
+              79,
+              44
+            ],
+            [
+              45,
+              80,
+              1
+            ],
+            [
+              24,
+              32,
+              13
+            ]
+          ],
+          "label_order": [
+            "baseline",
+            "stress",
+            "amusement"
+          ],
+          "absent_classes": [],
+          "loss": 3.9913679569768874
+        },
+        "5": {
+          "macro_f1": 0.5570601919183432,
+          "balanced_accuracy": 0.565080050294814,
+          "accuracy": 0.6181384248210023,
+          "precision_per_class": [
+            0.7539267015706806,
+            0.4947916666666667,
+            0.5555555555555556
+          ],
+          "recall_per_class": [
+            0.6371681415929203,
+            0.7723577235772358,
+            0.2857142857142857
+          ],
+          "f1_per_class": [
+            0.6906474820143885,
+            0.6031746031746031,
+            0.37735849056603776
+          ],
+          "support": [
+            226,
+            123,
+            70
+          ],
+          "confusion_matrix": [
+            [
+              144,
+              70,
+              12
+            ],
+            [
+              24,
+              95,
+              4
+            ],
+            [
+              23,
+              27,
+              20
+            ]
+          ],
+          "label_order": [
+            "baseline",
+            "stress",
+            "amusement"
+          ],
+          "absent_classes": [],
+          "loss": 1.485362126138074
+        }
+      },
+      "subjects": {
+        "S2": {
+          "macro_f1": 0.7065573924126557,
+          "balanced_accuracy": 0.6756447417316983,
+          "accuracy": 0.7445255474452555,
+          "precision_per_class": [
+            0.7395833333333334,
+            0.6,
+            1.0
+          ],
+          "recall_per_class": [
+            0.9466666666666667,
+            0.38461538461538464,
+            0.6956521739130435
+          ],
+          "f1_per_class": [
+            0.8304093567251462,
+            0.46875,
+            0.8205128205128205
+          ],
+          "support": [
+            75,
+            39,
+            23
+          ],
+          "confusion_matrix": [
+            [
+              71,
+              4,
+              0
+            ],
+            [
+              24,
+              15,
+              0
+            ],
+            [
+              1,
+              6,
+              16
+            ]
+          ],
+          "label_order": [
+            "baseline",
+            "stress",
+            "amusement"
+          ],
+          "absent_classes": []
+        },
+        "S3": {
+          "macro_f1": 0.4341842340384429,
+          "balanced_accuracy": 0.4909814374289454,
+          "accuracy": 0.5579710144927537,
+          "precision_per_class": [
+            0.8666666666666667,
+            0.42528735632183906,
+            0.16666666666666666
+          ],
+          "recall_per_class": [
+            0.527027027027027,
+            0.9024390243902439,
+            0.043478260869565216
+          ],
+          "f1_per_class": [
+            0.6554621848739496,
+            0.578125,
+            0.06896551724137931
+          ],
+          "support": [
+            74,
+            41,
+            23
+          ],
+          "confusion_matrix": [
+            [
+              39,
+              34,
+              1
+            ],
+            [
+              0,
+              37,
+              4
+            ],
+            [
+              6,
+              16,
+              1
+            ]
+          ],
+          "label_order": [
+            "baseline",
+            "stress",
+            "amusement"
+          ],
+          "absent_classes": []
+        },
+        "S4": {
+          "macro_f1": 0.9742964728790384,
+          "balanced_accuracy": 0.9666285278413426,
+          "accuracy": 0.9785714285714285,
+          "precision_per_class": [
+            0.974025974025974,
+            0.9761904761904762,
+            1.0
+          ],
+          "recall_per_class": [
+            0.9868421052631579,
+            1.0,
+            0.9130434782608695
+          ],
+          "f1_per_class": [
+            0.9803921568627451,
+            0.9879518072289156,
+            0.9545454545454546
+          ],
+          "support": [
+            76,
+            41,
+            23
+          ],
+          "confusion_matrix": [
+            [
+              75,
+              1,
+              0
+            ],
+            [
+              0,
+              41,
+              0
+            ],
+            [
+              2,
+              0,
+              21
+            ]
+          ],
+          "label_order": [
+            "baseline",
+            "stress",
+            "amusement"
+          ],
+          "absent_classes": []
+        },
+        "S5": {
+          "macro_f1": 0.2712215320910973,
+          "balanced_accuracy": 0.39316239316239315,
+          "accuracy": 0.3873239436619718,
+          "precision_per_class": [
+            1.0,
+            0.3416666666666667,
+            0.0
+          ],
+          "recall_per_class": [
+            0.1794871794871795,
+            1.0,
+            0.0
+          ],
+          "f1_per_class": [
+            0.30434782608695654,
+            0.5093167701863354,
+            0.0
+          ],
+          "support": [
+            78,
+            41,
+            23
+          ],
+          "confusion_matrix": [
+            [
+              14,
+              56,
+              8
+            ],
+            [
+              0,
+              41,
+              0
+            ],
+            [
+              0,
+              23,
+              0
+            ]
+          ],
+          "label_order": [
+            "baseline",
+            "stress",
+            "amusement"
+          ],
+          "absent_classes": []
+        },
+        "S6": {
+          "macro_f1": 0.46276455191324944,
+          "balanced_accuracy": 0.5613589309241483,
+          "accuracy": 0.4859154929577465,
+          "precision_per_class": [
+            0.782608695652174,
+            0.5492957746478874,
+            0.25
+          ],
+          "recall_per_class": [
+            0.23376623376623376,
+            0.9285714285714286,
+            0.5217391304347826
+          ],
+          "f1_per_class": [
+            0.36,
+            0.6902654867256637,
+            0.3380281690140845
+          ],
+          "support": [
+            77,
+            42,
+            23
+          ],
+          "confusion_matrix": [
+            [
+              18,
+              23,
+              36
+            ],
+            [
+              3,
+              39,
+              0
+            ],
+            [
+              2,
+              9,
+              12
+            ]
+          ],
+          "label_order": [
+            "baseline",
+            "stress",
+            "amusement"
+          ],
+          "absent_classes": []
+        },
+        "S7": {
+          "macro_f1": 0.1442495126705653,
+          "balanced_accuracy": 0.1581196581196581,
+          "accuracy": 0.2605633802816901,
+          "precision_per_class": [
+            0.3978494623655914,
+            0.0,
+            0.0
+          ],
+          "recall_per_class": [
+            0.47435897435897434,
+            0.0,
+            0.0
+          ],
+          "f1_per_class": [
+            0.4327485380116959,
+            0.0,
+            0.0
+          ],
+          "support": [
+            78,
+            41,
+            23
+          ],
+          "confusion_matrix": [
+            [
+              37,
+              0,
+              41
+            ],
+            [
+              33,
+              0,
+              8
+            ],
+            [
+              23,
+              0,
+              0
+            ]
+          ],
+          "label_order": [
+            "baseline",
+            "stress",
+            "amusement"
+          ],
+          "absent_classes": []
+        },
+        "S8": {
+          "macro_f1": 0.030303030303030304,
+          "balanced_accuracy": 0.02631578947368421,
+          "accuracy": 0.04225352112676056,
+          "precision_per_class": [
+            0.10714285714285714,
+            0.0,
+            0.0
+          ],
+          "recall_per_class": [
+            0.07894736842105263,
+            0.0,
+            0.0
+          ],
+          "f1_per_class": [
+            0.09090909090909091,
+            0.0,
+            0.0
+          ],
+          "support": [
+            76,
+            43,
+            23
+          ],
+          "confusion_matrix": [
+            [
+              6,
+              19,
+              51
+            ],
+            [
+              27,
+              0,
+              16
+            ],
+            [
+              23,
+              0,
+              0
+            ]
+          ],
+          "label_order": [
+            "baseline",
+            "stress",
+            "amusement"
+          ],
+          "absent_classes": []
+        },
+        "S9": {
+          "macro_f1": 0.26900584795321636,
+          "balanced_accuracy": 0.2987012987012987,
+          "accuracy": 0.48936170212765956,
+          "precision_per_class": [
+            0.7340425531914894,
+            0.0,
+            0.0
+          ],
+          "recall_per_class": [
+            0.8961038961038961,
+            0.0,
+            0.0
+          ],
+          "f1_per_class": [
+            0.8070175438596491,
+            0.0,
+            0.0
+          ],
+          "support": [
+            77,
+            41,
+            23
+          ],
+          "confusion_matrix": [
+            [
+              69,
+              0,
+              8
+            ],
+            [
+              2,
+              0,
+              39
+            ],
+            [
+              23,
+              0,
+              0
+            ]
+          ],
+          "label_order": [
+            "baseline",
+            "stress",
+            "amusement"
+          ],
+          "absent_classes": []
+        },
+        "S10": {
+          "macro_f1": 0.7062813729480396,
+          "balanced_accuracy": 0.7062284000304352,
+          "accuracy": 0.7414965986394558,
+          "precision_per_class": [
+            0.7468354430379747,
+            1.0,
+            0.41935483870967744
+          ],
+          "recall_per_class": [
+            0.7662337662337663,
+            0.7872340425531915,
+            0.5652173913043478
+          ],
+          "f1_per_class": [
+            0.7564102564102564,
+            0.8809523809523809,
+            0.48148148148148145
+          ],
+          "support": [
+            77,
+            47,
+            23
+          ],
+          "confusion_matrix": [
+            [
+              59,
+              0,
+              18
+            ],
+            [
+              10,
+              37,
+              0
+            ],
+            [
+              10,
+              0,
+              13
+            ]
+          ],
+          "label_order": [
+            "baseline",
+            "stress",
+            "amusement"
+          ],
+          "absent_classes": []
+        },
+        "S11": {
+          "macro_f1": 0.6131014256014257,
+          "balanced_accuracy": 0.5719932241671372,
+          "accuracy": 0.6666666666666666,
+          "precision_per_class": [
+            0.638095238095238,
+            0.6666666666666666,
+            1.0
+          ],
+          "recall_per_class": [
+            0.8701298701298701,
+            0.45454545454545453,
+            0.391304347826087
+          ],
+          "f1_per_class": [
+            0.7362637362637363,
+            0.5405405405405406,
+            0.5625
+          ],
+          "support": [
+            77,
+            44,
+            23
+          ],
+          "confusion_matrix": [
+            [
+              67,
+              10,
+              0
+            ],
+            [
+              24,
+              20,
+              0
+            ],
+            [
+              14,
+              0,
+              9
+            ]
+          ],
+          "label_order": [
+            "baseline",
+            "stress",
+            "amusement"
+          ],
+          "absent_classes": []
+        },
+        "S13": {
+          "macro_f1": 0.46417159985938855,
+          "balanced_accuracy": 0.5221861471861472,
+          "accuracy": 0.5555555555555556,
+          "precision_per_class": [
+            0.68,
+            0.5375,
+            0.21428571428571427
+          ],
+          "recall_per_class": [
+            0.44155844155844154,
+            1.0,
+            0.125
+          ],
+          "f1_per_class": [
+            0.5354330708661418,
+            0.6991869918699187,
+            0.15789473684210525
+          ],
+          "support": [
+            77,
+            43,
+            24
+          ],
+          "confusion_matrix": [
+            [
+              34,
+              32,
+              11
+            ],
+            [
+              0,
+              43,
+              0
+            ],
+            [
+              16,
+              5,
+              3
+            ]
+          ],
+          "label_order": [
+            "baseline",
+            "stress",
+            "amusement"
+          ],
+          "absent_classes": []
+        },
+        "S14": {
+          "macro_f1": 0.2621406727828746,
+          "balanced_accuracy": 0.34782608695652173,
+          "accuracy": 0.5454545454545454,
+          "precision_per_class": [
+            0.5460992907801419,
+            0.0,
+            0.5
+          ],
+          "recall_per_class": [
+            1.0,
+            0.0,
+            0.043478260869565216
+          ],
+          "f1_per_class": [
+            0.7064220183486238,
+            0.0,
+            0.08
+          ],
+          "support": [
+            77,
+            43,
+            23
+          ],
+          "confusion_matrix": [
+            [
+              77,
+              0,
+              0
+            ],
+            [
+              42,
+              0,
+              1
+            ],
+            [
+              22,
+              0,
+              1
+            ]
+          ],
+          "label_order": [
+            "baseline",
+            "stress",
+            "amusement"
+          ],
+          "absent_classes": []
+        },
+        "S15": {
+          "macro_f1": 0.3672760327590762,
+          "balanced_accuracy": 0.5,
+          "accuracy": 0.3541666666666667,
+          "precision_per_class": [
+            0.7368421052631579,
+            0.8235294117647058,
+            0.21296296296296297
+          ],
+          "recall_per_class": [
+            0.18181818181818182,
+            0.3181818181818182,
+            1.0
+          ],
+          "f1_per_class": [
+            0.2916666666666667,
+            0.45901639344262296,
+            0.3511450381679389
+          ],
+          "support": [
+            77,
+            44,
+            23
+          ],
+          "confusion_matrix": [
+            [
+              14,
+              3,
+              60
+            ],
+            [
+              5,
+              14,
+              25
+            ],
+            [
+              0,
+              0,
+              23
+            ]
+          ],
+          "label_order": [
+            "baseline",
+            "stress",
+            "amusement"
+          ],
+          "absent_classes": []
+        },
+        "S16": {
+          "macro_f1": 0.5172364874450276,
+          "balanced_accuracy": 0.5395147488170744,
+          "accuracy": 0.6503496503496503,
+          "precision_per_class": [
+            0.9464285714285714,
+            0.6349206349206349,
+            0.0
+          ],
+          "recall_per_class": [
+            0.6883116883116883,
+            0.9302325581395349,
+            0.0
+          ],
+          "f1_per_class": [
+            0.7969924812030075,
+            0.7547169811320755,
+            0.0
+          ],
+          "support": [
+            77,
+            43,
+            23
+          ],
+          "confusion_matrix": [
+            [
+              53,
+              0,
+              24
+            ],
+            [
+              3,
+              40,
+              0
+            ],
+            [
+              0,
+              23,
+              0
+            ]
+          ],
+          "label_order": [
+            "baseline",
+            "stress",
+            "amusement"
+          ],
+          "absent_classes": []
+        },
+        "S17": {
+          "macro_f1": 0.3543224987533433,
+          "balanced_accuracy": 0.3782812931749102,
+          "accuracy": 0.5510204081632653,
+          "precision_per_class": [
+            0.7553191489361702,
+            0.2564102564102564,
+            0.0
+          ],
+          "recall_per_class": [
+            0.922077922077922,
+            0.2127659574468085,
+            0.0
+          ],
+          "f1_per_class": [
+            0.8304093567251462,
+            0.23255813953488372,
+            0.0
+          ],
+          "support": [
+            77,
+            47,
+            23
+          ],
+          "confusion_matrix": [
+            [
+              71,
+              6,
+              0
+            ],
+            [
+              23,
+              10,
+              14
+            ],
+            [
+              0,
+              23,
+              0
+            ]
+          ],
+          "label_order": [
+            "baseline",
+            "stress",
+            "amusement"
+          ],
+          "absent_classes": []
+        }
+      },
+      "pooled_oof": {
+        "macro_f1": 0.47249629076170835,
+        "balanced_accuracy": 0.47495452689117873,
+        "accuracy": 0.5337078651685393,
+        "precision_per_class": [
+          0.6756238003838771,
+          0.5349206349206349,
+          0.21336206896551724
+        ],
+        "recall_per_class": [
+          0.6121739130434782,
+          0.5265625,
+          0.2861271676300578
+        ],
+        "f1_per_class": [
+          0.6423357664233577,
+          0.5307086614173229,
+          0.24444444444444444
+        ],
+        "support": [
+          1150,
+          640,
+          346
+        ],
+        "confusion_matrix": [
+          [
+            704,
+            188,
+            258
+          ],
+          [
+            196,
+            337,
+            107
+          ],
+          [
+            142,
+            105,
+            99
+          ]
+        ],
+        "label_order": [
+          "baseline",
+          "stress",
+          "amusement"
+        ],
+        "absent_classes": []
+      }
+    }
+  },
+  "figure_count": 131,
+  "file_count": 262,
+  "dpi": 220,
+  "reused_figures": 0,
+  "rendered_figures": 131,
+  "generation_directory": "scientific-v2_8ef7274d0df7e355"
+}
