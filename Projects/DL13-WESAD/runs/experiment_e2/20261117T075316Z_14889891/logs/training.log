@@ -1,0 +1,6 @@
+2026-11-17T07:53:17.046248+00:00 [EXPERIMENT_START] {'group_id': '20261117T075316Z_14889891', 'resume': False}
+2026-11-17T07:53:17.046248+00:00 [PREPROCESSING] {'root': 'D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\raw\\WESAD', 'cache': 'D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\processed\\c369cd27d24abb09'}
+2026-11-17T07:58:41.879140+00:00 [EXPERIMENT_END] {'status': 'partial', 'completed_folds': 1}
+2026-11-17T07:59:35.820056+00:00 [EXPERIMENT_START] {'group_id': '20261117T075316Z_14889891', 'resume': True}
+2026-11-17T07:59:35.821058+00:00 [PREPROCESSING] {'root': 'D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\raw\\WESAD', 'cache': 'D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\processed\\c369cd27d24abb09'}
+2026-11-17T08:38:49.996813+00:00 [EXPERIMENT_END] {'status': 'completed', 'completed_folds': 5}

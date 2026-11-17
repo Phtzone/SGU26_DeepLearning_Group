@@ -1,0 +1,6 @@
+{"timestamp": "2026-11-17T07:53:17.045742+00:00", "event": "experiment_start", "group_id": "20261117T075316Z_14889891", "resume": false}
+{"timestamp": "2026-11-17T07:53:17.046248+00:00", "event": "preprocessing", "root": "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\raw\\WESAD", "cache": "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\processed\\c369cd27d24abb09"}
+{"timestamp": "2026-11-17T07:58:41.879140+00:00", "event": "experiment_end", "status": "partial", "completed_folds": 1}
+{"timestamp": "2026-11-17T07:59:35.819047+00:00", "event": "experiment_start", "group_id": "20261117T075316Z_14889891", "resume": true}
+{"timestamp": "2026-11-17T07:59:35.820056+00:00", "event": "preprocessing", "root": "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\raw\\WESAD", "cache": "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\processed\\c369cd27d24abb09"}
+{"timestamp": "2026-11-17T08:38:49.996813+00:00", "event": "experiment_end", "status": "completed", "completed_folds": 5}

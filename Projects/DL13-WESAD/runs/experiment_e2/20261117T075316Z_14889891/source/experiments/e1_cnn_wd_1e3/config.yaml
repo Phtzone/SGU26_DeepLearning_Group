@@ -1,0 +1,7 @@
+# E1 optimization candidate: change weight decay only; preserve the baseline.
+experiment:
+  id: E1_CNN_WD_1E3
+  model: cnn1d
+  status: implemented
+training:
+  weight_decay: 0.001

@@ -6,12 +6,12 @@ Dự án sử dụng PyTorch để phân loại ba trạng thái **baseline, str
 
 ## 1. Mục tiêu nghiên cứu và tiến độ
 
-Các câu hỏi nghiên cứu gồm: CNN-1D có nhận diện được trạng thái của người mới không; GRU và CNN-GRU có cải thiện so với CNN-1D khi dùng cùng giao thức không; ACC, BVP và EDA đóng góp như thế nào qua các thí nghiệm loại bỏ cảm biến?
+Các câu hỏi nghiên cứu gồm: CNN-1D, GRU và CNN-GRU phân loại ba trạng thái baseline, stress và amusement trên người mới tốt đến mức nào; CNN-GRU có cải thiện so với hai mô hình riêng lẻ không; kết quả CNN-GRU thay đổi thế nào khi lần lượt vô hiệu hóa EDA hoặc BVP rồi huấn luyện lại?
 
 | Thành phần | Trạng thái thực tế |
 |---|---|
 | E1 CNN-1D | Đã huấn luyện từ đầu và hoàn tất 5 folds; group chính thức `20261108T154303Z_474b38f9` |
-| E2 GRU | Chưa triển khai: module còn là placeholder, cấu hình `planned` |
+| E2 GRU | Đã triển khai và chạy đủ 5 folds, seed 42; [kết quả E2](experiments/e2_gru/README.md), group `20261117T075316Z_14889891` |
 | E3 CNN-GRU | Chưa triển khai: module còn là placeholder, cấu hình `planned` |
 | Loại bỏ từng cảm biến | Đã có cấu hình dự kiến; chưa có kết quả để báo cáo |
 
@@ -50,13 +50,13 @@ Checksum SHA256 của JSON canonical cho split: `239949dfebabd802091d14a4494d221
 DL13-WESAD/
 ├── src/
 │   ├── data/             # Kiểm tra, resampling, windows, cache, chuẩn hóa và splits
-│   ├── models/           # CNN-1D; GRU/CNN-GRU hiện còn placeholder
+│   ├── models/           # CNN-1D, GRU; CNN-GRU hiện còn placeholder
 │   ├── training/         # Trainer, optimizer, selection và checkpoints
 │   ├── evaluation/       # Metrics, OOF, lịch sử và trực quan hóa
 │   └── utils/            # Cấu hình, console, CSV/JSON và TensorBoard
 ├── scripts/              # Các lệnh điều phối, tổng hợp và hậu kiểm
 ├── configs/              # Cấu hình nền
-├── experiments/          # Cấu hình/tài liệu E1, kế hoạch E2/E3 và ablation
+├── experiments/          # Cấu hình/tài liệu E1, E2; kế hoạch E3 và ablation
 ├── splits/               # Manifest subject-wise dùng chung
 ├── tests/                # Unit và regression tests với dữ liệu tổng hợp
 ├── data/                 # Raw/interim/processed cục bộ; không đóng gói audit
@@ -156,7 +156,7 @@ Canonical GROUP_ID: `20261108T154303Z_474b38f9`. **5/5 folds, 15 Test subjects d
 Độ lệch chuẩn giữa folds dùng `ddof=1`. Pooled OOF tính trực tiếp trên tất cả dự đoán, không phải trung bình năm scores. [Bảng từng fold và phân tích E1](experiments/e1_cnn/README.md) · [Summary](results/experiment_e1/20261108T154303Z_474b38f9/summary.json).
 <!-- ACTUAL_RESULTS_END -->
 
-Chưa có kết quả E2/E3 để kết luận model nào tốt hơn. Registry chọn group đã được chỉ định trước để làm baseline, không lựa chọn group có Test score cao nhất.
+E2 đã có một lượt thử hoàn chỉnh; xem [so sánh CNN và GRU theo người](results/experiment_e2/20261117T075316Z_14889891/cnn_gru_comparison.md). Chưa có E3 và chưa đánh giá nhiều seeds để kết luận RQ1. Registry E1 giữ group được chỉ định trước, không lựa chọn group có Test score cao nhất. Báo cáo mới dùng Macro-F1 trung bình đều theo người làm metric chính; trung bình theo folds và pooled OOF là các số bổ sung.
 
 ## 10. Kiểm chứng và tái lập
 
@@ -180,4 +180,4 @@ Mười lăm người trong bối cảnh thu thập WESAD và một training see
 
 ## 12. Hướng phát triển
 
-Triển khai E2 GRU, sau đó E3 CNN-GRU, dùng cùng preprocessing, split, selection và cách tổng hợp để so sánh với registry E1. Các sensor ablations và thí nghiệm điều chỉnh siêu tham số phải dùng experiment/group riêng. Chưa công bố bất kỳ metrics GRU/CNN-GRU hoặc ablation nào.
+E2 GRU đã chạy một cấu hình với seed 42. Tiếp theo cần thống nhất ngân sách tuning và kế hoạch seeds trước khi mở rộng so sánh, rồi triển khai E3 CNN-GRU. Giữ cùng preprocessing, split và quy tắc selection. Với ablation EDA/BVP của CNN-GRU, đặt riêng kênh cần vô hiệu hóa bằng 0 sau chuẩn hóa và huấn luyện lại, giữ kích thước đầu vào. Các YAML ablation hiện mới là bản dự kiến, cần điều chỉnh trước khi chạy. Mỗi thiết kế/lượt chạy lưu riêng; không dùng Test để quyết định thay đổi thông số.

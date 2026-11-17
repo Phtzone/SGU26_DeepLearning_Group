@@ -1,4 +1,4 @@
-"""Manual E1 entry point: selected folds or full grouped CV; dry-run never trains."""
+"""CNN/GRU entry point: selected folds or full grouped CV; dry-run never trains."""
 import argparse
 import os
 import re
@@ -10,7 +10,7 @@ from src.data.splits import load_manifest
 from src.evaluation.aggregation import aggregate_group
 from src.training.trainer import train_fold, completed_fold
 from src.evaluation.enhanced_visualization import generate_visualizations
-from src.utils.config import ROOT, raw_root, load_config, same_training_config
+from src.utils.config import ROOT, raw_root, load_config, same_training_config, experiment_folder
 from src.utils.console import ConsoleLogger
 from src.utils.logging import RunLogger
 from src.utils.system_info import system_info
@@ -34,7 +34,7 @@ def execution_plan(config, group_id=None, resume=False, folds=None):
     if resume:
         if not group_id or not re.fullmatch(r'[A-Za-z0-9_-]+', group_id):
             raise ValueError('--resume requires a valid --group-id.')
-        existing = read_json(ROOT / 'runs/experiment_e1' / group_id / 'experiment_manifest.json')
+        existing = read_json(ROOT / 'runs' / experiment_folder(config) / group_id / 'experiment_manifest.json')
         if existing.get('runner_version') != 'tensorboard-manual-v1':
             raise ValueError('Historical/legacy groups are read-only. Start a new reproduction group.')
         if not same_training_config(existing['effective_config'], config) or existing['manifest_checksum'] != digest(split):
@@ -50,7 +50,7 @@ def execution_plan(config, group_id=None, resume=False, folds=None):
         'protocol_folds': len(split['folds']), 'training_seeds': config['training']['seeds'],
         'effective_config': config, 'manifest_checksum': digest(split), 'raw_root': str(dataset),
         'subjects_present': len(split['original_subject_order']) - len(missing), 'missing_subjects': missing,
-        'tensorboard_log_root': str(ROOT / 'runs/experiment_e1'),
+        'tensorboard_log_root': str(ROOT / 'runs' / experiment_folder(config)),
         'subjects_by_fold': [fold for fold in split['folds'] if fold['fold_id'] in selected]}
 
 
@@ -61,7 +61,7 @@ def run(config, group_id=None, resume=False, folds=None, dry_run=False):
     if not re.fullmatch(r'[A-Za-z0-9_-]+', group_id):
         raise ValueError('Invalid group ID.')
     split, selected, existing, plan = execution_plan(config, group_id, resume, folds)
-    group = ROOT / 'runs/experiment_e1' / group_id
+    group = ROOT / 'runs' / experiment_folder(config) / group_id
     exists = group.exists()
     if exists != resume:
         raise ValueError('New groups must not exist; resumed groups must already exist.')
@@ -71,7 +71,7 @@ def run(config, group_id=None, resume=False, folds=None, dry_run=False):
         return plan
     if plan['missing_subjects']:
         raise FileNotFoundError(f"Dataset is incomplete at {plan['raw_root']}: {plan['missing_subjects']}")
-    if resume and existing['status'] in ('partial', 'completed') and (ROOT / 'results/experiment_e1' / group_id / 'summary.json').exists():
+    if resume and existing['status'] in ('partial', 'completed') and (ROOT / 'results' / group.parent.name / group_id / 'summary.json').exists():
         if all(completed_fold(group / f'seed_{seed}' / f'fold_{fold_id:02d}') for seed in config['training']['seeds'] for fold_id in selected):
             print('Selected folds already completed and verified; no artifacts were rewritten.')
             print('GROUP_ID=' + group_id)
@@ -147,7 +147,8 @@ def run(config, group_id=None, resume=False, folds=None, dry_run=False):
             manifest = read_json(group / 'experiment_manifest.json')
             manifest.update(status='interrupted' if isinstance(exc, KeyboardInterrupt) else 'failed', error=repr(exc))
             write_group_manifest(group, manifest)
-        print(f'Resume: python -m scripts.run_grouped_cv --experiment experiments/e1_cnn/config.yaml --resume --group-id {group_id}', flush=True)
+        experiment_path = 'experiments/e2_gru/config.yaml' if config['experiment']['model'] == 'gru' else 'experiments/e1_cnn/config.yaml'
+        print(f'Resume: python -m scripts.run_grouped_cv --experiment {experiment_path} --resume --group-id {group_id}', flush=True)
         raise
     finally:
         lock.unlink(missing_ok=True)

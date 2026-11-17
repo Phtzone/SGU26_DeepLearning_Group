@@ -70,7 +70,7 @@ def aggregate_group(group, output=None, update_docs=True):
     split = load_manifest(group / 'split_manifest.json')
     if digest(split) != manifest['manifest_checksum']:
         raise ValueError('Group split checksum mismatch.')
-    output = output or ROOT / 'results/experiment_e1' / group.name
+    output = output or ROOT / 'results' / group.parent.name / group.name
     output.mkdir(parents=True, exist_ok=True)
     folds, subjects, predictions, audits, histories = [], [], [], {}, []
     missing = []
@@ -109,7 +109,8 @@ def aggregate_group(group, output=None, update_docs=True):
         raise ValueError('Duplicate OOF predictions across folds.')
     status = 'partial' if missing else 'completed'
     summary = {'status': status, 'completed_folds': len(folds), 'expected_folds': 5 * len(config['training']['seeds']), 'missing_folds': missing,
-               'group_id': group.name, 'manifest_checksum': manifest['manifest_checksum'], 'per_seed': {}}
+               'group_id': group.name, 'manifest_checksum': manifest['manifest_checksum'], 'per_seed': {},
+               'primary_metric': 'per_seed[seed].subject_level.macro_f1.mean'}
     if not missing:
         for seed in config['training']['seeds']:
             fr, sr, pr = ([r for r in rows if r['training_seed'] == seed] for rows in (folds, subjects, predictions))
@@ -127,6 +128,7 @@ def aggregate_group(group, output=None, update_docs=True):
     write_json(output / 'iteration_audit.json', audits)
     write_json(output / 'summary.json', summary)
     text = f"Trạng thái: **{status}**. Hoàn tất {len(folds)}/{summary['expected_folds']} folds. Group: `{group.name}`.\n"
+    text += '\nMetric chính: Macro-F1 tính riêng từng người rồi trung bình đều trên 15 người, cho mỗi seed. Độ lệch chuẩn giữa người không phải độ lệch chuẩn giữa seeds.\n'
     if not missing:
         text += '\n| Seed | Fold | Epochs | Best epoch | Test Macro-F1 | Balanced Accuracy | Duration (s) |\n|---|---|---|---|---|---|---|\n'
         text += '\n'.join(f"| {r['training_seed']} | {r['fold_id']} | {r['completed_epochs']} | {r['best_epoch']} | {r['macro_f1']:.4f} | {r['balanced_accuracy']:.4f} | {r['training_duration_seconds']:.1f} |" for r in folds)
@@ -163,11 +165,11 @@ def aggregate_group(group, output=None, update_docs=True):
             plt.close(fig)
         text += '\n\n| Seed | Subject | Fold | Windows | Macro-F1 | Balanced Accuracy |\n|---|---|---|---|---|---|\n'
         text += '\n'.join(f"| {r['training_seed']} | {r['subject_id']} | {r['fold_id']} | {r['windows']} | {r['macro_f1']:.4f} | {r['balanced_accuracy']:.4f} |" for r in subjects)
-        text += '\n\nCác metrics được tính lại từ predictions và kiểm tra với manifest. Hiệu suất biến thiên theo subject trong WESAD; các kết quả này chưa xác định được nguyên nhân của khác biệt. Một training seed chưa đánh giá được độ ổn định theo khởi tạo. Chưa có kết quả E2/E3 để so sánh kiến trúc.'
+        text += '\n\nCác metrics được tính lại từ predictions và kiểm tra với manifest. Một training seed chưa đánh giá được độ ổn định theo khởi tạo. Cần đối chiếu các lượt chạy có cùng giao thức để so sánh kiến trúc.'
     else:
         text += '\nChưa đủ folds; không báo cáo mean/std cuối cùng. Folds còn thiếu: ' + str(missing)
     (output / 'summary.md').write_text(text + '\n', encoding='utf-8')
-    if update_docs:
+    if update_docs and config['experiment']['model'] == 'cnn1d':
         relative = '../../results/experiment_e1/' + group.name
         update_section(ROOT / 'experiments/e1_cnn/README.md', text + f'\n\n[Summary]({relative}/summary.md) · [OOF]({relative}/oof_predictions.csv) · [Figures]({relative}/figures/) · [Runs](../../runs/experiment_e1/{group.name}/)')
         update_section(ROOT / 'README.md', f"E1: **{status}**, {len(folds)}/{summary['expected_folds']} folds. [Kết quả](results/experiment_e1/{group.name}/summary.md) · [Chi tiết E1](experiments/e1_cnn/README.md).")

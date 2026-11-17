@@ -1,4 +1,7 @@
 experiment:
   id: E2_GRU
   model: gru
-  status: planned
+  status: implemented
+model:
+  hidden_size: 64
+  dropout: 0.3

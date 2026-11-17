@@ -2,7 +2,7 @@ from copy import deepcopy
 from unittest.mock import Mock
 import pytest
 from src.data.splits import ensure_manifest, SUBJECTS
-from src.utils.config import load_config, same_training_config
+from src.utils.config import load_config, same_training_config, experiment_folder
 from src.utils.tracking import write_json, read_json, digest
 import scripts.run_grouped_cv as runner
 
@@ -57,8 +57,12 @@ def test_dry_run_never_preprocesses_or_trains(sandbox_runner, monkeypatch):
     assert not (root / 'runs').exists()
 
 
-def test_single_full_resume_and_completed_skip(sandbox_runner, monkeypatch):
+@pytest.mark.parametrize('experiment', ['experiments/e1_cnn/config.yaml', 'experiments/e2_gru/config.yaml'])
+def test_single_full_resume_and_completed_skip(sandbox_runner, monkeypatch, experiment):
     root, cfg = sandbox_runner
+    cfg = load_config(experiment)
+    cfg['logging']['console']['enabled'] = False
+    namespace = experiment_folder(cfg)
     trained = []
     monkeypatch.setattr(runner, 'prepare_dataset', lambda *args: [{'subject_id': subject, 'cache_key': subject} for subject in SUBJECTS])
     def train(folder, cache, fold, seed, config, checksum, **kwargs):
@@ -75,9 +79,9 @@ def test_single_full_resume_and_completed_skip(sandbox_runner, monkeypatch):
         assert update_docs is False
         count = len(list(group.glob('seed_*/fold_*/metadata.json')))
         summary = {'status': 'completed' if count == 5 else 'partial', 'completed_folds': count}
-        write_json(root / 'results/experiment_e1' / group.name / 'summary.json', summary)
+        write_json(root / 'results' / namespace / group.name / 'summary.json', summary)
         # Reproduce an aggregator copying the still-running input manifest.
-        write_json(root / 'results/experiment_e1' / group.name / 'experiment_manifest.json',
+        write_json(root / 'results' / namespace / group.name / 'experiment_manifest.json',
                    read_json(group / 'experiment_manifest.json'))
         return summary
     monkeypatch.setattr(runner, 'aggregate_group', aggregate)
@@ -85,7 +89,8 @@ def test_single_full_resume_and_completed_skip(sandbox_runner, monkeypatch):
     monkeypatch.setattr(runner, 'generate_visualizations', images)
     group = runner.run(cfg, group_id='manual', folds=[1])
     assert trained == [1] and read_json(group / 'experiment_manifest.json')['status'] == 'partial'
-    result_manifest = root / 'results/experiment_e1/manual/experiment_manifest.json'
+    assert group.parent.name == namespace
+    result_manifest = root / 'results' / namespace / 'manual/experiment_manifest.json'
     assert read_json(result_manifest) == read_json(group / 'experiment_manifest.json')
     before = {p: p.read_bytes() for p in group.rglob('*') if p.is_file()}
     runner.run(cfg, group_id='manual', resume=True)

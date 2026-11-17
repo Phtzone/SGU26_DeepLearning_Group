@@ -7,6 +7,10 @@ import yaml
 ROOT = Path(__file__).resolve().parents[2]
 
 
+def experiment_folder(config):
+    return {'cnn1d': 'experiment_e1', 'gru': 'experiment_e2'}[config['experiment']['model']]
+
+
 def merge(base, override):
     result = copy.deepcopy(base)
     for key, value in override.items():
@@ -19,13 +23,22 @@ def load_config(path=None):
     if path:
         config = merge(config, yaml.safe_load((ROOT / path).read_text(encoding='utf-8')))
     if config['experiment']['status'] == 'planned':
-        raise NotImplementedError('This experiment is planned; only E1 is implemented.')
+        raise NotImplementedError('This experiment is planned; only CNN-1D and GRU are implemented.')
     if config['data']['max_windows_per_subject'] is not None:
         raise ValueError('Research runs must use every valid window.')
     if config['split']['protocol'] != 'grouped_subject_wise_5fold' or config['split']['split_seed'] != 42:
         raise ValueError('The official protocol requires the fixed seed42 five-fold manifest.')
-    if config['experiment']['model'] != 'cnn1d' or config['selection'] != {'metric': 'val_macro_f1', 'mode': 'max', 'tie_breaker': 'val_loss'}:
+    if config['experiment']['model'] not in ('cnn1d', 'gru') or config['selection'] != {'metric': 'val_macro_f1', 'mode': 'max', 'tie_breaker': 'val_loss'}:
         raise ValueError('Unsupported model/selection protocol.')
+    if config['experiment']['model'] == 'gru':
+        options = config.get('model', {})
+        if set(options) - {'hidden_size', 'dropout'}:
+            raise ValueError('Unsupported GRU model options.')
+        hidden = options.get('hidden_size', 64)
+        if isinstance(hidden, bool) or not isinstance(hidden, int) or hidden <= 0:
+            raise ValueError('GRU hidden_size must be a positive integer.')
+        if not 0 <= options.get('dropout', 0.3) < 1:
+            raise ValueError('GRU dropout must be in [0, 1).')
     if config['data']['labels'] != [1, 2, 3] or config['runtime']['parallel_folds'] != 1:
         raise ValueError('E1 uses labels 1/2/3 and sequential folds.')
     if config['training']['optimizer'] != 'adam' or config['training']['loss'] != 'weighted_cross_entropy':

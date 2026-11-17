@@ -8,8 +8,9 @@ from src.evaluation.aggregation import audit_iterations
 from src.utils.config import load_config
 
 
-def test_interrupted_resume_matches_uninterrupted(tiny_cache, tmp_path):
-    config = load_config()
+@pytest.mark.parametrize('experiment', ['experiments/e1_cnn/config.yaml', 'experiments/e2_gru/config.yaml'])
+def test_interrupted_resume_matches_uninterrupted(tiny_cache, tmp_path, experiment):
+    config = load_config(experiment)
     config['training'].update(max_epochs=3, batch_size=32)
     fold = create_manifest()['folds'][0]
     reference = tmp_path / 'reference'
@@ -35,9 +36,10 @@ def test_interrupted_resume_matches_uninterrupted(tiny_cache, tmp_path):
     assert len({h['attempt_id'] for h in b['history']}) == 2
 
 
-def test_test_not_used_for_checkpoint_selection(tiny_cache, tmp_path, monkeypatch):
+@pytest.mark.parametrize('experiment', ['experiments/e1_cnn/config.yaml', 'experiments/e2_gru/config.yaml'])
+def test_test_not_used_for_checkpoint_selection(tiny_cache, tmp_path, monkeypatch, experiment):
     import src.training.trainer as trainer
-    config = load_config()
+    config = load_config(experiment)
     config['training'].update(max_epochs=2, batch_size=64)
     fold = create_manifest()['folds'][0]
     original = trainer.evaluate

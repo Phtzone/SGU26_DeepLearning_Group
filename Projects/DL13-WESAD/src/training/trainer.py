@@ -8,7 +8,7 @@ import yaml
 from torch.utils.data import DataLoader
 from src.data.dataset import WindowDataset
 from src.data.normalization import ChannelScaler
-from src.models.cnn import CNN1D
+from src.models import build_model
 from src.training.optimizer import make_optimizer, class_weights
 from src.training.callbacks import SelectionState
 from src.training.checkpoint import save_checkpoint, load_checkpoint
@@ -75,7 +75,7 @@ def train_fold(folder, cache, fold, seed, config, manifest_checksum, resume=Fals
         tc = config['training']
         loaders = {role: DataLoader(dataset, batch_size=tc['batch_size'], shuffle=False, num_workers=config['runtime']['num_workers']) for role, dataset in datasets.items()}
         train_loader = DataLoader(datasets['train'], batch_size=tc['batch_size'], shuffle=True, num_workers=config['runtime']['num_workers'])
-        model = CNN1D(datasets['train'].arrays[fold['train'][0]].shape[1]).to(device)
+        model = build_model(config, datasets['train'].arrays[fold['train'][0]].shape[1]).to(device)
         optimizer = make_optimizer(model, tc)
         weights = class_weights(datasets['train'].labels).to(device)
         criterion = torch.nn.CrossEntropyLoss(weight=weights)

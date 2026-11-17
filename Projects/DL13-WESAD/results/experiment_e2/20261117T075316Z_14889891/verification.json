@@ -1,0 +1,61 @@
+{
+  "status": "passed",
+  "group_id": "20261117T075316Z_14889891",
+  "folds": [
+    {
+      "fold": 1,
+      "epochs": 17,
+      "best_epoch": 2,
+      "test_windows": 431,
+      "inference_matches_saved_probabilities": true,
+      "hashes_valid": true,
+      "train_only_scaler_recomputed": true,
+      "iterations": 680
+    },
+    {
+      "fold": 2,
+      "epochs": 41,
+      "best_epoch": 26,
+      "test_windows": 433,
+      "inference_matches_saved_probabilities": true,
+      "hashes_valid": true,
+      "train_only_scaler_recomputed": true,
+      "iterations": 1640
+    },
+    {
+      "fold": 3,
+      "epochs": 17,
+      "best_epoch": 2,
+      "test_windows": 426,
+      "inference_matches_saved_probabilities": true,
+      "hashes_valid": true,
+      "train_only_scaler_recomputed": true,
+      "iterations": 697
+    },
+    {
+      "fold": 4,
+      "epochs": 27,
+      "best_epoch": 12,
+      "test_windows": 427,
+      "inference_matches_saved_probabilities": true,
+      "hashes_valid": true,
+      "train_only_scaler_recomputed": true,
+      "iterations": 1107
+    },
+    {
+      "fold": 5,
+      "epochs": 49,
+      "best_epoch": 34,
+      "test_windows": 419,
+      "inference_matches_saved_probabilities": true,
+      "hashes_valid": true,
+      "train_only_scaler_recomputed": true,
+      "iterations": 2009
+    }
+  ],
+  "subjects": 15,
+  "oof_windows": 2136,
+  "same_data_split_training_settings_as_cnn": true,
+  "primary_metric_recomputed_from_subject_predictions": true,
+  "old_e1_artifacts_intact": true
+}
