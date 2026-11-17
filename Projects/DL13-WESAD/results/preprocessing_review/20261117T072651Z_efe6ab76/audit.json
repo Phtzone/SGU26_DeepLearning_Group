@@ -1,0 +1,271 @@
+{
+  "status": "passed",
+  "cache": "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\processed\\c369cd27d24abb09",
+  "raw_root": "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\raw\\WESAD",
+  "total_windows": 2136,
+  "class_distribution": [
+    {
+      "class": "baseline",
+      "windows": 1150,
+      "percentage": 53.838951310861425
+    },
+    {
+      "class": "stress",
+      "windows": 640,
+      "percentage": 29.962546816479403
+    },
+    {
+      "class": "amusement",
+      "windows": 346,
+      "percentage": 16.198501872659175
+    }
+  ],
+  "subject_counts": [
+    {
+      "subject": "S2",
+      "baseline": 75,
+      "stress": 39,
+      "amusement": 23,
+      "total": 137
+    },
+    {
+      "subject": "S3",
+      "baseline": 74,
+      "stress": 41,
+      "amusement": 23,
+      "total": 138
+    },
+    {
+      "subject": "S4",
+      "baseline": 76,
+      "stress": 41,
+      "amusement": 23,
+      "total": 140
+    },
+    {
+      "subject": "S5",
+      "baseline": 78,
+      "stress": 41,
+      "amusement": 23,
+      "total": 142
+    },
+    {
+      "subject": "S6",
+      "baseline": 77,
+      "stress": 42,
+      "amusement": 23,
+      "total": 142
+    },
+    {
+      "subject": "S7",
+      "baseline": 78,
+      "stress": 41,
+      "amusement": 23,
+      "total": 142
+    },
+    {
+      "subject": "S8",
+      "baseline": 76,
+      "stress": 43,
+      "amusement": 23,
+      "total": 142
+    },
+    {
+      "subject": "S9",
+      "baseline": 77,
+      "stress": 41,
+      "amusement": 23,
+      "total": 141
+    },
+    {
+      "subject": "S10",
+      "baseline": 77,
+      "stress": 47,
+      "amusement": 23,
+      "total": 147
+    },
+    {
+      "subject": "S11",
+      "baseline": 77,
+      "stress": 44,
+      "amusement": 23,
+      "total": 144
+    },
+    {
+      "subject": "S13",
+      "baseline": 77,
+      "stress": 43,
+      "amusement": 24,
+      "total": 144
+    },
+    {
+      "subject": "S14",
+      "baseline": 77,
+      "stress": 43,
+      "amusement": 23,
+      "total": 143
+    },
+    {
+      "subject": "S15",
+      "baseline": 77,
+      "stress": 44,
+      "amusement": 23,
+      "total": 144
+    },
+    {
+      "subject": "S16",
+      "baseline": 77,
+      "stress": 43,
+      "amusement": 23,
+      "total": 143
+    },
+    {
+      "subject": "S17",
+      "baseline": 77,
+      "stress": 47,
+      "amusement": 23,
+      "total": 147
+    }
+  ],
+  "input_hashes": {
+    "S2": {
+      "raw_sha256": "36ef5e8afc0f91998eefba7c12fc9fa97b7b07198cbec0126917d7abb436ca23",
+      "cache_files": {
+        "windows.npy": "f71ab245ce84ff590684072018d2a4eac2d4585126a0ca51228ac5cea2bf13c3",
+        "windows.csv": "03c094bb974fe356adb866fdad21ba79412e076bb5450feb1cba2ce63f44dd1e"
+      }
+    },
+    "S3": {
+      "raw_sha256": "5c8bd4a82af029c082e610bca28a011fca2ae3b23e14a18458ebb5990be4015e",
+      "cache_files": {
+        "windows.npy": "6204daf69b782de41ca5f027d690d8d9053e4dec0b078826bd0bf645521bad2f",
+        "windows.csv": "2a9b187c66a2e479bba3bf05a44b75865d3a474179a4a1395beffbae6c9cf657"
+      }
+    },
+    "S4": {
+      "raw_sha256": "0f0740a79388723360ff12b4f47c465665ea7827d1399b18ac43908daac17900",
+      "cache_files": {
+        "windows.npy": "e5841f54be9d2ae48d6d96c594cc03458500d8be1a52927bf2e34fb23e7ea490",
+        "windows.csv": "eeae191ed439b06844ea66700ff58ae67cb57b9f31f4317ed9d406d6f743db3a"
+      }
+    },
+    "S5": {
+      "raw_sha256": "74bd187e3a9c1ca4259af52d04974c8e7ff7dc49ceea7e269f499ca98fe6d8ec",
+      "cache_files": {
+        "windows.npy": "68b17fac3ea7f810d395aefcea66ad3c4f0a55340581a546c584582ef9c893f1",
+        "windows.csv": "c8456320172fa3768ac37ba741762e97076fc534570ba1f5e7799c859b439eef"
+      }
+    },
+    "S6": {
+      "raw_sha256": "8aa9bf57b69f4fe5bce06c550230857627c3f05befa2f787151646bb29ee8f62",
+      "cache_files": {
+        "windows.npy": "aa8f1bcd550ab60a02ad50aa13e3a6a8e6c927322c57dfe295101515b38fab93",
+        "windows.csv": "90b9a43601e40d9555892427d44f7757de5689a0d967595970f4a0bf6e507580"
+      }
+    },
+    "S7": {
+      "raw_sha256": "9cb62705ae7f53dca327a9a00a6f9fdabf5128d449174ab37594658e912cb6d8",
+      "cache_files": {
+        "windows.npy": "a28c05025481aff42c3aceb090f895fb8abc469783ae79c5d51fb6e68f74d512",
+        "windows.csv": "f20d65cb7f2b29537ddd4aa507c6173be2e88f273c7ad0c5c91affa1d7499131"
+      }
+    },
+    "S8": {
+      "raw_sha256": "dac1141dac11d56b3641be982f45da63f05e9d74154f59e6ea0cdcf47fc72710",
+      "cache_files": {
+        "windows.npy": "414e73e3049d6b7afd5a175a64535a30618684a98dfe5546d0a655ee44ddf433",
+        "windows.csv": "0cf2a9b523965d837f73fc69712a639c936dc05a05b4ffcb701f0028d2ac0430"
+      }
+    },
+    "S9": {
+      "raw_sha256": "24dc004e201bd541f092989443f0a29ebf89e4a227a80bb6b6d1987255039544",
+      "cache_files": {
+        "windows.npy": "97493b383077e2ed26da186d13447139cef0505aab7cef23231a6ad15eb62ab0",
+        "windows.csv": "932d07156adb0dc4de7b6c053b7bef7b4a58984e1c5e2d7775e27c81f7429ba0"
+      }
+    },
+    "S10": {
+      "raw_sha256": "41da29c68366f33650f3d41a6be78107bf6942929c3bb0ef46238078ddddee9f",
+      "cache_files": {
+        "windows.npy": "d99f7654ee0dd535c7a494f6d80508aac7cfda03cdf84aa0cba5fc70edaf5e27",
+        "windows.csv": "a3bedbbf4eae48c866f7713ea21b0fd7d18bb4969d168000cd6f8ba6b20ec093"
+      }
+    },
+    "S11": {
+      "raw_sha256": "f39557a8d660b10154936f51debf2926aea7ebb9b26a168858f59502f914d8f7",
+      "cache_files": {
+        "windows.npy": "70371f6d288d7e9733f733a88809b52c93f1d7a1c860b84e14199bcad3d461af",
+        "windows.csv": "e7eb1014c257f81c1e68e5261b39af7b84348579a052bec48f3708aa86d6bfbf"
+      }
+    },
+    "S13": {
+      "raw_sha256": "772fb490f19b279e49367271e009fc10d3a3ca1e3456df0d68b9063a73992066",
+      "cache_files": {
+        "windows.npy": "b3964b83516c82214d20ecffae0dc9f7f165797321271cf7b2d99b9637288dcc",
+        "windows.csv": "5a8de7ee3b7d29ca1982e0552622b208349b4128d2c03a8fcaf142148cab8da1"
+      }
+    },
+    "S14": {
+      "raw_sha256": "e7bd33c57538319a25c6d53e6a9fb6c1abd12800cfc64bb63275d89de8d2fd60",
+      "cache_files": {
+        "windows.npy": "cb9843e2473d3d8891e91d29fc47b8b492a7a911a6df2b42e3cd0be5a1ced5b3",
+        "windows.csv": "910f1c907b1f8e927531969a3a570e74db991e9f505413c9a52a0d87e937f260"
+      }
+    },
+    "S15": {
+      "raw_sha256": "1ea573bc6b45ba79fb134f9460d691b86176f60dce23420dc514c28017d4049c",
+      "cache_files": {
+        "windows.npy": "f0e02b2dbd2ffd29f657db047b3ab919c9a83cba0637440cb2412b8be5c02015",
+        "windows.csv": "10a4b6fd2d04dfcfd216b67d90c0fa8e3a24886d84b999003b4fbf0702b6add5"
+      }
+    },
+    "S16": {
+      "raw_sha256": "f65cf40cada75c3e9f5813276d7dcc90359c3b06dec41d68656c0a6e61dbc575",
+      "cache_files": {
+        "windows.npy": "f572d453a0557a4f98943bb196052a434da1ddc29ca366b3aa292a1692344d7a",
+        "windows.csv": "e54d8086de918894f39c0ae91186df95eb9fc5261da6485b0830e354a3ee261e"
+      }
+    },
+    "S17": {
+      "raw_sha256": "3315796a75227d54d7b0056736f671484fd2fb85afffa65818fd76aeff2920fa",
+      "cache_files": {
+        "windows.npy": "9bacf0ed24f642b187539190118c652f75e07b4cc1ce59e3b8852e960dfcc8f6",
+        "windows.csv": "467e30e61c1e182f8b0e3475380505c6e74143c1ae7bb38ab000e78970f029f3"
+      }
+    }
+  },
+  "waveform_examples": [
+    {
+      "subject": "S2",
+      "class": "baseline",
+      "window_id": "S2_9810_10770",
+      "excerpt_start_seconds": 306.5625,
+      "excerpt_duration_seconds": 10,
+      "file": "S2_baseline_preprocessing.png",
+      "cache_reconstruction_matches": true
+    },
+    {
+      "subject": "S2",
+      "class": "stress",
+      "window_id": "S2_72754_73714",
+      "excerpt_start_seconds": 2273.5625,
+      "excerpt_duration_seconds": 10,
+      "file": "S2_stress_preprocessing.png",
+      "cache_reconstruction_matches": true
+    },
+    {
+      "subject": "S2",
+      "class": "amusement",
+      "window_id": "S2_152434_153394",
+      "excerpt_start_seconds": 4763.5625,
+      "excerpt_duration_seconds": 10,
+      "file": "S2_amusement_preprocessing.png",
+      "cache_reconstruction_matches": true
+    }
+  ],
+  "normalization_reference": "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\runs\\experiment_e1\\20261108T154303Z_474b38f9\\seed_42\\fold_01\\normalization.json",
+  "normalization_sha256": "368af75d7fe1b8502873d06f01ad923071e128f8d5cb34238536a8731c4b2195",
+  "waveform_policy": "First retained window per class from a Fold 1 Train subject; display first 10 seconds.",
+  "limitations": "Counts are overlapping windows, not independent observations. Waveform review covers only the displayed excerpts. No automated physiological artifact rejection or filter tuning.",
+  "data_or_training_artifacts_modified": false
+}
