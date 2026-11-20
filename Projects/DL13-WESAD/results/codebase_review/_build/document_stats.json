@@ -1,0 +1,726 @@
+{
+  "chapters": 17,
+  "tables": 88,
+  "figures": 7,
+  "diagrams": 5,
+  "scientific_charts": 2,
+  "paragraphs": 1046,
+  "citations": [
+    {
+      "path": "README.md",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "src/evaluation/metrics.py",
+      "symbol": "classification_metrics",
+      "line": 9
+    },
+    {
+      "path": "configs/default.yaml",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "experiments/e1_cnn/baseline_registry.json",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "scripts/run_grouped_cv.py",
+      "symbol": "main",
+      "line": 157
+    },
+    {
+      "path": "src/utils/config.py",
+      "symbol": "raw_root",
+      "line": 66
+    },
+    {
+      "path": "pyproject.toml",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "scripts/run_grouped_cv.py",
+      "symbol": "run",
+      "line": 57
+    },
+    {
+      "path": "scripts/prepare_data.py",
+      "symbol": "cache_path",
+      "line": 7
+    },
+    {
+      "path": "src/data/preprocessing.py",
+      "symbol": "prepare_subject",
+      "line": 15
+    },
+    {
+      "path": "src/training/trainer.py",
+      "symbol": "train_fold",
+      "line": 42
+    },
+    {
+      "path": "src/utils/config.py",
+      "symbol": "merge",
+      "line": 14
+    },
+    {
+      "path": "src/utils/config.py",
+      "symbol": "load_config",
+      "line": 21
+    },
+    {
+      "path": "configs/default.yaml",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "experiments/e2_gru/config.yaml",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "src/training/optimizer.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "src/data/inspection.py",
+      "symbol": "load_subject",
+      "line": 11
+    },
+    {
+      "path": "src/data/inspection.py",
+      "symbol": "inspect_subject",
+      "line": 22
+    },
+    {
+      "path": "src/data/inspection.py",
+      "symbol": "inspect_dataset",
+      "line": 52
+    },
+    {
+      "path": "data/interim/inspection.json",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "src/data/resampling.py",
+      "symbol": "resample_signal",
+      "line": 7
+    },
+    {
+      "path": "src/data/resampling.py",
+      "symbol": "align_labels",
+      "line": 28
+    },
+    {
+      "path": "src/data/windowing.py",
+      "symbol": "make_windows",
+      "line": 5
+    },
+    {
+      "path": "src/data/preprocessing.py",
+      "symbol": "prepare_subject",
+      "line": 15
+    },
+    {
+      "path": "src/data/normalization.py",
+      "symbol": "ChannelScaler",
+      "line": 6
+    },
+    {
+      "path": "src/data/splits.py",
+      "symbol": "create_manifest",
+      "line": 10
+    },
+    {
+      "path": "src/data/resampling.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "src/data/dataset.py",
+      "symbol": "WindowDataset",
+      "line": 9
+    },
+    {
+      "path": "src/data/normalization.py",
+      "symbol": "ChannelScaler",
+      "line": 6
+    },
+    {
+      "path": "src/training/trainer.py",
+      "symbol": "train_fold",
+      "line": 42
+    },
+    {
+      "path": "src/models/cnn.py",
+      "symbol": "CNN1D",
+      "line": 5
+    },
+    {
+      "path": "src/models/gru.py",
+      "symbol": "GRUClassifier",
+      "line": 5
+    },
+    {
+      "path": "src/models/__init__.py",
+      "symbol": "build_model",
+      "line": 6
+    },
+    {
+      "path": "src/models/cnn_gru.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "tests/test_model.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "tests/test_gru.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "src/training/trainer.py",
+      "symbol": "train_fold",
+      "line": 42
+    },
+    {
+      "path": "src/training/optimizer.py",
+      "symbol": "class_weights",
+      "line": 10
+    },
+    {
+      "path": "src/training/callbacks.py",
+      "symbol": "SelectionState",
+      "line": 2
+    },
+    {
+      "path": "src/training/checkpoint.py",
+      "symbol": "save_checkpoint",
+      "line": 8
+    },
+    {
+      "path": "src/utils/reproducibility.py",
+      "symbol": "seed_everything",
+      "line": 7
+    },
+    {
+      "path": "src/data/splits.py",
+      "symbol": "create_manifest",
+      "line": 10
+    },
+    {
+      "path": "src/data/splits.py",
+      "symbol": "validate_manifest",
+      "line": 22
+    },
+    {
+      "path": "src/data/splits.py",
+      "symbol": "load_manifest",
+      "line": 36
+    },
+    {
+      "path": "splits/grouped_5fold_seed42.json",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "src/evaluation/aggregation.py",
+      "symbol": "validate_predictions",
+      "line": 22
+    },
+    {
+      "path": "src/utils/tracking.py",
+      "symbol": "identifier",
+      "line": 14
+    },
+    {
+      "path": "src/utils/logging.py",
+      "symbol": "RunLogger",
+      "line": 52
+    },
+    {
+      "path": "src/utils/experiment_tracking.py",
+      "symbol": "TrainingTracker",
+      "line": 9
+    },
+    {
+      "path": "src/utils/tensorboard_tracker.py",
+      "symbol": "TensorBoardTracker",
+      "line": 34
+    },
+    {
+      "path": "experiments/e1_cnn/baseline_registry.json",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "src/evaluation/metrics.py",
+      "symbol": "classification_metrics",
+      "line": 9
+    },
+    {
+      "path": "src/evaluation/evaluator.py",
+      "symbol": "evaluate",
+      "line": 11
+    },
+    {
+      "path": "src/evaluation/evaluator.py",
+      "symbol": "export_test",
+      "line": 31
+    },
+    {
+      "path": "src/evaluation/aggregation.py",
+      "symbol": "aggregate_group",
+      "line": 67
+    },
+    {
+      "path": "src/evaluation/enhanced_visualization.py",
+      "symbol": "generate_visualizations",
+      "line": 344
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/summary.json",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "results/experiment_e2/20261117T075316Z_14889891/summary.json",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "tests/conftest.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "pyproject.toml",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "experiments/e2_gru/checks/pytest.xml",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9/finalization_pytest.xml",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "experiments/e1_cnn/baseline_registry.json",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "results/experiment_e2/20261117T075316Z_14889891/verification.json",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "results/preprocessing_review/20261117T072651Z_efe6ab76/audit.json",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "experiments/journal/README.md",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "experiments/journal/create_workbook.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "src/utils/config.py",
+      "symbol": "load_config",
+      "line": 21
+    },
+    {
+      "path": "src/data/preprocessing.py",
+      "symbol": "prepare_subject",
+      "line": 15
+    },
+    {
+      "path": "README.md",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "README.md",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "configs/default.yaml",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "tests/conftest.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "experiments/journal/README.md",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "src/models/cnn_gru.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "experiments/e3_cnn_gru/config.yaml",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "experiments/ablation/no_eda.yaml",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "experiments/e2_gru/README.md",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "results/experiment_e2/20261117T075316Z_14889891/cnn_gru_comparison.md",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "src/data/inspection.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "src/data/resampling.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "src/data/windowing.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "src/data/preprocessing.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "src/data/dataset.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "src/data/normalization.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "src/data/splits.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "src/models/cnn.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "src/models/gru.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "src/models/__init__.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "src/models/cnn_gru.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "src/training/optimizer.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "src/training/callbacks.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "src/training/checkpoint.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "src/training/trainer.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "src/evaluation/metrics.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "src/evaluation/evaluator.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "src/evaluation/aggregation.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "src/evaluation/history.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "src/evaluation/visualization.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "src/evaluation/enhanced_visualization.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "src/utils/config.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "src/utils/tracking.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "src/utils/reproducibility.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "src/utils/system_info.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "src/utils/logging.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "src/utils/console.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "src/utils/experiment_tracking.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "src/utils/tensorboard_tracker.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "src/utils/wandb_tracker.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "src/utils/history_import.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "scripts/run_grouped_cv.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "scripts/run_experiment.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "scripts/prepare_data.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "scripts/inspect_dataset.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "scripts/generate_splits.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "scripts/aggregate_results.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "scripts/generate_visualizations.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "scripts/verify_e1_baseline.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "scripts/verify_history.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "scripts/audit_preprocessing.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "scripts/audit_experiment.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "scripts/smoke_tensorboard.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "scripts/import_history_to_wandb.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "experiments/journal/create_workbook.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "tests/test_aggregation.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "tests/test_baseline_verification.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "tests/test_checkpoint.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "tests/test_dataset.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "tests/test_gru.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "tests/test_logging.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "tests/test_manual_runner.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "tests/test_metrics.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "tests/test_model.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "tests/test_normalization.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "tests/test_resampling.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "tests/test_resume.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "tests/test_splits.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "tests/test_tensorboard_tracking.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "tests/test_tracking_upgrade.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "tests/test_visualization_upgrade.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "tests/test_windowing.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "tests/conftest.py",
+      "symbol": null,
+      "line": null
+    },
+    {
+      "path": "tests/test_manual_runner.py",
+      "symbol": null,
+      "line": null
+    }
+  ],
+  "output": "D:\\Deep_learning_group\\Projects\\DL13-WESAD\\results\\codebase_review\\DL13-WESAD_Complete_Codebase_Learning_Guide.docx"
+}

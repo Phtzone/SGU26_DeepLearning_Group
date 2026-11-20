@@ -1,0 +1,153 @@
+{
+  "method": "Pure-Python text-only verification; no project imports, raw/binary loads or training",
+  "groups": [
+    {
+      "path": "results/experiment_e1/20261108T154303Z_474b38f9",
+      "oof_windows": 2136,
+      "subjects": 15,
+      "pooled_oof": {
+        "accuracy": 0.5065543071161048,
+        "macro_f1": 0.45000014134414124,
+        "balanced_accuracy": 0.45473645493004944,
+        "confusion_matrix": [
+          [
+            655,
+            244,
+            251
+          ],
+          [
+            198,
+            331,
+            111
+          ],
+          [
+            143,
+            107,
+            96
+          ]
+        ]
+      },
+      "subject_macro_f1": 0.4110071225173393,
+      "text_metrics_match": true
+    },
+    {
+      "path": "results/experiment_e1/20261115T101531Z_c2d7bd4b",
+      "oof_windows": 2136,
+      "subjects": 15,
+      "pooled_oof": {
+        "accuracy": 0.5337078651685393,
+        "macro_f1": 0.4724962907617083,
+        "balanced_accuracy": 0.47495452689117873,
+        "confusion_matrix": [
+          [
+            704,
+            188,
+            258
+          ],
+          [
+            196,
+            337,
+            107
+          ],
+          [
+            142,
+            105,
+            99
+          ]
+        ]
+      },
+      "subject_macro_f1": 0.4384741776273647,
+      "text_metrics_match": true
+    },
+    {
+      "path": "results/experiment_e1/20261115T101928Z_0ce52f72",
+      "oof_windows": 2136,
+      "subjects": 15,
+      "pooled_oof": {
+        "accuracy": 0.522003745318352,
+        "macro_f1": 0.4622693865788796,
+        "balanced_accuracy": 0.4653789687526179,
+        "confusion_matrix": [
+          [
+            691,
+            210,
+            249
+          ],
+          [
+            210,
+            324,
+            106
+          ],
+          [
+            141,
+            105,
+            100
+          ]
+        ]
+      },
+      "subject_macro_f1": 0.42420334395166537,
+      "text_metrics_match": true
+    },
+    {
+      "path": "results/experiment_e2/20261117T075316Z_14889891",
+      "oof_windows": 2136,
+      "subjects": 15,
+      "pooled_oof": {
+        "accuracy": 0.38857677902621723,
+        "macro_f1": 0.3602780378721755,
+        "balanced_accuracy": 0.37122136005696577,
+        "confusion_matrix": [
+          [
+            456,
+            309,
+            385
+          ],
+          [
+            224,
+            274,
+            142
+          ],
+          [
+            140,
+            106,
+            100
+          ]
+        ]
+      },
+      "subject_macro_f1": 0.3101951151782572,
+      "text_metrics_match": true
+    }
+  ],
+  "source_snapshots": [
+    {
+      "path": "runs/experiment_e1/20261108T154303Z_474b38f9/source_checksums.json",
+      "files": 55,
+      "verified_text_hashes": true
+    },
+    {
+      "path": "runs/experiment_e1/20261115T101531Z_c2d7bd4b/source_checksums.json",
+      "files": 58,
+      "verified_text_hashes": true
+    },
+    {
+      "path": "runs/experiment_e1/20261115T101928Z_0ce52f72/source_checksums.json",
+      "files": 58,
+      "verified_text_hashes": true
+    },
+    {
+      "path": "runs/experiment_e2/20261117T075316Z_14889891/source_checksums.json",
+      "files": 59,
+      "verified_text_hashes": true
+    }
+  ],
+  "cache_metadata": {
+    "subjects": 15,
+    "windows": 2136,
+    "rows_shapes_labels_match": true,
+    "array_contents_not_read": true
+  },
+  "split": {
+    "canonical_sha256": "239949dfebabd802091d14a4494d2216aee9809b0e2993dacdbdfbcdc7133f2c",
+    "disjoint_roles": true
+  }
+}
