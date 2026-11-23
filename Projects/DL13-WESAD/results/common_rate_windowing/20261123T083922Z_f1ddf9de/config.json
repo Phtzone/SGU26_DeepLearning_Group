@@ -1,0 +1,51 @@
+{
+  "version": "common-rate-region-windows-v1",
+  "sampling_rate": 64,
+  "label_source_fs": 700,
+  "window_seconds": 30,
+  "stride_seconds": 15,
+  "channels": [
+    "chest_ACC_X",
+    "chest_ACC_Y",
+    "chest_ACC_Z",
+    "chest_ECG",
+    "chest_EMG",
+    "chest_EDA",
+    "chest_Temp",
+    "chest_Resp",
+    "wrist_ACC_X",
+    "wrist_ACC_Y",
+    "wrist_ACC_Z",
+    "wrist_BVP",
+    "wrist_EDA",
+    "wrist_TEMP"
+  ],
+  "subjects": [
+    "S2",
+    "S3",
+    "S4",
+    "S5",
+    "S6",
+    "S7",
+    "S8",
+    "S9",
+    "S10",
+    "S11",
+    "S13",
+    "S14",
+    "S15",
+    "S16",
+    "S17"
+  ],
+  "label_map": {
+    "1": 0,
+    "2": 1,
+    "3": 2
+  },
+  "normalized": false,
+  "windowed": true,
+  "anchor_policy": "continuous valid label regions; no re-anchor after quality rejection",
+  "quality_policy": "all timepoints must have quality_mask=True",
+  "source": "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\processed\\common_rate_64hz",
+  "output": "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\processed\\common_rate_windows_64hz_30s_15s"
+}
