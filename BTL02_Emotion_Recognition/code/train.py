@@ -23,7 +23,9 @@ CONFIGS = {
     "flip": (True, 0.25),
     "dropout": (False, 0.45),
     "flip_dropout": (True, 0.45),
+    "flip_weighted": (True, 0.25),
 }
+BASELINE_CONFIGS = ("baseline", "flip", "dropout", "flip_dropout")
 
 
 def load_data(path):
@@ -69,6 +71,7 @@ def run_epoch(model, loader, device, criterion, optimizer=None, flip=False, conf
     training = optimizer is not None
     model.train(training)
     total_loss = torch.zeros((), device=device)
+    loss_weight = torch.zeros((), device=device) if criterion.weight is not None else None
     correct = torch.zeros((), device=device, dtype=torch.long)
     with torch.set_grad_enabled(training):
         for images, labels in loader:
@@ -85,13 +88,25 @@ def run_epoch(model, loader, device, criterion, optimizer=None, flip=False, conf
             if training:
                 loss.backward()
                 optimizer.step()
-            total_loss += loss.detach() * len(labels)
+            batch_weight = len(labels)
+            if criterion.weight is not None:
+                batch_weight = criterion.weight[labels].sum()
+                loss_weight += batch_weight
+            total_loss += loss.detach() * batch_weight
             predictions = logits.detach().argmax(dim=1)
             correct += predictions.eq(labels).sum()
             if confusion is not None:
                 indices = labels * len(CLASSES) + predictions
                 confusion += torch.bincount(indices.cpu(), minlength=len(CLASSES)**2).view(7, 7)
-    return total_loss.item() / len(loader.dataset), correct.item() / len(loader.dataset)
+    denominator = len(loader.dataset) if loss_weight is None else loss_weight.item()
+    return total_loss.item() / denominator, correct.item() / len(loader.dataset)
+
+
+def class_f1(confusion):
+    matrix = confusion.numpy()
+    denominator = matrix.sum(axis=0) + matrix.sum(axis=1)
+    return np.divide(2 * matrix.diagonal(), denominator,
+                     out=np.zeros(len(CLASSES)), where=denominator > 0)
 
 
 def write_csv(path, rows):
@@ -151,6 +166,7 @@ def train(args):
     args.output.mkdir(parents=True, exist_ok=False)
     print(f"{device} | PyTorch {torch.__version__} | split sizes {SPLITS}", flush=True)
     criterion = nn.CrossEntropyLoss()
+    counts = datasets["Training"].tensors[1].bincount(minlength=len(CLASSES))
     histories = {}
     summary = []
     best_model = None
@@ -158,6 +174,14 @@ def train(args):
     best_name = ""
     for name in args.configs:
         flip, dropout = CONFIGS[name]
+        weighted = name == "flip_weighted"
+        weights = None
+        if weighted:
+            if torch.any(counts == 0):
+                raise ValueError("Weighted loss requires a training example for every class")
+            weights = counts.float().rsqrt()
+            weights /= weights.mean()
+        train_criterion = nn.CrossEntropyLoss(weight=weights).to(device)
         torch.manual_seed(args.seed)
         generator = torch.Generator().manual_seed(args.seed)
         loaders = {
@@ -172,24 +196,35 @@ def train(args):
         checkpoint = args.output / f"{name}.pt"
         started = time.perf_counter()
         for epoch in range(1, args.epochs + 1):
-            train_loss, train_acc = run_epoch(model, loaders["Training"], device, criterion,
+            train_loss, train_acc = run_epoch(model, loaders["Training"], device, train_criterion,
                                               optimizer=optimizer, flip=flip)
-            val_loss, val_acc = run_epoch(model, loaders["PublicTest"], device, criterion)
+            val_confusion = torch.zeros((len(CLASSES), len(CLASSES)), dtype=torch.long)
+            val_loss, val_acc = run_epoch(model, loaders["PublicTest"], device, criterion,
+                                         confusion=val_confusion)
+            val_f1 = class_f1(val_confusion)
+            val_macro_f1 = float(val_f1.mean())
             row = dict(epoch=epoch, train_loss=train_loss, train_accuracy=train_acc,
-                       val_loss=val_loss, val_accuracy=val_acc)
+                       val_loss=val_loss, val_accuracy=val_acc, val_macro_f1=val_macro_f1)
+            row.update({f"val_f1_{label}": score for label, score in zip(CLASSES, val_f1)})
             history.append(row)
             write_csv(args.output / f"{name}_epochs.csv", history)
             print(f"{name:12s} {epoch:02d}/{args.epochs}  train {train_acc:.2%}  "
-                  f"val {val_acc:.2%}  val_loss {val_loss:.4f}", flush=True)
-            if (val_acc, -val_loss) > run_rank:
-                run_rank = (val_acc, -val_loss)
-                best_epoch = epoch
+                  f"val {val_acc:.2%}  val macro F1 {val_macro_f1:.2%}", flush=True)
+            score = val_macro_f1 if args.selection_metric == "macro-f1" else val_acc
+            if (score, -val_loss) > run_rank:
+                run_rank = (score, -val_loss)
+                best_row = row
                 torch.save(model.state_dict(), checkpoint)
         histories[name] = history
         summary.append(dict(config=name, horizontal_flip=flip, dropout=dropout, optimizer="AdamW",
                             learning_rate=args.lr, batch_size=args.batch_size, seed=args.seed,
-                            epochs=args.epochs, best_epoch=best_epoch, val_accuracy=run_rank[0],
-                            val_loss=-run_rank[1], seconds=round(time.perf_counter() - started, 1)))
+                            epochs=args.epochs, best_epoch=best_row["epoch"],
+                            val_accuracy=best_row["val_accuracy"], val_loss=best_row["val_loss"],
+                            seconds=round(time.perf_counter() - started, 1),
+                            val_macro_f1=best_row["val_macro_f1"], weighted_loss=weighted,
+                            selection_metric=args.selection_metric,
+                            class_weights=json.dumps(dict(zip(CLASSES, weights.tolist())))
+                            if weighted else ""))
         write_csv(args.output / "experiments.csv", summary)
         if run_rank > best_rank:
             best_rank = run_rank
@@ -201,14 +236,12 @@ def train(args):
     test_loss, test_acc = run_epoch(best_model, loaders["PrivateTest"], device, criterion,
                                     confusion=confusion)
     matrix = confusion.numpy()
-    denominator = matrix.sum(axis=0) + matrix.sum(axis=1)
-    per_class_f1 = np.divide(2 * matrix.diagonal(), denominator,
-                             out=np.zeros(7), where=denominator > 0)
+    per_class_f1 = class_f1(confusion)
     results = dict(selected_config=best_name, test_loss=test_loss, test_accuracy=test_acc,
                    test_macro_f1=float(per_class_f1.mean()), class_f1=dict(zip(CLASSES, per_class_f1)),
                    class_order=CLASSES, splits=SPLITS, device=str(device),
                    gpu=torch.cuda.get_device_name(device) if device.type == "cuda" else None,
-                   pytorch=str(torch.__version__))
+                   pytorch=str(torch.__version__), selection_metric=args.selection_metric)
     (args.output / "test_metrics.json").write_text(json.dumps(results, indent=2), encoding="utf-8")
     np.savetxt(args.output / "confusion_matrix.csv", matrix, fmt="%d", delimiter=",",
                header=",".join(CLASSES), comments="")
@@ -226,7 +259,8 @@ if __name__ == "__main__":
     parser.add_argument("--lr", type=float, default=0.001)
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--device", choices=["auto", "cpu", "cuda"], default="auto")
-    parser.add_argument("--configs", nargs="+", choices=list(CONFIGS), default=list(CONFIGS))
+    parser.add_argument("--configs", nargs="+", choices=list(CONFIGS), default=BASELINE_CONFIGS)
+    parser.add_argument("--selection-metric", choices=["accuracy", "macro-f1"], default="accuracy")
     args = parser.parse_args()
     if min(args.epochs, args.batch_size) < 1 or args.lr <= 0:
         parser.error("epochs, batch size and learning rate must be positive")

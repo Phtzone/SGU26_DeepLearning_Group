@@ -10,6 +10,7 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib.backends.backend_pdf import PdfPages
+from matplotlib.ticker import PercentFormatter
 from openpyxl import Workbook, load_workbook
 from openpyxl.styles import Font, PatternFill
 from openpyxl.utils import get_column_letter
@@ -103,6 +104,27 @@ def picture(figure, path, bounds):
     axis.axis("off")
 
 
+def validation_curve(figure, results, runs, bounds, weighted_round):
+    if not weighted_round:
+        picture(figure, results / "learning_curves.png", bounds)
+        return
+    left, bottom, width, height = bounds
+    axis = figure.add_axes([left + 0.07, bottom + 0.045, width - 0.10, height - 0.06])
+    for run in runs:
+        history = csv_rows(results / f"{run['config']}_epochs.csv")
+        epochs = [int(row["epoch"]) for row in history]
+        macro_f1 = [float(row["val_macro_f1"]) for row in history]
+        line, = axis.plot(epochs, macro_f1, label=run["config"])
+        best = int(run["best_epoch"])
+        axis.scatter(best, macro_f1[best - 1], color=line.get_color(), zorder=3)
+    if max(int(run["epochs"]) for run in runs) > 12:
+        axis.axvline(12, linestyle=":", color=MUTED, label="Mốc 12 epoch")
+    axis.set(xlabel="Epoch", ylabel="Macro F1 trên PublicTest")
+    axis.yaxis.set_major_formatter(PercentFormatter(1))
+    axis.grid(axis="y", alpha=0.2)
+    axis.legend(fontsize=8, loc="lower right")
+
+
 def write_page(pdf, figure):
     pdf.savefig(figure)
     plt.close(figure)
@@ -111,12 +133,17 @@ def write_page(pdf, figure):
 def comparison_table(figure, runs, bounds):
     axis = figure.add_axes(bounds)
     axis.axis("off")
-    rows = [(run["config"], "Có" if run["horizontal_flip"] == "True" else "Không",
+    rows = [[run["config"], "Có" if run["horizontal_flip"] == "True" else "Không",
              run["dropout"], run["best_epoch"], f"{float(run['val_accuracy']):.2%}",
-             f"{float(run['val_loss']):.3f}") for run in runs]
-    table = axis.table(cellText=rows, colLabels=["Cấu hình", "Lật ngang", "Dropout",
-                                                "Epoch", "Val acc.", "Val loss"],
-                       colWidths=[0.24, 0.16, 0.15, 0.12, 0.17, 0.16],
+             f"{float(run['val_loss']):.3f}"] for run in runs]
+    columns = ["Cấu hình", "Lật ngang", "Dropout", "Epoch", "Val acc.", "Val loss"]
+    widths = [0.24, 0.16, 0.15, 0.12, 0.17, 0.16]
+    if all("val_macro_f1" in run for run in runs):
+        columns.append("Val macro F1")
+        widths = [0.21, 0.13, 0.12, 0.10, 0.14, 0.13, 0.17]
+        for row, run in zip(rows, runs):
+            row.append(f"{float(run['val_macro_f1']):.2%}")
+    table = axis.table(cellText=rows, colLabels=columns, colWidths=widths,
                        cellLoc="center", bbox=[0, 0, 1, 1])
     table.auto_set_font_size(False)
     table.set_fontsize(10)
@@ -141,8 +168,10 @@ def make_documents(output, results, runs, metrics):
     class_f1 = metrics["class_f1"]
     weakest = min(class_f1, key=class_f1.get)
     strongest = max(class_f1, key=class_f1.get)
+    criterion = "macro F1" if metrics.get("selection_metric") == "macro-f1" else "accuracy"
+    weighted_round = any(run.get("weighted_loss") == "True" for run in runs)
     conclusion = (
-        f"Cấu hình {selected} đạt {float(best['val_accuracy']):.2%} trên PublicTest ở epoch "
+        f"Cấu hình {selected} đạt {float(best['val_accuracy']):.2%} accuracy trên PublicTest ở epoch "
         f"{best['best_epoch']}. Trên PrivateTest, accuracy đạt {accuracy}, macro F1 đạt {macro_f1}."
     )
     errors = (
@@ -150,7 +179,18 @@ def make_documents(output, results, runs, metrics):
         f"({matrix[worst_source][worst_target]} ảnh). F1 thấp nhất thuộc về {weakest} "
         f"({class_f1[weakest]:.2%}), cao nhất thuộc về {strongest} ({class_f1[strongest]:.2%})."
     )
-    if {"baseline", "flip", "dropout", "flip_dropout"} <= scores.keys():
+    effect_title = "So sánh các cấu hình"
+    if weighted_round and {"flip", "flip_weighted"} <= scores.keys():
+        control = next(run for run in runs if run["config"] == "flip")
+        weighted = next(run for run in runs if run["config"] == "flip_weighted")
+        gap_f1 = 100 * (float(weighted["val_macro_f1"]) - float(control["val_macro_f1"]))
+        gap_accuracy = 100 * (scores["flip_weighted"] - scores["flip"])
+        effects = (f"Với cùng ngân sách epoch, dùng trọng số theo lớp làm macro F1 trên PublicTest "
+                   f"thay đổi {gap_f1:+.2f} điểm phần trăm, accuracy thay đổi "
+                   f"{gap_accuracy:+.2f} điểm. Mỗi cấu hình được đo tại checkpoint đã chọn.")
+        effect_title = "Ảnh hưởng của trọng số theo lớp"
+    elif {"baseline", "flip", "dropout", "flip_dropout"} <= scores.keys():
+        effect_title = "Ảnh hưởng của lật ngang và dropout"
         flip_low = 100 * (scores["flip"] - scores["baseline"])
         flip_high = 100 * (scores["flip_dropout"] - scores["dropout"])
         drop_no_flip = 100 * (scores["dropout"] - scores["baseline"])
@@ -166,6 +206,17 @@ def make_documents(output, results, runs, metrics):
     val_end = float(final_epoch["val_accuracy"])
     gap = (f"Ở epoch cuối của {selected}, accuracy train là {train_end:.2%}, validation "
            f"là {val_end:.2%}. Chênh lệch là {100 * (train_end - val_end):+.2f} điểm phần trăm.")
+    gap_title = "Khoảng cách train và validation"
+    if weighted_round and int(best["epochs"]) > 12:
+        metric_key = "val_macro_f1" if criterion == "macro F1" else "val_accuracy"
+        budget_scores = []
+        for run in runs:
+            early = csv_rows(results / f"{run['config']}_epochs.csv")[:12]
+            early_score = max(float(row[metric_key]) for row in early)
+            budget_scores.append(f"{run['config']} {early_score:.2%} → {float(run[metric_key]):.2%}")
+        gap_title = "So sánh ngân sách epoch"
+        gap = (f"{criterion.capitalize()} PublicTest tốt nhất sau 12 và {best['epochs']} epoch. "
+               + ", ".join(budget_scores) + ".")
     limits = ("Mỗi cấu hình dùng một seed. Cần lặp lại với nhiều seed để biết các chênh lệch "
               "nhỏ giữa các cấu hình có ổn định hay không.")
     support = sum(matrix[labels.index(weakest)])
@@ -181,7 +232,10 @@ def make_documents(output, results, runs, metrics):
                     "ReLU và Dropout để tạo 7 logits, huấn luyện bằng CrossEntropyLoss.")
     settings = (f"AdamW, learning rate {best['learning_rate']}, batch {best['batch_size']}, "
                 f"{best['epochs']} epoch, seed {best['seed']}, thiết bị {metrics['device'].upper()}. "
-                "Chọn theo accuracy PublicTest cao nhất, dùng loss để phân giải khi hòa.")
+                f"Chọn theo {criterion} PublicTest cao nhất, dùng loss để phân giải khi hòa.")
+    if weighted_round:
+        settings += (" Trọng số lớp tỉ lệ nghịch với căn bậc hai của số ảnh trong tập Training. "
+                     "Cả hai lượt dùng lật ngang, dropout 0,25 và loss chuẩn khi đánh giá.")
     data = ("FER2013 gồm 35.887 ảnh xám 48×48. Cột Usage chia dữ liệu thành 28.709 ảnh "
             "Training, 3.589 ảnh PublicTest và 3.589 ảnh PrivateTest. Đưa pixel về [0, 1].")
     with PdfPages(output / "report.pdf", metadata={"Title": "BTL02 - Báo cáo FER2013"}) as pdf:
@@ -197,9 +251,9 @@ def make_documents(output, results, runs, metrics):
 
         figure = page("So sánh các cấu hình", 2)
         comparison_table(figure, runs, [0.07, 0.66, 0.86, 0.20])
-        picture(figure, results / "learning_curves.png", [0.07, 0.39, 0.86, 0.24])
-        block(figure, "Ảnh hưởng của lật ngang và dropout", effects, 0.34)
-        block(figure, "Khoảng cách train và validation", gap + " " + limits, 0.19)
+        validation_curve(figure, results, runs, [0.07, 0.39, 0.86, 0.24], weighted_round)
+        block(figure, effect_title, effects, 0.34)
+        block(figure, gap_title, gap + " " + limits, 0.19)
         write_page(pdf, figure)
 
         figure = page("Đánh giá và bộ lọc cuối", 3)
@@ -224,11 +278,11 @@ def make_documents(output, results, runs, metrics):
 
         figure = page("Kết quả trên PublicTest", 3, slide=True)
         comparison_table(figure, runs, [0.07, 0.47, 0.86, 0.34])
-        block(figure, "So sánh theo từng yếu tố", effects, 0.37, width=105, size=14)
+        block(figure, effect_title, effects, 0.37, width=105, size=14)
         write_page(pdf, figure)
 
         figure = page("Diễn biến qua các epoch", 4, slide=True)
-        picture(figure, results / "learning_curves.png", [0.07, 0.19, 0.86, 0.62])
+        validation_curve(figure, results, runs, [0.07, 0.19, 0.86, 0.62], weighted_round)
         figure.text(0.07, 0.14, "\n".join(wrap(gap + " " + limits, 116)), fontsize=12, va="top")
         write_page(pdf, figure)
 
@@ -247,9 +301,11 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--results", type=Path, default=ROOT / "results")
     parser.add_argument("--output", type=Path, default=ROOT)
+    parser.add_argument("--journal", type=Path, help="Optional destination for a generated workbook.")
     args = parser.parse_args()
     runs = csv_rows(args.results / "experiments.csv")
     metrics = json.loads((args.results / "test_metrics.json").read_text(encoding="utf-8"))
     args.output.mkdir(parents=True, exist_ok=True)
     make_documents(args.output, args.results, runs, metrics)
-    save_journal(args.output / "journal" / "detail.xlsx", args.results, runs, metrics)
+    if args.journal is not None:
+        save_journal(args.journal, args.results, runs, metrics)

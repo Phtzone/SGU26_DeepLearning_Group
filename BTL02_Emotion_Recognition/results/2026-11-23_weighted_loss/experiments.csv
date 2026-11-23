@@ -1,0 +1,3 @@
+config,horizontal_flip,dropout,optimizer,learning_rate,batch_size,seed,epochs,best_epoch,val_accuracy,val_loss,seconds,val_macro_f1,weighted_loss,selection_metric,class_weights
+flip,True,0.25,AdamW,0.001,256,42,24,13,0.5330175536361104,1.2461044979015743,208.3,0.48973929094617935,False,macro-f1,
+flip_weighted,True,0.25,AdamW,0.001,256,42,24,14,0.5346893285037615,1.225081466372945,253.1,0.5149234915963955,True,macro-f1,"{""Angry"": 0.8057538866996765, ""Disgust"": 2.4390323162078857, ""Fear"": 0.7956604957580566, ""Happy"": 0.5995737910270691, ""Sad"": 0.7328029870986938, ""Surprise"": 0.90440434217453, ""Neutral"": 0.7227717638015747}"

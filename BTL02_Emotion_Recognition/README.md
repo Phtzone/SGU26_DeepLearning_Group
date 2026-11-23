@@ -31,6 +31,25 @@ nhất trên PublicTest, dùng loss thấp hơn khi hòa. Đo kết quả Privat
 cho cấu hình được chọn. Accuracy và F1 trong các tệp CSV/JSON được lưu
 dưới dạng tỷ lệ từ 0 đến 1.
 
+## Thử loss có trọng số và ngân sách 24 epoch
+
+Hai cấu hình `flip` và `flip_weighted` cùng dùng lật ngang, dropout 0,25,
+AdamW và seed 42. Ở cấu hình weighted, trọng số lớp tỷ lệ với nghịch đảo căn
+bậc hai của số ảnh lớp đó trong **Training**. Chọn checkpoint theo macro F1
+trên **PublicTest** và dùng validation loss để phân giải khi hòa. Cả hai
+cấu hình dùng cross-entropy không trọng số khi đánh giá. So sánh
+checkpoint trong 12 epoch đầu với checkpoint trong toàn bộ 24 epoch.
+
+```sh
+python code/train.py --configs flip flip_weighted --epochs 24 --selection-metric macro-f1 --output results/weighted_loss_new
+python code/make_submission.py --results results/weighted_loss_new --output results/weighted_loss_new
+```
+
+Kết quả thực tế ngày 23/11 nằm trong `results/2026-11-23_weighted_loss`.
+Lệnh tạo PDF chỉ ghi workbook khi truyền đường dẫn `--journal` riêng.
+Các lượt mới được thêm vào `journal/1.xlsx` để đối chiếu và chép sang
+sổ chính khi cần.
+
 ## Các tệp nộp
 
 - `report.pdf` chứa phương pháp, kết quả và phân tích, cùng hình các bộ lọc convolution cuối.
