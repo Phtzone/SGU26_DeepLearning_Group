@@ -13,6 +13,7 @@ from src.training.optimizer import make_optimizer, class_weights
 from src.training.callbacks import SelectionState
 from src.training.checkpoint import save_checkpoint, load_checkpoint
 from src.evaluation.evaluator import evaluate, export_test
+from src.evaluation.metrics import metrics_by_subject
 from src.evaluation.visualization import training_plots, confusion_plot
 from src.utils.experiment_tracking import TrainingTracker
 from src.utils.config import same_training_config
@@ -75,11 +76,15 @@ def train_fold(folder, cache, fold, seed, config, manifest_checksum, resume=Fals
         tc = config['training']
         loaders = {role: DataLoader(dataset, batch_size=tc['batch_size'], shuffle=False, num_workers=config['runtime']['num_workers']) for role, dataset in datasets.items()}
         train_loader = DataLoader(datasets['train'], batch_size=tc['batch_size'], shuffle=True, num_workers=config['runtime']['num_workers'])
-        model = build_model(config, datasets['train'].arrays[fold['train'][0]].shape[1]).to(device)
+        model = build_model(config, datasets['train'].input_channels).to(device)
         optimizer = make_optimizer(model, tc)
         weights = class_weights(datasets['train'].labels).to(device)
         criterion = torch.nn.CrossEntropyLoss(weight=weights)
         selection = SelectionState(tc['early_stopping_patience'], tc['early_stopping_min_delta'])
+        subject_selection = config['selection']['metric'] == 'val_subject_macro_f1'
+        if datasets['train'].timeline:
+            metadata.update(group_id=group_id or folder.parent.parent.name, selection_metric=config['selection']['metric'],
+                            input_shape=list(datasets['train'].raw_window(fold['train'][0], 0).shape))
         last_path, best_path = folder / 'checkpoints/last.pt', folder / 'checkpoints/best.pt'
         epoch_start, step, best_state = 1, 0, None
         cache_keys = {s: key for dataset in datasets.values() for s, key in dataset.cache_keys.items()}
@@ -142,8 +147,15 @@ def train_fold(folder, cache, fold, seed, config, manifest_checksum, resume=Fals
                     if interrupt:
                         interrupt(epoch, batch_index)
                 train_metrics, _, _ = evaluate(model, loaders['train'], device, weights)
-                val, _, _ = evaluate(model, loaders['validation'], device, weights)
-                better, stop = selection.update(val['macro_f1'], val['loss'], epoch)
+                val, val_probabilities, val_indices = evaluate(model, loaders['validation'], device, weights)
+                score = val['macro_f1']
+                if subject_selection:
+                    validation = datasets['validation']
+                    subject_metrics = metrics_by_subject(validation.labels[val_indices], val_probabilities.argmax(axis=1),
+                                                         [validation.rows[i]['subject_id'] for i in val_indices])
+                    subject_f1 = {subject: m['macro_f1'] for subject, m in subject_metrics.items()}
+                    score = float(np.mean(list(subject_f1.values())))
+                better, stop = selection.update(score, val['loss'], epoch)
                 if better:
                     best_state = {k: v.detach().cpu().clone() for k, v in model.state_dict().items()}
                 epoch_row = {'attempt_id': attempt, 'epoch': epoch, 'train_online_loss': numerator / denominator, 'train_eval_loss': train_metrics['loss'],
@@ -156,6 +168,11 @@ def train_fold(folder, cache, fold, seed, config, manifest_checksum, resume=Fals
                 val_row = {'attempt_id': attempt, 'epoch': epoch, 'val_loss': val['loss'], 'val_macro_f1': val['macro_f1'], 'val_balanced_accuracy': val['balanced_accuracy'],
                            'val_accuracy': val['accuracy'],
                            'val_precision_per_class': val['precision_per_class'], 'val_recall_per_class': val['recall_per_class'], 'val_f1_per_class': val['f1_per_class'], 'is_best_checkpoint': better}
+                if subject_selection:
+                    pooled_at_best = val['macro_f1'] if better else history[selection.best_epoch - 1]['val_macro_f1']
+                    epoch_row.update(val_subject_macro_f1=score, best_val_subject_macro_f1=selection.best_score,
+                                     best_val_macro_f1=pooled_at_best)
+                    val_row.update(val_subject_macro_f1=score, val_macro_f1_by_subject=subject_f1)
                 history.append({**epoch_row, 'epoch_log': epoch_row, 'validation_log': val_row})
                 state = {'model': model.state_dict(), 'optimizer': optimizer.state_dict(), 'scheduler': None, 'epoch': epoch,
                          'best_epoch': selection.best_epoch, 'best_validation_score': selection.best_score, 'early_stopping': copy.deepcopy(selection.__dict__),
@@ -180,6 +197,8 @@ def train_fold(folder, cache, fold, seed, config, manifest_checksum, resume=Fals
             # Test loader is first consumed only after model selection has finished.
             model.load_state_dict(load_checkpoint(best_path)['model'])
             test, probabilities, indices = evaluate(model, loaders['test'], device, weights)
+            if datasets['test'].timeline:
+                test['stress_recall'] = test['recall_per_class'][1]
             export_test(folder / 'metrics', datasets['test'], test, probabilities, indices, fold['fold_id'])
             write_json(folder / 'metrics/best_validation.json', history[selection.best_epoch - 1]['validation_log'])
             training_plots(history, folder / 'plots')
@@ -191,6 +210,9 @@ def train_fold(folder, cache, fold, seed, config, manifest_checksum, resume=Fals
                         best_val_macro_f1=selection.best_score, test_metrics=test,
                         training_duration_seconds=elapsed_before + time.perf_counter() - started,
                         checkpoints={'best': str(best_path), 'last': str(last_path)})
+        if subject_selection:
+            metadata.update(best_val_subject_macro_f1=selection.best_score,
+                            best_val_macro_f1=history[selection.best_epoch - 1]['val_macro_f1'])
         write_json(metadata_path, metadata)
         logger.event('test_completed', macro_f1=test['macro_f1'], balanced_accuracy=test['balanced_accuracy'])
         logger.event('fold_end', status='completed')

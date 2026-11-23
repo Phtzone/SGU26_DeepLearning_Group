@@ -5,7 +5,7 @@ import re
 from pathlib import Path
 import numpy as np
 from src.data.splits import load_manifest
-from src.evaluation.metrics import classification_metrics, LABEL_NAMES
+from src.evaluation.metrics import classification_metrics, metrics_by_subject, LABEL_NAMES
 from src.evaluation.evaluator import write_csv
 from src.evaluation.visualization import bar_plot, confusion_plot
 from src.training.checkpoint import load_checkpoint
@@ -30,6 +30,9 @@ def validate_predictions(rows, fold, expected_rows):
         raw = expected[(row['subject_id'], row['window_id'])]
         if int(row['fold_id']) != fold['fold_id'] or int(row['true_label']) != int(raw['label']):
             raise ValueError('OOF fold or ground truth mismatch.')
+        if 'start_index' in raw and any(str(row[k]) != str(raw[k]) for k in (
+                'start_index', 'end_index', 'start_time', 'end_time', 'original_label', 'quality_status')):
+            raise ValueError('OOF window provenance differs from the validated common-rate index.')
         p = np.array([float(row['p_' + name]) for name in LABEL_NAMES])
         if not np.isfinite(p).all() or (p < 0).any() or not np.isclose(p.sum(), 1, atol=1e-5) or int(p.argmax()) != int(row['predicted_label']):
             raise ValueError('Invalid OOF probabilities/predictions.')
@@ -53,7 +56,7 @@ def audit_iterations(folder, checkpoint, train_windows, batch_size):
 def stats(rows):
     return {metric: {'mean': float(np.mean([float(r[metric]) for r in rows])),
                      'std': float(np.std([float(r[metric]) for r in rows], ddof=1)) if len(rows) > 1 else None,
-                     'n': len(rows)} for metric in ('macro_f1', 'balanced_accuracy', 'accuracy')}
+                     'n': len(rows)} for metric in ('macro_f1', 'balanced_accuracy', 'accuracy', 'stress_recall') if metric in rows[0]}
 
 
 def update_section(path, text):
@@ -67,6 +70,7 @@ def update_section(path, text):
 def aggregate_group(group, output=None, update_docs=True):
     manifest = read_json(group / 'experiment_manifest.json')
     config = manifest['effective_config']
+    common_rate = config['data'].get('source') == 'common_rate'
     split = load_manifest(group / 'split_manifest.json')
     if digest(split) != manifest['manifest_checksum']:
         raise ValueError('Group split checksum mismatch.')
@@ -98,12 +102,19 @@ def aggregate_group(group, output=None, update_docs=True):
                           'best_epoch': meta['best_epoch'], 'completed_epochs': meta['completed_epochs'],
                           **{key: metrics[key] for key in ('macro_f1', 'balanced_accuracy', 'accuracy')},
                           'training_duration_seconds': meta['training_duration_seconds']})
+            if common_rate:
+                folds[-1]['stress_recall'] = metrics['recall_per_class'][1]
+                if 'best_val_subject_macro_f1' in meta:
+                    folds[-1]['best_val_subject_macro_f1'] = meta['best_val_subject_macro_f1']
             predictions.extend({'training_seed': seed, **r} for r in rows)
+            by_subject = metrics_by_subject([int(r['true_label']) for r in rows], [int(r['predicted_label']) for r in rows],
+                                            [r['subject_id'] for r in rows])
             for subject in fold['test']:
-                sr = [r for r in rows if r['subject_id'] == subject]
-                sm = classification_metrics([int(r['true_label']) for r in sr], [int(r['predicted_label']) for r in sr])
-                subjects.append({'training_seed': seed, 'fold_id': fold['fold_id'], 'subject_id': subject, 'windows': len(sr),
+                sm = by_subject[subject]
+                subjects.append({'training_seed': seed, 'fold_id': fold['fold_id'], 'subject_id': subject, 'windows': sum(sm['support']),
                                  **{key: sm[key] for key in ('macro_f1', 'balanced_accuracy', 'accuracy')}})
+                if common_rate:
+                    subjects[-1]['stress_recall'] = sm['recall_per_class'][1]
     all_keys = [(r['training_seed'], r['subject_id'], r['window_id']) for r in predictions]
     if len(set(all_keys)) != len(all_keys):
         raise ValueError('Duplicate OOF predictions across folds.')
@@ -119,6 +130,9 @@ def aggregate_group(group, output=None, update_docs=True):
             summary['per_seed'][str(seed)] = {'fold_level': stats(fr), 'subject_level': stats(sr),
                                               'pooled_oof': classification_metrics([int(r['true_label']) for r in pr], [int(r['predicted_label']) for r in pr]),
                                               'oof_windows': len(pr), 'training_duration_seconds': sum(r['training_duration_seconds'] for r in fr)}
+            if common_rate:
+                pooled = summary['per_seed'][str(seed)]['pooled_oof']
+                pooled['stress_recall'] = pooled['recall_per_class'][1]
     for filename, rows in [('fold_results.csv', folds), ('subject_metrics.csv', subjects), ('oof_predictions.csv', predictions)]:
         if rows:
             write_csv(output / filename, rows)
@@ -169,7 +183,7 @@ def aggregate_group(group, output=None, update_docs=True):
     else:
         text += '\nChưa đủ folds; không báo cáo mean/std cuối cùng. Folds còn thiếu: ' + str(missing)
     (output / 'summary.md').write_text(text + '\n', encoding='utf-8')
-    if update_docs and config['experiment']['model'] == 'cnn1d':
+    if update_docs and config['experiment']['model'] == 'cnn1d' and not common_rate:
         relative = '../../results/experiment_e1/' + group.name
         update_section(ROOT / 'experiments/e1_cnn/README.md', text + f'\n\n[Summary]({relative}/summary.md) · [OOF]({relative}/oof_predictions.csv) · [Figures]({relative}/figures/) · [Runs](../../runs/experiment_e1/{group.name}/)')
         update_section(ROOT / 'README.md', f"E1: **{status}**, {len(folds)}/{summary['expected_folds']} folds. [Kết quả](results/experiment_e1/{group.name}/summary.md) · [Chi tiết E1](experiments/e1_cnn/README.md).")

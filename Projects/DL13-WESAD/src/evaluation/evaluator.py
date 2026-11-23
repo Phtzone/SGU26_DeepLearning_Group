@@ -3,7 +3,7 @@ import csv
 import numpy as np
 import torch
 from torch.nn import functional as F
-from src.evaluation.metrics import classification_metrics, LABEL_NAMES
+from src.evaluation.metrics import classification_metrics, metrics_by_subject, LABEL_NAMES
 from src.utils.tracking import write_json
 
 
@@ -37,12 +37,18 @@ def export_test(folder, dataset, metrics, probabilities, indices, fold_id):
                      'start_time': row['start_time'], 'end_time': row['end_time'], 'true_label': row['label'],
                      'predicted_label': int(probability.argmax()),
                      **{f'p_{name}': float(probability[c]) for c, name in enumerate(LABEL_NAMES)}})
+        if 'start_index' in row:
+            rows[-1].update({key: row[key] for key in ('start_index', 'end_index', 'original_label', 'quality_status')})
     write_csv(folder / 'predictions.csv', rows)
     subject_rows = []
+    by_subject = metrics_by_subject([r['true_label'] for r in rows], [r['predicted_label'] for r in rows],
+                                    [r['subject_id'] for r in rows])
     for subject in dataset.subjects:
-        selected = [r for r in rows if r['subject_id'] == subject]
-        m = classification_metrics([r['true_label'] for r in selected], [r['predicted_label'] for r in selected])
-        subject_rows.append({'fold_id': fold_id, 'subject_id': subject, 'windows': len(selected), **{k: m[k] for k in ('macro_f1', 'balanced_accuracy', 'accuracy')}})
+        m = by_subject[subject]
+        subject_rows.append({'fold_id': fold_id, 'subject_id': subject, 'windows': sum(m['support']),
+                             **{k: m[k] for k in ('macro_f1', 'balanced_accuracy', 'accuracy')}})
+        if 'stress_recall' in metrics:
+            subject_rows[-1]['stress_recall'] = m['recall_per_class'][1]
     write_csv(folder / 'subject_metrics.csv', subject_rows)
     write_json(folder / 'test.json', metrics)
     write_json(folder / 'classification_report.json', {name: {key: metrics[key + '_per_class'][i] for key in ['precision', 'recall', 'f1']} | {'support': metrics['support'][i]} for i, name in enumerate(LABEL_NAMES)})

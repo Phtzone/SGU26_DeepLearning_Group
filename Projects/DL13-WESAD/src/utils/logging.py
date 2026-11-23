@@ -79,10 +79,16 @@ class RunLogger:
         append_csv(self.folder / 'iterations.csv', row, ITERATION_FIELDS)
 
     def epoch(self, row):
-        append_epoch(self.folder / 'epochs.csv', row, EPOCH_FIELDS, LEGACY_EPOCH_FIELDS)
+        fields = EPOCH_FIELDS
+        if 'val_subject_macro_f1' in row:
+            fields = fields + ['val_subject_macro_f1', 'best_val_subject_macro_f1', 'early_stopping_counter']
+        append_epoch(self.folder / 'epochs.csv', row, fields, LEGACY_EPOCH_FIELDS)
 
     def validation(self, row):
-        append_epoch(self.folder / 'validation.csv', row, VALIDATION_FIELDS, LEGACY_VALIDATION_FIELDS)
+        fields = VALIDATION_FIELDS
+        if 'val_subject_macro_f1' in row:
+            fields = fields + ['val_subject_macro_f1', 'val_macro_f1_by_subject']
+        append_epoch(self.folder / 'validation.csv', row, fields, LEGACY_VALIDATION_FIELDS)
 
     def error(self, error):
         with (self.folder / 'errors.log').open('a', encoding='utf-8') as stream:

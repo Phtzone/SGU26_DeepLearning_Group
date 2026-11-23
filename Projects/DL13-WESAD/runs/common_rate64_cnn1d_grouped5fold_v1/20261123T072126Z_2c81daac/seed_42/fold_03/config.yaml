@@ -1,0 +1,90 @@
+experiment:
+  id: common_rate64_cnn1d_grouped5fold_v1
+  model: cnn1d
+  status: implemented
+split:
+  protocol: grouped_subject_wise_5fold
+  manifest: splits/grouped_5fold_seed42.json
+  split_seed: 42
+data:
+  sampling_rate: 64
+  window_seconds: 30
+  stride_seconds: 15
+  sensors:
+  - chest_ACC
+  - chest_ECG
+  - chest_EMG
+  - chest_EDA
+  - chest_Temp
+  - chest_Resp
+  - wrist_ACC
+  - wrist_BVP
+  - wrist_EDA
+  - wrist_TEMP
+  labels:
+  - 1
+  - 2
+  - 3
+  max_windows_per_subject: null
+  source: common_rate
+  processed_dir: data/processed/common_rate_64hz
+  channels:
+  - chest_ACC_X
+  - chest_ACC_Y
+  - chest_ACC_Z
+  - chest_ECG
+  - chest_EMG
+  - chest_EDA
+  - chest_Temp
+  - chest_Resp
+  - wrist_ACC_X
+  - wrist_ACC_Y
+  - wrist_ACC_Z
+  - wrist_BVP
+  - wrist_EDA
+  - wrist_TEMP
+  quality_policy: all_samples_valid
+training:
+  seeds:
+  - 42
+  max_epochs: 100
+  batch_size: 32
+  optimizer: adam
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  loss: weighted_cross_entropy
+  early_stopping_patience: 15
+  early_stopping_min_delta: 0.001
+  gradient_clip_norm: 1.0
+selection:
+  metric: val_subject_macro_f1
+  mode: max
+  tie_breaker: val_loss
+runtime:
+  device: auto
+  num_workers: 0
+  deterministic: true
+  parallel_folds: 1
+  torch_threads: 2
+logging:
+  log_every_iteration: true
+  log_every_epoch: true
+  flush_each_iteration: true
+  console:
+    enabled: true
+    progress: never
+tracking:
+  backend: tensorboard
+  strict: true
+  local:
+    enabled: true
+  tensorboard:
+    enabled: true
+    log_every_epoch: true
+    log_every_batch: true
+    batch_log_frequency: 1
+    flush_secs: 10
+    max_queue: 10
+    log_figures: true
+model:
+  dropout: 0.3

@@ -1,0 +1,152 @@
+2026-11-23T07:35:58.997734+00:00 [FOLD_START] {'run_id': '20261123T073558Z_d5d2f07b', 'attempt_id': '20261123T073558Z_e043d838', 'fold_id': 2, 'seed': 42, 'device': 'cpu'}
+2026-11-23T07:36:00.755487+00:00 [PREPROCESSING] {'train_subjects': ['S10', 'S16', 'S9', 'S5', 'S6', 'S14', 'S2', 'S3', 'S13'], 'validation_subjects': ['S7', 'S4', 'S11'], 'test_subjects': ['S8', 'S17', 'S15'], 'window_counts': {'train': 1275, 'validation': 426, 'test': 433}}
+2026-11-23T07:36:00.848782+00:00 [MODEL] {'parameters': 47075}
+RUN HEADER {'run_id': '20261123T073558Z_d5d2f07b', 'fold_id': 2, 'training_seed': 42, 'window_counts': {'train': 1275, 'validation': 426, 'test': 433}, 'trainable_parameters': 47075, 'device': 'cpu'}
+2026-11-23T07:36:01.001913+00:00 [EPOCH_START] {'epoch': 1, 'attempt_id': '20261123T073558Z_e043d838'}
+EPOCH SUMMARY epoch=1 train_accuracy=0.9505882352941176 val_accuracy=0.4014084507042254 train_eval_loss=0.20814571415262517 val_loss=2.1613488924142916 train_macro_f1=0.9389528462841238 val_macro_f1=0.3514998742761662 train_balanced_accuracy=0.9648952549895946 val_balanced_accuracy=0.38284501327979586
+2026-11-23T07:36:34.690141+00:00 [VALIDATION_COMPLETED] {'epoch': 1, 'val_macro_f1': 0.3514998742761662, 'val_loss': 2.1613488924142916}
+2026-11-23T07:36:34.693488+00:00 [CHECKPOINT_SAVED] {'epoch': 1, 'best': True}
+2026-11-23T07:36:34.695058+00:00 [EPOCH_END] {'epoch': 1, 'train_online_loss': 0.6028029036808441, 'val_macro_f1': 0.3514998742761662, 'best_epoch': 1}
+2026-11-23T07:36:34.696478+00:00 [EPOCH_START] {'epoch': 2, 'attempt_id': '20261123T073558Z_e043d838'}
+EPOCH SUMMARY epoch=2 train_accuracy=0.9945098039215686 val_accuracy=0.40375586854460094 train_eval_loss=0.027358110809200285 val_loss=3.616240231948452 train_macro_f1=0.9927819248085554 val_macro_f1=0.36954788455635396 train_balanced_accuracy=0.9966134494436382 val_balanced_accuracy=0.387675931154192
+2026-11-23T07:37:10.726242+00:00 [VALIDATION_COMPLETED] {'epoch': 2, 'val_macro_f1': 0.36954788455635396, 'val_loss': 3.616240231948452}
+2026-11-23T07:37:10.730214+00:00 [CHECKPOINT_SAVED] {'epoch': 2, 'best': False}
+2026-11-23T07:37:10.732189+00:00 [EPOCH_END] {'epoch': 2, 'train_online_loss': 0.14610338403787773, 'val_macro_f1': 0.36954788455635396, 'best_epoch': 1}
+2026-11-23T07:37:10.733494+00:00 [EPOCH_START] {'epoch': 3, 'attempt_id': '20261123T073558Z_e043d838'}
+EPOCH SUMMARY epoch=3 train_accuracy=0.996078431372549 val_accuracy=0.4061032863849765 train_eval_loss=0.01379941437145395 val_loss=2.9433186402904585 train_macro_f1=0.9951711753053155 val_macro_f1=0.37265987127146444 train_balanced_accuracy=0.9975810353168844 val_balanced_accuracy=0.39611435263609174
+2026-11-23T07:37:45.193710+00:00 [VALIDATION_COMPLETED] {'epoch': 3, 'val_macro_f1': 0.37265987127146444, 'val_loss': 2.9433186402904585}
+2026-11-23T07:37:45.194853+00:00 [CHECKPOINT_SAVED] {'epoch': 3, 'best': True}
+2026-11-23T07:37:45.199117+00:00 [EPOCH_END] {'epoch': 3, 'train_online_loss': 0.10745667656297178, 'val_macro_f1': 0.37265987127146444, 'best_epoch': 3}
+2026-11-23T07:37:45.200624+00:00 [EPOCH_START] {'epoch': 4, 'attempt_id': '20261123T073558Z_e043d838'}
+EPOCH SUMMARY epoch=4 train_accuracy=0.9984313725490196 val_accuracy=0.39906103286384975 train_eval_loss=0.00951086373093612 val_loss=4.622995623425675 train_macro_f1=0.998272659557634 val_macro_f1=0.35349838012149154 train_balanced_accuracy=0.9979136429608128 val_balanced_accuracy=0.3780140954053997
+2026-11-23T07:38:15.768805+00:00 [VALIDATION_COMPLETED] {'epoch': 4, 'val_macro_f1': 0.35349838012149154, 'val_loss': 4.622995623425675}
+2026-11-23T07:38:15.770988+00:00 [CHECKPOINT_SAVED] {'epoch': 4, 'best': False}
+2026-11-23T07:38:15.773770+00:00 [EPOCH_END] {'epoch': 4, 'train_online_loss': 0.09430070317619473, 'val_macro_f1': 0.35349838012149154, 'best_epoch': 3}
+2026-11-23T07:38:15.775348+00:00 [EPOCH_START] {'epoch': 5, 'attempt_id': '20261123T073558Z_e043d838'}
+EPOCH SUMMARY epoch=5 train_accuracy=0.9952941176470588 val_accuracy=0.40375586854460094 train_eval_loss=0.01282797091270695 val_loss=4.890813456480618 train_macro_f1=0.9936756383712906 val_macro_f1=0.3635914584056683 train_balanced_accuracy=0.9947089947089948 val_balanced_accuracy=0.38549051592529854
+2026-11-23T07:39:05.924549+00:00 [VALIDATION_COMPLETED] {'epoch': 5, 'val_macro_f1': 0.3635914584056683, 'val_loss': 4.890813456480618}
+2026-11-23T07:39:05.925890+00:00 [CHECKPOINT_SAVED] {'epoch': 5, 'best': False}
+2026-11-23T07:39:05.927382+00:00 [EPOCH_END] {'epoch': 5, 'train_online_loss': 0.0534816046540615, 'val_macro_f1': 0.3635914584056683, 'best_epoch': 3}
+2026-11-23T07:39:05.928895+00:00 [EPOCH_START] {'epoch': 6, 'attempt_id': '20261123T073558Z_e043d838'}
+EPOCH SUMMARY epoch=6 train_accuracy=1.0 val_accuracy=0.40375586854460094 train_eval_loss=0.0015807820494993033 val_loss=4.7854681596700885 train_macro_f1=1.0 val_macro_f1=0.3636944004038722 train_balanced_accuracy=1.0 val_balanced_accuracy=0.38428801472279733
+2026-11-23T07:39:40.109374+00:00 [VALIDATION_COMPLETED] {'epoch': 6, 'val_macro_f1': 0.3636944004038722, 'val_loss': 4.7854681596700885}
+2026-11-23T07:39:40.110582+00:00 [CHECKPOINT_SAVED] {'epoch': 6, 'best': False}
+2026-11-23T07:39:40.111666+00:00 [EPOCH_END] {'epoch': 6, 'train_online_loss': 0.04041615489826642, 'val_macro_f1': 0.3636944004038722, 'best_epoch': 3}
+2026-11-23T07:39:40.112797+00:00 [EPOCH_START] {'epoch': 7, 'attempt_id': '20261123T073558Z_e043d838'}
+EPOCH SUMMARY epoch=7 train_accuracy=1.0 val_accuracy=0.4014084507042254 train_eval_loss=0.0005435128596954731 val_loss=4.894760754996488 train_macro_f1=1.0 val_macro_f1=0.3522499613579333 train_balanced_accuracy=1.0 val_balanced_accuracy=0.38284501327979586
+2026-11-23T07:40:08.667465+00:00 [VALIDATION_COMPLETED] {'epoch': 7, 'val_macro_f1': 0.3522499613579333, 'val_loss': 4.894760754996488}
+2026-11-23T07:40:08.668788+00:00 [CHECKPOINT_SAVED] {'epoch': 7, 'best': False}
+2026-11-23T07:40:08.673954+00:00 [EPOCH_END] {'epoch': 7, 'train_online_loss': 0.01273227014250314, 'val_macro_f1': 0.3522499613579333, 'best_epoch': 3}
+2026-11-23T07:40:08.675994+00:00 [EPOCH_START] {'epoch': 8, 'attempt_id': '20261123T073558Z_e043d838'}
+EPOCH SUMMARY epoch=8 train_accuracy=0.9921568627450981 val_accuracy=0.43896713615023475 train_eval_loss=0.01037858361254544 val_loss=5.291206689497206 train_macro_f1=0.9897386266919255 val_macro_f1=0.38903281519861826 train_balanced_accuracy=0.9951620706337687 val_balanced_accuracy=0.405933036367819
+2026-11-23T07:40:43.648295+00:00 [VALIDATION_COMPLETED] {'epoch': 8, 'val_macro_f1': 0.38903281519861826, 'val_loss': 5.291206689497206}
+2026-11-23T07:40:43.650496+00:00 [CHECKPOINT_SAVED] {'epoch': 8, 'best': True}
+2026-11-23T07:40:43.652471+00:00 [EPOCH_END] {'epoch': 8, 'train_online_loss': 0.026327299768847196, 'val_macro_f1': 0.38903281519861826, 'best_epoch': 8}
+2026-11-23T07:40:43.654232+00:00 [EPOCH_START] {'epoch': 9, 'attempt_id': '20261123T073558Z_e043d838'}
+EPOCH SUMMARY epoch=9 train_accuracy=1.0 val_accuracy=0.39906103286384975 train_eval_loss=0.0010899918685701583 val_loss=4.6465034100318 train_macro_f1=1.0 val_macro_f1=0.34906841894790414 train_balanced_accuracy=1.0 val_balanced_accuracy=0.38140201183679445
+2026-11-23T07:41:12.731541+00:00 [VALIDATION_COMPLETED] {'epoch': 9, 'val_macro_f1': 0.34906841894790414, 'val_loss': 4.6465034100318}
+2026-11-23T07:41:12.739856+00:00 [CHECKPOINT_SAVED] {'epoch': 9, 'best': False}
+2026-11-23T07:41:12.743933+00:00 [EPOCH_END] {'epoch': 9, 'train_online_loss': 0.06463264933692417, 'val_macro_f1': 0.34906841894790414, 'best_epoch': 8}
+2026-11-23T07:41:12.753920+00:00 [EPOCH_START] {'epoch': 10, 'attempt_id': '20261123T073558Z_e043d838'}
+EPOCH SUMMARY epoch=10 train_accuracy=1.0 val_accuracy=0.40375586854460094 train_eval_loss=0.00043470614132408105 val_loss=5.409259148856078 train_macro_f1=1.0 val_macro_f1=0.36146718216746726 train_balanced_accuracy=1.0 val_balanced_accuracy=0.387675931154192
+2026-11-23T07:41:45.801294+00:00 [VALIDATION_COMPLETED] {'epoch': 10, 'val_macro_f1': 0.36146718216746726, 'val_loss': 5.409259148856078}
+2026-11-23T07:41:45.802455+00:00 [CHECKPOINT_SAVED] {'epoch': 10, 'best': False}
+2026-11-23T07:41:45.803603+00:00 [EPOCH_END] {'epoch': 10, 'train_online_loss': 0.049289320713407296, 'val_macro_f1': 0.36146718216746726, 'best_epoch': 8}
+2026-11-23T07:41:45.804715+00:00 [EPOCH_START] {'epoch': 11, 'attempt_id': '20261123T073558Z_e043d838'}
+EPOCH SUMMARY epoch=11 train_accuracy=0.9976470588235294 val_accuracy=0.4507042253521127 train_eval_loss=0.007150838297122528 val_loss=5.062087795567261 train_macro_f1=0.9973895264526297 val_macro_f1=0.392610198789974 train_balanced_accuracy=0.9973544973544973 val_balanced_accuracy=0.4141309576092185
+2026-11-23T07:42:04.081566+00:00 [VALIDATION_COMPLETED] {'epoch': 11, 'val_macro_f1': 0.392610198789974, 'val_loss': 5.062087795567261}
+2026-11-23T07:42:04.082751+00:00 [CHECKPOINT_SAVED] {'epoch': 11, 'best': False}
+2026-11-23T07:42:04.083957+00:00 [EPOCH_END] {'epoch': 11, 'train_online_loss': 0.03106086414784346, 'val_macro_f1': 0.392610198789974, 'best_epoch': 8}
+2026-11-23T07:42:04.085000+00:00 [EPOCH_START] {'epoch': 12, 'attempt_id': '20261123T073558Z_e043d838'}
+EPOCH SUMMARY epoch=12 train_accuracy=1.0 val_accuracy=0.42018779342723006 train_eval_loss=0.0005921903785338166 val_loss=6.732972368472281 train_macro_f1=1.0 val_macro_f1=0.36928966504966815 train_balanced_accuracy=1.0 val_balanced_accuracy=0.39100110839241276
+2026-11-23T07:42:21.484866+00:00 [VALIDATION_COMPLETED] {'epoch': 12, 'val_macro_f1': 0.36928966504966815, 'val_loss': 6.732972368472281}
+2026-11-23T07:42:21.486030+00:00 [CHECKPOINT_SAVED] {'epoch': 12, 'best': False}
+2026-11-23T07:42:21.487159+00:00 [EPOCH_END] {'epoch': 12, 'train_online_loss': 0.053919472447197886, 'val_macro_f1': 0.36928966504966815, 'best_epoch': 8}
+2026-11-23T07:42:21.488360+00:00 [EPOCH_START] {'epoch': 13, 'attempt_id': '20261123T073558Z_e043d838'}
+EPOCH SUMMARY epoch=13 train_accuracy=1.0 val_accuracy=0.3826291079812207 train_eval_loss=0.001049806461048749 val_loss=6.812828994311864 train_macro_f1=1.0 val_macro_f1=0.28593181015618474 train_balanced_accuracy=1.0 val_balanced_accuracy=0.34080975385323214
+2026-11-23T07:42:43.106940+00:00 [VALIDATION_COMPLETED] {'epoch': 13, 'val_macro_f1': 0.28593181015618474, 'val_loss': 6.812828994311864}
+2026-11-23T07:42:43.108497+00:00 [CHECKPOINT_SAVED] {'epoch': 13, 'best': False}
+2026-11-23T07:42:43.109854+00:00 [EPOCH_END] {'epoch': 13, 'train_online_loss': 0.05739171638728818, 'val_macro_f1': 0.28593181015618474, 'best_epoch': 8}
+2026-11-23T07:42:43.111189+00:00 [EPOCH_START] {'epoch': 14, 'attempt_id': '20261123T073558Z_e043d838'}
+EPOCH SUMMARY epoch=14 train_accuracy=1.0 val_accuracy=0.4835680751173709 train_eval_loss=0.0008555021385069807 val_loss=5.58936963291087 train_macro_f1=1.0 val_macro_f1=0.41243221969445426 train_balanced_accuracy=1.0 val_balanced_accuracy=0.4299621473534517
+2026-11-23T07:43:11.836468+00:00 [VALIDATION_COMPLETED] {'epoch': 14, 'val_macro_f1': 0.41243221969445426, 'val_loss': 5.58936963291087}
+2026-11-23T07:43:11.837605+00:00 [CHECKPOINT_SAVED] {'epoch': 14, 'best': True}
+2026-11-23T07:43:11.838670+00:00 [EPOCH_END] {'epoch': 14, 'train_online_loss': 0.06091926316900407, 'val_macro_f1': 0.41243221969445426, 'best_epoch': 14}
+2026-11-23T07:43:11.840203+00:00 [EPOCH_START] {'epoch': 15, 'attempt_id': '20261123T073558Z_e043d838'}
+EPOCH SUMMARY epoch=15 train_accuracy=1.0 val_accuracy=0.4084507042253521 train_eval_loss=0.00020992582094526646 val_loss=6.641209328884991 train_macro_f1=1.0 val_macro_f1=0.36722987097247395 train_balanced_accuracy=1.0 val_balanced_accuracy=0.38717401760880027
+2026-11-23T07:43:47.546227+00:00 [VALIDATION_COMPLETED] {'epoch': 15, 'val_macro_f1': 0.36722987097247395, 'val_loss': 6.641209328884991}
+2026-11-23T07:43:47.547725+00:00 [CHECKPOINT_SAVED] {'epoch': 15, 'best': False}
+2026-11-23T07:43:47.551014+00:00 [EPOCH_END] {'epoch': 15, 'train_online_loss': 0.01003607468519203, 'val_macro_f1': 0.36722987097247395, 'best_epoch': 14}
+2026-11-23T07:43:47.552389+00:00 [EPOCH_START] {'epoch': 16, 'attempt_id': '20261123T073558Z_e043d838'}
+EPOCH SUMMARY epoch=16 train_accuracy=1.0 val_accuracy=0.4131455399061033 train_eval_loss=0.0012986022447934932 val_loss=6.253573703342485 train_macro_f1=1.0 val_macro_f1=0.37074240256452523 train_balanced_accuracy=1.0 val_balanced_accuracy=0.3900600204948031
+2026-11-23T07:44:11.995410+00:00 [VALIDATION_COMPLETED] {'epoch': 16, 'val_macro_f1': 0.37074240256452523, 'val_loss': 6.253573703342485}
+2026-11-23T07:44:11.998587+00:00 [CHECKPOINT_SAVED] {'epoch': 16, 'best': False}
+2026-11-23T07:44:11.999976+00:00 [EPOCH_END] {'epoch': 16, 'train_online_loss': 0.025201588835716784, 'val_macro_f1': 0.37074240256452523, 'best_epoch': 14}
+2026-11-23T07:44:12.006075+00:00 [EPOCH_START] {'epoch': 17, 'attempt_id': '20261123T073558Z_e043d838'}
+EPOCH SUMMARY epoch=17 train_accuracy=1.0 val_accuracy=0.45774647887323944 train_eval_loss=0.0010593785325946278 val_loss=5.892514134442896 train_macro_f1=1.0 val_macro_f1=0.40307637354050857 train_balanced_accuracy=1.0 val_balanced_accuracy=0.41747704791183055
+2026-11-23T07:44:36.675161+00:00 [VALIDATION_COMPLETED] {'epoch': 17, 'val_macro_f1': 0.40307637354050857, 'val_loss': 5.892514134442896}
+2026-11-23T07:44:36.676464+00:00 [CHECKPOINT_SAVED] {'epoch': 17, 'best': False}
+2026-11-23T07:44:36.677780+00:00 [EPOCH_END] {'epoch': 17, 'train_online_loss': 0.04675880748298834, 'val_macro_f1': 0.40307637354050857, 'best_epoch': 14}
+2026-11-23T07:44:36.679367+00:00 [EPOCH_START] {'epoch': 18, 'attempt_id': '20261123T073558Z_e043d838'}
+EPOCH SUMMARY epoch=18 train_accuracy=1.0 val_accuracy=0.4295774647887324 train_eval_loss=0.0003114463716477232 val_loss=6.922518172959337 train_macro_f1=1.0 val_macro_f1=0.3822101400635432 train_balanced_accuracy=1.0 val_balanced_accuracy=0.4001610305958132
+2026-11-23T07:45:03.229709+00:00 [VALIDATION_COMPLETED] {'epoch': 18, 'val_macro_f1': 0.3822101400635432, 'val_loss': 6.922518172959337}
+2026-11-23T07:45:03.230879+00:00 [CHECKPOINT_SAVED] {'epoch': 18, 'best': False}
+2026-11-23T07:45:03.232380+00:00 [EPOCH_END] {'epoch': 18, 'train_online_loss': 0.05844531913114579, 'val_macro_f1': 0.3822101400635432, 'best_epoch': 14}
+2026-11-23T07:45:03.239375+00:00 [EPOCH_START] {'epoch': 19, 'attempt_id': '20261123T073558Z_e043d838'}
+EPOCH SUMMARY epoch=19 train_accuracy=1.0 val_accuracy=0.4624413145539906 train_eval_loss=0.001451058385800991 val_loss=6.580646683043773 train_macro_f1=1.0 val_macro_f1=0.4063820402728697 train_balanced_accuracy=1.0 val_balanced_accuracy=0.42036305079783337
+2026-11-23T07:45:42.988456+00:00 [VALIDATION_COMPLETED] {'epoch': 19, 'val_macro_f1': 0.4063820402728697, 'val_loss': 6.580646683043773}
+2026-11-23T07:45:42.991433+00:00 [CHECKPOINT_SAVED] {'epoch': 19, 'best': False}
+2026-11-23T07:45:42.993352+00:00 [EPOCH_END] {'epoch': 19, 'train_online_loss': 0.045859949906716144, 'val_macro_f1': 0.4063820402728697, 'best_epoch': 14}
+2026-11-23T07:45:42.994715+00:00 [EPOCH_START] {'epoch': 20, 'attempt_id': '20261123T073558Z_e043d838'}
+EPOCH SUMMARY epoch=20 train_accuracy=1.0 val_accuracy=0.43427230046948356 train_eval_loss=0.0001512142210703665 val_loss=6.537806892651354 train_macro_f1=1.0 val_macro_f1=0.3862804514638 train_balanced_accuracy=1.0 val_balanced_accuracy=0.40304703348181614
+2026-11-23T07:46:08.360097+00:00 [VALIDATION_COMPLETED] {'epoch': 20, 'val_macro_f1': 0.3862804514638, 'val_loss': 6.537806892651354}
+2026-11-23T07:46:08.361399+00:00 [CHECKPOINT_SAVED] {'epoch': 20, 'best': False}
+2026-11-23T07:46:08.362549+00:00 [EPOCH_END] {'epoch': 20, 'train_online_loss': 0.03926249950855787, 'val_macro_f1': 0.3862804514638, 'best_epoch': 14}
+2026-11-23T07:46:08.363635+00:00 [EPOCH_START] {'epoch': 21, 'attempt_id': '20261123T073558Z_e043d838'}
+EPOCH SUMMARY epoch=21 train_accuracy=1.0 val_accuracy=0.41784037558685444 train_eval_loss=0.00012923718458535867 val_loss=6.5177523788141825 train_macro_f1=1.0 val_macro_f1=0.3742325809836358 train_balanced_accuracy=1.0 val_balanced_accuracy=0.392946023380806
+2026-11-23T07:46:33.222621+00:00 [VALIDATION_COMPLETED] {'epoch': 21, 'val_macro_f1': 0.3742325809836358, 'val_loss': 6.5177523788141825}
+2026-11-23T07:46:33.224195+00:00 [CHECKPOINT_SAVED] {'epoch': 21, 'best': False}
+2026-11-23T07:46:33.232262+00:00 [EPOCH_END] {'epoch': 21, 'train_online_loss': 0.007598501438923613, 'val_macro_f1': 0.3742325809836358, 'best_epoch': 14}
+2026-11-23T07:46:33.233739+00:00 [EPOCH_START] {'epoch': 22, 'attempt_id': '20261123T073558Z_e043d838'}
+EPOCH SUMMARY epoch=22 train_accuracy=1.0 val_accuracy=0.460093896713615 train_eval_loss=0.0005628344328650296 val_loss=5.24048727118085 train_macro_f1=1.0 val_macro_f1=0.4080214765493953 train_balanced_accuracy=1.0 val_balanced_accuracy=0.4223079657862267
+2026-11-23T07:46:57.924626+00:00 [VALIDATION_COMPLETED] {'epoch': 22, 'val_macro_f1': 0.4080214765493953, 'val_loss': 5.24048727118085}
+2026-11-23T07:46:57.926572+00:00 [CHECKPOINT_SAVED] {'epoch': 22, 'best': False}
+2026-11-23T07:46:57.929001+00:00 [EPOCH_END] {'epoch': 22, 'train_online_loss': 0.027070840755889523, 'val_macro_f1': 0.4080214765493953, 'best_epoch': 14}
+2026-11-23T07:46:57.930633+00:00 [EPOCH_START] {'epoch': 23, 'attempt_id': '20261123T073558Z_e043d838'}
+EPOCH SUMMARY epoch=23 train_accuracy=1.0 val_accuracy=0.39906103286384975 train_eval_loss=0.00020622428239780395 val_loss=7.697434660062832 train_macro_f1=1.0 val_macro_f1=0.28973488311349094 train_balanced_accuracy=1.0 val_balanced_accuracy=0.34752284752284757
+2026-11-23T07:47:21.443245+00:00 [VALIDATION_COMPLETED] {'epoch': 23, 'val_macro_f1': 0.28973488311349094, 'val_loss': 7.697434660062832}
+2026-11-23T07:47:21.444977+00:00 [CHECKPOINT_SAVED] {'epoch': 23, 'best': False}
+2026-11-23T07:47:21.446770+00:00 [EPOCH_END] {'epoch': 23, 'train_online_loss': 0.010707310167746712, 'val_macro_f1': 0.28973488311349094, 'best_epoch': 14}
+2026-11-23T07:47:21.447930+00:00 [EPOCH_START] {'epoch': 24, 'attempt_id': '20261123T073558Z_e043d838'}
+EPOCH SUMMARY epoch=24 train_accuracy=1.0 val_accuracy=0.4154929577464789 train_eval_loss=0.005391899714964174 val_loss=6.975222341488994 train_macro_f1=1.0 val_macro_f1=0.304474073284761 train_balanced_accuracy=1.0 val_balanced_accuracy=0.3576238576238577
+2026-11-23T07:47:46.832831+00:00 [VALIDATION_COMPLETED] {'epoch': 24, 'val_macro_f1': 0.304474073284761, 'val_loss': 6.975222341488994}
+2026-11-23T07:47:46.834019+00:00 [CHECKPOINT_SAVED] {'epoch': 24, 'best': False}
+2026-11-23T07:47:46.835105+00:00 [EPOCH_END] {'epoch': 24, 'train_online_loss': 0.03436882832841523, 'val_macro_f1': 0.304474073284761, 'best_epoch': 14}
+2026-11-23T07:47:46.836162+00:00 [EPOCH_START] {'epoch': 25, 'attempt_id': '20261123T073558Z_e043d838'}
+EPOCH SUMMARY epoch=25 train_accuracy=1.0 val_accuracy=0.4225352112676056 train_eval_loss=0.00025436129502750664 val_loss=7.862054696950854 train_macro_f1=1.0 val_macro_f1=0.3065831539113982 train_balanced_accuracy=1.0 val_balanced_accuracy=0.36195286195286197
+2026-11-23T07:48:09.743482+00:00 [VALIDATION_COMPLETED] {'epoch': 25, 'val_macro_f1': 0.3065831539113982, 'val_loss': 7.862054696950854}
+2026-11-23T07:48:09.744675+00:00 [CHECKPOINT_SAVED] {'epoch': 25, 'best': False}
+2026-11-23T07:48:09.745935+00:00 [EPOCH_END] {'epoch': 25, 'train_online_loss': 0.03136259881844623, 'val_macro_f1': 0.3065831539113982, 'best_epoch': 14}
+2026-11-23T07:48:09.749236+00:00 [EPOCH_START] {'epoch': 26, 'attempt_id': '20261123T073558Z_e043d838'}
+EPOCH SUMMARY epoch=26 train_accuracy=1.0 val_accuracy=0.460093896713615 train_eval_loss=0.0012352853449188524 val_loss=7.286304191398209 train_macro_f1=1.0 val_macro_f1=0.3322897016698107 train_balanced_accuracy=1.0 val_balanced_accuracy=0.3850408850408851
+2026-11-23T07:48:34.429191+00:00 [VALIDATION_COMPLETED] {'epoch': 26, 'val_macro_f1': 0.3322897016698107, 'val_loss': 7.286304191398209}
+2026-11-23T07:48:34.430523+00:00 [CHECKPOINT_SAVED] {'epoch': 26, 'best': False}
+2026-11-23T07:48:34.432977+00:00 [EPOCH_END] {'epoch': 26, 'train_online_loss': 0.09074431751915316, 'val_macro_f1': 0.3322897016698107, 'best_epoch': 14}
+2026-11-23T07:48:34.435169+00:00 [EPOCH_START] {'epoch': 27, 'attempt_id': '20261123T073558Z_e043d838'}
+EPOCH SUMMARY epoch=27 train_accuracy=0.9976470588235294 val_accuracy=0.40375586854460094 train_eval_loss=0.005194590775405044 val_loss=8.020426788698437 train_macro_f1=0.9962853439067914 val_macro_f1=0.29314584394162935 train_balanced_accuracy=0.9973544973544973 val_balanced_accuracy=0.35040885040885045
+2026-11-23T07:49:02.803392+00:00 [VALIDATION_COMPLETED] {'epoch': 27, 'val_macro_f1': 0.29314584394162935, 'val_loss': 8.020426788698437}
+2026-11-23T07:49:02.805390+00:00 [CHECKPOINT_SAVED] {'epoch': 27, 'best': False}
+2026-11-23T07:49:02.807462+00:00 [EPOCH_END] {'epoch': 27, 'train_online_loss': 0.02059489757693723, 'val_macro_f1': 0.29314584394162935, 'best_epoch': 14}
+2026-11-23T07:49:02.809193+00:00 [EPOCH_START] {'epoch': 28, 'attempt_id': '20261123T073558Z_e043d838'}
+EPOCH SUMMARY epoch=28 train_accuracy=1.0 val_accuracy=0.42018779342723006 train_eval_loss=0.0001687318641324017 val_loss=5.396931249672779 train_macro_f1=1.0 val_macro_f1=0.36502708456694216 train_balanced_accuracy=1.0 val_balanced_accuracy=0.3943890248238074
+2026-11-23T07:49:37.313962+00:00 [VALIDATION_COMPLETED] {'epoch': 28, 'val_macro_f1': 0.36502708456694216, 'val_loss': 5.396931249672779}
+2026-11-23T07:49:37.315164+00:00 [CHECKPOINT_SAVED] {'epoch': 28, 'best': False}
+2026-11-23T07:49:37.316345+00:00 [EPOCH_END] {'epoch': 28, 'train_online_loss': 0.036022974835805466, 'val_macro_f1': 0.36502708456694216, 'best_epoch': 14}
+2026-11-23T07:49:37.317489+00:00 [EPOCH_START] {'epoch': 29, 'attempt_id': '20261123T073558Z_e043d838'}
+EPOCH SUMMARY epoch=29 train_accuracy=1.0 val_accuracy=0.4225352112676056 train_eval_loss=7.084823338972032e-05 val_loss=5.725595572504013 train_macro_f1=1.0 val_macro_f1=0.3710165515892996 train_balanced_accuracy=1.0 val_balanced_accuracy=0.39244410983541417
+2026-11-23T07:50:03.593931+00:00 [VALIDATION_COMPLETED] {'epoch': 29, 'val_macro_f1': 0.3710165515892996, 'val_loss': 5.725595572504013}
+2026-11-23T07:50:03.595437+00:00 [CHECKPOINT_SAVED] {'epoch': 29, 'best': False}
+2026-11-23T07:50:03.598717+00:00 [EPOCH_END] {'epoch': 29, 'train_online_loss': 0.010429066323049916, 'val_macro_f1': 0.3710165515892996, 'best_epoch': 14}
+2026-11-23T07:50:03.600398+00:00 [EARLY_STOPPING] {'epoch': 29, 'patience': 15}
+2026-11-23T07:50:08.378571+00:00 [TEST_COMPLETED] {'macro_f1': 0.35666904786202674, 'balanced_accuracy': 0.35420722474583605}
+2026-11-23T07:50:08.380119+00:00 [FOLD_END] {'status': 'completed'}

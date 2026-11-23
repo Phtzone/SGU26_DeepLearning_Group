@@ -1,0 +1,18 @@
+2026-11-23T07:20:13.649470+00:00
+Traceback (most recent call last):
+  File "D:\Deep_learning_group\Projects\DL13-WESAD\scripts\run_grouped_cv.py", line 144, in run
+    audit, rows = build_index(source, config['data'], split['original_subject_order'])
+                  ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Deep_learning_group\Projects\DL13-WESAD\src\data\common_rate.py", line 31, in build_index
+    metadata = read_json(source / 'config.json')
+  File "D:\Deep_learning_group\Projects\DL13-WESAD\src\utils\tracking.py", line 47, in read_json
+    return json.loads(Path(path).read_text(encoding='utf-8'))
+                      ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "D:\anaconda3\Lib\pathlib\__init__.py", line 787, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\anaconda3\Lib\pathlib\__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Deep_learning_group\\Projects\\DL13-WESAD\\experiments\\journal\\create_workbook.py\\config.json'
+

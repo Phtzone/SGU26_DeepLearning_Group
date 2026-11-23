@@ -6,6 +6,12 @@ from sklearn.metrics import confusion_matrix, precision_recall_fscore_support
 LABEL_NAMES = ['baseline', 'stress', 'amusement']
 
 
+def metrics_by_subject(labels, predictions, subjects):
+    labels, predictions, subjects = map(np.asarray, (labels, predictions, subjects))
+    return {str(subject): classification_metrics(labels[subjects == subject], predictions[subjects == subject])
+            for subject in dict.fromkeys(subjects)}
+
+
 def classification_metrics(labels, predictions):
     labels, predictions = np.asarray(labels), np.asarray(predictions)
     if not len(labels) or labels.shape != predictions.shape or not np.isin(labels, [0, 1, 2]).all() or not np.isin(predictions, [0, 1, 2]).all():

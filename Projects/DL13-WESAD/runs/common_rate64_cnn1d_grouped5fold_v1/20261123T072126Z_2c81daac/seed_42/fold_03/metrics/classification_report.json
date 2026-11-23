@@ -1,0 +1,20 @@
+{
+  "baseline": {
+    "precision": 0.7524752475247525,
+    "recall": 0.329004329004329,
+    "f1": 0.4578313253012048,
+    "support": 231
+  },
+  "stress": {
+    "precision": 0.4,
+    "recall": 0.6825396825396826,
+    "f1": 0.5043988269794721,
+    "support": 126
+  },
+  "amusement": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "support": 69
+  }
+}

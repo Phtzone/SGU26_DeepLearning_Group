@@ -9,9 +9,8 @@ class ChannelScaler:
             raise ValueError('Fit requires unnormalized training windows.')
         count, mean, m2 = 0, None, None
         for subject in dataset.subjects:
-            array = dataset.arrays[subject]
-            for start in range(0, len(array), 64):
-                block = np.asarray(array[start:start + 64], dtype=np.float64).transpose(1, 0, 2).reshape(array.shape[1], -1)
+            for windows in dataset.raw_blocks(subject):
+                block = np.asarray(windows, dtype=np.float64).transpose(1, 0, 2).reshape(windows.shape[1], -1)
                 n = block.shape[1]
                 bm = block.mean(axis=1)
                 b2 = ((block - bm[:, None]) ** 2).sum(axis=1)
@@ -22,6 +21,8 @@ class ChannelScaler:
                     m2 += b2 + delta ** 2 * count * n / (count + n)
                     mean += delta * n / (count + n)
                     count += n
+        if count == 0:
+            raise ValueError('Fit requires at least one training window.')
         self.mean = mean.astype(np.float32)
         self.std = np.sqrt(m2 / count).astype(np.float32)
         self.std[self.std < 1e-8] = 1

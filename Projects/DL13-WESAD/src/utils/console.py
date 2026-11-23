@@ -69,12 +69,16 @@ class ConsoleLogger:
             lines.append(title)
             for label, key in [('Loss', 'eval_loss' if prefix == 'train' else 'loss'), ('Accuracy', 'accuracy'), ('Macro-F1', 'macro_f1'), ('Balanced Accuracy', 'balanced_accuracy')]:
                 lines.append(f'  {label:<20}: {number(row.get(prefix + "_" + key))}')
+        if 'val_subject_macro_f1' in row:
+            lines.append(f"  {'Subject Macro-F1':<20}: {number(row['val_subject_macro_f1'])}")
+        selection_line = (f"  Best Val subject F1 : {number(row['best_val_subject_macro_f1'])}"
+                          if 'best_val_subject_macro_f1' in row else f"  Best Val Macro-F1   : {number(row['best_val_macro_f1'])}")
         lines.extend(['OPTIMIZATION', f"  Train online loss   : {number(row.get('train_online_loss'))}",
                       f"  Learning Rate       : {number(row.get('learning_rate'), 6)}",
                       f"  Epoch Duration      : {number(row.get('epoch_duration_seconds'), 1)} s",
                       f"  Total Elapsed       : {elapsed_text}",
                       'MODEL SELECTION', f"  Best Epoch          : {row['best_epoch']}",
-                      f"  Best Val Macro-F1   : {number(row['best_val_macro_f1'])}",
+                      selection_line,
                       f"  Patience            : {context.get('bad_epochs', 'N/A')}/{config['training']['early_stopping_patience']}",
                       '  Checkpoint          : ' + ('New best saved' if context.get('is_best') else 'No improvement'), '-' * 68])
         self.write('\n'.join(lines))

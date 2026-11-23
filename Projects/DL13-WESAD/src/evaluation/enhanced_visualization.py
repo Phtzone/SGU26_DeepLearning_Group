@@ -148,6 +148,10 @@ def learning_figures(writer, fold):
             continue
         writer.line(prefix + '/' + name, title + ' | Train vs validation ' + name.replace('_', ' '),
                     [(label, epochs, values(fold.epochs, key)) for label, key in fields], 'Epoch', ylabel, best=best)
+    if any(r.get('val_subject_macro_f1') is not None for r in fold.epochs):
+        writer.line(prefix + '/validation_subject_macro_f1', title + ' | Validation subject-mean Macro-F1',
+                    [('Mean over Validation subjects', epochs, values(fold.epochs, 'val_subject_macro_f1'))],
+                    'Epoch', 'Macro-F1', best=best)
     steps = [r['global_step'] for r in fold.iterations]
     for name, key, ylabel in [('batch_loss', 'train_loss', 'Batch weighted cross-entropy loss'),
                               ('gradient_norm', 'gradient_norm', 'Gradient L2 norm (before clipping)')]:
@@ -294,6 +298,11 @@ def dataset_figures(writer, history):
                            CLASS_NAMES, {role.title(): distribution for role, distribution in fold.metadata['label_distribution'].items()}, 'Windows (count)', False)
     cache = Path(history['manifest'].get('cache_path', ''))
     metadata = [read_json(cache / s / 'metadata.json') for s in subjects if (cache / s / 'metadata.json').exists()]
+    if history['manifest']['effective_config']['data'].get('source') == 'common_rate':
+        if metadata:
+            writer.bars('dataset/quality_exclusions', 'Common-rate | Candidate windows rejected by quality mask',
+                        [m['subject_id'] for m in metadata], [m['rejected_quality_windows'] for m in metadata], 'Windows (count)')
+        return
     audited = [m for m in metadata if 'counts' in m]
     if audited:
         names = [m['subject_id'] for m in audited]
@@ -346,6 +355,9 @@ def generate_visualizations(group_id, root=ROOT):
     cache = Path(history['manifest'].get('cache_path', ''))
     sources = dict(history['source_hashes'])
     if cache.is_dir():
+        index = cache / 'common_rate_index.json'
+        if index.is_file():
+            sources[str(index)] = file_hash(index)
         for path in sorted(cache.glob('*/*')):
             if path.name in ('metadata.json', 'windows.csv', 'windows.npy'):
                 sources[str(path)] = file_hash(path)

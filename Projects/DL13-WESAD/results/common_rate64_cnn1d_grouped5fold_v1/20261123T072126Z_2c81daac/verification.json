@@ -1,0 +1,473 @@
+{
+  "status": "passed",
+  "verified_at": "2026-11-23T08:27:42.810467+00:00",
+  "group_id": "20261123T072126Z_2c81daac",
+  "data_fingerprint": "9f2f09b7aee2ec94134a4734d7b9a1382e03936a49ecb9e8c5952e3b92760772",
+  "split_manifest_sha256": "239949dfebabd802091d14a4494d2216aee9809b0e2993dacdbdfbcdc7133f2c",
+  "source_snapshot_files": 61,
+  "verified_folds": 5,
+  "folds": [
+    {
+      "fold_id": 1,
+      "run_id": "20261123T072132Z_780a5a85",
+      "started_at": "2026-11-23T07:21:32.838105+00:00",
+      "ended_at": "2026-11-23T07:35:56.328285+00:00",
+      "window_counts": {
+        "train": 1270,
+        "validation": 433,
+        "test": 431
+      },
+      "best_epoch": 13,
+      "epochs": 28,
+      "trainable_parameters": 47075,
+      "normalized_on_train": true,
+      "validation_selection_replayed": true,
+      "checkpoints": {
+        "best": {
+          "path": "runs/common_rate64_cnn1d_grouped5fold_v1/20261123T072126Z_2c81daac/seed_42/fold_01/checkpoints/best.pt",
+          "sha256": "8878fa68d8e39467e73a1e7361f0754e05ed0887b97c1f944902d86de8d190a2",
+          "epoch": 13,
+          "size_bytes": 615237
+        },
+        "last": {
+          "path": "runs/common_rate64_cnn1d_grouped5fold_v1/20261123T072126Z_2c81daac/seed_42/fold_01/checkpoints/last.pt",
+          "sha256": "cb1275c854656beee61d9e5c18dda51986b20165b9d4cf6edb664d88f24da518",
+          "epoch": 28,
+          "size_bytes": 824890
+        }
+      },
+      "iterations": {
+        "logged_iterations": 1120,
+        "committed_iterations": 1120,
+        "orphan_or_replayed_iterations": 0,
+        "completed_epochs": 28
+      },
+      "tensorboard_files": [
+        "runs/common_rate64_cnn1d_grouped5fold_v1/20261123T072126Z_2c81daac/seed_42/fold_01/tensorboard/batches/events.out.tfevents.1795418499.DESKTOP-3Q2FPVI.2848.1.414c0c2c1c10",
+        "runs/common_rate64_cnn1d_grouped5fold_v1/20261123T072126Z_2c81daac/seed_42/fold_01/tensorboard/epochs/events.out.tfevents.1795418499.DESKTOP-3Q2FPVI.2848.0.5b51699ef968",
+        "runs/common_rate64_cnn1d_grouped5fold_v1/20261123T072126Z_2c81daac/seed_42/fold_01/tensorboard/evaluation/events.out.tfevents.1795418499.DESKTOP-3Q2FPVI.2848.2.c991cb1028dd"
+      ],
+      "test_metrics": {
+        "macro_f1": 0.27351916376306623,
+        "balanced_accuracy": 0.38239538239538234,
+        "accuracy": 0.3642691415313225,
+        "precision_per_class": [
+          0.5211267605633803,
+          0.0,
+          0.21100917431192662
+        ],
+        "recall_per_class": [
+          0.4805194805194805,
+          0.0,
+          0.6666666666666666
+        ],
+        "f1_per_class": [
+          0.5,
+          0.0,
+          0.3205574912891986
+        ],
+        "support": [
+          231,
+          131,
+          69
+        ],
+        "confusion_matrix": [
+          [
+            111,
+            0,
+            120
+          ],
+          [
+            79,
+            0,
+            52
+          ],
+          [
+            23,
+            0,
+            46
+          ]
+        ],
+        "label_order": [
+          "baseline",
+          "stress",
+          "amusement"
+        ],
+        "absent_classes": [],
+        "loss": 7.516875311298066,
+        "stress_recall": 0.0
+      }
+    },
+    {
+      "fold_id": 2,
+      "run_id": "20261123T073558Z_d5d2f07b",
+      "started_at": "2026-11-23T07:35:58.833347+00:00",
+      "ended_at": "2026-11-23T07:50:08.316461+00:00",
+      "window_counts": {
+        "train": 1275,
+        "validation": 426,
+        "test": 433
+      },
+      "best_epoch": 14,
+      "epochs": 29,
+      "trainable_parameters": 47075,
+      "normalized_on_train": true,
+      "validation_selection_replayed": true,
+      "checkpoints": {
+        "best": {
+          "path": "runs/common_rate64_cnn1d_grouped5fold_v1/20261123T072126Z_2c81daac/seed_42/fold_02/checkpoints/best.pt",
+          "sha256": "8625f62958f3b2d6fffcae3158af0abbf4bf0ceda6925225e571d354ccf21151",
+          "epoch": 14,
+          "size_bytes": 616005
+        },
+        "last": {
+          "path": "runs/common_rate64_cnn1d_grouped5fold_v1/20261123T072126Z_2c81daac/seed_42/fold_02/checkpoints/last.pt",
+          "sha256": "d24c6bc075859b0856e47ffe8f8730b32fb6c2f236afc341882e7875a7f8097c",
+          "epoch": 29,
+          "size_bytes": 825658
+        }
+      },
+      "iterations": {
+        "logged_iterations": 1160,
+        "committed_iterations": 1160,
+        "orphan_or_replayed_iterations": 0,
+        "completed_epochs": 29
+      },
+      "tensorboard_files": [
+        "runs/common_rate64_cnn1d_grouped5fold_v1/20261123T072126Z_2c81daac/seed_42/fold_02/tensorboard/batches/events.out.tfevents.1795419360.DESKTOP-3Q2FPVI.2848.4.c6331ca0d2a0",
+        "runs/common_rate64_cnn1d_grouped5fold_v1/20261123T072126Z_2c81daac/seed_42/fold_02/tensorboard/epochs/events.out.tfevents.1795419360.DESKTOP-3Q2FPVI.2848.3.e3d98e9883af",
+        "runs/common_rate64_cnn1d_grouped5fold_v1/20261123T072126Z_2c81daac/seed_42/fold_02/tensorboard/evaluation/events.out.tfevents.1795419360.DESKTOP-3Q2FPVI.2848.5.a3dc0e1db601"
+      ],
+      "test_metrics": {
+        "macro_f1": 0.35666904786202674,
+        "balanced_accuracy": 0.35420722474583605,
+        "accuracy": 0.47344110854503463,
+        "precision_per_class": [
+          0.5725190839694656,
+          0.5238095238095238,
+          0.0
+        ],
+        "recall_per_class": [
+          0.6521739130434783,
+          0.41044776119402987,
+          0.0
+        ],
+        "f1_per_class": [
+          0.6097560975609756,
+          0.4602510460251046,
+          0.0
+        ],
+        "support": [
+          230,
+          134,
+          69
+        ],
+        "confusion_matrix": [
+          [
+            150,
+            46,
+            34
+          ],
+          [
+            47,
+            55,
+            32
+          ],
+          [
+            65,
+            4,
+            0
+          ]
+        ],
+        "label_order": [
+          "baseline",
+          "stress",
+          "amusement"
+        ],
+        "absent_classes": [],
+        "loss": 4.363605461633651,
+        "stress_recall": 0.41044776119402987
+      }
+    },
+    {
+      "fold_id": 3,
+      "run_id": "20261123T075009Z_1ab8c40b",
+      "started_at": "2026-11-23T07:50:09.448499+00:00",
+      "ended_at": "2026-11-23T08:05:25.061751+00:00",
+      "window_counts": {
+        "train": 1281,
+        "validation": 427,
+        "test": 426
+      },
+      "best_epoch": 25,
+      "epochs": 40,
+      "trainable_parameters": 47075,
+      "normalized_on_train": true,
+      "validation_selection_replayed": true,
+      "checkpoints": {
+        "best": {
+          "path": "runs/common_rate64_cnn1d_grouped5fold_v1/20261123T072126Z_2c81daac/seed_42/fold_03/checkpoints/best.pt",
+          "sha256": "fe8b3923fd134322c4328409e0a0ba17ffce20b4910b740288e5ee3ee3f33597",
+          "epoch": 25,
+          "size_bytes": 624517
+        },
+        "last": {
+          "path": "runs/common_rate64_cnn1d_grouped5fold_v1/20261123T072126Z_2c81daac/seed_42/fold_03/checkpoints/last.pt",
+          "sha256": "d7280ab1e07ef8ee8298cf7b373171f31d24e7c4127edb4d073a8bbe6412f23a",
+          "epoch": 40,
+          "size_bytes": 834234
+        }
+      },
+      "iterations": {
+        "logged_iterations": 1640,
+        "committed_iterations": 1640,
+        "orphan_or_replayed_iterations": 0,
+        "completed_epochs": 40
+      },
+      "tensorboard_files": [
+        "runs/common_rate64_cnn1d_grouped5fold_v1/20261123T072126Z_2c81daac/seed_42/fold_03/tensorboard/batches/events.out.tfevents.1795420210.DESKTOP-3Q2FPVI.2848.7.b6e172676049",
+        "runs/common_rate64_cnn1d_grouped5fold_v1/20261123T072126Z_2c81daac/seed_42/fold_03/tensorboard/epochs/events.out.tfevents.1795420210.DESKTOP-3Q2FPVI.2848.6.c1d95fca6180",
+        "runs/common_rate64_cnn1d_grouped5fold_v1/20261123T072126Z_2c81daac/seed_42/fold_03/tensorboard/evaluation/events.out.tfevents.1795420210.DESKTOP-3Q2FPVI.2848.8.75dbc1d7f94b"
+      ],
+      "test_metrics": {
+        "macro_f1": 0.32074338409355896,
+        "balanced_accuracy": 0.3371813371813372,
+        "accuracy": 0.38028169014084506,
+        "precision_per_class": [
+          0.7524752475247525,
+          0.4,
+          0.0
+        ],
+        "recall_per_class": [
+          0.329004329004329,
+          0.6825396825396826,
+          0.0
+        ],
+        "f1_per_class": [
+          0.4578313253012048,
+          0.5043988269794721,
+          0.0
+        ],
+        "support": [
+          231,
+          126,
+          69
+        ],
+        "confusion_matrix": [
+          [
+            76,
+            83,
+            72
+          ],
+          [
+            2,
+            86,
+            38
+          ],
+          [
+            23,
+            46,
+            0
+          ]
+        ],
+        "label_order": [
+          "baseline",
+          "stress",
+          "amusement"
+        ],
+        "absent_classes": [],
+        "loss": 9.69961019116724,
+        "stress_recall": 0.6825396825396826
+      }
+    },
+    {
+      "fold_id": 4,
+      "run_id": "20261123T080526Z_a21cbd20",
+      "started_at": "2026-11-23T08:05:26.142086+00:00",
+      "ended_at": "2026-11-23T08:13:25.097600+00:00",
+      "window_counts": {
+        "train": 1290,
+        "validation": 417,
+        "test": 427
+      },
+      "best_epoch": 8,
+      "epochs": 23,
+      "trainable_parameters": 47075,
+      "normalized_on_train": true,
+      "validation_selection_replayed": true,
+      "checkpoints": {
+        "best": {
+          "path": "runs/common_rate64_cnn1d_grouped5fold_v1/20261123T072126Z_2c81daac/seed_42/fold_04/checkpoints/best.pt",
+          "sha256": "f9da8200379059f8933f3f73ccd456ab0e503a8a03b6709994c30181cd7de256",
+          "epoch": 8,
+          "size_bytes": 611333
+        },
+        "last": {
+          "path": "runs/common_rate64_cnn1d_grouped5fold_v1/20261123T072126Z_2c81daac/seed_42/fold_04/checkpoints/last.pt",
+          "sha256": "491515ad740518d0c688dd35fa4834ed0a828b99792689e8fb51140e0c5dd4bb",
+          "epoch": 23,
+          "size_bytes": 820986
+        }
+      },
+      "iterations": {
+        "logged_iterations": 943,
+        "committed_iterations": 943,
+        "orphan_or_replayed_iterations": 0,
+        "completed_epochs": 23
+      },
+      "tensorboard_files": [
+        "runs/common_rate64_cnn1d_grouped5fold_v1/20261123T072126Z_2c81daac/seed_42/fold_04/tensorboard/batches/events.out.tfevents.1795421127.DESKTOP-3Q2FPVI.2848.10.082e995e035a",
+        "runs/common_rate64_cnn1d_grouped5fold_v1/20261123T072126Z_2c81daac/seed_42/fold_04/tensorboard/epochs/events.out.tfevents.1795421127.DESKTOP-3Q2FPVI.2848.9.cb51b5686b77",
+        "runs/common_rate64_cnn1d_grouped5fold_v1/20261123T072126Z_2c81daac/seed_42/fold_04/tensorboard/evaluation/events.out.tfevents.1795421127.DESKTOP-3Q2FPVI.2848.11.900f2ead1757"
+      ],
+      "test_metrics": {
+        "macro_f1": 0.377720230404236,
+        "balanced_accuracy": 0.4053221405170431,
+        "accuracy": 0.36533957845433257,
+        "precision_per_class": [
+          0.5140845070422535,
+          0.7419354838709677,
+          0.16591928251121077
+        ],
+        "recall_per_class": [
+          0.3146551724137931,
+          0.36507936507936506,
+          0.5362318840579711
+        ],
+        "f1_per_class": [
+          0.39037433155080214,
+          0.48936170212765956,
+          0.2534246575342466
+        ],
+        "support": [
+          232,
+          126,
+          69
+        ],
+        "confusion_matrix": [
+          [
+            73,
+            14,
+            145
+          ],
+          [
+            39,
+            46,
+            41
+          ],
+          [
+            30,
+            2,
+            37
+          ]
+        ],
+        "label_order": [
+          "baseline",
+          "stress",
+          "amusement"
+        ],
+        "absent_classes": [],
+        "loss": 3.618710738638058,
+        "stress_recall": 0.36507936507936506
+      }
+    },
+    {
+      "fold_id": 5,
+      "run_id": "20261123T081326Z_da054c44",
+      "started_at": "2026-11-23T08:13:26.090694+00:00",
+      "ended_at": "2026-11-23T08:24:26.352899+00:00",
+      "window_counts": {
+        "train": 1286,
+        "validation": 431,
+        "test": 417
+      },
+      "best_epoch": 17,
+      "epochs": 32,
+      "trainable_parameters": 47075,
+      "normalized_on_train": true,
+      "validation_selection_replayed": true,
+      "checkpoints": {
+        "best": {
+          "path": "runs/common_rate64_cnn1d_grouped5fold_v1/20261123T072126Z_2c81daac/seed_42/fold_05/checkpoints/best.pt",
+          "sha256": "3bff3ae063a7b1e755ff341a6cfcf101de686fd223f296715aec07e487876fbe",
+          "epoch": 17,
+          "size_bytes": 618309
+        },
+        "last": {
+          "path": "runs/common_rate64_cnn1d_grouped5fold_v1/20261123T072126Z_2c81daac/seed_42/fold_05/checkpoints/last.pt",
+          "sha256": "f00553b3542603d6298a136b68d653fd1c37cc1c26dd3c1b33dfe7e2ef0710b9",
+          "epoch": 32,
+          "size_bytes": 828026
+        }
+      },
+      "iterations": {
+        "logged_iterations": 1312,
+        "committed_iterations": 1312,
+        "orphan_or_replayed_iterations": 0,
+        "completed_epochs": 32
+      },
+      "tensorboard_files": [
+        "runs/common_rate64_cnn1d_grouped5fold_v1/20261123T072126Z_2c81daac/seed_42/fold_05/tensorboard/batches/events.out.tfevents.1795421609.DESKTOP-3Q2FPVI.2848.13.37a9d0a8a476",
+        "runs/common_rate64_cnn1d_grouped5fold_v1/20261123T072126Z_2c81daac/seed_42/fold_05/tensorboard/epochs/events.out.tfevents.1795421609.DESKTOP-3Q2FPVI.2848.12.0371945dbad4",
+        "runs/common_rate64_cnn1d_grouped5fold_v1/20261123T072126Z_2c81daac/seed_42/fold_05/tensorboard/evaluation/events.out.tfevents.1795421609.DESKTOP-3Q2FPVI.2848.14.2dfec1bd0a75"
+      ],
+      "test_metrics": {
+        "macro_f1": 0.4532262434909639,
+        "balanced_accuracy": 0.45267942033831016,
+        "accuracy": 0.5755395683453237,
+        "precision_per_class": [
+          0.6103448275862069,
+          0.5242718446601942,
+          0.375
+        ],
+        "recall_per_class": [
+          0.7831858407079646,
+          0.4462809917355372,
+          0.12857142857142856
+        ],
+        "f1_per_class": [
+          0.686046511627907,
+          0.48214285714285715,
+          0.19148936170212766
+        ],
+        "support": [
+          226,
+          121,
+          70
+        ],
+        "confusion_matrix": [
+          [
+            177,
+            34,
+            15
+          ],
+          [
+            67,
+            54,
+            0
+          ],
+          [
+            46,
+            15,
+            9
+          ]
+        ],
+        "label_order": [
+          "baseline",
+          "stress",
+          "amusement"
+        ],
+        "absent_classes": [],
+        "loss": 6.290945368462404,
+        "stress_recall": 0.4462809917355372
+      }
+    }
+  ],
+  "oof_windows": 2134,
+  "test_subjects": 15,
+  "tensorboard_files": 15,
+  "checkpoint_count": 10,
+  "verified_figures": 134,
+  "verified_figure_files": 268,
+  "figure_directory": "results/common_rate64_cnn1d_grouped5fold_v1/20261123T072126Z_2c81daac/enhanced_visualizations/scientific-v2_a3d014ba1ef8351d"
+}

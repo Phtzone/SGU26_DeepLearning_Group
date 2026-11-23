@@ -134,6 +134,7 @@ class TensorBoardTracker:
             'val_loss': 'val/loss', 'val_accuracy': 'val/accuracy', 'val_macro_f1': 'val/macro_f1', 'val_balanced_accuracy': 'val/balanced_accuracy',
             'learning_rate': 'optimization/learning_rate', 'epoch_duration_seconds': 'optimization/epoch_duration_seconds',
             'best_epoch': 'selection/best_epoch', 'best_val_macro_f1': 'selection/best_val_macro_f1',
+            'val_subject_macro_f1': 'val/subject_macro_f1', 'best_val_subject_macro_f1': 'selection/best_val_subject_macro_f1',
             'early_stopping_counter': 'selection/early_stopping_counter'}
         for source, tag in mapping.items():
             self._scalar(self.writers['epochs'], tag, row.get(source), epoch)

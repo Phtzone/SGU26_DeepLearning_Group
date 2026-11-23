@@ -1,0 +1,3 @@
+2026-11-23T07:21:27.881461+00:00 [EXPERIMENT_START] {'group_id': '20261123T072126Z_2c81daac', 'resume': False}
+2026-11-23T07:21:32.781931+00:00 [WINDOW_INDEX_READY] {'root': 'D:\\Deep_learning_group\\Projects\\DL13-WESAD\\data\\processed\\common_rate_64hz', 'index': 'D:\\Deep_learning_group\\Projects\\DL13-WESAD\\runs\\common_rate64_cnn1d_grouped5fold_v1\\20261123T072126Z_2c81daac\\window_index', 'windows': 2134, 'rejected_quality_windows': 2}
+2026-11-23T08:27:13.537494+00:00 [EXPERIMENT_END] {'status': 'completed', 'completed_folds': 5}

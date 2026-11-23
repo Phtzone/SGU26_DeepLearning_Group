@@ -5,6 +5,7 @@ import re
 import shutil
 import psutil
 import yaml
+from src.data.common_rate import NOTEBOOK_METADATA, build_index, prepare_index
 from src.data.preprocessing import prepare_dataset
 from src.data.splits import load_manifest
 from src.evaluation.aggregation import aggregate_group
@@ -44,17 +45,26 @@ def execution_plan(config, group_id=None, resume=False, folds=None):
     if not selected or len(set(selected)) != len(selected) or not set(selected) <= available:
         raise ValueError(f'--folds must contain distinct IDs from {sorted(available)}.')
     selected = sorted(selected)
-    dataset = raw_root()
-    missing = [subject for subject in split['original_subject_order'] if not (dataset / subject / (subject + '.pkl')).is_file()]
+    subjects = split['original_subject_order']
+    if config['data'].get('source') == 'common_rate':
+        dataset = (ROOT / config['data']['processed_dir']).resolve()
+        missing = [subject for subject in subjects
+                   if not all((dataset / f'{subject}{suffix}').is_file() for suffix in ('_X.npy', '_quality_mask.npy'))]
+        source_plan = {'data_source': str(dataset),
+                       'missing_files': [name for name in NOTEBOOK_METADATA if not (dataset / name).is_file()]}
+    else:
+        dataset = raw_root()
+        missing = [subject for subject in subjects if not (dataset / subject / (subject + '.pkl')).is_file()]
+        source_plan = {'raw_root': str(dataset)}
     return split, selected, existing, {'group_id': group_id, 'resume': resume, 'selected_folds': selected,
         'protocol_folds': len(split['folds']), 'training_seeds': config['training']['seeds'],
-        'effective_config': config, 'manifest_checksum': digest(split), 'raw_root': str(dataset),
+        'effective_config': config, 'manifest_checksum': digest(split), **source_plan,
         'subjects_present': len(split['original_subject_order']) - len(missing), 'missing_subjects': missing,
         'tensorboard_log_root': str(ROOT / 'runs' / experiment_folder(config)),
         'subjects_by_fold': [fold for fold in split['folds'] if fold['fold_id'] in selected]}
 
 
-def run(config, group_id=None, resume=False, folds=None, dry_run=False):
+def run(config, group_id=None, resume=False, folds=None, dry_run=False, experiment_path=None):
     if resume and not group_id:
         raise ValueError('--resume requires --group-id')
     group_id = group_id or identifier()
@@ -62,16 +72,25 @@ def run(config, group_id=None, resume=False, folds=None, dry_run=False):
         raise ValueError('Invalid group ID.')
     split, selected, existing, plan = execution_plan(config, group_id, resume, folds)
     group = ROOT / 'runs' / experiment_folder(config) / group_id
+    result_directory = ROOT / 'results' / group.parent.name / group_id
+    source = plan.get('data_source')
     exists = group.exists()
     if exists != resume:
         raise ValueError('New groups must not exist; resumed groups must already exist.')
     if dry_run:
         import json
+        if source and not (plan['missing_subjects'] or plan['missing_files']):
+            audit, _ = build_index(source, config['data'], split['original_subject_order'])
+            plan['data_audit'] = audit
         print(json.dumps({'dry_run': True, 'training_executed': False, **plan}, indent=2))
         return plan
-    if plan['missing_subjects']:
-        raise FileNotFoundError(f"Dataset is incomplete at {plan['raw_root']}: {plan['missing_subjects']}")
-    if resume and existing['status'] in ('partial', 'completed') and (ROOT / 'results' / group.parent.name / group_id / 'summary.json').exists():
+    if plan['missing_subjects'] or plan.get('missing_files'):
+        raise FileNotFoundError(f"Dataset is incomplete at {source or plan['raw_root']}: "
+                                f"subjects={plan['missing_subjects']}, metadata={plan.get('missing_files', [])}")
+    if source and not resume and result_directory.exists():
+        raise FileExistsError(f'Results already exist for this group: {result_directory}')
+    visualizations_ready = not source or (result_directory / 'enhanced_visualizations/generation_manifest.json').is_file()
+    if resume and existing['status'] in ('partial', 'completed') and (result_directory / 'summary.json').exists() and visualizations_ready:
         if all(completed_fold(group / f'seed_{seed}' / f'fold_{fold_id:02d}') for seed in config['training']['seeds'] for fold_id in selected):
             print('Selected folds already completed and verified; no artifacts were rewritten.')
             print('GROUP_ID=' + group_id)
@@ -94,14 +113,19 @@ def run(config, group_id=None, resume=False, folds=None, dry_run=False):
     try:
         print('GROUP_ID=' + group_id, flush=True)
         print('SELECTED_FOLDS=' + ','.join(map(str, selected)), flush=True)
-        cache = cache_path(config)
+        cache = group / 'window_index' if source else cache_path(config)
         path = group / 'experiment_manifest.json'
         if resume:
             manifest = existing
         else:
             manifest = {'group_id': group_id, 'effective_config': config, 'manifest_checksum': digest(split),
-                        'cache_path': str(cache), 'raw_root': str(raw_root()), 'status': 'running',
+                        'cache_path': str(cache), 'status': 'running',
                         'runner_version': 'tensorboard-manual-v1', 'requested_folds': selected}
+            if source:
+                notebook = 'notebooks/02_preprocessing_common_rate.ipynb'
+                manifest.update(data_source=source, preprocessing_notebook={'path': notebook, 'sha256': file_hash(ROOT / notebook)})
+            else:
+                manifest['raw_root'] = str(raw_root())
             write_json(path, manifest)
             write_json(group / 'split_manifest.json', split)
             (group / 'split_manifest.sha256').write_text(digest(split) + '\n', encoding='ascii')
@@ -110,14 +134,25 @@ def run(config, group_id=None, resume=False, folds=None, dry_run=False):
             write_json(group / 'system.json', system)
             (group / 'requirements-runtime.txt').write_text('\n'.join(f'{name}=={version}' for name, version in system['packages'].items() if version is not None) + '\n', encoding='utf-8')
             source_files = [p for directory in ['src', 'scripts', 'configs', 'experiments'] for p in (ROOT / directory).rglob('*') if p.is_file() and p.suffix in ('.py', '.yaml')]
-            for source in source_files:
-                destination = group / 'source' / source.relative_to(ROOT)
+            for source_file in source_files:
+                destination = group / 'source' / source_file.relative_to(ROOT)
                 destination.parent.mkdir(parents=True, exist_ok=True)
-                shutil.copy2(source, destination)
+                shutil.copy2(source_file, destination)
             write_json(group / 'source_checksums.json', {p.relative_to(ROOT).as_posix(): file_hash(p) for p in source_files})
         logger.event('experiment_start', group_id=group_id, resume=resume)
-        logger.event('preprocessing', root=str(raw_root()), cache=str(cache))
-        caches = prepare_dataset(raw_root(), cache, config)
+        if source:
+            audit, rows = build_index(source, config['data'], split['original_subject_order'])
+            if resume and manifest.get('dataset_fingerprint', audit['dataset_fingerprint']) != audit['dataset_fingerprint']:
+                raise ValueError('Common-rate notebook files changed since the original experiment.')
+            prepare_index(cache, audit, rows)
+            caches = audit['subjects']
+            manifest.update(dataset_fingerprint=audit['dataset_fingerprint'], window_count=audit['windows'],
+                            window_manifest='window_index/windows.csv', data_audit='window_index/common_rate_index.json')
+            logger.event('window_index_ready', root=source, index=str(cache), windows=audit['windows'],
+                         rejected_quality_windows=audit['rejected_quality_windows'])
+        else:
+            logger.event('preprocessing', root=str(raw_root()), cache=str(cache))
+            caches = prepare_dataset(raw_root(), cache, config)
         cache_keys = {m['subject_id']: m['cache_key'] for m in caches}
         if resume and 'cache_keys' in manifest and manifest['cache_keys'] != cache_keys:
             raise ValueError('Raw dataset/cache differs from the original experiment.')
@@ -147,7 +182,8 @@ def run(config, group_id=None, resume=False, folds=None, dry_run=False):
             manifest = read_json(group / 'experiment_manifest.json')
             manifest.update(status='interrupted' if isinstance(exc, KeyboardInterrupt) else 'failed', error=repr(exc))
             write_group_manifest(group, manifest)
-        experiment_path = 'experiments/e2_gru/config.yaml' if config['experiment']['model'] == 'gru' else 'experiments/e1_cnn/config.yaml'
+        if experiment_path is None:
+            experiment_path = group / 'config.yaml'
         print(f'Resume: python -m scripts.run_grouped_cv --experiment {experiment_path} --resume --group-id {group_id}', flush=True)
         raise
     finally:
@@ -160,7 +196,7 @@ def main():
     parser.add_argument('--resume', action='store_true')
     parser.add_argument('--group-id')
     parser.add_argument('--folds', type=int, nargs='+', help='Official fold IDs to execute; default all five. Resume defaults to the saved selection.')
-    parser.add_argument('--dry-run', action='store_true', help='Validate config/split/data paths and print the plan; no preprocessing, training or outputs.')
+    parser.add_argument('--dry-run', action='store_true', help='Verify config, splits and input files without training or writing artifacts.')
     parser.add_argument('--tracking', choices=['local', 'tensorboard'])
     parser.add_argument('--non-interactive', action='store_true')
     args = parser.parse_args()
@@ -170,7 +206,7 @@ def main():
         config['tracking']['tensorboard']['enabled'] = args.tracking == 'tensorboard'
     if args.non_interactive:
         config['logging']['console']['progress'] = 'never'
-    run(config, args.group_id, args.resume, folds=args.folds, dry_run=args.dry_run)
+    run(config, args.group_id, args.resume, folds=args.folds, dry_run=args.dry_run, experiment_path=args.experiment)
 
 
 if __name__ == '__main__':
