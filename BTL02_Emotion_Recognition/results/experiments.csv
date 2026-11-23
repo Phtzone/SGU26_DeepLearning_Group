@@ -1,0 +1,5 @@
+config,horizontal_flip,dropout,optimizer,learning_rate,batch_size,seed,epochs,best_epoch,val_accuracy,val_loss,seconds
+baseline,False,0.25,AdamW,0.001,256,42,12,11,0.5196433546949011,1.3188126915575369,92.3
+flip,True,0.25,AdamW,0.001,256,42,12,11,0.5288381164669824,1.2464063914913626,94.1
+dropout,False,0.45,AdamW,0.001,256,42,12,12,0.5199219838395096,1.2801511291010728,99.0
+flip_dropout,True,0.45,AdamW,0.001,256,42,12,12,0.514349400947339,1.2603964860075927,99.1

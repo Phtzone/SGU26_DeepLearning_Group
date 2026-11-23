@@ -1,0 +1,17 @@
+2026-11-23 15:39:22,877 INFO Start 14-channel common-rate windowing: {'version': 'common-rate-region-windows-v1', 'sampling_rate': 64, 'label_source_fs': 700, 'window_seconds': 30, 'stride_seconds': 15, 'channels': ['chest_ACC_X', 'chest_ACC_Y', 'chest_ACC_Z', 'chest_ECG', 'chest_EMG', 'chest_EDA', 'chest_Temp', 'chest_Resp', 'wrist_ACC_X', 'wrist_ACC_Y', 'wrist_ACC_Z', 'wrist_BVP', 'wrist_EDA', 'wrist_TEMP'], 'subjects': ['S2', 'S3', 'S4', 'S5', 'S6', 'S7', 'S8', 'S9', 'S10', 'S11', 'S13', 'S14', 'S15', 'S16', 'S17'], 'label_map': {1: 0, 2: 1, 3: 2}, 'normalized': False, 'windowed': True, 'anchor_policy': 'continuous valid label regions; no re-anchor after quality rejection', 'quality_policy': 'all timepoints must have quality_mask=True', 'source': 'D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\processed\\common_rate_64hz', 'output': 'D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\processed\\common_rate_windows_64hz_30s_15s'}
+2026-11-23 15:39:23,175 INFO S2: kept=137, rejected_quality=0, classes={'baseline': 75, 'stress': 39, 'amusement': 23}; verification PASS
+2026-11-23 15:39:23,470 INFO S3: kept=136, rejected_quality=2, classes={'baseline': 74, 'stress': 39, 'amusement': 23}; verification PASS
+2026-11-23 15:39:23,793 INFO S4: kept=140, rejected_quality=0, classes={'baseline': 76, 'stress': 41, 'amusement': 23}; verification PASS
+2026-11-23 15:39:24,126 INFO S5: kept=142, rejected_quality=0, classes={'baseline': 78, 'stress': 41, 'amusement': 23}; verification PASS
+2026-11-23 15:39:24,434 INFO S6: kept=142, rejected_quality=0, classes={'baseline': 77, 'stress': 42, 'amusement': 23}; verification PASS
+2026-11-23 15:39:24,733 INFO S7: kept=142, rejected_quality=0, classes={'baseline': 78, 'stress': 41, 'amusement': 23}; verification PASS
+2026-11-23 15:39:25,029 INFO S8: kept=142, rejected_quality=0, classes={'baseline': 76, 'stress': 43, 'amusement': 23}; verification PASS
+2026-11-23 15:39:25,342 INFO S9: kept=141, rejected_quality=0, classes={'baseline': 77, 'stress': 41, 'amusement': 23}; verification PASS
+2026-11-23 15:39:25,698 INFO S10: kept=147, rejected_quality=0, classes={'baseline': 77, 'stress': 47, 'amusement': 23}; verification PASS
+2026-11-23 15:39:26,018 INFO S11: kept=144, rejected_quality=0, classes={'baseline': 77, 'stress': 44, 'amusement': 23}; verification PASS
+2026-11-23 15:39:26,313 INFO S13: kept=144, rejected_quality=0, classes={'baseline': 77, 'stress': 43, 'amusement': 24}; verification PASS
+2026-11-23 15:39:26,671 INFO S14: kept=143, rejected_quality=0, classes={'baseline': 77, 'stress': 43, 'amusement': 23}; verification PASS
+2026-11-23 15:39:27,071 INFO S15: kept=144, rejected_quality=0, classes={'baseline': 77, 'stress': 44, 'amusement': 23}; verification PASS
+2026-11-23 15:39:27,360 INFO S16: kept=143, rejected_quality=0, classes={'baseline': 77, 'stress': 43, 'amusement': 23}; verification PASS
+2026-11-23 15:39:27,679 INFO S17: kept=147, rejected_quality=0, classes={'baseline': 77, 'stress': 47, 'amusement': 23}; verification PASS
+2026-11-23 15:39:27,693 INFO COMPLETE: {'baseline': 1150, 'stress': 638, 'amusement': 346, 'label_safe_candidates': 2136, 'rejected_quality': 2, 'kept_windows': 2134}; report=D:\SGU26_DeepLearning_Group\Projects\DL13-WESAD\results\common_rate_windowing\20261123T083922Z_f1ddf9de

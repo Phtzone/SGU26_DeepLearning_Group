@@ -39,3 +39,7 @@ results/tensorboard_upgrade/smoke_events/
 *.swo
 .DS_Store
 Thumbs.db
+
+# Local presentation exports.
+/scripts/export_progress_slides.py
+/results/presentation_assets/
