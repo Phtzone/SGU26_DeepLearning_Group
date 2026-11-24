@@ -1,0 +1,25 @@
+{
+  "subject_id": "S3",
+  "cache_key": "2669fdabc1658e4309775b0f5b13273a3cc5f3a786c80169adffe17c54d51cbb",
+  "shape": [
+    136,
+    14,
+    1920
+  ],
+  "source_shape": [
+    415552,
+    14
+  ],
+  "dtype": "float32",
+  "file_sha256": {
+    "S3_X.npy": "702c2cdac34402c28a64d7c80a7c22293fa9ea37cc7821a460bb1fe1909f04d0",
+    "S3_quality_mask.npy": "00527997bebd536f8866cbe9c84656197c7411fd70951843715baf1cfbbcedc1"
+  },
+  "invalid_samples_64": 265,
+  "rejected_quality_windows": 2,
+  "label_distribution": {
+    "0": 74,
+    "1": 39,
+    "2": 23
+  }
+}

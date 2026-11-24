@@ -1,0 +1,25 @@
+{
+  "subject_id": "S8",
+  "cache_key": "c4f598e67405738f72665cfaccf81fe3aa829e00845b654a7d254fe10b1aa10a",
+  "shape": [
+    142,
+    14,
+    1920
+  ],
+  "source_shape": [
+    349824,
+    14
+  ],
+  "dtype": "float32",
+  "file_sha256": {
+    "S8_X.npy": "8c0322da50b9db4200f8a2b962a7071ad18f121f80046c709615019dfd996b53",
+    "S8_quality_mask.npy": "bdef10e0d86e779b277fa4b7011948dc44a667d38f6a4e105cbca29172df1342"
+  },
+  "invalid_samples_64": 0,
+  "rejected_quality_windows": 0,
+  "label_distribution": {
+    "0": 76,
+    "1": 43,
+    "2": 23
+  }
+}

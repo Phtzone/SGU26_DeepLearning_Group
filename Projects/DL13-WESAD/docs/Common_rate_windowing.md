@@ -1,5 +1,7 @@
 # Chia cửa sổ Common-rate 14 kênh
 
+**Dung lượng, cập nhật 24/11/2026:** cache `common_rate_windows_64hz_30s_15s` đã được dọn sau khi xác minh runner mới đọc trực tiếp dữ liệu liên tục và window index. Notebook 03/lệnh dưới đây vẫn tạo lại cache nếu cần; huấn luyện chính bằng runner Common-rate không cần bản sao này. Số liệu ngày 23/11 bên dưới được giữ làm lịch sử.
+
 Đầu vào là dữ liệu liên tục do `notebooks/02_preprocessing_common_rate.ipynb` tạo ra: 15 người, 14 kênh ngực và cổ tay, 64 Hz. Bước này chưa chuẩn hóa, chia Train/Validation/Test hay huấn luyện.
 
 ## Chạy và xem kết quả

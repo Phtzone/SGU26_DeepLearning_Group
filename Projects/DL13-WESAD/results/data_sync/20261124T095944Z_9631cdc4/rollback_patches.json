@@ -1,0 +1,111 @@
+[
+  {
+    "file": "S4_X.npy",
+    "old_sha256": "1541b66ce320501d0d6f44056706db0017820841effe97ef163a240e071cd2a5",
+    "new_sha256": "0df347e95d2769eb1f2e6e96f9d417253da89ebfafc628ddfc0749c3349ce0ec",
+    "size_bytes": 23020160,
+    "restore_patch": [
+      {
+        "offset": 9607415,
+        "old_byte": 8,
+        "new_byte": 136
+      }
+    ],
+    "restore_patch_verified": true
+  },
+  {
+    "file": "S6_X.npy",
+    "old_sha256": "c2e2f8cd5a12276f628044dfb99a7efd864979287422feac4c0672b79a2e1939",
+    "new_sha256": "57a83adc04a9fc9cfa41437869bfc617677481338e39cb20a3802beae2faae68",
+    "size_bytes": 25342592,
+    "restore_patch": [
+      {
+        "offset": 13202950,
+        "old_byte": 0,
+        "new_byte": 128
+      },
+      {
+        "offset": 13202951,
+        "old_byte": 0,
+        "new_byte": 136
+      }
+    ],
+    "restore_patch_verified": true
+  },
+  {
+    "file": "S7_X.npy",
+    "old_sha256": "7fe44e97e8e1c89c5e5a9cbde2f5a62fed036276b2102ef35c0748848617af18",
+    "new_sha256": "cf35a24f3ffaaf742c0753080d967899e61dddd0ddd14152231b1e01e4f5ce93",
+    "size_bytes": 18773120,
+    "restore_patch": [
+      {
+        "offset": 16355026,
+        "old_byte": 0,
+        "new_byte": 192
+      },
+      {
+        "offset": 16355027,
+        "old_byte": 33,
+        "new_byte": 161
+      }
+    ],
+    "restore_patch_verified": true
+  },
+  {
+    "file": "S8_X.npy",
+    "old_sha256": "8c0322da50b9db4200f8a2b962a7071ad18f121f80046c709615019dfd996b53",
+    "new_sha256": "97d0e40ac7ed7253117eec51c19a293a64ed6e6ae975fb0e9d0289e05b33dc52",
+    "size_bytes": 19590272,
+    "restore_patch": [
+      {
+        "offset": 13512242,
+        "old_byte": 0,
+        "new_byte": 192
+      },
+      {
+        "offset": 13512243,
+        "old_byte": 161,
+        "new_byte": 33
+      },
+      {
+        "offset": 17306631,
+        "old_byte": 8,
+        "new_byte": 136
+      }
+    ],
+    "restore_patch_verified": true
+  },
+  {
+    "file": "S11_X.npy",
+    "old_sha256": "de9b23bf3ae1560e25ce976d94914153688ea3d17ffe13677be1103928c587aa",
+    "new_sha256": "08bf8fff24da9da64531e9f5acadd97d20ddd1a8af9b00fec9276fc941cfd95b",
+    "size_bytes": 18755200,
+    "restore_patch": [
+      {
+        "offset": 9101790,
+        "old_byte": 0,
+        "new_byte": 192
+      },
+      {
+        "offset": 9101791,
+        "old_byte": 33,
+        "new_byte": 161
+      }
+    ],
+    "restore_patch_verified": true
+  },
+  {
+    "file": "S15_X.npy",
+    "old_sha256": "935efac3cacd7210b0f47015fc4443ac8df052b28e1196bd66cfef4596c77cc2",
+    "new_sha256": "89f44bcf376f0d40e75650ad61fcbecbbdc3579871fffbcf6ebad447d9f28d67",
+    "size_bytes": 18823296,
+    "restore_patch": [
+      {
+        "offset": 9601255,
+        "old_byte": 136,
+        "new_byte": 8
+      }
+    ],
+    "restore_patch_verified": true
+  }
+]

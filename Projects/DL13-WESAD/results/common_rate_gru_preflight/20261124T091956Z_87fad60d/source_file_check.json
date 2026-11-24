@@ -1,0 +1,218 @@
+{
+  "reference_audit": "runs\\common_rate64_cnn1d_grouped5fold_v1\\20261123T072126Z_2c81daac\\window_index\\common_rate_index.json",
+  "reference_audit_sha256": "8feef5bac17b35560125d3f17c4815675ed65edff2ea1d3b6f662b825fbe45ef",
+  "reference_authentic": true,
+  "files_checked": 33,
+  "matched_files": 27,
+  "different_files": [
+    "S4_X.npy",
+    "S6_X.npy",
+    "S7_X.npy",
+    "S8_X.npy",
+    "S11_X.npy",
+    "S15_X.npy"
+  ],
+  "comparison": [
+    {
+      "file": "config.json",
+      "matches": true,
+      "reference_sha256": "f9f43b21fc161ac0bdd8af6b91f608e8bd31941078a0a4c3f8675a3b64a20c50",
+      "current_sha256": "f9f43b21fc161ac0bdd8af6b91f608e8bd31941078a0a4c3f8675a3b64a20c50"
+    },
+    {
+      "file": "subjects_summary.csv",
+      "matches": true,
+      "reference_sha256": "d5466d668a013c71c42723b197a25844b81d311a67307744cddd8d245585699f",
+      "current_sha256": "d5466d668a013c71c42723b197a25844b81d311a67307744cddd8d245585699f"
+    },
+    {
+      "file": "label_segments.csv",
+      "matches": true,
+      "reference_sha256": "02fc28faa1a30e850d66108c01567a3cce67847e8713270bc42eea014f0afbf4",
+      "current_sha256": "02fc28faa1a30e850d66108c01567a3cce67847e8713270bc42eea014f0afbf4"
+    },
+    {
+      "file": "S2_X.npy",
+      "matches": true,
+      "reference_sha256": "814cf1caf104c75141023e5435ed1d481e524015508d4d7a19dfe26df61af855",
+      "current_sha256": "814cf1caf104c75141023e5435ed1d481e524015508d4d7a19dfe26df61af855"
+    },
+    {
+      "file": "S2_quality_mask.npy",
+      "matches": true,
+      "reference_sha256": "7df126ac5ee6b1f9dda939bf1a9349e7a31e5a828d4340ca8999b872dec5adff",
+      "current_sha256": "7df126ac5ee6b1f9dda939bf1a9349e7a31e5a828d4340ca8999b872dec5adff"
+    },
+    {
+      "file": "S3_X.npy",
+      "matches": true,
+      "reference_sha256": "702c2cdac34402c28a64d7c80a7c22293fa9ea37cc7821a460bb1fe1909f04d0",
+      "current_sha256": "702c2cdac34402c28a64d7c80a7c22293fa9ea37cc7821a460bb1fe1909f04d0"
+    },
+    {
+      "file": "S3_quality_mask.npy",
+      "matches": true,
+      "reference_sha256": "00527997bebd536f8866cbe9c84656197c7411fd70951843715baf1cfbbcedc1",
+      "current_sha256": "00527997bebd536f8866cbe9c84656197c7411fd70951843715baf1cfbbcedc1"
+    },
+    {
+      "file": "S4_X.npy",
+      "matches": false,
+      "reference_sha256": "0df347e95d2769eb1f2e6e96f9d417253da89ebfafc628ddfc0749c3349ce0ec",
+      "current_sha256": "1541b66ce320501d0d6f44056706db0017820841effe97ef163a240e071cd2a5"
+    },
+    {
+      "file": "S4_quality_mask.npy",
+      "matches": true,
+      "reference_sha256": "47adbdd213bc37dc5bdc6cf1c283a520cbf7234eb799eeea9b370b87a72621f7",
+      "current_sha256": "47adbdd213bc37dc5bdc6cf1c283a520cbf7234eb799eeea9b370b87a72621f7"
+    },
+    {
+      "file": "S5_X.npy",
+      "matches": true,
+      "reference_sha256": "e10202ceda250e2bbf23a0f40f06a63c66ddf2bc193f87d78c48724222aafaba",
+      "current_sha256": "e10202ceda250e2bbf23a0f40f06a63c66ddf2bc193f87d78c48724222aafaba"
+    },
+    {
+      "file": "S5_quality_mask.npy",
+      "matches": true,
+      "reference_sha256": "f1aef520b38d8083a0541fac51bb701960b4a792f656ca394b0b8dcb0ab4c712",
+      "current_sha256": "f1aef520b38d8083a0541fac51bb701960b4a792f656ca394b0b8dcb0ab4c712"
+    },
+    {
+      "file": "S6_X.npy",
+      "matches": false,
+      "reference_sha256": "57a83adc04a9fc9cfa41437869bfc617677481338e39cb20a3802beae2faae68",
+      "current_sha256": "c2e2f8cd5a12276f628044dfb99a7efd864979287422feac4c0672b79a2e1939"
+    },
+    {
+      "file": "S6_quality_mask.npy",
+      "matches": true,
+      "reference_sha256": "afb2d3eb57fb6412bdf04a2ae0d8a082c2cd24e89505f32935994a0bd4b02df3",
+      "current_sha256": "afb2d3eb57fb6412bdf04a2ae0d8a082c2cd24e89505f32935994a0bd4b02df3"
+    },
+    {
+      "file": "S7_X.npy",
+      "matches": false,
+      "reference_sha256": "cf35a24f3ffaaf742c0753080d967899e61dddd0ddd14152231b1e01e4f5ce93",
+      "current_sha256": "7fe44e97e8e1c89c5e5a9cbde2f5a62fed036276b2102ef35c0748848617af18"
+    },
+    {
+      "file": "S7_quality_mask.npy",
+      "matches": true,
+      "reference_sha256": "b50c50fc798ada1ec0af49ab4640d8d030b2afac7f1494c823edeecd926c00a1",
+      "current_sha256": "b50c50fc798ada1ec0af49ab4640d8d030b2afac7f1494c823edeecd926c00a1"
+    },
+    {
+      "file": "S8_X.npy",
+      "matches": false,
+      "reference_sha256": "97d0e40ac7ed7253117eec51c19a293a64ed6e6ae975fb0e9d0289e05b33dc52",
+      "current_sha256": "8c0322da50b9db4200f8a2b962a7071ad18f121f80046c709615019dfd996b53"
+    },
+    {
+      "file": "S8_quality_mask.npy",
+      "matches": true,
+      "reference_sha256": "bdef10e0d86e779b277fa4b7011948dc44a667d38f6a4e105cbca29172df1342",
+      "current_sha256": "bdef10e0d86e779b277fa4b7011948dc44a667d38f6a4e105cbca29172df1342"
+    },
+    {
+      "file": "S9_X.npy",
+      "matches": true,
+      "reference_sha256": "6d931ea7c9fe3627f7c844e8359c87dd0a4e23394e0f635d7e7af97f5242a3d9",
+      "current_sha256": "6d931ea7c9fe3627f7c844e8359c87dd0a4e23394e0f635d7e7af97f5242a3d9"
+    },
+    {
+      "file": "S9_quality_mask.npy",
+      "matches": true,
+      "reference_sha256": "6bf30f118803909291d81cd14ce9d448118bb1b7bbbc60edbb1492fa72df49eb",
+      "current_sha256": "6bf30f118803909291d81cd14ce9d448118bb1b7bbbc60edbb1492fa72df49eb"
+    },
+    {
+      "file": "S10_X.npy",
+      "matches": true,
+      "reference_sha256": "0a1616be7c9ad430b5ebd7c38bdafd2624957665d0f2019a9bc8377a9c3319ac",
+      "current_sha256": "0a1616be7c9ad430b5ebd7c38bdafd2624957665d0f2019a9bc8377a9c3319ac"
+    },
+    {
+      "file": "S10_quality_mask.npy",
+      "matches": true,
+      "reference_sha256": "0e31dcaa609d47e2ce1262f87c803491e4b40466681bcd7ce99873f1aa868323",
+      "current_sha256": "0e31dcaa609d47e2ce1262f87c803491e4b40466681bcd7ce99873f1aa868323"
+    },
+    {
+      "file": "S11_X.npy",
+      "matches": false,
+      "reference_sha256": "08bf8fff24da9da64531e9f5acadd97d20ddd1a8af9b00fec9276fc941cfd95b",
+      "current_sha256": "de9b23bf3ae1560e25ce976d94914153688ea3d17ffe13677be1103928c587aa"
+    },
+    {
+      "file": "S11_quality_mask.npy",
+      "matches": true,
+      "reference_sha256": "e46e850d95e899725f240a512c7a5789a7b2e454d0e286f430afcd5680970586",
+      "current_sha256": "e46e850d95e899725f240a512c7a5789a7b2e454d0e286f430afcd5680970586"
+    },
+    {
+      "file": "S13_X.npy",
+      "matches": true,
+      "reference_sha256": "656ebe92b42a5d635fa7d174dc4786fad60d189fac176d85fb38b09ad505f3cd",
+      "current_sha256": "656ebe92b42a5d635fa7d174dc4786fad60d189fac176d85fb38b09ad505f3cd"
+    },
+    {
+      "file": "S13_quality_mask.npy",
+      "matches": true,
+      "reference_sha256": "a412296372ee3924cb5c7649f04a56a073e3c1ff2974e943bc03b3204ad52b80",
+      "current_sha256": "a412296372ee3924cb5c7649f04a56a073e3c1ff2974e943bc03b3204ad52b80"
+    },
+    {
+      "file": "S14_X.npy",
+      "matches": true,
+      "reference_sha256": "b6f1ea622173b47635551e91f4a18355ee77e0147840508eb061597a17df6a1f",
+      "current_sha256": "b6f1ea622173b47635551e91f4a18355ee77e0147840508eb061597a17df6a1f"
+    },
+    {
+      "file": "S14_quality_mask.npy",
+      "matches": true,
+      "reference_sha256": "2cf259868b6ba9326d5d5e66962b78b05b5996c45cb43a3909a77628a6ae7664",
+      "current_sha256": "2cf259868b6ba9326d5d5e66962b78b05b5996c45cb43a3909a77628a6ae7664"
+    },
+    {
+      "file": "S15_X.npy",
+      "matches": false,
+      "reference_sha256": "89f44bcf376f0d40e75650ad61fcbecbbdc3579871fffbcf6ebad447d9f28d67",
+      "current_sha256": "935efac3cacd7210b0f47015fc4443ac8df052b28e1196bd66cfef4596c77cc2"
+    },
+    {
+      "file": "S15_quality_mask.npy",
+      "matches": true,
+      "reference_sha256": "b476e9c64b5303b715f74910a613d32e17b6d92c99e002724805b4e399ec5346",
+      "current_sha256": "b476e9c64b5303b715f74910a613d32e17b6d92c99e002724805b4e399ec5346"
+    },
+    {
+      "file": "S16_X.npy",
+      "matches": true,
+      "reference_sha256": "e20f97f96aa0ad48940a8dd3c2f8cdd90b008797c53dfa6c14055969ecdb062b",
+      "current_sha256": "e20f97f96aa0ad48940a8dd3c2f8cdd90b008797c53dfa6c14055969ecdb062b"
+    },
+    {
+      "file": "S16_quality_mask.npy",
+      "matches": true,
+      "reference_sha256": "2a4188403e3bd80f6ada49f238e8c217e0f678a2a875574ee479172c8c5239cf",
+      "current_sha256": "2a4188403e3bd80f6ada49f238e8c217e0f678a2a875574ee479172c8c5239cf"
+    },
+    {
+      "file": "S17_X.npy",
+      "matches": true,
+      "reference_sha256": "eee302906b2e4b4b2a8458e8971dda8384f1e01bf7eca486f53911508c0666ab",
+      "current_sha256": "eee302906b2e4b4b2a8458e8971dda8384f1e01bf7eca486f53911508c0666ab"
+    },
+    {
+      "file": "S17_quality_mask.npy",
+      "matches": true,
+      "reference_sha256": "09eed784a744472ac6ac1bfac2a44773ac76cc0b0b3b9f190a6a3f6a7ac05e89",
+      "current_sha256": "09eed784a744472ac6ac1bfac2a44773ac76cc0b0b3b9f190a6a3f6a7ac05e89"
+    }
+  ],
+  "official_training_allowed": false,
+  "training_executed": false,
+  "next_step": "Obtain the six differing X.npy files from the exact CNN input set; preserve current files before replacement. Do not regenerate or edit original run hashes."
+}

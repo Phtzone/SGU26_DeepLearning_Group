@@ -1,0 +1,58 @@
+{
+  "archive": "data\\interim\\cnn_reference_received\\common_rate_64hz.zip",
+  "archive_sha256": "a81744002864fca4f9d934b6b412584e4b0749ec6cc5cef5f0e4841445e4f4ed",
+  "extracted_source": "data\\interim\\cnn_reference_received\\extracted_a81744002864\\common_rate_64hz",
+  "reference_files": 33,
+  "matched_files": 33,
+  "mismatched_files": [],
+  "fingerprint_matches_cnn": true,
+  "window_ids_labels_times_match_cnn": true,
+  "windows": 2134,
+  "rejected_quality_windows": 2,
+  "differences_from_local": [
+    {
+      "file": "S4_X.npy",
+      "numeric_values_different": 1,
+      "bit_patterns_different": 1,
+      "max_absolute_numeric_difference": 7.703719777548943e-34,
+      "changed_timepoints_in_retained_windows": 0
+    },
+    {
+      "file": "S6_X.npy",
+      "numeric_values_different": 1,
+      "bit_patterns_different": 1,
+      "max_absolute_numeric_difference": 7.703719777548943e-34,
+      "changed_timepoints_in_retained_windows": 0
+    },
+    {
+      "file": "S7_X.npy",
+      "numeric_values_different": 1,
+      "bit_patterns_different": 1,
+      "max_absolute_numeric_difference": 1.734723475976807e-18,
+      "changed_timepoints_in_retained_windows": 0
+    },
+    {
+      "file": "S8_X.npy",
+      "numeric_values_different": 2,
+      "bit_patterns_different": 2,
+      "max_absolute_numeric_difference": 1.734723475976807e-18,
+      "changed_timepoints_in_retained_windows": 1
+    },
+    {
+      "file": "S11_X.npy",
+      "numeric_values_different": 1,
+      "bit_patterns_different": 1,
+      "max_absolute_numeric_difference": 1.734723475976807e-18,
+      "changed_timepoints_in_retained_windows": 1
+    },
+    {
+      "file": "S15_X.npy",
+      "numeric_values_different": 1,
+      "bit_patterns_different": 1,
+      "max_absolute_numeric_difference": 7.703719777548943e-34,
+      "changed_timepoints_in_retained_windows": 0
+    }
+  ],
+  "original_processed_directory_unchanged": true,
+  "training_executed": false
+}

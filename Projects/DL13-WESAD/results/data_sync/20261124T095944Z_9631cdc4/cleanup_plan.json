@@ -1,0 +1,42 @@
+{
+  "targets": [
+    {
+      "absolute_target": "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\interim\\cnn_reference_received\\common_rate_64hz.zip",
+      "bytes": 251393482,
+      "files": 1,
+      "type": "file"
+    },
+    {
+      "absolute_target": "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\interim\\cnn_reference_received\\extracted_a81744002864",
+      "bytes": 316913303,
+      "files": 33,
+      "type": "directory"
+    },
+    {
+      "absolute_target": "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\processed\\common_rate_windows_64hz_30s_15s",
+      "bytes": 229626224,
+      "files": 62,
+      "type": "directory"
+    },
+    {
+      "absolute_target": "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\interim\\pytest_gru_preflight_20261124_a",
+      "bytes": 890565,
+      "files": 414,
+      "type": "directory"
+    },
+    {
+      "absolute_target": "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\interim\\pytest_gru_preflight_20261124_b",
+      "bytes": 892190,
+      "files": 416,
+      "type": "directory"
+    },
+    {
+      "absolute_target": "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\interim\\sync_backup_20261124T095944Z_9631cdc4",
+      "bytes": 124304640,
+      "files": 6,
+      "type": "directory"
+    }
+  ],
+  "source_verified_33_files": true,
+  "rollback_patches_verified": true
+}

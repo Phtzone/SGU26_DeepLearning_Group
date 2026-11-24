@@ -1,0 +1,12 @@
+{
+  "processes": [
+    {
+      "pid": 28320,
+      "created": 1795518947.2164564
+    }
+  ],
+  "script_sha256": "72cc40f0e6a4f4f39aca1bd368b7e0b2961015950037ce34e81497f1ccb3dd59",
+  "unit_test_report": "review_tests.xml",
+  "source": "scripts/finish_common_rate_gru.py",
+  "does_not_modify_training": true
+}

@@ -1,0 +1,3 @@
+2026-11-24T10:02:59.423780+00:00 [EXPERIMENT_START] {'group_id': '20261124T100241Z_204cb671', 'resume': False}
+2026-11-24T10:02:59.679987+00:00 [WINDOW_INDEX_READY] {'root': 'D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\processed\\common_rate_64hz', 'index': 'D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\runs\\common_rate64_gru_grouped5fold_v1\\20261124T100241Z_204cb671\\window_index', 'windows': 2134, 'rejected_quality_windows': 2}
+2026-11-24T11:36:22.418505+00:00 [EXPERIMENT_END] {'status': 'completed', 'completed_folds': 5}

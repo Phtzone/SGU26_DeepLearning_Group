@@ -6,6 +6,7 @@ import shutil
 import psutil
 import yaml
 from src.data.common_rate import NOTEBOOK_METADATA, build_index, prepare_index
+from src.data.reference_check import require_matching_reference
 from src.data.preprocessing import prepare_dataset
 from src.data.splits import load_manifest
 from src.evaluation.aggregation import aggregate_group
@@ -77,10 +78,17 @@ def run(config, group_id=None, resume=False, folds=None, dry_run=False, experime
     exists = group.exists()
     if exists != resume:
         raise ValueError('New groups must not exist; resumed groups must already exist.')
+    reference_inputs = None
+    if config.get('reference_run'):
+        if not source or plan['missing_subjects'] or plan.get('missing_files'):
+            raise ValueError('Reference-gated experiments require complete common-rate inputs.')
+        audit, rows = build_index(source, config['data'], split['original_subject_order'])
+        plan['reference_check'] = require_matching_reference(ROOT, config, split, audit, rows)
+        reference_inputs = audit, rows
     if dry_run:
         import json
         if source and not (plan['missing_subjects'] or plan['missing_files']):
-            audit, _ = build_index(source, config['data'], split['original_subject_order'])
+            audit, _ = reference_inputs or build_index(source, config['data'], split['original_subject_order'])
             plan['data_audit'] = audit
         print(json.dumps({'dry_run': True, 'training_executed': False, **plan}, indent=2))
         return plan
@@ -141,7 +149,7 @@ def run(config, group_id=None, resume=False, folds=None, dry_run=False, experime
             write_json(group / 'source_checksums.json', {p.relative_to(ROOT).as_posix(): file_hash(p) for p in source_files})
         logger.event('experiment_start', group_id=group_id, resume=resume)
         if source:
-            audit, rows = build_index(source, config['data'], split['original_subject_order'])
+            audit, rows = reference_inputs or build_index(source, config['data'], split['original_subject_order'])
             if resume and manifest.get('dataset_fingerprint', audit['dataset_fingerprint']) != audit['dataset_fingerprint']:
                 raise ValueError('Common-rate notebook files changed since the original experiment.')
             prepare_index(cache, audit, rows)

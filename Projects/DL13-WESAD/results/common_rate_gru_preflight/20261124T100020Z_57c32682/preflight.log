@@ -1,0 +1,5 @@
+2026-11-24 17:00:24,672 INFO REFERENCE passed=True; mismatched subjects=[]; matching window IDs/labels/times=True
+2026-11-24 17:00:28,293 INFO SMOKE TRAIN {'batch': 0, 'loss': 1.1036969423294067, 'gradient_norm': 0.36140260100364685, 'seconds': 0.6021240999998554, 'input_shape': [32, 14, 1920]}
+2026-11-24 17:00:28,856 INFO SMOKE TRAIN {'batch': 1, 'loss': 1.0947754383087158, 'gradient_norm': 0.30719083547592163, 'seconds': 0.5610938999998325, 'input_shape': [32, 14, 1920]}
+2026-11-24 17:00:29,149 INFO SMOKE PASS: two Train batches, one Validation batch, exact checkpoint replay; Test untouched.
+2026-11-24 17:00:29,181 INFO OFFICIAL TRAINING ALLOWED: True

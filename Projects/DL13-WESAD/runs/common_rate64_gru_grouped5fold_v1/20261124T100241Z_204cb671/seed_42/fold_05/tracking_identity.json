@@ -1,0 +1,11 @@
+{
+  "backend": "tensorboard",
+  "directory": "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\runs\\common_rate64_gru_grouped5fold_v1\\20261124T100241Z_204cb671\\seed_42\\fold_05\\tensorboard",
+  "streams": {
+    "epochs": "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\runs\\common_rate64_gru_grouped5fold_v1\\20261124T100241Z_204cb671\\seed_42\\fold_05\\tensorboard\\epochs",
+    "batches": "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\runs\\common_rate64_gru_grouped5fold_v1\\20261124T100241Z_204cb671\\seed_42\\fold_05\\tensorboard\\batches",
+    "evaluation": "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\runs\\common_rate64_gru_grouped5fold_v1\\20261124T100241Z_204cb671\\seed_42\\fold_05\\tensorboard\\evaluation"
+  },
+  "run_id": "20261124T112502Z_b95ba084",
+  "group_id": "20261124T100241Z_204cb671"
+}

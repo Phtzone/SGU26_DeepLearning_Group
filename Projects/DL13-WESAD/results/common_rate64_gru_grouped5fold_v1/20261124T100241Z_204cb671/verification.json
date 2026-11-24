@@ -1,0 +1,473 @@
+{
+  "status": "passed",
+  "verified_at": "2026-11-24T11:40:11.265390+00:00",
+  "group_id": "20261124T100241Z_204cb671",
+  "data_fingerprint": "9f2f09b7aee2ec94134a4734d7b9a1382e03936a49ecb9e8c5952e3b92760772",
+  "split_manifest_sha256": "239949dfebabd802091d14a4494d2216aee9809b0e2993dacdbdfbcdc7133f2c",
+  "source_snapshot_files": 72,
+  "verified_folds": 5,
+  "folds": [
+    {
+      "fold_id": 1,
+      "run_id": "20261124T100259Z_d52a46cb",
+      "started_at": "2026-11-24T10:02:59.685508+00:00",
+      "ended_at": "2026-11-24T10:11:48.856149+00:00",
+      "window_counts": {
+        "train": 1270,
+        "validation": 433,
+        "test": 431
+      },
+      "best_epoch": 1,
+      "epochs": 16,
+      "trainable_parameters": 19715,
+      "normalized_on_train": true,
+      "validation_selection_replayed": true,
+      "checkpoints": {
+        "best": {
+          "path": "runs/common_rate64_gru_grouped5fold_v1/20261124T100241Z_204cb671/seed_42/fold_01/checkpoints/best.pt",
+          "sha256": "f545848f66d09460aa623e63a1019e483c482d831513756cc5d62cdb8b5cf057",
+          "epoch": 1,
+          "size_bytes": 264768
+        },
+        "last": {
+          "path": "runs/common_rate64_gru_grouped5fold_v1/20261124T100241Z_204cb671/seed_42/fold_01/checkpoints/last.pt",
+          "sha256": "ebad004b4b2a10225e0431c87ef174aca8692fea39965d162d0bfd83cc81dc3d",
+          "epoch": 16,
+          "size_bytes": 357864
+        }
+      },
+      "iterations": {
+        "logged_iterations": 640,
+        "committed_iterations": 640,
+        "orphan_or_replayed_iterations": 0,
+        "completed_epochs": 16
+      },
+      "tensorboard_files": [
+        "runs/common_rate64_gru_grouped5fold_v1/20261124T100241Z_204cb671/seed_42/fold_01/tensorboard/batches/events.out.tfevents.1795514583.thao.14564.1.505791061c7a",
+        "runs/common_rate64_gru_grouped5fold_v1/20261124T100241Z_204cb671/seed_42/fold_01/tensorboard/epochs/events.out.tfevents.1795514583.thao.14564.0.4aa780f2c79e",
+        "runs/common_rate64_gru_grouped5fold_v1/20261124T100241Z_204cb671/seed_42/fold_01/tensorboard/evaluation/events.out.tfevents.1795514583.thao.14564.2.354354afcf44"
+      ],
+      "test_metrics": {
+        "macro_f1": 0.11102649898080842,
+        "balanced_accuracy": 0.24675324675324672,
+        "accuracy": 0.14617169373549885,
+        "precision_per_class": [
+          0.18888888888888888,
+          0.0,
+          0.13690476190476192
+        ],
+        "recall_per_class": [
+          0.0735930735930736,
+          0.0,
+          0.6666666666666666
+        ],
+        "f1_per_class": [
+          0.1059190031152648,
+          0.0,
+          0.2271604938271605
+        ],
+        "support": [
+          231,
+          131,
+          69
+        ],
+        "confusion_matrix": [
+          [
+            17,
+            5,
+            209
+          ],
+          [
+            50,
+            0,
+            81
+          ],
+          [
+            23,
+            0,
+            46
+          ]
+        ],
+        "label_order": [
+          "baseline",
+          "stress",
+          "amusement"
+        ],
+        "absent_classes": [],
+        "loss": 1.2665318911206045,
+        "stress_recall": 0.0
+      }
+    },
+    {
+      "fold_id": 2,
+      "run_id": "20261124T101149Z_33b50e1c",
+      "started_at": "2026-11-24T10:11:49.366841+00:00",
+      "ended_at": "2026-11-24T11:08:14.665741+00:00",
+      "window_counts": {
+        "train": 1275,
+        "validation": 426,
+        "test": 433
+      },
+      "best_epoch": 15,
+      "epochs": 30,
+      "trainable_parameters": 19715,
+      "normalized_on_train": true,
+      "validation_selection_replayed": true,
+      "checkpoints": {
+        "best": {
+          "path": "runs/common_rate64_gru_grouped5fold_v1/20261124T100241Z_204cb671/seed_42/fold_02/checkpoints/best.pt",
+          "sha256": "d14ee1dcfbae2787091df2367f2b3f87905c82f55088c8cd278f3928d3767dda",
+          "epoch": 15,
+          "size_bytes": 275648
+        },
+        "last": {
+          "path": "runs/common_rate64_gru_grouped5fold_v1/20261124T100241Z_204cb671/seed_42/fold_02/checkpoints/last.pt",
+          "sha256": "5d97598e0ec028a635328c89b87c8f54c225d34b37fd13bb1e3c460d8c9e3c5b",
+          "epoch": 30,
+          "size_bytes": 368744
+        }
+      },
+      "iterations": {
+        "logged_iterations": 1200,
+        "committed_iterations": 1200,
+        "orphan_or_replayed_iterations": 0,
+        "completed_epochs": 30
+      },
+      "tensorboard_files": [
+        "runs/common_rate64_gru_grouped5fold_v1/20261124T100241Z_204cb671/seed_42/fold_02/tensorboard/batches/events.out.tfevents.1795515109.thao.14564.4.5f1e555b1442",
+        "runs/common_rate64_gru_grouped5fold_v1/20261124T100241Z_204cb671/seed_42/fold_02/tensorboard/epochs/events.out.tfevents.1795515109.thao.14564.3.694335919865",
+        "runs/common_rate64_gru_grouped5fold_v1/20261124T100241Z_204cb671/seed_42/fold_02/tensorboard/evaluation/events.out.tfevents.1795515109.thao.14564.5.4d37b18ea105"
+      ],
+      "test_metrics": {
+        "macro_f1": 0.32600342088615014,
+        "balanced_accuracy": 0.3192155166197996,
+        "accuracy": 0.3533487297921478,
+        "precision_per_class": [
+          0.6296296296296297,
+          0.47761194029850745,
+          0.09313725490196079
+        ],
+        "recall_per_class": [
+          0.4434782608695652,
+          0.23880597014925373,
+          0.2753623188405797
+        ],
+        "f1_per_class": [
+          0.5204081632653061,
+          0.31840796019900497,
+          0.1391941391941392
+        ],
+        "support": [
+          230,
+          134,
+          69
+        ],
+        "confusion_matrix": [
+          [
+            102,
+            7,
+            121
+          ],
+          [
+            38,
+            32,
+            64
+          ],
+          [
+            22,
+            28,
+            19
+          ]
+        ],
+        "label_order": [
+          "baseline",
+          "stress",
+          "amusement"
+        ],
+        "absent_classes": [],
+        "loss": 4.370041450349918,
+        "stress_recall": 0.23880597014925373
+      }
+    },
+    {
+      "fold_id": 3,
+      "run_id": "20261124T110815Z_53988a77",
+      "started_at": "2026-11-24T11:08:15.021952+00:00",
+      "ended_at": "2026-11-24T11:16:57.791375+00:00",
+      "window_counts": {
+        "train": 1281,
+        "validation": 427,
+        "test": 426
+      },
+      "best_epoch": 1,
+      "epochs": 16,
+      "trainable_parameters": 19715,
+      "normalized_on_train": true,
+      "validation_selection_replayed": true,
+      "checkpoints": {
+        "best": {
+          "path": "runs/common_rate64_gru_grouped5fold_v1/20261124T100241Z_204cb671/seed_42/fold_03/checkpoints/best.pt",
+          "sha256": "a49688dd8ebefa3a8cbe29aad62e38176a66486ee1703e63f84af58e6748bec4",
+          "epoch": 1,
+          "size_bytes": 264768
+        },
+        "last": {
+          "path": "runs/common_rate64_gru_grouped5fold_v1/20261124T100241Z_204cb671/seed_42/fold_03/checkpoints/last.pt",
+          "sha256": "75568e1d08503b71ddff612f3bb9c3f0f0c126feb8b39bd6c88f5685a9050072",
+          "epoch": 16,
+          "size_bytes": 357864
+        }
+      },
+      "iterations": {
+        "logged_iterations": 656,
+        "committed_iterations": 656,
+        "orphan_or_replayed_iterations": 0,
+        "completed_epochs": 16
+      },
+      "tensorboard_files": [
+        "runs/common_rate64_gru_grouped5fold_v1/20261124T100241Z_204cb671/seed_42/fold_03/tensorboard/batches/events.out.tfevents.1795518495.thao.14564.7.85f3dd48715e",
+        "runs/common_rate64_gru_grouped5fold_v1/20261124T100241Z_204cb671/seed_42/fold_03/tensorboard/epochs/events.out.tfevents.1795518495.thao.14564.6.21fb8fbdc9ae",
+        "runs/common_rate64_gru_grouped5fold_v1/20261124T100241Z_204cb671/seed_42/fold_03/tensorboard/evaluation/events.out.tfevents.1795518495.thao.14564.8.5172feae110a"
+      ],
+      "test_metrics": {
+        "macro_f1": 0.27740465810455206,
+        "balanced_accuracy": 0.3398268398268398,
+        "accuracy": 0.3826291079812207,
+        "precision_per_class": [
+          0.5507246376811594,
+          0.3020833333333333,
+          0.0
+        ],
+        "recall_per_class": [
+          0.329004329004329,
+          0.6904761904761905,
+          0.0
+        ],
+        "f1_per_class": [
+          0.41192411924119243,
+          0.42028985507246375,
+          0.0
+        ],
+        "support": [
+          231,
+          126,
+          69
+        ],
+        "confusion_matrix": [
+          [
+            76,
+            155,
+            0
+          ],
+          [
+            39,
+            87,
+            0
+          ],
+          [
+            23,
+            46,
+            0
+          ]
+        ],
+        "label_order": [
+          "baseline",
+          "stress",
+          "amusement"
+        ],
+        "absent_classes": [],
+        "loss": 1.1261495208149253,
+        "stress_recall": 0.6904761904761905
+      }
+    },
+    {
+      "fold_id": 4,
+      "run_id": "20261124T111658Z_8352d2ef",
+      "started_at": "2026-11-24T11:16:58.375312+00:00",
+      "ended_at": "2026-11-24T11:25:02.450207+00:00",
+      "window_counts": {
+        "train": 1290,
+        "validation": 417,
+        "test": 427
+      },
+      "best_epoch": 15,
+      "epochs": 16,
+      "trainable_parameters": 19715,
+      "normalized_on_train": true,
+      "validation_selection_replayed": true,
+      "checkpoints": {
+        "best": {
+          "path": "runs/common_rate64_gru_grouped5fold_v1/20261124T100241Z_204cb671/seed_42/fold_04/checkpoints/best.pt",
+          "sha256": "01922c4894e812ffcb75002f87c4a5b68fd535dd9dffc99e8ad689d76cd42489",
+          "epoch": 15,
+          "size_bytes": 275648
+        },
+        "last": {
+          "path": "runs/common_rate64_gru_grouped5fold_v1/20261124T100241Z_204cb671/seed_42/fold_04/checkpoints/last.pt",
+          "sha256": "c92193cc6860aedeaeebe3f7117437779a820b51cd9e29bb795ef4f53953007b",
+          "epoch": 16,
+          "size_bytes": 357864
+        }
+      },
+      "iterations": {
+        "logged_iterations": 656,
+        "committed_iterations": 656,
+        "orphan_or_replayed_iterations": 0,
+        "completed_epochs": 16
+      },
+      "tensorboard_files": [
+        "runs/common_rate64_gru_grouped5fold_v1/20261124T100241Z_204cb671/seed_42/fold_04/tensorboard/batches/events.out.tfevents.1795519019.thao.14564.10.a267f6df01d3",
+        "runs/common_rate64_gru_grouped5fold_v1/20261124T100241Z_204cb671/seed_42/fold_04/tensorboard/epochs/events.out.tfevents.1795519019.thao.14564.9.4d0fb8732802",
+        "runs/common_rate64_gru_grouped5fold_v1/20261124T100241Z_204cb671/seed_42/fold_04/tensorboard/evaluation/events.out.tfevents.1795519019.thao.14564.11.bccc97d177bc"
+      ],
+      "test_metrics": {
+        "macro_f1": 0.45137030115006577,
+        "balanced_accuracy": 0.44607557332444886,
+        "accuracy": 0.5199063231850117,
+        "precision_per_class": [
+          0.5930232558139535,
+          0.620253164556962,
+          0.2222222222222222
+        ],
+        "recall_per_class": [
+          0.6594827586206896,
+          0.3888888888888889,
+          0.2898550724637681
+        ],
+        "f1_per_class": [
+          0.6244897959183674,
+          0.47804878048780486,
+          0.25157232704402516
+        ],
+        "support": [
+          232,
+          126,
+          69
+        ],
+        "confusion_matrix": [
+          [
+            153,
+            27,
+            52
+          ],
+          [
+            59,
+            49,
+            18
+          ],
+          [
+            46,
+            3,
+            20
+          ]
+        ],
+        "label_order": [
+          "baseline",
+          "stress",
+          "amusement"
+        ],
+        "absent_classes": [],
+        "loss": 3.3883749351819006,
+        "stress_recall": 0.3888888888888889
+      }
+    },
+    {
+      "fold_id": 5,
+      "run_id": "20261124T112502Z_b95ba084",
+      "started_at": "2026-11-24T11:25:02.814066+00:00",
+      "ended_at": "2026-11-24T11:35:42.996443+00:00",
+      "window_counts": {
+        "train": 1286,
+        "validation": 431,
+        "test": 417
+      },
+      "best_epoch": 5,
+      "epochs": 20,
+      "trainable_parameters": 19715,
+      "normalized_on_train": true,
+      "validation_selection_replayed": true,
+      "checkpoints": {
+        "best": {
+          "path": "runs/common_rate64_gru_grouped5fold_v1/20261124T100241Z_204cb671/seed_42/fold_05/checkpoints/best.pt",
+          "sha256": "3bede5316615664cbb820b1fcd0f27036334003917a65b3e2610de1ab0b6a6aa",
+          "epoch": 5,
+          "size_bytes": 267904
+        },
+        "last": {
+          "path": "runs/common_rate64_gru_grouped5fold_v1/20261124T100241Z_204cb671/seed_42/fold_05/checkpoints/last.pt",
+          "sha256": "e4a2734a1aa6d99755282a16a4890f3b02f7a99c9761495beee1c97786188d5f",
+          "epoch": 20,
+          "size_bytes": 361000
+        }
+      },
+      "iterations": {
+        "logged_iterations": 820,
+        "committed_iterations": 820,
+        "orphan_or_replayed_iterations": 0,
+        "completed_epochs": 20
+      },
+      "tensorboard_files": [
+        "runs/common_rate64_gru_grouped5fold_v1/20261124T100241Z_204cb671/seed_42/fold_05/tensorboard/batches/events.out.tfevents.1795519503.thao.14564.13.e58c25e6172d",
+        "runs/common_rate64_gru_grouped5fold_v1/20261124T100241Z_204cb671/seed_42/fold_05/tensorboard/epochs/events.out.tfevents.1795519503.thao.14564.12.c28b92654d63",
+        "runs/common_rate64_gru_grouped5fold_v1/20261124T100241Z_204cb671/seed_42/fold_05/tensorboard/evaluation/events.out.tfevents.1795519503.thao.14564.14.a1f507a9ce7d"
+      ],
+      "test_metrics": {
+        "macro_f1": 0.4718808079117587,
+        "balanced_accuracy": 0.4613182741099073,
+        "accuracy": 0.6163069544364509,
+        "precision_per_class": [
+          0.6482084690553745,
+          0.9310344827586207,
+          0.07692307692307693
+        ],
+        "recall_per_class": [
+          0.8805309734513275,
+          0.4462809917355372,
+          0.05714285714285714
+        ],
+        "f1_per_class": [
+          0.7467166979362101,
+          0.6033519553072626,
+          0.06557377049180328
+        ],
+        "support": [
+          226,
+          121,
+          70
+        ],
+        "confusion_matrix": [
+          [
+            199,
+            1,
+            26
+          ],
+          [
+            45,
+            54,
+            22
+          ],
+          [
+            63,
+            3,
+            4
+          ]
+        ],
+        "label_order": [
+          "baseline",
+          "stress",
+          "amusement"
+        ],
+        "absent_classes": [],
+        "loss": 2.7812071825262983,
+        "stress_recall": 0.4462809917355372
+      }
+    }
+  ],
+  "oof_windows": 2134,
+  "test_subjects": 15,
+  "tensorboard_files": 15,
+  "checkpoint_count": 10,
+  "verified_figures": 134,
+  "verified_figure_files": 268,
+  "figure_directory": "results/common_rate64_gru_grouped5fold_v1/20261124T100241Z_204cb671/enhanced_visualizations/scientific-v2_0fec0dd2e08137c2"
+}

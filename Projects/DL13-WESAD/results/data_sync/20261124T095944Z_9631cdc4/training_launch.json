@@ -1,0 +1,14 @@
+{
+  "group_id": "20261124T100241Z_204cb671",
+  "experiment": "common_rate64_gru_grouped5fold_v1",
+  "config": "experiments/common_rate64_gru_grouped5fold_v1/config.yaml",
+  "folds": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "optional_pyarrow_disabled_in_process": true,
+  "reason": "Previously observed native import failure in optional pyarrow; no algorithm changes."
+}

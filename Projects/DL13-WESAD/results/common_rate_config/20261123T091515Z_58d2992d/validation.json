@@ -1,0 +1,161 @@
+{
+  "config": "configs/common_rate_14ch.yaml",
+  "config_sha256": "9abd320666342d7a59a1b5707ba7bc8919356ad60524bbdcd28de8edbd7d4116",
+  "passed": true,
+  "training_executed": false,
+  "normalization_fitted": false,
+  "runner_ready": false,
+  "protocol": "grouped_subject_wise_5fold",
+  "manifest_checksum": "239949dfebabd802091d14a4494d2216aee9809b0e2993dacdbdfbcdc7133f2c",
+  "folds": 5,
+  "subjects": [
+    {
+      "subject": "S2",
+      "windows": 137,
+      "shape": [
+        137,
+        14,
+        1920
+      ]
+    },
+    {
+      "subject": "S3",
+      "windows": 136,
+      "shape": [
+        136,
+        14,
+        1920
+      ]
+    },
+    {
+      "subject": "S4",
+      "windows": 140,
+      "shape": [
+        140,
+        14,
+        1920
+      ]
+    },
+    {
+      "subject": "S5",
+      "windows": 142,
+      "shape": [
+        142,
+        14,
+        1920
+      ]
+    },
+    {
+      "subject": "S6",
+      "windows": 142,
+      "shape": [
+        142,
+        14,
+        1920
+      ]
+    },
+    {
+      "subject": "S7",
+      "windows": 142,
+      "shape": [
+        142,
+        14,
+        1920
+      ]
+    },
+    {
+      "subject": "S8",
+      "windows": 142,
+      "shape": [
+        142,
+        14,
+        1920
+      ]
+    },
+    {
+      "subject": "S9",
+      "windows": 141,
+      "shape": [
+        141,
+        14,
+        1920
+      ]
+    },
+    {
+      "subject": "S10",
+      "windows": 147,
+      "shape": [
+        147,
+        14,
+        1920
+      ]
+    },
+    {
+      "subject": "S11",
+      "windows": 144,
+      "shape": [
+        144,
+        14,
+        1920
+      ]
+    },
+    {
+      "subject": "S13",
+      "windows": 144,
+      "shape": [
+        144,
+        14,
+        1920
+      ]
+    },
+    {
+      "subject": "S14",
+      "windows": 143,
+      "shape": [
+        143,
+        14,
+        1920
+      ]
+    },
+    {
+      "subject": "S15",
+      "windows": 144,
+      "shape": [
+        144,
+        14,
+        1920
+      ]
+    },
+    {
+      "subject": "S16",
+      "windows": 143,
+      "shape": [
+        143,
+        14,
+        1920
+      ]
+    },
+    {
+      "subject": "S17",
+      "windows": 147,
+      "shape": [
+        147,
+        14,
+        1920
+      ]
+    }
+  ],
+  "total_windows": 2134,
+  "class_counts": {
+    "baseline": 1150,
+    "stress": 638,
+    "amusement": 346
+  },
+  "window_cache": "data/processed/common_rate_windows_64hz_30s_15s",
+  "window_shape": [
+    14,
+    1920
+  ],
+  "legacy_runner_blocked": true,
+  "legacy_runner_message": "The 14-channel common-rate config is prepared, but the training runner is not integrated yet. Validate it with: python -m scripts.check_common_rate_config. Refusing to fall back to historical wrist preprocessing."
+}

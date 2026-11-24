@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "folds": [
+    {
+      "fold": 1,
+      "windows": 431,
+      "max_probability_difference": 0.0,
+      "passed": true
+    },
+    {
+      "fold": 2,
+      "windows": 433,
+      "max_probability_difference": 0.0,
+      "passed": true
+    },
+    {
+      "fold": 3,
+      "windows": 426,
+      "max_probability_difference": 0.0,
+      "passed": true
+    },
+    {
+      "fold": 4,
+      "windows": 427,
+      "max_probability_difference": 0.0,
+      "passed": true
+    },
+    {
+      "fold": 5,
+      "windows": 417,
+      "max_probability_difference": 0.0,
+      "passed": true
+    }
+  ]
+}

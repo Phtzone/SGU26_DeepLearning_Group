@@ -1,0 +1,24 @@
+2026-11-24 18:15:47,455 INFO Started; optional pyarrow disabled=True
+2026-11-24 18:36:36,887 ERROR Review failed.
+Traceback (most recent call last):
+  File "D:\SGU26_DeepLearning_Group\Projects\DL13-WESAD\scripts\finish_common_rate_gru.py", line 179, in main
+    finalize(ROOT,args.group_id,review,log)
+  File "D:\SGU26_DeepLearning_Group\Projects\DL13-WESAD\scripts\finish_common_rate_gru.py", line 105, in finalize
+    verify(group_id)
+  File "D:\SGU26_DeepLearning_Group\Projects\DL13-WESAD\scripts\verify_common_rate.py", line 168, in verify
+    subjects = read_csv(result / 'subject_metrics.csv')
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SGU26_DeepLearning_Group\Projects\DL13-WESAD\src\evaluation\history.py", line 37, in read_csv
+    return [{k: parse_value(k, v) for k, v in row.items()} for row in csv.DictReader(stream)]
+                ^^^^^^^^^^^^^^^^^
+  File "D:\SGU26_DeepLearning_Group\Projects\DL13-WESAD\src\evaluation\history.py", line 27, in parse_value
+    return int(value)
+           ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: '147.0'
+2026-11-24 18:40:02,051 INFO Started; optional pyarrow disabled=True
+2026-11-24 18:40:13,789 INFO Replay fold 1 PASS (431 windows)
+2026-11-24 18:40:15,792 INFO Replay fold 2 PASS (433 windows)
+2026-11-24 18:40:17,756 INFO Replay fold 3 PASS (426 windows)
+2026-11-24 18:40:19,715 INFO Replay fold 4 PASS (427 windows)
+2026-11-24 18:40:21,839 INFO Replay fold 5 PASS (417 windows)
+2026-11-24 18:40:22,378 INFO COMPLETE: D:\SGU26_DeepLearning_Group\Projects\DL13-WESAD\results\common_rate64_gru_grouped5fold_v1\20261124T100241Z_204cb671\cnn_gru_comparison.md

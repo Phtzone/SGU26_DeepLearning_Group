@@ -1,0 +1,55 @@
+{
+  "passed": true,
+  "bytes_removed": 924020404,
+  "mib_removed": 881.214527130127,
+  "temporary_backup_mib_included": 118.546142578125,
+  "preexisting_redundant_mib_removed": 762.668384552002,
+  "targets": [
+    {
+      "absolute_target": "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\interim\\cnn_reference_received\\common_rate_64hz.zip",
+      "bytes": 251393482,
+      "files": 1,
+      "type": "file",
+      "removed": true
+    },
+    {
+      "absolute_target": "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\interim\\cnn_reference_received\\extracted_a81744002864",
+      "bytes": 316913303,
+      "files": 33,
+      "type": "directory",
+      "removed": true
+    },
+    {
+      "absolute_target": "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\processed\\common_rate_windows_64hz_30s_15s",
+      "bytes": 229626224,
+      "files": 62,
+      "type": "directory",
+      "removed": true
+    },
+    {
+      "absolute_target": "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\interim\\pytest_gru_preflight_20261124_a",
+      "bytes": 890565,
+      "files": 414,
+      "type": "directory",
+      "removed": true
+    },
+    {
+      "absolute_target": "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\interim\\pytest_gru_preflight_20261124_b",
+      "bytes": 892190,
+      "files": 416,
+      "type": "directory",
+      "removed": true
+    },
+    {
+      "absolute_target": "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\data\\interim\\sync_backup_20261124T095944Z_9631cdc4",
+      "bytes": 124304640,
+      "files": 6,
+      "type": "directory",
+      "removed": true
+    }
+  ],
+  "main_dataset_hashes_verified_after_cleanup": true,
+  "rollback_patches_kept": true,
+  "training_executed": false,
+  "post_sync_smoke": "results\\common_rate_gru_preflight\\20261124T100020Z_57c32682"
+}

@@ -1,6 +1,6 @@
 # DL13-WESAD — Nhận diện trạng thái stress từ tín hiệu sinh lý
 
-**Phạm vi chính hiện tại: 14 kênh ngực và cổ tay, 3 lớp.** Đã chuẩn bị Common-rate 64 Hz và [chia cửa sổ 30 giây, stride 15 giây](docs/Common_rate_windowing.md); xem `notebooks/03_windowing_common_rate.ipynb`. Chưa nối dữ liệu mới vào runner huấn luyện. Các phần kết quả E1/E2 và mô tả đầu vào 5 kênh bên dưới là lịch sử thử nghiệm cũ, không phải kết quả của bài 14 kênh.
+**Phạm vi chính hiện tại: 14 kênh ngực và cổ tay, 3 lớp.** Đã chuẩn bị Common-rate 64 Hz, [chia cửa sổ 30 giây, stride 15 giây](docs/Common_rate_windowing.md) và tích hợp runner. [CNN 14 kênh](experiments/common_rate64_cnn1d_grouped5fold_v1/README.md) đã chạy đủ 5 folds. [GRU 14 kênh](experiments/common_rate64_gru_grouped5fold_v1/README.md) đã có cấu hình, kiểm tra kỹ thuật và nguồn dữ liệu khớp CNN; xem thư mục runs để theo dõi lượt chạy mới. Các phần kết quả E1/E2 và mô tả đầu vào 5 kênh bên dưới là lịch sử thử nghiệm cũ, không phải kết quả của bài 14 kênh.
 
 Nhật ký làm việc và thí nghiệm: mở [sổ Excel](experiments/journal/research_journal.xlsx) và [hướng dẫn ghi nhật ký, debug, log, nơi chạy tiếp](experiments/journal/README.md). Sổ đã có dòng E1 tổng hợp từ artifacts; các lần làm tiếp cần bổ sung ngày thực tế, GROUP_ID và liên kết minh chứng.
 

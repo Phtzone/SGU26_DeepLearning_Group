@@ -1,0 +1,25 @@
+{
+  "subject_id": "S15",
+  "cache_key": "77af57e9ed8476fe0ccfd0aa86c250a29596d8c782ac7fb78d318e637a5ac9df",
+  "shape": [
+    144,
+    14,
+    1920
+  ],
+  "source_shape": [
+    336128,
+    14
+  ],
+  "dtype": "float32",
+  "file_sha256": {
+    "S15_X.npy": "935efac3cacd7210b0f47015fc4443ac8df052b28e1196bd66cfef4596c77cc2",
+    "S15_quality_mask.npy": "b476e9c64b5303b715f74910a613d32e17b6d92c99e002724805b4e399ec5346"
+  },
+  "invalid_samples_64": 0,
+  "rejected_quality_windows": 0,
+  "label_distribution": {
+    "0": 77,
+    "1": 44,
+    "2": 23
+  }
+}

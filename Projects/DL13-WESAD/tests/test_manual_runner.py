@@ -57,6 +57,17 @@ def test_dry_run_never_preprocesses_or_trains(sandbox_runner, monkeypatch):
     assert not (root / 'runs').exists()
 
 
+def test_common_rate_config_cannot_enter_legacy_runner(monkeypatch):
+    prepare, train = Mock(), Mock()
+    monkeypatch.setattr(runner, 'prepare_dataset', prepare)
+    monkeypatch.setattr(runner, 'train_fold', train)
+    monkeypatch.setattr('sys.argv', ['run_grouped_cv', '--experiment', 'configs/common_rate_14ch.yaml'])
+    with pytest.raises(NotImplementedError, match='14-channel common-rate config'):
+        runner.main()
+    prepare.assert_not_called()
+    train.assert_not_called()
+
+
 @pytest.mark.parametrize('experiment', ['experiments/e1_cnn/config.yaml', 'experiments/e2_gru/config.yaml'])
 def test_single_full_resume_and_completed_skip(sandbox_runner, monkeypatch, experiment):
     root, cfg = sandbox_runner

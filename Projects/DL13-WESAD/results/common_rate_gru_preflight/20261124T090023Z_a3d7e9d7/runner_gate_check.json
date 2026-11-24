@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "message": "Reference comparison failed before training: mismatched subjects=['S4', 'S6', 'S7', 'S8', 'S11', 'S15']; run python -m scripts.preflight_common_rate_gru for details. Obtain the reference data/audit before comparing model results.",
+  "training_calls": 0,
+  "created_run_group": false
+}

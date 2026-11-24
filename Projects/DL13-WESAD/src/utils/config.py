@@ -28,6 +28,12 @@ def load_config(path=None):
     config = yaml.safe_load((ROOT / 'configs/default.yaml').read_text(encoding='utf-8'))
     if path:
         config = merge(config, yaml.safe_load((ROOT / path).read_text(encoding='utf-8')))
+    if config['data'].get('input_format') == 'common_rate_windows_v1':
+        raise NotImplementedError(
+            'The 14-channel common-rate config in configs/ is a superseded local draft. '
+            'Use experiments/common_rate64_cnn1d_grouped5fold_v1/config.yaml or '
+            'experiments/common_rate64_gru_grouped5fold_v1/config.yaml. '
+            'Refusing to fall back to historical wrist preprocessing.')
     if config['experiment']['status'] == 'planned':
         raise NotImplementedError('This experiment is planned; only CNN-1D and GRU are implemented.')
     if config['data']['max_windows_per_subject'] is not None:

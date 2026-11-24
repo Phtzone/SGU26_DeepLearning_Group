@@ -1,0 +1,265 @@
+{
+  "run_id": "20261124T100259Z_d52a46cb",
+  "fold_id": 1,
+  "training_seed": 42,
+  "subjects": {
+    "fold_id": 1,
+    "test": [
+      "S10",
+      "S16",
+      "S9"
+    ],
+    "train": [
+      "S7",
+      "S4",
+      "S11",
+      "S5",
+      "S6",
+      "S14",
+      "S2",
+      "S3",
+      "S13"
+    ],
+    "validation": [
+      "S8",
+      "S17",
+      "S15"
+    ]
+  },
+  "started_at": "2026-11-24T10:02:59.685508+00:00",
+  "manifest_checksum": "239949dfebabd802091d14a4494d2216aee9809b0e2993dacdbdfbcdc7133f2c",
+  "effective_config": {
+    "experiment": {
+      "id": "common_rate64_gru_grouped5fold_v1",
+      "model": "gru",
+      "status": "implemented"
+    },
+    "split": {
+      "protocol": "grouped_subject_wise_5fold",
+      "manifest": "splits/grouped_5fold_seed42.json",
+      "split_seed": 42
+    },
+    "data": {
+      "sampling_rate": 64,
+      "window_seconds": 30,
+      "stride_seconds": 15,
+      "sensors": [
+        "chest_ACC",
+        "chest_ECG",
+        "chest_EMG",
+        "chest_EDA",
+        "chest_Temp",
+        "chest_Resp",
+        "wrist_ACC",
+        "wrist_BVP",
+        "wrist_EDA",
+        "wrist_TEMP"
+      ],
+      "labels": [
+        1,
+        2,
+        3
+      ],
+      "max_windows_per_subject": null,
+      "source": "common_rate",
+      "processed_dir": "data/processed/common_rate_64hz",
+      "channels": [
+        "chest_ACC_X",
+        "chest_ACC_Y",
+        "chest_ACC_Z",
+        "chest_ECG",
+        "chest_EMG",
+        "chest_EDA",
+        "chest_Temp",
+        "chest_Resp",
+        "wrist_ACC_X",
+        "wrist_ACC_Y",
+        "wrist_ACC_Z",
+        "wrist_BVP",
+        "wrist_EDA",
+        "wrist_TEMP"
+      ],
+      "quality_policy": "all_samples_valid"
+    },
+    "training": {
+      "seeds": [
+        42
+      ],
+      "max_epochs": 100,
+      "batch_size": 32,
+      "optimizer": "adam",
+      "learning_rate": 0.001,
+      "weight_decay": 0.0001,
+      "loss": "weighted_cross_entropy",
+      "early_stopping_patience": 15,
+      "early_stopping_min_delta": 0.001,
+      "gradient_clip_norm": 1.0
+    },
+    "selection": {
+      "metric": "val_subject_macro_f1",
+      "mode": "max",
+      "tie_breaker": "val_loss"
+    },
+    "runtime": {
+      "device": "auto",
+      "num_workers": 0,
+      "deterministic": true,
+      "parallel_folds": 1,
+      "torch_threads": 2
+    },
+    "logging": {
+      "log_every_iteration": true,
+      "log_every_epoch": true,
+      "flush_each_iteration": true,
+      "console": {
+        "enabled": true,
+        "progress": "never"
+      }
+    },
+    "tracking": {
+      "backend": "tensorboard",
+      "strict": true,
+      "local": {
+        "enabled": true
+      },
+      "tensorboard": {
+        "enabled": true,
+        "log_every_epoch": true,
+        "log_every_batch": true,
+        "batch_log_frequency": 1,
+        "flush_secs": 10,
+        "max_queue": 10,
+        "log_figures": true
+      }
+    },
+    "reference_run": {
+      "experiment": "common_rate64_cnn1d_grouped5fold_v1",
+      "group_id": "20261123T072126Z_2c81daac"
+    },
+    "model": {
+      "hidden_size": 64,
+      "dropout": 0.3
+    }
+  },
+  "attempts": [
+    {
+      "attempt_id": "20261124T100259Z_930fafae",
+      "started_at": "2026-11-24T10:02:59.685508+00:00"
+    }
+  ],
+  "status": "completed",
+  "group_id": "20261124T100241Z_204cb671",
+  "selection_metric": "val_subject_macro_f1",
+  "input_shape": [
+    14,
+    1920
+  ],
+  "logging_schema_version": 2,
+  "device": "cpu",
+  "architecture": "GRUClassifier(\n  (gru): GRU(14, 64, batch_first=True)\n  (classifier): Sequential(\n    (0): Linear(in_features=64, out_features=64, bias=True)\n    (1): ReLU()\n    (2): Dropout(p=0.3, inplace=False)\n    (3): Linear(in_features=64, out_features=3, bias=True)\n  )\n)",
+  "trainable_parameters": 19715,
+  "window_counts": {
+    "train": 1270,
+    "validation": 433,
+    "test": 431
+  },
+  "label_distribution": {
+    "train": [
+      689,
+      373,
+      208
+    ],
+    "validation": [
+      230,
+      134,
+      69
+    ],
+    "test": [
+      231,
+      131,
+      69
+    ]
+  },
+  "class_weights": [
+    0.6144170165061951,
+    1.1349419355392456,
+    2.0352563858032227
+  ],
+  "cache_keys": {
+    "S7": "6aa2c82c7691adb7036b329c052c77f0b4a7f3bcf4923c8215d34cc2327850e7",
+    "S4": "5a62d292cfc165b2aa986719df75be0d8ec20b347bda5cb5a8ed2874f343e523",
+    "S11": "c5c9652cf110872b0ba6e217a02a7647c3e64960c07cc20c08c36c2912e82c7b",
+    "S5": "4c48fb92cf311d8060a5d978680592d08c726e5097c2abbc925624b54c26e441",
+    "S6": "6e510c448144c74f78277175813abbfcc3f7a3c6409d2d532ece8fac512c8494",
+    "S14": "249f69ee11b109061a95c253efa7120bc4115f95e0cc778cffe99a26c02743d9",
+    "S2": "7a9429853236d31800cfb47ac569b0a84d2fc4dfccf99e6743a5e1138d2e3ec7",
+    "S3": "2669fdabc1658e4309775b0f5b13273a3cc5f3a786c80169adffe17c54d51cbb",
+    "S13": "0ded7c46e0370fe328a9e699443a38dc65ecb652f8fbe2a56079be948ffbbb6f",
+    "S8": "570e2ecfa5fb46e12301ea3a62d23ea18972c1836ccd0a3a2a8950c91585e0f0",
+    "S17": "644eaba1de2aff12c1dadb9708000035fe2c11863394f3027586ce7167ab22fd",
+    "S15": "33e28f1cff1ceeb2a26795870fe328094eb80bb5d31fc1291578db360a7644d5",
+    "S10": "620ad6394d7a708dae66d75e70323c4f6ce0267b9599fce519ce7899362a00c1",
+    "S16": "2a3ddd9b49497ddff9326988b0e4a0c65889189557cd70f63511cd99861e8076",
+    "S9": "d1512258ce160c9f77cb24eee1cec04a056403d1ca1f7d0ba26b41db5bcb4743"
+  },
+  "ended_at": "2026-11-24T10:11:48.856149+00:00",
+  "completed_epochs": 16,
+  "best_epoch": 1,
+  "best_val_macro_f1": 0.390714075815457,
+  "test_metrics": {
+    "macro_f1": 0.11102649898080842,
+    "balanced_accuracy": 0.24675324675324672,
+    "accuracy": 0.14617169373549885,
+    "precision_per_class": [
+      0.18888888888888888,
+      0.0,
+      0.13690476190476192
+    ],
+    "recall_per_class": [
+      0.0735930735930736,
+      0.0,
+      0.6666666666666666
+    ],
+    "f1_per_class": [
+      0.1059190031152648,
+      0.0,
+      0.2271604938271605
+    ],
+    "support": [
+      231,
+      131,
+      69
+    ],
+    "confusion_matrix": [
+      [
+        17,
+        5,
+        209
+      ],
+      [
+        50,
+        0,
+        81
+      ],
+      [
+        23,
+        0,
+        46
+      ]
+    ],
+    "label_order": [
+      "baseline",
+      "stress",
+      "amusement"
+    ],
+    "absent_classes": [],
+    "loss": 1.2665318911206045,
+    "stress_recall": 0.0
+  },
+  "training_duration_seconds": 529.1701506000009,
+  "checkpoints": {
+    "best": "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\runs\\common_rate64_gru_grouped5fold_v1\\20261124T100241Z_204cb671\\seed_42\\fold_01\\checkpoints\\best.pt",
+    "last": "D:\\SGU26_DeepLearning_Group\\Projects\\DL13-WESAD\\runs\\common_rate64_gru_grouped5fold_v1\\20261124T100241Z_204cb671\\seed_42\\fold_01\\checkpoints\\last.pt"
+  },
+  "best_val_subject_macro_f1": 0.35479299745295795
+}

@@ -1,6 +1,7 @@
 """Read-only, schema-aware committed history shared by import and plotting."""
 import csv
 from dataclasses import dataclass
+from decimal import Decimal, InvalidOperation
 import json
 from pathlib import Path
 import re
@@ -24,7 +25,15 @@ def parse_value(key, value):
     if str(value).startswith(('[', '{')):
         return json.loads(value)
     if key in INTEGER_FIELDS:
-        return int(value)
+        # CSV editors may write an integer count as 147.0. Accept exact
+        # integers without rounding fractional values or losing large IDs.
+        try:
+            number = Decimal(str(value))
+        except InvalidOperation as exc:
+            raise ValueError(f'Invalid integer field {key}: {value!r}') from exc
+        if not number.is_finite() or number != number.to_integral_value():
+            raise ValueError(f'Nonintegral value in {key}: {value!r}')
+        return int(number)
     try:
         value = float(value)
         return value if np.isfinite(value) else None

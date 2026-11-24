@@ -1,0 +1,115 @@
+{
+  "passed": true,
+  "reference_run": {
+    "experiment": "common_rate64_cnn1d_grouped5fold_v1",
+    "group_id": "20261123T072126Z_2c81daac"
+  },
+  "reference_status": "completed",
+  "protocol_sections_match": {
+    "data": true,
+    "split": true,
+    "training": true,
+    "selection": true
+  },
+  "subject_roster_matches": true,
+  "split_matches": true,
+  "window_identity_labels_and_times_match": true,
+  "subjects": [
+    {
+      "subject": "S2",
+      "matches": true,
+      "current_cache_key": "7a9429853236d31800cfb47ac569b0a84d2fc4dfccf99e6743a5e1138d2e3ec7",
+      "reference_cache_key": "7a9429853236d31800cfb47ac569b0a84d2fc4dfccf99e6743a5e1138d2e3ec7"
+    },
+    {
+      "subject": "S3",
+      "matches": true,
+      "current_cache_key": "2669fdabc1658e4309775b0f5b13273a3cc5f3a786c80169adffe17c54d51cbb",
+      "reference_cache_key": "2669fdabc1658e4309775b0f5b13273a3cc5f3a786c80169adffe17c54d51cbb"
+    },
+    {
+      "subject": "S4",
+      "matches": true,
+      "current_cache_key": "5a62d292cfc165b2aa986719df75be0d8ec20b347bda5cb5a8ed2874f343e523",
+      "reference_cache_key": "5a62d292cfc165b2aa986719df75be0d8ec20b347bda5cb5a8ed2874f343e523"
+    },
+    {
+      "subject": "S5",
+      "matches": true,
+      "current_cache_key": "4c48fb92cf311d8060a5d978680592d08c726e5097c2abbc925624b54c26e441",
+      "reference_cache_key": "4c48fb92cf311d8060a5d978680592d08c726e5097c2abbc925624b54c26e441"
+    },
+    {
+      "subject": "S6",
+      "matches": true,
+      "current_cache_key": "6e510c448144c74f78277175813abbfcc3f7a3c6409d2d532ece8fac512c8494",
+      "reference_cache_key": "6e510c448144c74f78277175813abbfcc3f7a3c6409d2d532ece8fac512c8494"
+    },
+    {
+      "subject": "S7",
+      "matches": true,
+      "current_cache_key": "6aa2c82c7691adb7036b329c052c77f0b4a7f3bcf4923c8215d34cc2327850e7",
+      "reference_cache_key": "6aa2c82c7691adb7036b329c052c77f0b4a7f3bcf4923c8215d34cc2327850e7"
+    },
+    {
+      "subject": "S8",
+      "matches": true,
+      "current_cache_key": "570e2ecfa5fb46e12301ea3a62d23ea18972c1836ccd0a3a2a8950c91585e0f0",
+      "reference_cache_key": "570e2ecfa5fb46e12301ea3a62d23ea18972c1836ccd0a3a2a8950c91585e0f0"
+    },
+    {
+      "subject": "S9",
+      "matches": true,
+      "current_cache_key": "d1512258ce160c9f77cb24eee1cec04a056403d1ca1f7d0ba26b41db5bcb4743",
+      "reference_cache_key": "d1512258ce160c9f77cb24eee1cec04a056403d1ca1f7d0ba26b41db5bcb4743"
+    },
+    {
+      "subject": "S10",
+      "matches": true,
+      "current_cache_key": "620ad6394d7a708dae66d75e70323c4f6ce0267b9599fce519ce7899362a00c1",
+      "reference_cache_key": "620ad6394d7a708dae66d75e70323c4f6ce0267b9599fce519ce7899362a00c1"
+    },
+    {
+      "subject": "S11",
+      "matches": true,
+      "current_cache_key": "c5c9652cf110872b0ba6e217a02a7647c3e64960c07cc20c08c36c2912e82c7b",
+      "reference_cache_key": "c5c9652cf110872b0ba6e217a02a7647c3e64960c07cc20c08c36c2912e82c7b"
+    },
+    {
+      "subject": "S13",
+      "matches": true,
+      "current_cache_key": "0ded7c46e0370fe328a9e699443a38dc65ecb652f8fbe2a56079be948ffbbb6f",
+      "reference_cache_key": "0ded7c46e0370fe328a9e699443a38dc65ecb652f8fbe2a56079be948ffbbb6f"
+    },
+    {
+      "subject": "S14",
+      "matches": true,
+      "current_cache_key": "249f69ee11b109061a95c253efa7120bc4115f95e0cc778cffe99a26c02743d9",
+      "reference_cache_key": "249f69ee11b109061a95c253efa7120bc4115f95e0cc778cffe99a26c02743d9"
+    },
+    {
+      "subject": "S15",
+      "matches": true,
+      "current_cache_key": "33e28f1cff1ceeb2a26795870fe328094eb80bb5d31fc1291578db360a7644d5",
+      "reference_cache_key": "33e28f1cff1ceeb2a26795870fe328094eb80bb5d31fc1291578db360a7644d5"
+    },
+    {
+      "subject": "S16",
+      "matches": true,
+      "current_cache_key": "2a3ddd9b49497ddff9326988b0e4a0c65889189557cd70f63511cd99861e8076",
+      "reference_cache_key": "2a3ddd9b49497ddff9326988b0e4a0c65889189557cd70f63511cd99861e8076"
+    },
+    {
+      "subject": "S17",
+      "matches": true,
+      "current_cache_key": "644eaba1de2aff12c1dadb9708000035fe2c11863394f3027586ce7167ab22fd",
+      "reference_cache_key": "644eaba1de2aff12c1dadb9708000035fe2c11863394f3027586ce7167ab22fd"
+    }
+  ],
+  "mismatched_subjects": [],
+  "current_fingerprint": "9f2f09b7aee2ec94134a4734d7b9a1382e03936a49ecb9e8c5952e3b92760772",
+  "reference_fingerprint": "9f2f09b7aee2ec94134a4734d7b9a1382e03936a49ecb9e8c5952e3b92760772",
+  "fingerprint_matches": true,
+  "reference_source_audit_present": true,
+  "training_allowed": true
+}
