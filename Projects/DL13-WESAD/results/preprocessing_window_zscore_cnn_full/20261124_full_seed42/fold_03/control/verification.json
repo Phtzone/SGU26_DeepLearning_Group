@@ -1,0 +1,27 @@
+{
+  "fold": 3,
+  "mode": "control",
+  "passed": true,
+  "scaler_fit_subjects": [
+    "S10",
+    "S16",
+    "S9",
+    "S8",
+    "S17",
+    "S15",
+    "S2",
+    "S3",
+    "S13"
+  ],
+  "validation_subjects": [
+    "S5",
+    "S6",
+    "S14"
+  ],
+  "test_evaluated": false,
+  "checkpoint_score_replayed": true,
+  "input_shape": [
+    14,
+    1920
+  ]
+}

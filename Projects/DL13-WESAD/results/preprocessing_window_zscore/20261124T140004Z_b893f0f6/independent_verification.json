@@ -1,0 +1,91 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "fold": 1,
+      "mode": "control",
+      "passed": true,
+      "validation_windows": 433,
+      "score_recomputed": 0.2698545245083494,
+      "test_evaluated": false
+    },
+    {
+      "fold": 1,
+      "mode": "window_zscore",
+      "passed": true,
+      "validation_windows": 433,
+      "score_recomputed": 0.294787323836107,
+      "test_evaluated": false
+    },
+    {
+      "fold": 2,
+      "mode": "control",
+      "passed": true,
+      "validation_windows": 426,
+      "score_recomputed": 0.26681379131387434,
+      "test_evaluated": false
+    },
+    {
+      "fold": 2,
+      "mode": "window_zscore",
+      "passed": true,
+      "validation_windows": 426,
+      "score_recomputed": 0.5073698364449316,
+      "test_evaluated": false
+    },
+    {
+      "fold": 3,
+      "mode": "control",
+      "passed": true,
+      "validation_windows": 427,
+      "score_recomputed": 0.4039688067205735,
+      "test_evaluated": false
+    },
+    {
+      "fold": 3,
+      "mode": "window_zscore",
+      "passed": true,
+      "validation_windows": 427,
+      "score_recomputed": 0.5503741318500739,
+      "test_evaluated": false
+    },
+    {
+      "fold": 4,
+      "mode": "control",
+      "passed": true,
+      "validation_windows": 417,
+      "score_recomputed": 0.503306766630064,
+      "test_evaluated": false
+    },
+    {
+      "fold": 4,
+      "mode": "window_zscore",
+      "passed": true,
+      "validation_windows": 417,
+      "score_recomputed": 0.5434896103271364,
+      "test_evaluated": false
+    },
+    {
+      "fold": 5,
+      "mode": "control",
+      "passed": true,
+      "validation_windows": 431,
+      "score_recomputed": 0.3391753225588334,
+      "test_evaluated": false
+    },
+    {
+      "fold": 5,
+      "mode": "window_zscore",
+      "passed": true,
+      "validation_windows": 431,
+      "score_recomputed": 0.7149061306840729,
+      "test_evaluated": false
+    }
+  ],
+  "validation_windows_per_variant": {
+    "control": 2134,
+    "window_zscore": 2134
+  },
+  "old_cnn_gru_preserved": true,
+  "test_evaluated": false
+}

@@ -1,0 +1,28 @@
+{
+  "epochs_checked": 25,
+  "exactly_matching_scores": 22,
+  "differences": [
+    {
+      "fold": 3,
+      "epoch": 2,
+      "local_score": 0.24382879785178635,
+      "historical_score": 0.2424109220153059,
+      "delta": 0.0014178758364804533
+    },
+    {
+      "fold": 3,
+      "epoch": 4,
+      "local_score": 0.4039688067205735,
+      "historical_score": 0.40339465973894617,
+      "delta": 0.0005741469816273326
+    },
+    {
+      "fold": 4,
+      "epoch": 5,
+      "local_score": 0.503306766630064,
+      "historical_score": 0.5102939913584532,
+      "delta": -0.006987224728389196
+    }
+  ],
+  "note": "Main comparison uses paired local controls. Historical run is not claimed to reproduce exactly in all epochs."
+}

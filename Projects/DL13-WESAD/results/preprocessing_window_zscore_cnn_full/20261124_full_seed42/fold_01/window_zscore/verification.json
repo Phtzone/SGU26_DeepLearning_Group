@@ -1,0 +1,27 @@
+{
+  "fold": 1,
+  "mode": "window_zscore",
+  "passed": true,
+  "scaler_fit_subjects": [
+    "S7",
+    "S4",
+    "S11",
+    "S5",
+    "S6",
+    "S14",
+    "S2",
+    "S3",
+    "S13"
+  ],
+  "validation_subjects": [
+    "S8",
+    "S17",
+    "S15"
+  ],
+  "test_evaluated": false,
+  "checkpoint_score_replayed": true,
+  "input_shape": [
+    14,
+    1920
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "status": "completed",
+  "folds": [
+    {
+      "fold": 1,
+      "mode": "control",
+      "best_epoch": 6,
+      "best_val_subject_f1": 0.3115428793284637,
+      "best_val_loss": 4.863222941087969,
+      "epochs": 21,
+      "seconds": 127.26595970000199
+    },
+    {
+      "fold": 1,
+      "mode": "window_zscore",
+      "best_epoch": 10,
+      "best_val_subject_f1": 0.29495235698975497,
+      "best_val_loss": 4.7020472870963905,
+      "epochs": 17,
+      "seconds": 118.14385080000284
+    },
+    {
+      "fold": 2,
+      "mode": "control",
+      "best_epoch": 14,
+      "best_val_subject_f1": 0.38224183868830547,
+      "best_val_loss": 4.508641754714737,
+      "epochs": 29,
+      "seconds": 192.65361160000248
+    },
+    {
+      "fold": 2,
+      "mode": "window_zscore",
+      "best_epoch": 2,
+      "best_val_subject_f1": 0.5073698364449316,
+      "best_val_loss": 0.9431262430656163,
+      "epochs": 17,
+      "seconds": 128.96213350000107
+    },
+    {
+      "fold": 3,
+      "mode": "control",
+      "best_epoch": 25,
+      "best_val_subject_f1": 0.5536656387299632,
+      "best_val_loss": 4.522597224442478,
+      "epochs": 40,
+      "seconds": 270.74115240000174
+    },
+    {
+      "fold": 3,
+      "mode": "window_zscore",
+      "best_epoch": 8,
+      "best_val_subject_f1": 0.6568973150399874,
+      "best_val_loss": 2.197461155668836,
+      "epochs": 23,
+      "seconds": 179.51624919999813
+    },
+    {
+      "fold": 4,
+      "mode": "control",
+      "best_epoch": 8,
+      "best_val_subject_f1": 0.6131989400136647,
+      "best_val_loss": 4.59711317927219,
+      "epochs": 23,
+      "seconds": 183.80834369999866
+    },
+    {
+      "fold": 4,
+      "mode": "window_zscore",
+      "best_epoch": 1,
+      "best_val_subject_f1": 0.5434896103271364,
+      "best_val_loss": 1.3907035299975603,
+      "epochs": 16,
+      "seconds": 136.05510799999684
+    },
+    {
+      "fold": 5,
+      "mode": "control",
+      "best_epoch": 32,
+      "best_val_subject_f1": 0.38939294379656025,
+      "best_val_loss": 5.686554710918088,
+      "epochs": 47,
+      "seconds": 365.41666400000395
+    },
+    {
+      "fold": 5,
+      "mode": "window_zscore",
+      "best_epoch": 16,
+      "best_val_subject_f1": 0.8244324216269424,
+      "best_val_loss": 1.4101421843876314,
+      "epochs": 31,
+      "seconds": 263.8001740000036
+    }
+  ],
+  "means": {
+    "control": 0.4500084481113915,
+    "window_zscore": 0.5654283080857506
+  },
+  "delta_window_zscore_minus_control": 0.1154198599743591,
+  "epochs_per_variant": 100,
+  "early_stopping": true,
+  "test_evaluated": false
+}

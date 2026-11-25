@@ -1,0 +1,95 @@
+{
+  "completed_variants": [
+    {
+      "fold": 1,
+      "mode": "control",
+      "best_epoch": 5,
+      "best_val_subject_f1": 0.2698545245083494,
+      "best_val_loss": 5.448140329359783,
+      "epochs": 5,
+      "seconds": 38.78130520000195
+    },
+    {
+      "fold": 1,
+      "mode": "window_zscore",
+      "best_epoch": 2,
+      "best_val_subject_f1": 0.294787323836107,
+      "best_val_loss": 1.8222906995655384,
+      "epochs": 5,
+      "seconds": 33.76157279999825
+    },
+    {
+      "fold": 2,
+      "mode": "control",
+      "best_epoch": 3,
+      "best_val_subject_f1": 0.26681379131387434,
+      "best_val_loss": 2.9419134248091896,
+      "epochs": 5,
+      "seconds": 41.497348100001545
+    },
+    {
+      "fold": 2,
+      "mode": "window_zscore",
+      "best_epoch": 2,
+      "best_val_subject_f1": 0.5073698364449316,
+      "best_val_loss": 0.9431262430656163,
+      "epochs": 5,
+      "seconds": 44.607159799998044
+    },
+    {
+      "fold": 3,
+      "mode": "control",
+      "best_epoch": 4,
+      "best_val_subject_f1": 0.4039688067205735,
+      "best_val_loss": 3.1931606622678266,
+      "epochs": 5,
+      "seconds": 40.32809880000059
+    },
+    {
+      "fold": 3,
+      "mode": "window_zscore",
+      "best_epoch": 3,
+      "best_val_subject_f1": 0.5503741318500739,
+      "best_val_loss": 1.5124857701211332,
+      "epochs": 5,
+      "seconds": 48.026413100000354
+    },
+    {
+      "fold": 4,
+      "mode": "control",
+      "best_epoch": 5,
+      "best_val_subject_f1": 0.503306766630064,
+      "best_val_loss": 4.192527707219963,
+      "epochs": 5,
+      "seconds": 43.821200299997145
+    },
+    {
+      "fold": 4,
+      "mode": "window_zscore",
+      "best_epoch": 1,
+      "best_val_subject_f1": 0.5434896103271364,
+      "best_val_loss": 1.3907035299975603,
+      "epochs": 5,
+      "seconds": 42.74643880000076
+    },
+    {
+      "fold": 5,
+      "mode": "control",
+      "best_epoch": 4,
+      "best_val_subject_f1": 0.3391753225588334,
+      "best_val_loss": 4.153304300636817,
+      "epochs": 5,
+      "seconds": 37.20902750000096
+    },
+    {
+      "fold": 5,
+      "mode": "window_zscore",
+      "best_epoch": 5,
+      "best_val_subject_f1": 0.7149061306840729,
+      "best_val_loss": 0.9285020597087942,
+      "epochs": 5,
+      "seconds": 42.221501300002274
+    }
+  ],
+  "test_evaluated": false
+}

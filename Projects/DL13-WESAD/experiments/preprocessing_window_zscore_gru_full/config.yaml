@@ -1,0 +1,15 @@
+experiment:
+  purpose: gru_full_budget_train_validation_preprocessing_comparison
+  reference: experiments/common_rate64_gru_grouped5fold_v1/config.yaml
+  variants: [control, window_zscore]
+  fold_ids: [1, 2, 3, 4, 5]
+  epochs_per_variant: 100
+  early_stopping: true
+  tensorboard: true
+  seed: 42
+  test_evaluated: false
+preprocessing:
+  mode: window_local_zscore_oscillatory_channels
+  keep_absolute_channels: [chest_EDA, chest_Temp, wrist_EDA, wrist_TEMP]
+  std_floor: 0.00000001
+  fit_fold_scaler_after_transform: true
