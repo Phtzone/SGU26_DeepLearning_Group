@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "model": "CNN",
+      "mode": "control",
+      "subjects": 15,
+      "windows": 2134,
+      "macro_f1": 0.3401812598573924,
+      "passed": true
+    },
+    {
+      "model": "CNN",
+      "mode": "window_zscore",
+      "subjects": 15,
+      "windows": 2134,
+      "macro_f1": 0.3963875497184148,
+      "passed": true
+    },
+    {
+      "model": "GRU",
+      "mode": "control",
+      "subjects": 15,
+      "windows": 2134,
+      "macro_f1": 0.28644542000441325,
+      "passed": true
+    },
+    {
+      "model": "GRU",
+      "mode": "window_zscore",
+      "subjects": 15,
+      "windows": 2134,
+      "macro_f1": 0.3566734734912293,
+      "passed": true
+    }
+  ]
+}

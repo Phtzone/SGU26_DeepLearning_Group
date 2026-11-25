@@ -1,0 +1,22 @@
+2026-11-25T16:35:24.624273+00:00 POST-RUN evaluation summary; training_performed=false
+Verification: all 20 checkpoint Validation probability replays passed; all 4 Test variants cover 15 people and 2134 windows exactly once; input run files preserved.
+CNN control fold=1 best_epoch=6 Test/person_macro_f1=0.24824948
+CNN control fold=2 best_epoch=14 Test/person_macro_f1=0.47366650
+CNN control fold=3 best_epoch=25 Test/person_macro_f1=0.22512019
+CNN control fold=4 best_epoch=8 Test/person_macro_f1=0.36306414
+CNN control fold=5 best_epoch=32 Test/person_macro_f1=0.39080599
+CNN window_zscore fold=1 best_epoch=10 Test/person_macro_f1=0.40659568
+CNN window_zscore fold=2 best_epoch=2 Test/person_macro_f1=0.29308340
+CNN window_zscore fold=3 best_epoch=8 Test/person_macro_f1=0.41391212
+CNN window_zscore fold=4 best_epoch=1 Test/person_macro_f1=0.44979038
+CNN window_zscore fold=5 best_epoch=16 Test/person_macro_f1=0.41855617
+GRU control fold=1 best_epoch=1 Test/person_macro_f1=0.10522982
+GRU control fold=2 best_epoch=15 Test/person_macro_f1=0.29081123
+GRU control fold=3 best_epoch=1 Test/person_macro_f1=0.19105291
+GRU control fold=4 best_epoch=15 Test/person_macro_f1=0.41376181
+GRU control fold=5 best_epoch=5 Test/person_macro_f1=0.43137134
+GRU window_zscore fold=1 best_epoch=1 Test/person_macro_f1=0.35145378
+GRU window_zscore fold=2 best_epoch=3 Test/person_macro_f1=0.34663710
+GRU window_zscore fold=3 best_epoch=6 Test/person_macro_f1=0.32939131
+GRU window_zscore fold=4 best_epoch=3 Test/person_macro_f1=0.36115565
+GRU window_zscore fold=5 best_epoch=33 Test/person_macro_f1=0.39472953

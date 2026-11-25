@@ -1,0 +1,289 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "model": "CNN",
+      "mode": "control",
+      "fold": 1,
+      "passed": true,
+      "best_epoch": 6,
+      "validation_probabilities_replayed_exactly": true,
+      "test_windows": 431,
+      "test_subjects": [
+        "S10",
+        "S16",
+        "S9"
+      ]
+    },
+    {
+      "model": "CNN",
+      "mode": "control",
+      "fold": 2,
+      "passed": true,
+      "best_epoch": 14,
+      "validation_probabilities_replayed_exactly": true,
+      "test_windows": 433,
+      "test_subjects": [
+        "S8",
+        "S17",
+        "S15"
+      ]
+    },
+    {
+      "model": "CNN",
+      "mode": "control",
+      "fold": 3,
+      "passed": true,
+      "best_epoch": 25,
+      "validation_probabilities_replayed_exactly": true,
+      "test_windows": 426,
+      "test_subjects": [
+        "S7",
+        "S4",
+        "S11"
+      ]
+    },
+    {
+      "model": "CNN",
+      "mode": "control",
+      "fold": 4,
+      "passed": true,
+      "best_epoch": 8,
+      "validation_probabilities_replayed_exactly": true,
+      "test_windows": 427,
+      "test_subjects": [
+        "S5",
+        "S6",
+        "S14"
+      ]
+    },
+    {
+      "model": "CNN",
+      "mode": "control",
+      "fold": 5,
+      "passed": true,
+      "best_epoch": 32,
+      "validation_probabilities_replayed_exactly": true,
+      "test_windows": 417,
+      "test_subjects": [
+        "S2",
+        "S3",
+        "S13"
+      ]
+    },
+    {
+      "model": "CNN",
+      "mode": "window_zscore",
+      "fold": 1,
+      "passed": true,
+      "best_epoch": 10,
+      "validation_probabilities_replayed_exactly": true,
+      "test_windows": 431,
+      "test_subjects": [
+        "S10",
+        "S16",
+        "S9"
+      ]
+    },
+    {
+      "model": "CNN",
+      "mode": "window_zscore",
+      "fold": 2,
+      "passed": true,
+      "best_epoch": 2,
+      "validation_probabilities_replayed_exactly": true,
+      "test_windows": 433,
+      "test_subjects": [
+        "S8",
+        "S17",
+        "S15"
+      ]
+    },
+    {
+      "model": "CNN",
+      "mode": "window_zscore",
+      "fold": 3,
+      "passed": true,
+      "best_epoch": 8,
+      "validation_probabilities_replayed_exactly": true,
+      "test_windows": 426,
+      "test_subjects": [
+        "S7",
+        "S4",
+        "S11"
+      ]
+    },
+    {
+      "model": "CNN",
+      "mode": "window_zscore",
+      "fold": 4,
+      "passed": true,
+      "best_epoch": 1,
+      "validation_probabilities_replayed_exactly": true,
+      "test_windows": 427,
+      "test_subjects": [
+        "S5",
+        "S6",
+        "S14"
+      ]
+    },
+    {
+      "model": "CNN",
+      "mode": "window_zscore",
+      "fold": 5,
+      "passed": true,
+      "best_epoch": 16,
+      "validation_probabilities_replayed_exactly": true,
+      "test_windows": 417,
+      "test_subjects": [
+        "S2",
+        "S3",
+        "S13"
+      ]
+    },
+    {
+      "model": "GRU",
+      "mode": "control",
+      "fold": 1,
+      "passed": true,
+      "best_epoch": 1,
+      "validation_probabilities_replayed_exactly": true,
+      "test_windows": 431,
+      "test_subjects": [
+        "S10",
+        "S16",
+        "S9"
+      ]
+    },
+    {
+      "model": "GRU",
+      "mode": "control",
+      "fold": 2,
+      "passed": true,
+      "best_epoch": 15,
+      "validation_probabilities_replayed_exactly": true,
+      "test_windows": 433,
+      "test_subjects": [
+        "S8",
+        "S17",
+        "S15"
+      ]
+    },
+    {
+      "model": "GRU",
+      "mode": "control",
+      "fold": 3,
+      "passed": true,
+      "best_epoch": 1,
+      "validation_probabilities_replayed_exactly": true,
+      "test_windows": 426,
+      "test_subjects": [
+        "S7",
+        "S4",
+        "S11"
+      ]
+    },
+    {
+      "model": "GRU",
+      "mode": "control",
+      "fold": 4,
+      "passed": true,
+      "best_epoch": 15,
+      "validation_probabilities_replayed_exactly": true,
+      "test_windows": 427,
+      "test_subjects": [
+        "S5",
+        "S6",
+        "S14"
+      ]
+    },
+    {
+      "model": "GRU",
+      "mode": "control",
+      "fold": 5,
+      "passed": true,
+      "best_epoch": 5,
+      "validation_probabilities_replayed_exactly": true,
+      "test_windows": 417,
+      "test_subjects": [
+        "S2",
+        "S3",
+        "S13"
+      ]
+    },
+    {
+      "model": "GRU",
+      "mode": "window_zscore",
+      "fold": 1,
+      "passed": true,
+      "best_epoch": 1,
+      "validation_probabilities_replayed_exactly": true,
+      "test_windows": 431,
+      "test_subjects": [
+        "S10",
+        "S16",
+        "S9"
+      ]
+    },
+    {
+      "model": "GRU",
+      "mode": "window_zscore",
+      "fold": 2,
+      "passed": true,
+      "best_epoch": 3,
+      "validation_probabilities_replayed_exactly": true,
+      "test_windows": 433,
+      "test_subjects": [
+        "S8",
+        "S17",
+        "S15"
+      ]
+    },
+    {
+      "model": "GRU",
+      "mode": "window_zscore",
+      "fold": 3,
+      "passed": true,
+      "best_epoch": 6,
+      "validation_probabilities_replayed_exactly": true,
+      "test_windows": 426,
+      "test_subjects": [
+        "S7",
+        "S4",
+        "S11"
+      ]
+    },
+    {
+      "model": "GRU",
+      "mode": "window_zscore",
+      "fold": 4,
+      "passed": true,
+      "best_epoch": 3,
+      "validation_probabilities_replayed_exactly": true,
+      "test_windows": 427,
+      "test_subjects": [
+        "S5",
+        "S6",
+        "S14"
+      ]
+    },
+    {
+      "model": "GRU",
+      "mode": "window_zscore",
+      "fold": 5,
+      "passed": true,
+      "best_epoch": 33,
+      "validation_probabilities_replayed_exactly": true,
+      "test_windows": 417,
+      "test_subjects": [
+        "S2",
+        "S3",
+        "S13"
+      ]
+    }
+  ],
+  "all_15_test_subjects_once_per_variant": true,
+  "all_2134_windows_once_per_variant": true,
+  "source_runs_preserved": true,
+  "training_performed": false
+}
