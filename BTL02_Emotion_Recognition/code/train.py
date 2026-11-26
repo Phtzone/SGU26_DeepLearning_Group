@@ -24,6 +24,7 @@ CONFIGS = {
     "dropout": (False, 0.45),
     "flip_dropout": (True, 0.45),
     "flip_weighted": (True, 0.25),
+    "flip_weighted_late_pool": (True, 0.25),
 }
 BASELINE_CONFIGS = ("baseline", "flip", "dropout", "flip_dropout")
 
@@ -53,12 +54,14 @@ def load_data(path):
 
 
 class EmotionCNN(nn.Module):
-    def __init__(self, dropout):
+    def __init__(self, dropout, late_pool=False):
         super().__init__()
-        layers = [nn.AvgPool2d(2)]
+        layers = [] if late_pool else [nn.AvgPool2d(2)]
         for input_channels, output_channels in ((1, 24), (24, 48), (48, 96)):
             layers.extend([nn.Conv2d(input_channels, output_channels, 3, padding=1, bias=False),
                            nn.BatchNorm2d(output_channels), nn.ReLU(), nn.MaxPool2d(2)])
+            if late_pool and input_channels == 1:
+                layers.append(nn.AvgPool2d(2))
         self.features = nn.Sequential(*layers)
         self.classifier = nn.Sequential(nn.Flatten(), nn.Linear(96 * 3 * 3, 128),
                                         nn.ReLU(), nn.Dropout(dropout), nn.Linear(128, 7))
@@ -116,7 +119,7 @@ def write_csv(path, rows):
         writer.writerows(rows)
 
 
-def save_figures(output, histories, confusion, model):
+def save_learning_curves(output, histories):
     figure, (loss_axis, accuracy_axis) = plt.subplots(1, 2, figsize=(11, 4), layout="constrained")
     for name, history in histories.items():
         epochs = [row["epoch"] for row in history]
@@ -129,6 +132,8 @@ def save_figures(output, histories, confusion, model):
     figure.savefig(output / "learning_curves.png", dpi=160)
     plt.close(figure)
 
+
+def save_test_figures(output, confusion, model):
     figure, axis = plt.subplots(figsize=(7, 6), layout="constrained")
     image = axis.imshow(confusion, cmap="Blues")
     figure.colorbar(image, ax=axis, label="Images")
@@ -158,6 +163,23 @@ def save_figures(output, histories, confusion, model):
     plt.close(figure)
 
 
+def evaluate_test(model, loader, device, output, name, selection_metric):
+    confusion = torch.zeros((len(CLASSES), len(CLASSES)), dtype=torch.long)
+    test_loss, test_acc = run_epoch(model, loader, device, nn.CrossEntropyLoss(), confusion=confusion)
+    per_class_f1 = class_f1(confusion)
+    results = dict(selected_config=name, test_loss=test_loss, test_accuracy=test_acc,
+                   test_macro_f1=float(per_class_f1.mean()), class_f1=dict(zip(CLASSES, per_class_f1)),
+                   class_order=CLASSES, splits=SPLITS, device=str(device),
+                   gpu=torch.cuda.get_device_name(device) if device.type == "cuda" else None,
+                   pytorch=str(torch.__version__), selection_metric=selection_metric)
+    (output / "test_metrics.json").write_text(json.dumps(results, indent=2), encoding="utf-8")
+    np.savetxt(output / "confusion_matrix.csv", confusion.numpy(), fmt="%d", delimiter=",",
+               header=",".join(CLASSES), comments="")
+    save_test_figures(output, confusion.numpy(), model)
+    print(f"PrivateTest | {name} | accuracy {test_acc:.2%} | "
+          f"macro F1 {per_class_f1.mean():.2%}", flush=True)
+
+
 def train(args):
     device = torch.device("cuda" if args.device == "auto" and torch.cuda.is_available()
                           else "cpu" if args.device == "auto" else args.device)
@@ -174,7 +196,8 @@ def train(args):
     best_name = ""
     for name in args.configs:
         flip, dropout = CONFIGS[name]
-        weighted = name == "flip_weighted"
+        late_pool = name == "flip_weighted_late_pool"
+        weighted = name == "flip_weighted" or late_pool
         weights = None
         if weighted:
             if torch.any(counts == 0):
@@ -189,7 +212,7 @@ def train(args):
                               generator=generator, pin_memory=device.type == "cuda")
             for split, dataset in datasets.items()
         }
-        model = EmotionCNN(dropout).to(device, memory_format=torch.channels_last)
+        model = EmotionCNN(dropout, late_pool=late_pool).to(device, memory_format=torch.channels_last)
         optimizer = torch.optim.AdamW(model.parameters(), lr=args.lr)
         history = []
         run_rank = (-1, float("-inf"))
@@ -222,7 +245,7 @@ def train(args):
                             val_accuracy=best_row["val_accuracy"], val_loss=best_row["val_loss"],
                             seconds=round(time.perf_counter() - started, 1),
                             val_macro_f1=best_row["val_macro_f1"], weighted_loss=weighted,
-                            selection_metric=args.selection_metric,
+                            selection_metric=args.selection_metric, late_pool=late_pool,
                             class_weights=json.dumps(dict(zip(CLASSES, weights.tolist())))
                             if weighted else ""))
         write_csv(args.output / "experiments.csv", summary)
@@ -232,22 +255,10 @@ def train(args):
             best_model = model
             best_model.load_state_dict(torch.load(checkpoint, map_location=device, weights_only=True))
 
-    confusion = torch.zeros((7, 7), dtype=torch.long)
-    test_loss, test_acc = run_epoch(best_model, loaders["PrivateTest"], device, criterion,
-                                    confusion=confusion)
-    matrix = confusion.numpy()
-    per_class_f1 = class_f1(confusion)
-    results = dict(selected_config=best_name, test_loss=test_loss, test_accuracy=test_acc,
-                   test_macro_f1=float(per_class_f1.mean()), class_f1=dict(zip(CLASSES, per_class_f1)),
-                   class_order=CLASSES, splits=SPLITS, device=str(device),
-                   gpu=torch.cuda.get_device_name(device) if device.type == "cuda" else None,
-                   pytorch=str(torch.__version__), selection_metric=args.selection_metric)
-    (args.output / "test_metrics.json").write_text(json.dumps(results, indent=2), encoding="utf-8")
-    np.savetxt(args.output / "confusion_matrix.csv", matrix, fmt="%d", delimiter=",",
-               header=",".join(CLASSES), comments="")
-    save_figures(args.output, histories, matrix, best_model)
-    print(f"PrivateTest | {best_name} | accuracy {test_acc:.2%} | "
-          f"macro F1 {per_class_f1.mean():.2%}", flush=True)
+    save_learning_curves(args.output, histories)
+    if not args.validation_only:
+        evaluate_test(best_model, loaders["PrivateTest"], device, args.output, best_name,
+                      args.selection_metric)
 
 
 if __name__ == "__main__":
@@ -261,6 +272,8 @@ if __name__ == "__main__":
     parser.add_argument("--device", choices=["auto", "cpu", "cuda"], default="auto")
     parser.add_argument("--configs", nargs="+", choices=list(CONFIGS), default=BASELINE_CONFIGS)
     parser.add_argument("--selection-metric", choices=["accuracy", "macro-f1"], default="accuracy")
+    parser.add_argument("--validation-only", action="store_true",
+                        help="Save validation results and checkpoints without evaluating PrivateTest.")
     args = parser.parse_args()
     if min(args.epochs, args.batch_size) < 1 or args.lr <= 0:
         parser.error("epochs, batch size and learning rate must be positive")

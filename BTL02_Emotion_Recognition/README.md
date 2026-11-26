@@ -8,8 +8,7 @@ thay cho `python` nếu cần chọn bản Python 3.12.
 
 ```sh
 python -m pip install -r requirements.txt
-python code/train.py --epochs 12
-python code/make_submission.py
+python code/train.py --epochs 12 --output results/baseline_new
 ```
 
 Chương trình tự chọn CUDA nếu PyTorch có thể dùng GPU. Dùng `--device cpu`
@@ -50,13 +49,36 @@ Lệnh tạo PDF chỉ ghi workbook khi truyền đường dẫn `--journal` ri�
 Các lượt mới được thêm vào `journal/1.xlsx` để đối chiếu và chép sang
 sổ chính khi cần.
 
-## Các tệp nộp
+## Thử dời pooling sau khối convolution đầu tiên
 
-- `report.pdf` chứa phương pháp, kết quả và phân tích, cùng hình các bộ lọc convolution cuối.
-- `slides.pdf` là bộ slide ngang, mỗi trang là một slide.
-- `journal/detail.xlsx` ghi cấu hình, các epoch, kết quả test và bảng phân công.
-- `code/train.py` chứa mã nguồn PyTorch. `code/make_submission.py` tạo lại tài liệu từ kết quả.
+Lượt 26/11 giữ công thức trọng số lớp, lật ngang, dropout, seed và ngân sách
+24 epoch như `flip_weighted`. Cấu hình `flip_weighted_late_pool` đưa AvgPool
+xuống sau khối đầu để convolution đầu xử lý ảnh 48×48. Từ khối thứ hai,
+kích thước đặc trưng giống đối chứng.
 
-Khi chuẩn bị nộp, điền sheet **Phan cong** trong nhật ký rồi nén bộ tệp thành
-`BTL02_Emotion_HoTen_MaSV.zip` theo thông tin nhóm trưởng. Nếu đã điền phân công, giữ bản
-nhật ký đó khi chạy lại lệnh tạo tài liệu.
+```sh
+python code/train.py --configs flip_weighted_late_pool --epochs 24 --selection-metric macro-f1 --validation-only --output results/late_pool_new
+```
+
+Kết quả gốc nằm trong `results/2026-11-26_late_pool`. So sánh với checkpoint
+`flip_weighted` theo macro F1 trên PublicTest và dùng validation loss khi hòa.
+Chỉ đo PrivateTest cho checkpoint mới nếu nó được chọn.
+
+## Bộ nộp BTL02
+
+- `report.pdf` và `slides.pdf` trong ZIP tổng hợp ba vòng thực nghiệm, có kết quả
+  PublicTest, PrivateTest, ma trận nhầm lẫn và hình bộ lọc convolution cuối.
+- `journal/detail.xlsx` trong ZIP là bản nhật ký từ `journal/1.xlsx` của workspace.
+  Sheet **Thi nghiem** tóm tắt 7 lượt chạy, sheet **Ket qua tung epoch** có 120 dòng log.
+- `code/train.py` chứa mã nguồn PyTorch. Log và hình của các vòng nằm trong `results/`.
+
+Từ workspace, điền sheet **Phan cong** trong `journal/1.xlsx`, rồi tạo ZIP mới
+với họ tên và MSSV của nhóm trưởng. Lệnh lấy nhật ký bạn chỉ định và ghi bản sao
+vào ZIP. Chọn tên ZIP chưa tồn tại.
+
+```sh
+python code/final_report.py --output submission/2026-11-26 --journal journal/1.xlsx --archive submission/2026-11-26/BTL02_Emotion_HoTen_MaSV.zip
+```
+
+Hai bản PDF tổng hợp mới nhất được lưu tại `submission/2026-11-26/`. Để tạo lại riêng hai bản PDF
+từ ZIP đã giải nén, chạy `python code/final_report.py`.

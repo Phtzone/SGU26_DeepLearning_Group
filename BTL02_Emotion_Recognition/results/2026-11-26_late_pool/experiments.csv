@@ -1,0 +1,2 @@
+config,horizontal_flip,dropout,optimizer,learning_rate,batch_size,seed,epochs,best_epoch,val_accuracy,val_loss,seconds,val_macro_f1,weighted_loss,selection_metric,late_pool,class_weights
+flip_weighted_late_pool,True,0.25,AdamW,0.001,256,42,24,18,0.5550292560601839,1.178317210573976,401.3,0.5432327872385854,True,macro-f1,True,"{""Angry"": 0.8057538866996765, ""Disgust"": 2.4390323162078857, ""Fear"": 0.7956604957580566, ""Happy"": 0.5995737910270691, ""Sad"": 0.7328029870986938, ""Surprise"": 0.90440434217453, ""Neutral"": 0.7227717638015747}"

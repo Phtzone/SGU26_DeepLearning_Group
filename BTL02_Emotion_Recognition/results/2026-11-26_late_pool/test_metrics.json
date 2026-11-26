@@ -1,0 +1,33 @@
+{
+  "selected_config": "flip_weighted_late_pool",
+  "test_loss": 1.1276363650215937,
+  "test_accuracy": 0.571468375592087,
+  "test_macro_f1": 0.5515147819413952,
+  "class_f1": {
+    "Angry": 0.46226415094339623,
+    "Disgust": 0.5607476635514018,
+    "Fear": 0.3746505125815471,
+    "Happy": 0.7821835958718087,
+    "Sad": 0.44373503591380686,
+    "Surprise": 0.7025246981339188,
+    "Neutral": 0.5344978165938865
+  },
+  "class_order": [
+    "Angry",
+    "Disgust",
+    "Fear",
+    "Happy",
+    "Sad",
+    "Surprise",
+    "Neutral"
+  ],
+  "splits": {
+    "Training": 28709,
+    "PublicTest": 3589,
+    "PrivateTest": 3589
+  },
+  "device": "cpu",
+  "gpu": null,
+  "pytorch": "2.14.0+cpu",
+  "selection_metric": "macro-f1"
+}
