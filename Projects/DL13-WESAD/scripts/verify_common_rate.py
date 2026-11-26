@@ -70,6 +70,9 @@ def verify_fold(folder, group_id, fold, seed, config, checksum, cache):
     assert all(torch.equal(value, last['best_model'][key]) for key, value in states['best']['model'].items())
     epochs = read_csv(folder / 'logs/epochs.csv')
     validation = read_csv(folder / 'logs/validation.csv')
+    epoch_tags = dict(EPOCH_TAGS)
+    if epochs and 'train_stress_recall' in epochs[0]:
+        epoch_tags.update({'train/stress_recall': 'train_stress_recall', 'val/stress_recall': 'val_stress_recall'})
     tc = config['training']
     selection = SelectionState(tc['early_stopping_patience'], tc['early_stopping_min_delta'])
     assert len(epochs) == len(validation) == len(last['history']) == meta['completed_epochs']
@@ -81,8 +84,10 @@ def verify_fold(folder, group_id, fold, seed, config, checksum, cache):
         assert set(scores) == set(fold['validation'])
         close(row['val_subject_macro_f1'], np.mean(list(scores.values())))
         close(val['val_subject_macro_f1'], row['val_subject_macro_f1'])
-        for field in EPOCH_TAGS.values():
+        for field in epoch_tags.values():
             close(row[field], saved[field])
+        if 'val_stress_recall' in row:
+            close(row['val_stress_recall'], val['val_recall_per_class'][1])
         better, stop = selection.update(row['val_subject_macro_f1'], row['val_loss'], row['epoch'])
         assert better == val['is_best_checkpoint'] and row['early_stopping_counter'] == selection.bad_epochs
         assert not stop or row['epoch'] == len(epochs)
@@ -104,7 +109,7 @@ def verify_fold(folder, group_id, fold, seed, config, checksum, cache):
     identity = read_json(folder / 'tracking_identity.json')
     assert identity['group_id'] == group_id and identity['run_id'] == meta['run_id'] and identity['backend'] == 'tensorboard'
     tb = folder / 'tensorboard'
-    verify_scalars(tb / 'epochs', EPOCH_TAGS, epochs, 'epoch')
+    verify_scalars(tb / 'epochs', epoch_tags, epochs, 'epoch')
     verify_scalars(tb / 'batches', BATCH_TAGS, iterations, 'global_step')
     evaluations = verify_scalars(tb / 'evaluation', TEST_TAGS, [dict(saved_metrics, epoch=len(epochs))], 'epoch')
     assert set(evaluations.Tags()['images']) == {'test/confusion_raw', 'test/confusion_normalized', 'test/per_class_f1'}

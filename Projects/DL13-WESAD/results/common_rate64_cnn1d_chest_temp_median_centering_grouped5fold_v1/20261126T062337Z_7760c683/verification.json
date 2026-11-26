@@ -1,0 +1,473 @@
+{
+  "status": "passed",
+  "verified_at": "2026-11-26T07:17:39.624649+00:00",
+  "group_id": "20261126T062337Z_7760c683",
+  "data_fingerprint": "9f2f09b7aee2ec94134a4734d7b9a1382e03936a49ecb9e8c5952e3b92760772",
+  "split_manifest_sha256": "239949dfebabd802091d14a4494d2216aee9809b0e2993dacdbdfbcdc7133f2c",
+  "source_snapshot_files": 84,
+  "verified_folds": 5,
+  "folds": [
+    {
+      "fold_id": 1,
+      "run_id": "20261126T062418Z_4b78e443",
+      "started_at": "2026-11-26T06:24:18.001905+00:00",
+      "ended_at": "2026-11-26T06:33:48.608510+00:00",
+      "window_counts": {
+        "train": 1270,
+        "validation": 433,
+        "test": 431
+      },
+      "best_epoch": 9,
+      "epochs": 24,
+      "trainable_parameters": 47075,
+      "normalized_on_train": true,
+      "validation_selection_replayed": true,
+      "checkpoints": {
+        "best": {
+          "path": "runs/common_rate64_cnn1d_chest_temp_median_centering_grouped5fold_v1/20261126T062337Z_7760c683/seed_42/fold_01/checkpoints/best.pt",
+          "sha256": "7beb73d8b0560d6b4e9ba14d6914bfae15c40eb84db5bb3e424e8d1e4a9d94f9",
+          "epoch": 9,
+          "size_bytes": 612869
+        },
+        "last": {
+          "path": "runs/common_rate64_cnn1d_chest_temp_median_centering_grouped5fold_v1/20261126T062337Z_7760c683/seed_42/fold_01/checkpoints/last.pt",
+          "sha256": "b8a8e3d980c3195342cb6f7d944ae7c257a39a292e073733ebb0ac275a2d2280",
+          "epoch": 24,
+          "size_bytes": 823354
+        }
+      },
+      "iterations": {
+        "logged_iterations": 960,
+        "committed_iterations": 960,
+        "orphan_or_replayed_iterations": 0,
+        "completed_epochs": 24
+      },
+      "tensorboard_files": [
+        "runs/common_rate64_cnn1d_chest_temp_median_centering_grouped5fold_v1/20261126T062337Z_7760c683/seed_42/fold_01/tensorboard/batches/events.out.tfevents.1795674273.DESKTOP-3Q2FPVI.10788.1.eb13a25ed73a",
+        "runs/common_rate64_cnn1d_chest_temp_median_centering_grouped5fold_v1/20261126T062337Z_7760c683/seed_42/fold_01/tensorboard/epochs/events.out.tfevents.1795674273.DESKTOP-3Q2FPVI.10788.0.cabb0059f5d7",
+        "runs/common_rate64_cnn1d_chest_temp_median_centering_grouped5fold_v1/20261126T062337Z_7760c683/seed_42/fold_01/tensorboard/evaluation/events.out.tfevents.1795674273.DESKTOP-3Q2FPVI.10788.2.139e1631d4ee"
+      ],
+      "test_metrics": {
+        "macro_f1": 0.3294143412058969,
+        "balanced_accuracy": 0.4329004329004329,
+        "accuracy": 0.44547563805104406,
+        "precision_per_class": [
+          0.5770750988142292,
+          0.0,
+          0.27058823529411763
+        ],
+        "recall_per_class": [
+          0.6320346320346321,
+          0.0,
+          0.6666666666666666
+        ],
+        "f1_per_class": [
+          0.6033057851239669,
+          0.0,
+          0.38493723849372385
+        ],
+        "support": [
+          231,
+          131,
+          69
+        ],
+        "confusion_matrix": [
+          [
+            146,
+            8,
+            77
+          ],
+          [
+            84,
+            0,
+            47
+          ],
+          [
+            23,
+            0,
+            46
+          ]
+        ],
+        "label_order": [
+          "baseline",
+          "stress",
+          "amusement"
+        ],
+        "absent_classes": [],
+        "loss": 6.932580232587949,
+        "stress_recall": 0.0
+      }
+    },
+    {
+      "fold_id": 2,
+      "run_id": "20261126T063349Z_28d9dc85",
+      "started_at": "2026-11-26T06:33:49.769488+00:00",
+      "ended_at": "2026-11-26T06:42:26.478381+00:00",
+      "window_counts": {
+        "train": 1275,
+        "validation": 426,
+        "test": 433
+      },
+      "best_epoch": 3,
+      "epochs": 18,
+      "trainable_parameters": 47075,
+      "normalized_on_train": true,
+      "validation_selection_replayed": true,
+      "checkpoints": {
+        "best": {
+          "path": "runs/common_rate64_cnn1d_chest_temp_median_centering_grouped5fold_v1/20261126T062337Z_7760c683/seed_42/fold_02/checkpoints/best.pt",
+          "sha256": "68c387466900191944f41b3c611669703702a7c63941280f19047a850079b11f",
+          "epoch": 3,
+          "size_bytes": 607813
+        },
+        "last": {
+          "path": "runs/common_rate64_cnn1d_chest_temp_median_centering_grouped5fold_v1/20261126T062337Z_7760c683/seed_42/fold_02/checkpoints/last.pt",
+          "sha256": "2aaa2e7e083e201d9ed92bf2c770b6d647604e7984908e9b23e31661419a5a80",
+          "epoch": 18,
+          "size_bytes": 818362
+        }
+      },
+      "iterations": {
+        "logged_iterations": 720,
+        "committed_iterations": 720,
+        "orphan_or_replayed_iterations": 0,
+        "completed_epochs": 18
+      },
+      "tensorboard_files": [
+        "runs/common_rate64_cnn1d_chest_temp_median_centering_grouped5fold_v1/20261126T062337Z_7760c683/seed_42/fold_02/tensorboard/batches/events.out.tfevents.1795674830.DESKTOP-3Q2FPVI.10788.4.f950c726f8d5",
+        "runs/common_rate64_cnn1d_chest_temp_median_centering_grouped5fold_v1/20261126T062337Z_7760c683/seed_42/fold_02/tensorboard/epochs/events.out.tfevents.1795674830.DESKTOP-3Q2FPVI.10788.3.d9b96f79dac2",
+        "runs/common_rate64_cnn1d_chest_temp_median_centering_grouped5fold_v1/20261126T062337Z_7760c683/seed_42/fold_02/tensorboard/evaluation/events.out.tfevents.1795674830.DESKTOP-3Q2FPVI.10788.5.08d588b62cc8"
+      ],
+      "test_metrics": {
+        "macro_f1": 0.5848463092836264,
+        "balanced_accuracy": 0.6066695507967409,
+        "accuracy": 0.6212471131639723,
+        "precision_per_class": [
+          0.6949152542372882,
+          0.9076923076923077,
+          0.3484848484848485
+        ],
+        "recall_per_class": [
+          0.7130434782608696,
+          0.44029850746268656,
+          0.6666666666666666
+        ],
+        "f1_per_class": [
+          0.703862660944206,
+          0.592964824120603,
+          0.4577114427860697
+        ],
+        "support": [
+          230,
+          134,
+          69
+        ],
+        "confusion_matrix": [
+          [
+            164,
+            4,
+            62
+          ],
+          [
+            51,
+            59,
+            24
+          ],
+          [
+            21,
+            2,
+            46
+          ]
+        ],
+        "label_order": [
+          "baseline",
+          "stress",
+          "amusement"
+        ],
+        "absent_classes": [],
+        "loss": 1.7055852551806774,
+        "stress_recall": 0.44029850746268656
+      }
+    },
+    {
+      "fold_id": 3,
+      "run_id": "20261126T064228Z_ce585e63",
+      "started_at": "2026-11-26T06:42:28.044812+00:00",
+      "ended_at": "2026-11-26T06:50:45.041649+00:00",
+      "window_counts": {
+        "train": 1281,
+        "validation": 427,
+        "test": 426
+      },
+      "best_epoch": 11,
+      "epochs": 26,
+      "trainable_parameters": 47075,
+      "normalized_on_train": true,
+      "validation_selection_replayed": true,
+      "checkpoints": {
+        "best": {
+          "path": "runs/common_rate64_cnn1d_chest_temp_median_centering_grouped5fold_v1/20261126T062337Z_7760c683/seed_42/fold_03/checkpoints/best.pt",
+          "sha256": "18e24d22e2ed28b0d9b57cd35b974e0f0d51dfa9ddf98b7387a01a0f78c87bc0",
+          "epoch": 11,
+          "size_bytes": 614469
+        },
+        "last": {
+          "path": "runs/common_rate64_cnn1d_chest_temp_median_centering_grouped5fold_v1/20261126T062337Z_7760c683/seed_42/fold_03/checkpoints/last.pt",
+          "sha256": "61b54c4032d23f22133d5977bc557d2c92d6b28b29c43d99963c8ba01a938da6",
+          "epoch": 26,
+          "size_bytes": 825018
+        }
+      },
+      "iterations": {
+        "logged_iterations": 1066,
+        "committed_iterations": 1066,
+        "orphan_or_replayed_iterations": 0,
+        "completed_epochs": 26
+      },
+      "tensorboard_files": [
+        "runs/common_rate64_cnn1d_chest_temp_median_centering_grouped5fold_v1/20261126T062337Z_7760c683/seed_42/fold_03/tensorboard/batches/events.out.tfevents.1795675349.DESKTOP-3Q2FPVI.10788.7.38dea7f1e643",
+        "runs/common_rate64_cnn1d_chest_temp_median_centering_grouped5fold_v1/20261126T062337Z_7760c683/seed_42/fold_03/tensorboard/epochs/events.out.tfevents.1795675349.DESKTOP-3Q2FPVI.10788.6.6765a3987a1d",
+        "runs/common_rate64_cnn1d_chest_temp_median_centering_grouped5fold_v1/20261126T062337Z_7760c683/seed_42/fold_03/tensorboard/evaluation/events.out.tfevents.1795675349.DESKTOP-3Q2FPVI.10788.8.018ec40a4e00"
+      ],
+      "test_metrics": {
+        "macro_f1": 0.4397631698519116,
+        "balanced_accuracy": 0.49013949013949015,
+        "accuracy": 0.5938967136150235,
+        "precision_per_class": [
+          0.8232044198895028,
+          0.4663677130044843,
+          0.0
+        ],
+        "recall_per_class": [
+          0.645021645021645,
+          0.8253968253968254,
+          0.0
+        ],
+        "f1_per_class": [
+          0.7233009708737864,
+          0.5959885386819485,
+          0.0
+        ],
+        "support": [
+          231,
+          126,
+          69
+        ],
+        "confusion_matrix": [
+          [
+            149,
+            82,
+            0
+          ],
+          [
+            0,
+            104,
+            22
+          ],
+          [
+            32,
+            37,
+            0
+          ]
+        ],
+        "label_order": [
+          "baseline",
+          "stress",
+          "amusement"
+        ],
+        "absent_classes": [],
+        "loss": 4.923026429614041,
+        "stress_recall": 0.8253968253968254
+      }
+    },
+    {
+      "fold_id": 4,
+      "run_id": "20261126T065045Z_cc1821bc",
+      "started_at": "2026-11-26T06:50:45.790275+00:00",
+      "ended_at": "2026-11-26T06:58:28.836397+00:00",
+      "window_counts": {
+        "train": 1290,
+        "validation": 417,
+        "test": 427
+      },
+      "best_epoch": 8,
+      "epochs": 23,
+      "trainable_parameters": 47075,
+      "normalized_on_train": true,
+      "validation_selection_replayed": true,
+      "checkpoints": {
+        "best": {
+          "path": "runs/common_rate64_cnn1d_chest_temp_median_centering_grouped5fold_v1/20261126T062337Z_7760c683/seed_42/fold_04/checkpoints/best.pt",
+          "sha256": "ca7cbe0abb30bfab61d1ddcf7a8843c7e0b3967f57e64cb7bef6c0b8ccd7d3eb",
+          "epoch": 8,
+          "size_bytes": 611973
+        },
+        "last": {
+          "path": "runs/common_rate64_cnn1d_chest_temp_median_centering_grouped5fold_v1/20261126T062337Z_7760c683/seed_42/fold_04/checkpoints/last.pt",
+          "sha256": "158985b48a4e8846b403df0c9d983411987a3b9afc79f75e336b16c33803c071",
+          "epoch": 23,
+          "size_bytes": 822522
+        }
+      },
+      "iterations": {
+        "logged_iterations": 943,
+        "committed_iterations": 943,
+        "orphan_or_replayed_iterations": 0,
+        "completed_epochs": 23
+      },
+      "tensorboard_files": [
+        "runs/common_rate64_cnn1d_chest_temp_median_centering_grouped5fold_v1/20261126T062337Z_7760c683/seed_42/fold_04/tensorboard/batches/events.out.tfevents.1795675846.DESKTOP-3Q2FPVI.10788.10.14cc2da79ef7",
+        "runs/common_rate64_cnn1d_chest_temp_median_centering_grouped5fold_v1/20261126T062337Z_7760c683/seed_42/fold_04/tensorboard/epochs/events.out.tfevents.1795675846.DESKTOP-3Q2FPVI.10788.9.a2459e93a79e",
+        "runs/common_rate64_cnn1d_chest_temp_median_centering_grouped5fold_v1/20261126T062337Z_7760c683/seed_42/fold_04/tensorboard/evaluation/events.out.tfevents.1795675846.DESKTOP-3Q2FPVI.10788.11.f45e3ed7ed31"
+      ],
+      "test_metrics": {
+        "macro_f1": 0.37534729093203073,
+        "balanced_accuracy": 0.37021469424018144,
+        "accuracy": 0.3911007025761124,
+        "precision_per_class": [
+          0.5294117647058824,
+          0.6571428571428571,
+          0.12941176470588237
+        ],
+        "recall_per_class": [
+          0.4267241379310345,
+          0.36507936507936506,
+          0.3188405797101449
+        ],
+        "f1_per_class": [
+          0.47255369928400953,
+          0.46938775510204084,
+          0.18410041841004185
+        ],
+        "support": [
+          232,
+          126,
+          69
+        ],
+        "confusion_matrix": [
+          [
+            99,
+            16,
+            117
+          ],
+          [
+            49,
+            46,
+            31
+          ],
+          [
+            39,
+            8,
+            22
+          ]
+        ],
+        "label_order": [
+          "baseline",
+          "stress",
+          "amusement"
+        ],
+        "absent_classes": [],
+        "loss": 2.4216826512816927,
+        "stress_recall": 0.36507936507936506
+      }
+    },
+    {
+      "fold_id": 5,
+      "run_id": "20261126T065829Z_fe43866f",
+      "started_at": "2026-11-26T06:58:29.658615+00:00",
+      "ended_at": "2026-11-26T07:15:17.573204+00:00",
+      "window_counts": {
+        "train": 1286,
+        "validation": 431,
+        "test": 417
+      },
+      "best_epoch": 37,
+      "epochs": 52,
+      "trainable_parameters": 47075,
+      "normalized_on_train": true,
+      "validation_selection_replayed": true,
+      "checkpoints": {
+        "best": {
+          "path": "runs/common_rate64_cnn1d_chest_temp_median_centering_grouped5fold_v1/20261126T062337Z_7760c683/seed_42/fold_05/checkpoints/best.pt",
+          "sha256": "eca516e8b3d71ba56d7c095eb7840b8c546bc4a12bdaa569aa30e8d5ff27f1de",
+          "epoch": 37,
+          "size_bytes": 636229
+        },
+        "last": {
+          "path": "runs/common_rate64_cnn1d_chest_temp_median_centering_grouped5fold_v1/20261126T062337Z_7760c683/seed_42/fold_05/checkpoints/last.pt",
+          "sha256": "27201b2a4a90d5836a2a56741a2f4bdaf9393e6b1410d42e411ad472bcc5dd86",
+          "epoch": 52,
+          "size_bytes": 846778
+        }
+      },
+      "iterations": {
+        "logged_iterations": 2132,
+        "committed_iterations": 2132,
+        "orphan_or_replayed_iterations": 0,
+        "completed_epochs": 52
+      },
+      "tensorboard_files": [
+        "runs/common_rate64_cnn1d_chest_temp_median_centering_grouped5fold_v1/20261126T062337Z_7760c683/seed_42/fold_05/tensorboard/batches/events.out.tfevents.1795676310.DESKTOP-3Q2FPVI.10788.13.0cafbef02211",
+        "runs/common_rate64_cnn1d_chest_temp_median_centering_grouped5fold_v1/20261126T062337Z_7760c683/seed_42/fold_05/tensorboard/epochs/events.out.tfevents.1795676310.DESKTOP-3Q2FPVI.10788.12.9dddcdee8cd7",
+        "runs/common_rate64_cnn1d_chest_temp_median_centering_grouped5fold_v1/20261126T062337Z_7760c683/seed_42/fold_05/tensorboard/evaluation/events.out.tfevents.1795676310.DESKTOP-3Q2FPVI.10788.14.9a5e3732ba08"
+      ],
+      "test_metrics": {
+        "macro_f1": 0.47185246455242225,
+        "balanced_accuracy": 0.4825795014853744,
+        "accuracy": 0.5275779376498801,
+        "precision_per_class": [
+          0.6282722513089005,
+          0.5944055944055944,
+          0.18072289156626506
+        ],
+        "recall_per_class": [
+          0.5309734513274337,
+          0.7024793388429752,
+          0.21428571428571427
+        ],
+        "f1_per_class": [
+          0.5755395683453237,
+          0.6439393939393939,
+          0.19607843137254902
+        ],
+        "support": [
+          226,
+          121,
+          70
+        ],
+        "confusion_matrix": [
+          [
+            120,
+            41,
+            65
+          ],
+          [
+            33,
+            85,
+            3
+          ],
+          [
+            38,
+            17,
+            15
+          ]
+        ],
+        "label_order": [
+          "baseline",
+          "stress",
+          "amusement"
+        ],
+        "absent_classes": [],
+        "loss": 6.3541095942797545,
+        "stress_recall": 0.7024793388429752
+      }
+    }
+  ],
+  "oof_windows": 2134,
+  "test_subjects": 15,
+  "tensorboard_files": 15,
+  "checkpoint_count": 10,
+  "verified_figures": 134,
+  "verified_figure_files": 268,
+  "figure_directory": "results/common_rate64_cnn1d_chest_temp_median_centering_grouped5fold_v1/20261126T062337Z_7760c683/enhanced_visualizations/scientific-v2_65dbe87992cedd99"
+}

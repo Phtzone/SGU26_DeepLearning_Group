@@ -1,0 +1,5 @@
+{
+  "error": "ImportError: cannot import name 'RUN' from 'scripts.verify_chest_temp_centering'",
+  "cause": "Lệnh kiểm tra đầu vào dùng tên hằng RUN. Module kiểm chứng khai báo BASE_RUN.",
+  "recovery": "Sửa tên import trong lệnh preflight và chạy kiểm tra lại thành công trước khi runner khởi động."
+}

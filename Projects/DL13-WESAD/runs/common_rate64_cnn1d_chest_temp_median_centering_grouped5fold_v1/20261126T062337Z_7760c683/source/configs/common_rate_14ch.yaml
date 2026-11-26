@@ -1,0 +1,98 @@
+# Superseded local proposal, retained for provenance; do not use for training.
+# Active configs: experiments/common_rate64_cnn1d_grouped5fold_v1/config.yaml
+# and experiments/common_rate64_gru_grouped5fold_v1/config.yaml.
+experiment:
+  id: E1_CNN_COMMON_RATE_14CH
+  model: cnn1d
+  status: awaiting_runner_integration
+  output_namespace: experiment_e1_common_rate_14ch
+split:
+  protocol: grouped_subject_wise_5fold
+  manifest: splits/grouped_5fold_seed42.json
+  split_seed: 42
+data:
+  input_format: common_rate_windows_v1
+  continuous_cache: data/processed/common_rate_64hz
+  window_cache: data/processed/common_rate_windows_64hz_30s_15s
+  sampling_rate: 64
+  window_seconds: 30
+  stride_seconds: 15
+  input_channels: 14
+  samples_per_window: 1920
+  layout: NCT
+  dtype: float32
+  windowed: true
+  normalized: false
+  channels:
+    - chest_ACC_X
+    - chest_ACC_Y
+    - chest_ACC_Z
+    - chest_ECG
+    - chest_EMG
+    - chest_EDA
+    - chest_Temp
+    - chest_Resp
+    - wrist_ACC_X
+    - wrist_ACC_Y
+    - wrist_ACC_Z
+    - wrist_BVP
+    - wrist_EDA
+    - wrist_TEMP
+  labels: [1, 2, 3]
+  label_map: {1: 0, 2: 1, 3: 2}
+  class_names: [baseline, stress, amusement]
+  num_classes: 3
+  max_windows_per_subject: null
+  window_policy: continuous_valid_label_regions
+  quality_policy: reject_any_false_quality_mask
+normalization:
+  method: channel_zscore
+  fit_on: train_only_per_fold
+  apply_to: [train, validation, test]
+  statistics_weighting: all_timesteps_in_train_windows_including_overlap
+  std_floor: 0.00000001
+training:
+  seeds: [42]
+  max_epochs: 100
+  batch_size: 32
+  optimizer: adam
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  loss: weighted_cross_entropy
+  early_stopping_patience: 15
+  early_stopping_min_delta: 0.001
+  gradient_clip_norm: 1.0
+selection:
+  metric: val_macro_f1
+  mode: max
+  tie_breaker: val_loss
+evaluation:
+  primary_metric: subject_mean_macro_f1
+  subject_weighting: equal
+  supplementary_metrics: [balanced_accuracy, stress_precision_recall_f1, confusion_matrix]
+runtime:
+  device: auto
+  num_workers: 0
+  deterministic: true
+  parallel_folds: 1
+  torch_threads: 2
+logging:
+  log_every_iteration: true
+  log_every_epoch: true
+  flush_each_iteration: true
+  console:
+    enabled: true
+    progress: auto
+tracking:
+  backend: tensorboard
+  strict: false
+  local:
+    enabled: true
+  tensorboard:
+    enabled: true
+    log_every_epoch: true
+    log_every_batch: true
+    batch_log_frequency: 1
+    flush_secs: 10
+    max_queue: 10
+    log_figures: true

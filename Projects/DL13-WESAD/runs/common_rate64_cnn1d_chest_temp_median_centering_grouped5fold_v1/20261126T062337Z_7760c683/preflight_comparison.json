@@ -1,0 +1,682 @@
+{
+  "training_group_id": "20261126T062337Z_7760c683",
+  "experiment_id": "common_rate64_cnn1d_chest_temp_median_centering_grouped5fold_v1",
+  "preprocessing_group_id": "20261126T025058Z_fa1c92ea",
+  "status": "passed",
+  "baseline_group_id": "20261123T072126Z_2c81daac",
+  "dataset_fingerprint": "9f2f09b7aee2ec94134a4734d7b9a1382e03936a49ecb9e8c5952e3b92760772",
+  "window_manifest_sha256": "8df9d2b44c0c4c03081aa6808d8ef1b522e4236e3958d19189ccffc14a8be5bb",
+  "split_manifest_checksum": "239949dfebabd802091d14a4494d2216aee9809b0e2993dacdbdfbcdc7133f2c",
+  "cache_keys": {
+    "S2": "7a9429853236d31800cfb47ac569b0a84d2fc4dfccf99e6743a5e1138d2e3ec7",
+    "S3": "2669fdabc1658e4309775b0f5b13273a3cc5f3a786c80169adffe17c54d51cbb",
+    "S4": "5a62d292cfc165b2aa986719df75be0d8ec20b347bda5cb5a8ed2874f343e523",
+    "S5": "4c48fb92cf311d8060a5d978680592d08c726e5097c2abbc925624b54c26e441",
+    "S6": "6e510c448144c74f78277175813abbfcc3f7a3c6409d2d532ece8fac512c8494",
+    "S7": "6aa2c82c7691adb7036b329c052c77f0b4a7f3bcf4923c8215d34cc2327850e7",
+    "S8": "570e2ecfa5fb46e12301ea3a62d23ea18972c1836ccd0a3a2a8950c91585e0f0",
+    "S9": "d1512258ce160c9f77cb24eee1cec04a056403d1ca1f7d0ba26b41db5bcb4743",
+    "S10": "620ad6394d7a708dae66d75e70323c4f6ce0267b9599fce519ce7899362a00c1",
+    "S11": "c5c9652cf110872b0ba6e217a02a7647c3e64960c07cc20c08c36c2912e82c7b",
+    "S13": "0ded7c46e0370fe328a9e699443a38dc65ecb652f8fbe2a56079be948ffbbb6f",
+    "S14": "249f69ee11b109061a95c253efa7120bc4115f95e0cc778cffe99a26c02743d9",
+    "S15": "33e28f1cff1ceeb2a26795870fe328094eb80bb5d31fc1291578db360a7644d5",
+    "S16": "2a3ddd9b49497ddff9326988b0e4a0c65889189557cd70f63511cd99861e8076",
+    "S17": "644eaba1de2aff12c1dadb9708000035fe2c11863394f3027586ce7167ab22fd"
+  },
+  "config": {
+    "experiment": {
+      "id": "common_rate64_cnn1d_chest_temp_median_centering_grouped5fold_v1",
+      "model": "cnn1d",
+      "status": "implemented"
+    },
+    "split": {
+      "protocol": "grouped_subject_wise_5fold",
+      "manifest": "splits/grouped_5fold_seed42.json",
+      "split_seed": 42
+    },
+    "data": {
+      "sampling_rate": 64,
+      "window_seconds": 30,
+      "stride_seconds": 15,
+      "sensors": [
+        "chest_ACC",
+        "chest_ECG",
+        "chest_EMG",
+        "chest_EDA",
+        "chest_Temp",
+        "chest_Resp",
+        "wrist_ACC",
+        "wrist_BVP",
+        "wrist_EDA",
+        "wrist_TEMP"
+      ],
+      "labels": [
+        1,
+        2,
+        3
+      ],
+      "max_windows_per_subject": null,
+      "source": "common_rate",
+      "processed_dir": "data/processed/common_rate_64hz",
+      "channels": [
+        "chest_ACC_X",
+        "chest_ACC_Y",
+        "chest_ACC_Z",
+        "chest_ECG",
+        "chest_EMG",
+        "chest_EDA",
+        "chest_Temp",
+        "chest_Resp",
+        "wrist_ACC_X",
+        "wrist_ACC_Y",
+        "wrist_ACC_Z",
+        "wrist_BVP",
+        "wrist_EDA",
+        "wrist_TEMP"
+      ],
+      "quality_policy": "all_samples_valid"
+    },
+    "training": {
+      "seeds": [
+        42
+      ],
+      "max_epochs": 100,
+      "batch_size": 32,
+      "optimizer": "adam",
+      "learning_rate": 0.001,
+      "weight_decay": 0.0001,
+      "loss": "weighted_cross_entropy",
+      "early_stopping_patience": 15,
+      "early_stopping_min_delta": 0.001,
+      "gradient_clip_norm": 1
+    },
+    "selection": {
+      "metric": "val_subject_macro_f1",
+      "mode": "max",
+      "tie_breaker": "val_loss"
+    },
+    "runtime": {
+      "device": "auto",
+      "num_workers": 0,
+      "deterministic": true,
+      "parallel_folds": 1,
+      "torch_threads": 2
+    },
+    "logging": {
+      "log_every_iteration": true,
+      "log_every_epoch": true,
+      "flush_each_iteration": true,
+      "console": {
+        "enabled": true,
+        "progress": "never"
+      }
+    },
+    "tracking": {
+      "backend": "tensorboard",
+      "strict": true,
+      "local": {
+        "enabled": true
+      },
+      "tensorboard": {
+        "enabled": true,
+        "log_every_epoch": true,
+        "log_every_batch": true,
+        "batch_log_frequency": 1,
+        "flush_secs": 10,
+        "max_queue": 10,
+        "log_figures": true
+      }
+    },
+    "preprocessing": {
+      "window_centering": {
+        "enabled": true,
+        "method": "median",
+        "channels": [
+          "chest_Temp"
+        ]
+      }
+    },
+    "model": {
+      "dropout": 0.3
+    }
+  },
+  "baseline_config": {
+    "experiment": {
+      "id": "common_rate64_cnn1d_grouped5fold_v1",
+      "model": "cnn1d",
+      "status": "implemented"
+    },
+    "split": {
+      "protocol": "grouped_subject_wise_5fold",
+      "manifest": "splits/grouped_5fold_seed42.json",
+      "split_seed": 42
+    },
+    "data": {
+      "sampling_rate": 64,
+      "window_seconds": 30,
+      "stride_seconds": 15,
+      "sensors": [
+        "chest_ACC",
+        "chest_ECG",
+        "chest_EMG",
+        "chest_EDA",
+        "chest_Temp",
+        "chest_Resp",
+        "wrist_ACC",
+        "wrist_BVP",
+        "wrist_EDA",
+        "wrist_TEMP"
+      ],
+      "labels": [
+        1,
+        2,
+        3
+      ],
+      "max_windows_per_subject": null,
+      "source": "common_rate",
+      "processed_dir": "data/processed/common_rate_64hz",
+      "channels": [
+        "chest_ACC_X",
+        "chest_ACC_Y",
+        "chest_ACC_Z",
+        "chest_ECG",
+        "chest_EMG",
+        "chest_EDA",
+        "chest_Temp",
+        "chest_Resp",
+        "wrist_ACC_X",
+        "wrist_ACC_Y",
+        "wrist_ACC_Z",
+        "wrist_BVP",
+        "wrist_EDA",
+        "wrist_TEMP"
+      ],
+      "quality_policy": "all_samples_valid"
+    },
+    "training": {
+      "seeds": [
+        42
+      ],
+      "max_epochs": 100,
+      "batch_size": 32,
+      "optimizer": "adam",
+      "learning_rate": 0.001,
+      "weight_decay": 0.0001,
+      "loss": "weighted_cross_entropy",
+      "early_stopping_patience": 15,
+      "early_stopping_min_delta": 0.001,
+      "gradient_clip_norm": 1
+    },
+    "selection": {
+      "metric": "val_subject_macro_f1",
+      "mode": "max",
+      "tie_breaker": "val_loss"
+    },
+    "runtime": {
+      "device": "auto",
+      "num_workers": 0,
+      "deterministic": true,
+      "parallel_folds": 1,
+      "torch_threads": 2
+    },
+    "logging": {
+      "log_every_iteration": true,
+      "log_every_epoch": true,
+      "flush_each_iteration": true,
+      "console": {
+        "enabled": true,
+        "progress": "never"
+      }
+    },
+    "tracking": {
+      "backend": "tensorboard",
+      "strict": true,
+      "local": {
+        "enabled": true
+      },
+      "tensorboard": {
+        "enabled": true,
+        "log_every_epoch": true,
+        "log_every_batch": true,
+        "batch_log_frequency": 1,
+        "flush_secs": 10,
+        "max_queue": 10,
+        "log_figures": true
+      }
+    },
+    "model": {
+      "dropout": 0.3
+    }
+  },
+  "ref_check": {
+    "passed": true,
+    "reference_run": {
+      "experiment": "common_rate64_cnn1d_grouped5fold_v1",
+      "group_id": "20261123T072126Z_2c81daac"
+    },
+    "reference_status": "completed",
+    "protocol_sections_match": {
+      "data": true,
+      "split": true,
+      "training": true,
+      "selection": true
+    },
+    "subject_roster_matches": true,
+    "split_matches": true,
+    "window_identity_labels_and_times_match": true,
+    "subjects": [
+      {
+        "subject": "S2",
+        "matches": true,
+        "current_cache_key": "7a9429853236d31800cfb47ac569b0a84d2fc4dfccf99e6743a5e1138d2e3ec7",
+        "reference_cache_key": "7a9429853236d31800cfb47ac569b0a84d2fc4dfccf99e6743a5e1138d2e3ec7"
+      },
+      {
+        "subject": "S3",
+        "matches": true,
+        "current_cache_key": "2669fdabc1658e4309775b0f5b13273a3cc5f3a786c80169adffe17c54d51cbb",
+        "reference_cache_key": "2669fdabc1658e4309775b0f5b13273a3cc5f3a786c80169adffe17c54d51cbb"
+      },
+      {
+        "subject": "S4",
+        "matches": true,
+        "current_cache_key": "5a62d292cfc165b2aa986719df75be0d8ec20b347bda5cb5a8ed2874f343e523",
+        "reference_cache_key": "5a62d292cfc165b2aa986719df75be0d8ec20b347bda5cb5a8ed2874f343e523"
+      },
+      {
+        "subject": "S5",
+        "matches": true,
+        "current_cache_key": "4c48fb92cf311d8060a5d978680592d08c726e5097c2abbc925624b54c26e441",
+        "reference_cache_key": "4c48fb92cf311d8060a5d978680592d08c726e5097c2abbc925624b54c26e441"
+      },
+      {
+        "subject": "S6",
+        "matches": true,
+        "current_cache_key": "6e510c448144c74f78277175813abbfcc3f7a3c6409d2d532ece8fac512c8494",
+        "reference_cache_key": "6e510c448144c74f78277175813abbfcc3f7a3c6409d2d532ece8fac512c8494"
+      },
+      {
+        "subject": "S7",
+        "matches": true,
+        "current_cache_key": "6aa2c82c7691adb7036b329c052c77f0b4a7f3bcf4923c8215d34cc2327850e7",
+        "reference_cache_key": "6aa2c82c7691adb7036b329c052c77f0b4a7f3bcf4923c8215d34cc2327850e7"
+      },
+      {
+        "subject": "S8",
+        "matches": true,
+        "current_cache_key": "570e2ecfa5fb46e12301ea3a62d23ea18972c1836ccd0a3a2a8950c91585e0f0",
+        "reference_cache_key": "570e2ecfa5fb46e12301ea3a62d23ea18972c1836ccd0a3a2a8950c91585e0f0"
+      },
+      {
+        "subject": "S9",
+        "matches": true,
+        "current_cache_key": "d1512258ce160c9f77cb24eee1cec04a056403d1ca1f7d0ba26b41db5bcb4743",
+        "reference_cache_key": "d1512258ce160c9f77cb24eee1cec04a056403d1ca1f7d0ba26b41db5bcb4743"
+      },
+      {
+        "subject": "S10",
+        "matches": true,
+        "current_cache_key": "620ad6394d7a708dae66d75e70323c4f6ce0267b9599fce519ce7899362a00c1",
+        "reference_cache_key": "620ad6394d7a708dae66d75e70323c4f6ce0267b9599fce519ce7899362a00c1"
+      },
+      {
+        "subject": "S11",
+        "matches": true,
+        "current_cache_key": "c5c9652cf110872b0ba6e217a02a7647c3e64960c07cc20c08c36c2912e82c7b",
+        "reference_cache_key": "c5c9652cf110872b0ba6e217a02a7647c3e64960c07cc20c08c36c2912e82c7b"
+      },
+      {
+        "subject": "S13",
+        "matches": true,
+        "current_cache_key": "0ded7c46e0370fe328a9e699443a38dc65ecb652f8fbe2a56079be948ffbbb6f",
+        "reference_cache_key": "0ded7c46e0370fe328a9e699443a38dc65ecb652f8fbe2a56079be948ffbbb6f"
+      },
+      {
+        "subject": "S14",
+        "matches": true,
+        "current_cache_key": "249f69ee11b109061a95c253efa7120bc4115f95e0cc778cffe99a26c02743d9",
+        "reference_cache_key": "249f69ee11b109061a95c253efa7120bc4115f95e0cc778cffe99a26c02743d9"
+      },
+      {
+        "subject": "S15",
+        "matches": true,
+        "current_cache_key": "33e28f1cff1ceeb2a26795870fe328094eb80bb5d31fc1291578db360a7644d5",
+        "reference_cache_key": "33e28f1cff1ceeb2a26795870fe328094eb80bb5d31fc1291578db360a7644d5"
+      },
+      {
+        "subject": "S16",
+        "matches": true,
+        "current_cache_key": "2a3ddd9b49497ddff9326988b0e4a0c65889189557cd70f63511cd99861e8076",
+        "reference_cache_key": "2a3ddd9b49497ddff9326988b0e4a0c65889189557cd70f63511cd99861e8076"
+      },
+      {
+        "subject": "S17",
+        "matches": true,
+        "current_cache_key": "644eaba1de2aff12c1dadb9708000035fe2c11863394f3027586ce7167ab22fd",
+        "reference_cache_key": "644eaba1de2aff12c1dadb9708000035fe2c11863394f3027586ce7167ab22fd"
+      }
+    ],
+    "mismatched_subjects": [],
+    "current_fingerprint": "9f2f09b7aee2ec94134a4734d7b9a1382e03936a49ecb9e8c5952e3b92760772",
+    "reference_fingerprint": "9f2f09b7aee2ec94134a4734d7b9a1382e03936a49ecb9e8c5952e3b92760772",
+    "fingerprint_matches": true,
+    "reference_source_audit_present": true,
+    "training_allowed": true
+  },
+  "current_system": {
+    "python": "3.14.6 | packaged by Anaconda, Inc. | (main, Jul  9 2026, 14:29:05) [MSC v.1942 64 bit (AMD64)]",
+    "executable": "D:\\Deep_learning_group\\.venv_new\\Scripts\\python.exe",
+    "os": "Windows-11-10.0.26300-SP0",
+    "cpu": "Intel64 Family 6 Model 142 Stepping 10, GenuineIntel",
+    "cpu_count": 4,
+    "ram_total": 12762271744,
+    "ram_available": 3152396288,
+    "cuda_version": null,
+    "gpu": null,
+    "packages": {
+      "torch": "2.14.0",
+      "numpy": "2.5.3",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.1",
+      "PyYAML": "6.0.3",
+      "matplotlib": "3.11.2",
+      "psutil": "7.2.2",
+      "pytest": null,
+      "tensorboard": "2.21.0"
+    },
+    "git_commit": "58cb90d8d933c28e274d02aeff8d5b44ce68a2e8",
+    "git_dirty": true
+  },
+  "baseline_system": {
+    "python": "3.14.6 | packaged by Anaconda, Inc. | (main, Jul  9 2026, 14:29:05) [MSC v.1942 64 bit (AMD64)]",
+    "executable": "D:\\Deep_learning_group\\.venv_new\\Scripts\\python.exe",
+    "os": "Windows-11-10.0.26300-SP0",
+    "cpu": "Intel64 Family 6 Model 142 Stepping 10, GenuineIntel",
+    "cpu_count": 4,
+    "ram_total": 12762271744,
+    "ram_available": 3507953664,
+    "cuda_version": null,
+    "gpu": null,
+    "packages": {
+      "torch": "2.14.0",
+      "numpy": "2.5.3",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.1",
+      "PyYAML": "6.0.3",
+      "matplotlib": "3.11.2",
+      "psutil": "7.2.2",
+      "pytest": null,
+      "tensorboard": "2.21.0"
+    },
+    "git_commit": "d3964f9a5e51fce1f8afad6297336d7085662281",
+    "git_dirty": true
+  },
+  "baseline_snapshot_files": 61,
+  "changed_files_vs_baseline_snapshot": [
+    "src/data/dataset.py",
+    "src/data/normalization.py",
+    "src/evaluation/history.py",
+    "src/training/trainer.py",
+    "src/utils/config.py",
+    "src/utils/logging.py",
+    "src/utils/tensorboard_tracker.py",
+    "scripts/run_grouped_cv.py"
+  ],
+  "folds": [
+    {
+      "fold_id": 1,
+      "scaler_sha256": "c535e3b60de69bba0e820cf4327fc820234609e7d2950f34bbe50cb422da0f73",
+      "fold": {
+        "fold_id": 1,
+        "test": [
+          "S10",
+          "S16",
+          "S9"
+        ],
+        "train": [
+          "S7",
+          "S4",
+          "S11",
+          "S5",
+          "S6",
+          "S14",
+          "S2",
+          "S3",
+          "S13"
+        ],
+        "validation": [
+          "S8",
+          "S17",
+          "S15"
+        ]
+      },
+      "class_weights": [
+        0.6144170165061951,
+        1.1349419355392456,
+        2.0352563858032227
+      ],
+      "roles": {
+        "train": {
+          "windows": 1270,
+          "batches": 40,
+          "max_abs_centered_temp_z": 38.130409240722656
+        },
+        "validation": {
+          "windows": 433,
+          "batches": 14,
+          "max_abs_centered_temp_z": 3.875976324081421
+        },
+        "test": {
+          "windows": 431,
+          "batches": 14,
+          "max_abs_centered_temp_z": 4.589251518249512
+        }
+      }
+    },
+    {
+      "fold_id": 2,
+      "scaler_sha256": "6740be7fb52e5d75d5a211f11eca8b9e9d1c58b21b5da49c00b8a9239056fe13",
+      "fold": {
+        "fold_id": 2,
+        "test": [
+          "S8",
+          "S17",
+          "S15"
+        ],
+        "train": [
+          "S10",
+          "S16",
+          "S9",
+          "S5",
+          "S6",
+          "S14",
+          "S2",
+          "S3",
+          "S13"
+        ],
+        "validation": [
+          "S7",
+          "S4",
+          "S11"
+        ]
+      },
+      "class_weights": [
+        0.6168360114097595,
+        1.1243386268615723,
+        2.043269157409668
+      ],
+      "roles": {
+        "train": {
+          "windows": 1275,
+          "batches": 40,
+          "max_abs_centered_temp_z": 38.14977264404297
+        },
+        "validation": {
+          "windows": 426,
+          "batches": 14,
+          "max_abs_centered_temp_z": 4.0343451499938965
+        },
+        "test": {
+          "windows": 433,
+          "batches": 14,
+          "max_abs_centered_temp_z": 3.8779170513153076
+        }
+      }
+    },
+    {
+      "fold_id": 3,
+      "scaler_sha256": "da484308789f6347bd13dc6462bffc238eab353184a3bb9f44aa94bb87ed8fd0",
+      "fold": {
+        "fold_id": 3,
+        "test": [
+          "S7",
+          "S4",
+          "S11"
+        ],
+        "train": [
+          "S10",
+          "S16",
+          "S9",
+          "S8",
+          "S17",
+          "S15",
+          "S2",
+          "S3",
+          "S13"
+        ],
+        "validation": [
+          "S5",
+          "S6",
+          "S14"
+        ]
+      },
+      "class_weights": [
+        0.6215429306030273,
+        1.106217622756958,
+        2.052884578704834
+      ],
+      "roles": {
+        "train": {
+          "windows": 1281,
+          "batches": 41,
+          "max_abs_centered_temp_z": 38.199134826660156
+        },
+        "validation": {
+          "windows": 427,
+          "batches": 14,
+          "max_abs_centered_temp_z": 3.7095441818237305
+        },
+        "test": {
+          "windows": 426,
+          "batches": 14,
+          "max_abs_centered_temp_z": 4.036452770233154
+        }
+      }
+    },
+    {
+      "fold_id": 4,
+      "scaler_sha256": "84eca08589dd58001cc4c208c599a0ee07946a9f183d153e15bbe2a87e963d4a",
+      "fold": {
+        "fold_id": 4,
+        "test": [
+          "S5",
+          "S6",
+          "S14"
+        ],
+        "train": [
+          "S10",
+          "S16",
+          "S9",
+          "S8",
+          "S17",
+          "S15",
+          "S7",
+          "S4",
+          "S11"
+        ],
+        "validation": [
+          "S2",
+          "S3",
+          "S13"
+        ]
+      },
+      "class_weights": [
+        0.6213873028755188,
+        1.099744200706482,
+        2.0772945880889893
+      ],
+      "roles": {
+        "train": {
+          "windows": 1290,
+          "batches": 41,
+          "max_abs_centered_temp_z": 16.113832473754883
+        },
+        "validation": {
+          "windows": 417,
+          "batches": 14,
+          "max_abs_centered_temp_z": 133.69119262695312
+        },
+        "test": {
+          "windows": 427,
+          "batches": 14,
+          "max_abs_centered_temp_z": 12.97524356842041
+        }
+      }
+    },
+    {
+      "fold_id": 5,
+      "scaler_sha256": "18a63808a907e4cd09f74cbe90e17a988b1827dbd3f2f5cc8f17359ad580c9a9",
+      "fold": {
+        "fold_id": 5,
+        "test": [
+          "S2",
+          "S3",
+          "S13"
+        ],
+        "train": [
+          "S8",
+          "S17",
+          "S15",
+          "S7",
+          "S4",
+          "S11",
+          "S5",
+          "S6",
+          "S14"
+        ],
+        "validation": [
+          "S10",
+          "S16",
+          "S9"
+        ]
+      },
+      "class_weights": [
+        0.618566632270813,
+        1.1105353832244873,
+        2.0708534717559814
+      ],
+      "roles": {
+        "train": {
+          "windows": 1286,
+          "batches": 41,
+          "max_abs_centered_temp_z": 12.919049263000488
+        },
+        "validation": {
+          "windows": 431,
+          "batches": 14,
+          "max_abs_centered_temp_z": 14.732420921325684
+        },
+        "test": {
+          "windows": 417,
+          "batches": 14,
+          "max_abs_centered_temp_z": 122.27982330322266
+        }
+      }
+    }
+  ],
+  "trainable_parameters": 47075,
+  "protected_original_file_count": 624,
+  "protected_original_sha256": "10700b784e82bb9d8c51aee6088575b1912b58365e35852b562f4c0cc2a8936e",
+  "preprocessing_verification_sha256": "9e4de89cdb2d089d12c05e93b7344b3eedbc01eca83243c4ceaa5163b5fe8088"
+}

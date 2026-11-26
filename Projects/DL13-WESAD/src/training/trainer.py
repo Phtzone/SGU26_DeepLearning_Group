@@ -175,6 +175,9 @@ def train_fold(folder, cache, fold, seed, config, manifest_checksum, resume=Fals
                     epoch_row.update(val_subject_macro_f1=score, best_val_subject_macro_f1=selection.best_score,
                                      best_val_macro_f1=pooled_at_best)
                     val_row.update(val_subject_macro_f1=score, val_macro_f1_by_subject=subject_f1)
+                if scaler.window_centering:
+                    epoch_row.update(train_stress_recall=train_metrics['recall_per_class'][1],
+                                     val_stress_recall=val['recall_per_class'][1])
                 history.append({**epoch_row, 'epoch_log': epoch_row, 'validation_log': val_row})
                 state = {'model': model.state_dict(), 'optimizer': optimizer.state_dict(), 'scheduler': None, 'epoch': epoch,
                          'best_epoch': selection.best_epoch, 'best_validation_score': selection.best_score, 'early_stopping': copy.deepcopy(selection.__dict__),

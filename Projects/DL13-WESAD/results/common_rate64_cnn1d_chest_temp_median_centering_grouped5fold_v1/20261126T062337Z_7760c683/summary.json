@@ -1,0 +1,108 @@
+{
+  "status": "completed",
+  "completed_folds": 5,
+  "expected_folds": 5,
+  "missing_folds": [],
+  "group_id": "20261126T062337Z_7760c683",
+  "manifest_checksum": "239949dfebabd802091d14a4494d2216aee9809b0e2993dacdbdfbcdc7133f2c",
+  "per_seed": {
+    "42": {
+      "fold_level": {
+        "macro_f1": {
+          "mean": 0.4402447151651776,
+          "std": 0.09798462914261505,
+          "n": 5
+        },
+        "balanced_accuracy": {
+          "mean": 0.47650073391244396,
+          "std": 0.08712720076594316,
+          "n": 5
+        },
+        "accuracy": {
+          "mean": 0.5158596210112065,
+          "std": 0.09727836739941349,
+          "n": 5
+        },
+        "stress_recall": {
+          "mean": 0.4666508073563705,
+          "std": 0.32135960360835686,
+          "n": 5
+        }
+      },
+      "subject_level": {
+        "macro_f1": {
+          "mean": 0.39177635792324617,
+          "std": 0.178273712127988,
+          "n": 15
+        },
+        "balanced_accuracy": {
+          "mean": 0.47653266442700404,
+          "std": 0.17698226158964753,
+          "n": 15
+        },
+        "accuracy": {
+          "mean": 0.5158648144088345,
+          "std": 0.2034318849443903,
+          "n": 15
+        },
+        "stress_recall": {
+          "mean": 0.46565151619037043,
+          "std": 0.4093940684771438,
+          "n": 15
+        }
+      },
+      "pooled_oof": {
+        "macro_f1": 0.46969648144562853,
+        "balanced_accuracy": 0.4744042114518148,
+        "accuracy": 0.5159325210871603,
+        "precision_per_class": [
+          0.6469465648854962,
+          0.5776031434184676,
+          0.22357019064124783
+        ],
+        "recall_per_class": [
+          0.5895652173913043,
+          0.4608150470219436,
+          0.37283236994219654
+        ],
+        "f1_per_class": [
+          0.6169244767970883,
+          0.5126416739319966,
+          0.27952329360780065
+        ],
+        "support": [
+          1150,
+          638,
+          346
+        ],
+        "confusion_matrix": [
+          [
+            678,
+            151,
+            321
+          ],
+          [
+            217,
+            294,
+            127
+          ],
+          [
+            153,
+            64,
+            129
+          ]
+        ],
+        "label_order": [
+          "baseline",
+          "stress",
+          "amusement"
+        ],
+        "absent_classes": [],
+        "stress_recall": 0.4608150470219436
+      },
+      "oof_windows": 2134,
+      "training_duration_seconds": 3055.127031000001
+    }
+  },
+  "primary_metric": "per_seed[seed].subject_level.macro_f1.mean"
+}

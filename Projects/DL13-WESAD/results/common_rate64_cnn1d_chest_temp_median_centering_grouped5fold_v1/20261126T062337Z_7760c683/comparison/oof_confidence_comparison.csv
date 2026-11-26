@@ -1,0 +1,5 @@
+method,prediction_status,windows,mean_max_probability,median_max_probability,confidence_at_least_0_90
+baseline,correct,920,0.9619426167205624,0.9999313950538635,815
+baseline,incorrect,1214,0.9416283441974461,0.9990420043468475,1006
+median_centered,correct,1101,0.944273076904134,0.9990901947021484,915
+median_centered,incorrect,1033,0.9007664253612455,0.9808354377746582,709

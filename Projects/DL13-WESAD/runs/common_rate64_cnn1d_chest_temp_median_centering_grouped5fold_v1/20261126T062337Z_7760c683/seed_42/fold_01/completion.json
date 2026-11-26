@@ -1,0 +1,28 @@
+{
+  "files": {
+    "config.yaml": "34777d45c253531fdb56397a50e76086f4a084989d9dd3dc2ae9c2ab7ab35059",
+    "metadata.json": "c60711b9cbbe3135142044055e6d493f34d230c2298ce144f9393e58ff29a4aa",
+    "normalization.json": "c535e3b60de69bba0e820cf4327fc820234609e7d2950f34bbe50cb422da0f73",
+    "tracking_identity.json": "c7e0ed6db7f0e57c6c9385a1183a56958b61c5c05584711f8478dc8385359385",
+    "checkpoints/best.pt": "7beb73d8b0560d6b4e9ba14d6914bfae15c40eb84db5bb3e424e8d1e4a9d94f9",
+    "checkpoints/last.pt": "b8a8e3d980c3195342cb6f7d944ae7c257a39a292e073733ebb0ac275a2d2280",
+    "logs/epochs.csv": "54de24b6049069b7711364507cf335ea0fa64a3df82675741c1288961b0edc16",
+    "logs/errors.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/events.jsonl": "c56462f8bce03b23ab5148cb8006773c94a0a3c61e6e082efe84af2c8100bb08",
+    "logs/iterations.csv": "c46d827460439a1f2d19cdb49e9169b384fef9cd9f91f01b032f27d4b502681b",
+    "logs/training.log": "2d0206aeeafe3f49e1cc18cbfe6a2dd09e0ab236863f7cab93dc5a072f43d8ba",
+    "logs/validation.csv": "282412dd0ef28d992ddd7f704ff0fa88db80bbbe0fbc3df838614a653c11d225",
+    "metrics/best_validation.json": "05bcd3bf378e1cc5f9ccb308df6e7e0420cb154e8a9761493e32a86bb0ca5980",
+    "metrics/classification_report.json": "6d9298da054bae60a63a2dd51e1f62e6ade1dc16e56be209e56ed04bdd455737",
+    "metrics/confusion_matrix.csv": "23d05a4ef6d9eb92b49413fceaf4676794fd08d4f3f6d813895753b875f7c76a",
+    "metrics/predictions.csv": "e5bbcae58cda7192e2c3fd72862e4c28b6bc463b57aaa011cf40a503e0e2a389",
+    "metrics/subject_metrics.csv": "45ce1a031f10e107b62c448c0016b95b514616366aa6bdf4428d03c1ea7d3f47",
+    "metrics/test.json": "17c1f640c1cd531a81a0475c17728e74c0b15f2d4bfcf8c89650ef0d39570ffd",
+    "plots/confusion_matrix.png": "3da4cc2d955ee42868ace5885bf3e34391c660ac13cd8e36492d65ca8d43c990",
+    "plots/loss_curve.png": "a2e357bb339a1fee54c07587d237b3fb55aac56ece332b05ef999b10bcef7df7",
+    "plots/macro_f1_curve.png": "dc62b3d9f1fc7e75b996abaec1601996f787dab7ab006efe7a48a1ed5b7f4b7f",
+    "tensorboard/batches/events.out.tfevents.1795674273.DESKTOP-3Q2FPVI.10788.1.eb13a25ed73a": "593ffd0ba47a966caec944a26f1f2f20cd1ad16dc132e656fb22f0ae8fb06f6a",
+    "tensorboard/epochs/events.out.tfevents.1795674273.DESKTOP-3Q2FPVI.10788.0.cabb0059f5d7": "de4be09e4643e7db7061c08cc428ace960a4688841151ad63c124b9ea7a73035",
+    "tensorboard/evaluation/events.out.tfevents.1795674273.DESKTOP-3Q2FPVI.10788.2.139e1631d4ee": "518d79296a79c2fbf03725320daf7523dca7d39b76e237ceb669188336473404"
+  }
+}

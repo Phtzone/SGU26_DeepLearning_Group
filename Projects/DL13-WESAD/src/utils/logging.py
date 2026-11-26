@@ -82,6 +82,8 @@ class RunLogger:
         fields = EPOCH_FIELDS
         if 'val_subject_macro_f1' in row:
             fields = fields + ['val_subject_macro_f1', 'best_val_subject_macro_f1', 'early_stopping_counter']
+        if 'train_stress_recall' in row:
+            fields = fields + ['train_stress_recall', 'val_stress_recall']
         append_epoch(self.folder / 'epochs.csv', row, fields, LEGACY_EPOCH_FIELDS)
 
     def validation(self, row):

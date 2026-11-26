@@ -1,0 +1,157 @@
+{
+  "group_id": "20261126T062337Z_7760c683",
+  "effective_config": {
+    "experiment": {
+      "id": "common_rate64_cnn1d_chest_temp_median_centering_grouped5fold_v1",
+      "model": "cnn1d",
+      "status": "implemented"
+    },
+    "split": {
+      "protocol": "grouped_subject_wise_5fold",
+      "manifest": "splits/grouped_5fold_seed42.json",
+      "split_seed": 42
+    },
+    "data": {
+      "sampling_rate": 64,
+      "window_seconds": 30,
+      "stride_seconds": 15,
+      "sensors": [
+        "chest_ACC",
+        "chest_ECG",
+        "chest_EMG",
+        "chest_EDA",
+        "chest_Temp",
+        "chest_Resp",
+        "wrist_ACC",
+        "wrist_BVP",
+        "wrist_EDA",
+        "wrist_TEMP"
+      ],
+      "labels": [
+        1,
+        2,
+        3
+      ],
+      "max_windows_per_subject": null,
+      "source": "common_rate",
+      "processed_dir": "data/processed/common_rate_64hz",
+      "channels": [
+        "chest_ACC_X",
+        "chest_ACC_Y",
+        "chest_ACC_Z",
+        "chest_ECG",
+        "chest_EMG",
+        "chest_EDA",
+        "chest_Temp",
+        "chest_Resp",
+        "wrist_ACC_X",
+        "wrist_ACC_Y",
+        "wrist_ACC_Z",
+        "wrist_BVP",
+        "wrist_EDA",
+        "wrist_TEMP"
+      ],
+      "quality_policy": "all_samples_valid"
+    },
+    "training": {
+      "seeds": [
+        42
+      ],
+      "max_epochs": 100,
+      "batch_size": 32,
+      "optimizer": "adam",
+      "learning_rate": 0.001,
+      "weight_decay": 0.0001,
+      "loss": "weighted_cross_entropy",
+      "early_stopping_patience": 15,
+      "early_stopping_min_delta": 0.001,
+      "gradient_clip_norm": 1.0
+    },
+    "selection": {
+      "metric": "val_subject_macro_f1",
+      "mode": "max",
+      "tie_breaker": "val_loss"
+    },
+    "runtime": {
+      "device": "auto",
+      "num_workers": 0,
+      "deterministic": true,
+      "parallel_folds": 1,
+      "torch_threads": 2
+    },
+    "logging": {
+      "log_every_iteration": true,
+      "log_every_epoch": true,
+      "flush_each_iteration": true,
+      "console": {
+        "enabled": true,
+        "progress": "never"
+      }
+    },
+    "tracking": {
+      "backend": "tensorboard",
+      "strict": true,
+      "local": {
+        "enabled": true
+      },
+      "tensorboard": {
+        "enabled": true,
+        "log_every_epoch": true,
+        "log_every_batch": true,
+        "batch_log_frequency": 1,
+        "flush_secs": 10,
+        "max_queue": 10,
+        "log_figures": true
+      }
+    },
+    "preprocessing": {
+      "window_centering": {
+        "enabled": true,
+        "method": "median",
+        "channels": [
+          "chest_Temp"
+        ]
+      }
+    },
+    "model": {
+      "dropout": 0.3
+    }
+  },
+  "manifest_checksum": "239949dfebabd802091d14a4494d2216aee9809b0e2993dacdbdfbcdc7133f2c",
+  "cache_path": "D:\\Deep_learning_group\\Projects\\DL13-WESAD\\runs\\common_rate64_cnn1d_chest_temp_median_centering_grouped5fold_v1\\20261126T062337Z_7760c683\\window_index",
+  "status": "completed",
+  "runner_version": "tensorboard-manual-v1",
+  "requested_folds": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "data_source": "D:\\Deep_learning_group\\Projects\\DL13-WESAD\\data\\processed\\common_rate_64hz",
+  "preprocessing_notebook": {
+    "path": "notebooks/02_preprocessing_common_rate.ipynb",
+    "sha256": "eafbc45692f1eb4c569059a7500c34481f32d34cc9973430ed11676b8ffb22d8"
+  },
+  "dataset_fingerprint": "9f2f09b7aee2ec94134a4734d7b9a1382e03936a49ecb9e8c5952e3b92760772",
+  "window_count": 2134,
+  "window_manifest": "window_index/windows.csv",
+  "data_audit": "window_index/common_rate_index.json",
+  "cache_keys": {
+    "S2": "7a9429853236d31800cfb47ac569b0a84d2fc4dfccf99e6743a5e1138d2e3ec7",
+    "S3": "2669fdabc1658e4309775b0f5b13273a3cc5f3a786c80169adffe17c54d51cbb",
+    "S4": "5a62d292cfc165b2aa986719df75be0d8ec20b347bda5cb5a8ed2874f343e523",
+    "S5": "4c48fb92cf311d8060a5d978680592d08c726e5097c2abbc925624b54c26e441",
+    "S6": "6e510c448144c74f78277175813abbfcc3f7a3c6409d2d532ece8fac512c8494",
+    "S7": "6aa2c82c7691adb7036b329c052c77f0b4a7f3bcf4923c8215d34cc2327850e7",
+    "S8": "570e2ecfa5fb46e12301ea3a62d23ea18972c1836ccd0a3a2a8950c91585e0f0",
+    "S9": "d1512258ce160c9f77cb24eee1cec04a056403d1ca1f7d0ba26b41db5bcb4743",
+    "S10": "620ad6394d7a708dae66d75e70323c4f6ce0267b9599fce519ce7899362a00c1",
+    "S11": "c5c9652cf110872b0ba6e217a02a7647c3e64960c07cc20c08c36c2912e82c7b",
+    "S13": "0ded7c46e0370fe328a9e699443a38dc65ecb652f8fbe2a56079be948ffbbb6f",
+    "S14": "249f69ee11b109061a95c253efa7120bc4115f95e0cc778cffe99a26c02743d9",
+    "S15": "33e28f1cff1ceeb2a26795870fe328094eb80bb5d31fc1291578db360a7644d5",
+    "S16": "2a3ddd9b49497ddff9326988b0e4a0c65889189557cd70f63511cd99861e8076",
+    "S17": "644eaba1de2aff12c1dadb9708000035fe2c11863394f3027586ce7167ab22fd"
+  }
+}

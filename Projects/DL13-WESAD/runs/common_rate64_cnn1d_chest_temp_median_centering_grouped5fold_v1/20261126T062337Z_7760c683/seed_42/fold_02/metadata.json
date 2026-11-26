@@ -1,0 +1,269 @@
+{
+  "run_id": "20261126T063349Z_28d9dc85",
+  "fold_id": 2,
+  "training_seed": 42,
+  "subjects": {
+    "fold_id": 2,
+    "test": [
+      "S8",
+      "S17",
+      "S15"
+    ],
+    "train": [
+      "S10",
+      "S16",
+      "S9",
+      "S5",
+      "S6",
+      "S14",
+      "S2",
+      "S3",
+      "S13"
+    ],
+    "validation": [
+      "S7",
+      "S4",
+      "S11"
+    ]
+  },
+  "started_at": "2026-11-26T06:33:49.769488+00:00",
+  "manifest_checksum": "239949dfebabd802091d14a4494d2216aee9809b0e2993dacdbdfbcdc7133f2c",
+  "effective_config": {
+    "experiment": {
+      "id": "common_rate64_cnn1d_chest_temp_median_centering_grouped5fold_v1",
+      "model": "cnn1d",
+      "status": "implemented"
+    },
+    "split": {
+      "protocol": "grouped_subject_wise_5fold",
+      "manifest": "splits/grouped_5fold_seed42.json",
+      "split_seed": 42
+    },
+    "data": {
+      "sampling_rate": 64,
+      "window_seconds": 30,
+      "stride_seconds": 15,
+      "sensors": [
+        "chest_ACC",
+        "chest_ECG",
+        "chest_EMG",
+        "chest_EDA",
+        "chest_Temp",
+        "chest_Resp",
+        "wrist_ACC",
+        "wrist_BVP",
+        "wrist_EDA",
+        "wrist_TEMP"
+      ],
+      "labels": [
+        1,
+        2,
+        3
+      ],
+      "max_windows_per_subject": null,
+      "source": "common_rate",
+      "processed_dir": "data/processed/common_rate_64hz",
+      "channels": [
+        "chest_ACC_X",
+        "chest_ACC_Y",
+        "chest_ACC_Z",
+        "chest_ECG",
+        "chest_EMG",
+        "chest_EDA",
+        "chest_Temp",
+        "chest_Resp",
+        "wrist_ACC_X",
+        "wrist_ACC_Y",
+        "wrist_ACC_Z",
+        "wrist_BVP",
+        "wrist_EDA",
+        "wrist_TEMP"
+      ],
+      "quality_policy": "all_samples_valid"
+    },
+    "training": {
+      "seeds": [
+        42
+      ],
+      "max_epochs": 100,
+      "batch_size": 32,
+      "optimizer": "adam",
+      "learning_rate": 0.001,
+      "weight_decay": 0.0001,
+      "loss": "weighted_cross_entropy",
+      "early_stopping_patience": 15,
+      "early_stopping_min_delta": 0.001,
+      "gradient_clip_norm": 1.0
+    },
+    "selection": {
+      "metric": "val_subject_macro_f1",
+      "mode": "max",
+      "tie_breaker": "val_loss"
+    },
+    "runtime": {
+      "device": "auto",
+      "num_workers": 0,
+      "deterministic": true,
+      "parallel_folds": 1,
+      "torch_threads": 2
+    },
+    "logging": {
+      "log_every_iteration": true,
+      "log_every_epoch": true,
+      "flush_each_iteration": true,
+      "console": {
+        "enabled": true,
+        "progress": "never"
+      }
+    },
+    "tracking": {
+      "backend": "tensorboard",
+      "strict": true,
+      "local": {
+        "enabled": true
+      },
+      "tensorboard": {
+        "enabled": true,
+        "log_every_epoch": true,
+        "log_every_batch": true,
+        "batch_log_frequency": 1,
+        "flush_secs": 10,
+        "max_queue": 10,
+        "log_figures": true
+      }
+    },
+    "preprocessing": {
+      "window_centering": {
+        "enabled": true,
+        "method": "median",
+        "channels": [
+          "chest_Temp"
+        ]
+      }
+    },
+    "model": {
+      "dropout": 0.3
+    }
+  },
+  "attempts": [
+    {
+      "attempt_id": "20261126T063349Z_db1330e2",
+      "started_at": "2026-11-26T06:33:49.769515+00:00"
+    }
+  ],
+  "status": "completed",
+  "group_id": "20261126T062337Z_7760c683",
+  "selection_metric": "val_subject_macro_f1",
+  "input_shape": [
+    14,
+    1920
+  ],
+  "logging_schema_version": 2,
+  "device": "cpu",
+  "architecture": "CNN1D(\n  (network): Sequential(\n    (0): Conv1d(14, 32, kernel_size=(7,), stride=(1,), padding=(3,))\n    (1): BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)\n    (2): ReLU()\n    (3): MaxPool1d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)\n    (4): Conv1d(32, 64, kernel_size=(5,), stride=(1,), padding=(2,))\n    (5): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)\n    (6): ReLU()\n    (7): MaxPool1d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)\n    (8): Conv1d(64, 128, kernel_size=(3,), stride=(1,), padding=(1,))\n    (9): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)\n    (10): ReLU()\n    (11): AdaptiveAvgPool1d(output_size=1)\n    (12): Flatten(start_dim=1, end_dim=-1)\n    (13): Linear(in_features=128, out_features=64, bias=True)\n    (14): ReLU()\n    (15): Dropout(p=0.3, inplace=False)\n    (16): Linear(in_features=64, out_features=3, bias=True)\n  )\n)",
+  "trainable_parameters": 47075,
+  "window_counts": {
+    "train": 1275,
+    "validation": 426,
+    "test": 433
+  },
+  "label_distribution": {
+    "train": [
+      689,
+      378,
+      208
+    ],
+    "validation": [
+      231,
+      126,
+      69
+    ],
+    "test": [
+      230,
+      134,
+      69
+    ]
+  },
+  "class_weights": [
+    0.6168360114097595,
+    1.1243386268615723,
+    2.043269157409668
+  ],
+  "cache_keys": {
+    "S10": "620ad6394d7a708dae66d75e70323c4f6ce0267b9599fce519ce7899362a00c1",
+    "S16": "2a3ddd9b49497ddff9326988b0e4a0c65889189557cd70f63511cd99861e8076",
+    "S9": "d1512258ce160c9f77cb24eee1cec04a056403d1ca1f7d0ba26b41db5bcb4743",
+    "S5": "4c48fb92cf311d8060a5d978680592d08c726e5097c2abbc925624b54c26e441",
+    "S6": "6e510c448144c74f78277175813abbfcc3f7a3c6409d2d532ece8fac512c8494",
+    "S14": "249f69ee11b109061a95c253efa7120bc4115f95e0cc778cffe99a26c02743d9",
+    "S2": "7a9429853236d31800cfb47ac569b0a84d2fc4dfccf99e6743a5e1138d2e3ec7",
+    "S3": "2669fdabc1658e4309775b0f5b13273a3cc5f3a786c80169adffe17c54d51cbb",
+    "S13": "0ded7c46e0370fe328a9e699443a38dc65ecb652f8fbe2a56079be948ffbbb6f",
+    "S7": "6aa2c82c7691adb7036b329c052c77f0b4a7f3bcf4923c8215d34cc2327850e7",
+    "S4": "5a62d292cfc165b2aa986719df75be0d8ec20b347bda5cb5a8ed2874f343e523",
+    "S11": "c5c9652cf110872b0ba6e217a02a7647c3e64960c07cc20c08c36c2912e82c7b",
+    "S8": "570e2ecfa5fb46e12301ea3a62d23ea18972c1836ccd0a3a2a8950c91585e0f0",
+    "S17": "644eaba1de2aff12c1dadb9708000035fe2c11863394f3027586ce7167ab22fd",
+    "S15": "33e28f1cff1ceeb2a26795870fe328094eb80bb5d31fc1291578db360a7644d5"
+  },
+  "ended_at": "2026-11-26T06:42:26.478381+00:00",
+  "completed_epochs": 18,
+  "best_epoch": 3,
+  "best_val_macro_f1": 0.4484453923100349,
+  "test_metrics": {
+    "macro_f1": 0.5848463092836264,
+    "balanced_accuracy": 0.6066695507967409,
+    "accuracy": 0.6212471131639723,
+    "precision_per_class": [
+      0.6949152542372882,
+      0.9076923076923077,
+      0.3484848484848485
+    ],
+    "recall_per_class": [
+      0.7130434782608696,
+      0.44029850746268656,
+      0.6666666666666666
+    ],
+    "f1_per_class": [
+      0.703862660944206,
+      0.592964824120603,
+      0.4577114427860697
+    ],
+    "support": [
+      230,
+      134,
+      69
+    ],
+    "confusion_matrix": [
+      [
+        164,
+        4,
+        62
+      ],
+      [
+        51,
+        59,
+        24
+      ],
+      [
+        21,
+        2,
+        46
+      ]
+    ],
+    "label_order": [
+      "baseline",
+      "stress",
+      "amusement"
+    ],
+    "absent_classes": [],
+    "loss": 1.7055852551806774,
+    "stress_recall": 0.44029850746268656
+  },
+  "training_duration_seconds": 516.6692296000001,
+  "checkpoints": {
+    "best": "D:\\Deep_learning_group\\Projects\\DL13-WESAD\\runs\\common_rate64_cnn1d_chest_temp_median_centering_grouped5fold_v1\\20261126T062337Z_7760c683\\seed_42\\fold_02\\checkpoints\\best.pt",
+    "last": "D:\\Deep_learning_group\\Projects\\DL13-WESAD\\runs\\common_rate64_cnn1d_chest_temp_median_centering_grouped5fold_v1\\20261126T062337Z_7760c683\\seed_42\\fold_02\\checkpoints\\last.pt"
+  },
+  "best_val_subject_macro_f1": 0.3686494320536087
+}

@@ -135,6 +135,7 @@ class TensorBoardTracker:
             'learning_rate': 'optimization/learning_rate', 'epoch_duration_seconds': 'optimization/epoch_duration_seconds',
             'best_epoch': 'selection/best_epoch', 'best_val_macro_f1': 'selection/best_val_macro_f1',
             'val_subject_macro_f1': 'val/subject_macro_f1', 'best_val_subject_macro_f1': 'selection/best_val_subject_macro_f1',
+            'train_stress_recall': 'train/stress_recall', 'val_stress_recall': 'val/stress_recall',
             'early_stopping_counter': 'selection/early_stopping_counter'}
         for source, tag in mapping.items():
             self._scalar(self.writers['epochs'], tag, row.get(source), epoch)
