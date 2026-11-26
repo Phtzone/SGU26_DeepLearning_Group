@@ -42,10 +42,12 @@ def verify_fold(folder, group_id, fold, seed, config, checksum, cache):
     assert meta['subjects'] == fold and meta['training_seed'] == seed and meta['group_id'] == group_id
     assert meta['input_shape'] == [len(config['data']['channels']), 1920]
     assert meta['manifest_checksum'] == checksum and same_training_config(meta['effective_config'], config)
-    train = WindowDataset(cache, fold['train'])
+    window_centering = config.get('preprocessing', {}).get('window_centering')
+    train = WindowDataset(cache, fold['train'], window_centering=window_centering)
     scaler = ChannelScaler().fit(train)
     normalization = read_json(folder / 'normalization.json')
     assert normalization['train_subjects'] == fold['train'] and normalization['sample_count_per_channel'] == scaler.count
+    assert normalization.get('window_centering') == scaler.window_centering
     close(normalization['mean'], scaler.mean, 1e-7)
     close(normalization['std'], scaler.std, 1e-7)
     close(meta['class_weights'], class_weights(train.labels).numpy(), 1e-7)

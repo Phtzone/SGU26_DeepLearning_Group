@@ -5,24 +5,31 @@ import numpy as np
 import torch
 from torch.utils.data import Dataset
 from src.data.common_rate import INDEX_METADATA
+from src.data.normalization import window_centering_channels
 from src.utils.tracking import read_json
 
 
 class WindowDataset(Dataset):
-    def __init__(self, cache, subjects, scaler=None):
+    def __init__(self, cache, subjects, scaler=None, *, window_centering=None):
         self.subjects = list(subjects)
         self.scaler = scaler
         self.arrays, self.rows, self.indices, self.cache_keys = {}, [], [], {}
         self.subject_rows = {}
         index_path = cache / INDEX_METADATA
         self.timeline = index_path.exists()
+        selected_channels = ()
         if self.timeline:
             audit = read_json(index_path)['audit']
             self.source = Path(audit['source'])
             all_channels = audit['notebook_config']['channels']
-            channel_indices = [all_channels.index(channel) for channel in audit['policy']['channels']]
+            selected_channels = audit['policy']['channels']
+            channel_indices = [all_channels.index(channel) for channel in selected_channels]
             self.channel_indices = slice(None) if channel_indices == list(range(len(all_channels))) else channel_indices
             self.input_channels = len(channel_indices)
+        centered_channels = window_centering_channels(window_centering, selected_channels)
+        self.center_indices = [selected_channels.index(channel) for channel in centered_channels]
+        self.window_centering = ({'enabled': True, 'method': 'median', 'channels': list(centered_channels)}
+                                 if centered_channels else None)
         for subject in self.subjects:
             folder = cache / subject
             path = self.source / f'{subject}_X.npy' if self.timeline else folder / 'windows.npy'
@@ -61,9 +68,26 @@ class WindowDataset(Dataset):
             else:
                 yield self.arrays[subject][start:stop]
 
+    def _prepared_copy(self, windows):
+        prepared = np.array(windows, copy=True, order='C')
+        if self.center_indices:
+            # Preserve the exact midpoint of the two central float32 values.
+            selected = prepared[..., self.center_indices, :].astype(np.float64)
+            prepared[..., self.center_indices, :] = selected - np.median(selected, axis=-1, keepdims=True)
+        return prepared
+
+    def prepared_window(self, subject, offset):
+        """Copy one (channel, time) window and apply the optional pre-scaler transform."""
+        return self._prepared_copy(self.raw_window(subject, offset))
+
+    def prepared_blocks(self, subject, block_size=64):
+        """Apply the same transform while streaming windows for the scaler fit."""
+        for windows in self.raw_blocks(subject, block_size):
+            yield self._prepared_copy(windows) if self.center_indices else windows
+
     def __getitem__(self, index):
         subject, offset = self.indices[index]
-        x = np.array(self.raw_window(subject, offset), copy=True, order='C')
+        x = self.prepared_window(subject, offset)
         if self.scaler is not None:
             x = self.scaler.transform(x)
         return torch.from_numpy(x), int(self.labels[index]), index

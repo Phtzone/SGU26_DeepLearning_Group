@@ -86,6 +86,13 @@ def load_config(path=None):
             raise ValueError('Unsupported or duplicate sensors.')
     else:
         raise ValueError(f'Unsupported data source: {source}')
+    if 'preprocessing' in config:
+        from src.data.normalization import window_centering_channels
+
+        preprocessing = config['preprocessing']
+        if not isinstance(preprocessing, dict) or set(preprocessing) - {'window_centering'}:
+            raise ValueError('Invalid preprocessing options.')
+        window_centering_channels(preprocessing.get('window_centering'), data.get('channels', ()) if source == 'common_rate' else ())
     from src.utils.tensorboard_tracker import tracking_options
     tracking_options(config)
     return config

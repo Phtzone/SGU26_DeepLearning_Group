@@ -1,0 +1,178 @@
+{
+  "group_id": "20261123T072126Z_2c81daac",
+  "torch": "2.14.0+cpu",
+  "device": "cpu",
+  "folds": [
+    {
+      "fold_id": 1,
+      "completion_file_hashes": 24,
+      "tensorboard_scalar_values": 5184,
+      "epochs": 28,
+      "batches": 1120,
+      "checked_curve_series_groups": 5,
+      "best_epoch": 13,
+      "max_abs_test_probability_difference": 0.0,
+      "input_batches_checked": 68,
+      "input_windows_checked": 2134
+    },
+    {
+      "fold_id": 2,
+      "completion_file_hashes": 24,
+      "tensorboard_scalar_values": 5369,
+      "epochs": 29,
+      "batches": 1160,
+      "checked_curve_series_groups": 5,
+      "best_epoch": 14,
+      "max_abs_test_probability_difference": 0.0,
+      "input_batches_checked": 68,
+      "input_windows_checked": 2134
+    },
+    {
+      "fold_id": 3,
+      "completion_file_hashes": 24,
+      "tensorboard_scalar_values": 7564,
+      "epochs": 40,
+      "batches": 1640,
+      "checked_curve_series_groups": 5,
+      "best_epoch": 25,
+      "max_abs_test_probability_difference": 0.0,
+      "input_batches_checked": 69,
+      "input_windows_checked": 2134
+    },
+    {
+      "fold_id": 4,
+      "completion_file_hashes": 24,
+      "tensorboard_scalar_values": 4351,
+      "epochs": 23,
+      "batches": 943,
+      "checked_curve_series_groups": 5,
+      "best_epoch": 8,
+      "max_abs_test_probability_difference": 0.0,
+      "input_batches_checked": 69,
+      "input_windows_checked": 2134
+    },
+    {
+      "fold_id": 5,
+      "completion_file_hashes": 24,
+      "tensorboard_scalar_values": 6052,
+      "epochs": 32,
+      "batches": 1312,
+      "checked_curve_series_groups": 5,
+      "best_epoch": 17,
+      "max_abs_test_probability_difference": 0.0,
+      "input_batches_checked": 69,
+      "input_windows_checked": 2134
+    }
+  ],
+  "tensorboard_event_files": 15,
+  "checkpoint_files": 10,
+  "enhanced_visualizations": {
+    "directory": "results/common_rate64_cnn1d_grouped5fold_v1/20261123T072126Z_2c81daac/enhanced_visualizations/scientific-v2_a3d014ba1ef8351d",
+    "source_files": 68,
+    "figure_pairs": 134
+  },
+  "oof_windows": 2134,
+  "primary_subject_mean": {
+    "macro_f1": {
+      "mean": 0.2961869252913492,
+      "std": 0.14669103280880863,
+      "n": 15
+    },
+    "balanced_accuracy": {
+      "mean": 0.3857780324702736,
+      "std": 0.13647935209477577,
+      "n": 15
+    },
+    "accuracy": {
+      "mean": 0.4324713432895892,
+      "std": 0.1732802706791105,
+      "n": 15
+    },
+    "stress_recall": {
+      "mean": 0.37834654473905754,
+      "std": 0.4437406796771871,
+      "n": 15
+    }
+  },
+  "fold_summary": {
+    "macro_f1": {
+      "mean": 0.3563756139227704,
+      "std": 0.06702717795723293,
+      "n": 5
+    },
+    "balanced_accuracy": {
+      "mean": 0.3863571010355818,
+      "std": 0.04534834139994794,
+      "n": 5
+    },
+    "accuracy": {
+      "mean": 0.43177421740337163,
+      "std": 0.09223147894501119,
+      "n": 5
+    },
+    "stress_recall": {
+      "mean": 0.38086956010972295,
+      "std": 0.24569764966870342,
+      "n": 5
+    }
+  },
+  "pooled_test": {
+    "level": "pooled_oof",
+    "group": "all",
+    "windows": 2134,
+    "confusion_matrix": [
+      [
+        587,
+        177,
+        386
+      ],
+      [
+        234,
+        241,
+        163
+      ],
+      [
+        187,
+        67,
+        92
+      ]
+    ],
+    "support": [
+      1150,
+      638,
+      346
+    ],
+    "predicted_counts": [
+      1008,
+      485,
+      641
+    ],
+    "recall_per_class": [
+      0.5104347826086957,
+      0.3777429467084639,
+      0.2658959537572254
+    ],
+    "precision_per_class": [
+      0.5823412698412699,
+      0.49690721649484537,
+      0.1435257410296412
+    ],
+    "f1_per_class": [
+      0.5440222428174235,
+      0.42920747996438113,
+      0.18642350557244175
+    ],
+    "accuracy": 0.4311152764761012,
+    "macro_f1": 0.38655107611808215,
+    "balanced_accuracy": 0.38469122769146163,
+    "stress_recall": 0.3777429467084639,
+    "correct_count": 920,
+    "error_count": 1214,
+    "mean_max_probability_correct": 0.9619426167205624,
+    "mean_max_probability_wrong": 0.9416283441974461,
+    "wrong_pmax_at_least_0_9": 1006
+  },
+  "all_weights_and_buffers_unchanged_by_inference": true,
+  "protected_file_count_before_after": 611,
+  "protected_file_hash_collection": "f2f2c209a11901d2f5d4812f1102e297565065c12608726891c32d8c91c99256"
+}

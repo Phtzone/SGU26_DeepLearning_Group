@@ -67,7 +67,9 @@ def train_fold(folder, cache, fold, seed, config, manifest_checksum, resume=Fals
         requested = config['runtime']['device']
         device = torch.device(('cuda' if torch.cuda.is_available() else 'cpu') if requested == 'auto' else requested)
         logger.event('fold_start', run_id=metadata['run_id'], attempt_id=attempt, fold_id=fold['fold_id'], seed=seed, device=str(device))
-        datasets = {role: WindowDataset(cache, fold[role]) for role in ('train', 'validation', 'test')}
+        window_centering = config.get('preprocessing', {}).get('window_centering')
+        datasets = {role: WindowDataset(cache, fold[role], window_centering=window_centering)
+                    for role in ('train', 'validation', 'test')}
         scaler = ChannelScaler().fit(datasets['train'])
         scaler.save(folder / 'normalization.json')
         for dataset in datasets.values():

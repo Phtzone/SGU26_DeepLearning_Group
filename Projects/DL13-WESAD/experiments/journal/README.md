@@ -1,5 +1,30 @@
 # Nhật ký nghiên cứu DL13
 
+## Research Journal cho thí nghiệm mới
+
+Từ group `20261126T025058Z_fa1c92ea`, định dạng chính thức là sáu CSV dưới `experiments/<EXPERIMENT_ID>/research_journal/`. Sau khi tạo thư mục thí nghiệm, khởi tạo bảng ngay tại thư mục gốc của dự án.
+
+```powershell
+python -m scripts.research_journal --experiment "experiments/<EXPERIMENT_ID>"
+```
+
+| Tệp | Nội dung ghi |
+| --- | --- |
+| `experiments.csv` | Mã thí nghiệm, GROUP_ID, thời điểm, thiết lập, kết quả và trạng thái. |
+| `figures.csv` | Mô tả hình và đường dẫn tệp hình. |
+| `activity_log.csv` | Thời điểm, việc đã làm, kết quả, minh chứng và việc tiếp theo. |
+| `debug.csv` | Lỗi đã gặp, nguyên nhân, cách sửa, cách kiểm tra và log. |
+| `references.csv` | Tài liệu, phương pháp, kết quả tham khảo và giới hạn đối chiếu. |
+| `todo.csv` | Việc cần làm, người phụ trách, điều kiện hoàn tất và trạng thái. |
+
+Giữ nguyên header, thứ tự cột và cột trống đầu mỗi bảng. Tệp dùng UTF-8 BOM. Thời gian được lưu dưới dạng văn bản ISO, giữ độ chính xác có trong dữ liệu nguồn. Nhật ký của group này lấy thời gian địa phương UTC+07:00. Giữ các trường người làm, kết quả và lỗi chưa có bằng chứng ở trạng thái trống. CSV của nhóm này lưu cả chữ hiển thị lẫn đích hyperlink cũ trong cùng trường, trên hai dòng khi khác nhau. Đường dẫn tương đối được tính từ thư mục experiment chứa `research_journal/`.
+
+Dùng hàm `write_journal()` trong `scripts/research_journal.py` khi tự động xuất bản ghi. Trình ghi giữ các dòng hiện có theo thứ tự cũ, chỉ bổ sung dòng mới và bỏ qua dòng trùng toàn bộ nội dung. Ghi thêm dòng có GROUP_ID và thời điểm thực tế khi có sự kiện hoặc trạng thái mới. Có thể theo dõi sáu CSV theo Git như các tệp văn bản. [Ví dụ journal của group hiện tại](../common_rate64_cnn1d_chest_temp_median_centering_grouped5fold_v1/research_journal/experiments.csv).
+
+Research Journal ghi diễn giải và liên kết hiện vật. Iteration logs, epoch logs, TensorBoard, checkpoints, metrics và predictions vẫn do pipeline thực nghiệm ghi theo quy ước hiện tại. Các workbook XLSX dưới đây lưu lịch sử của những thí nghiệm trước.
+
+## Tham chiếu XLSX và hướng dẫn E1 lịch sử
+
 DL13 nhận diện ba trạng thái baseline, stress, amusement từ tín hiệu cổ tay WESAD: ACC, BVP và EDA. Có 15 người, 5 kênh ở 32 Hz; mỗi cửa sổ dài 30 giây, bước 15 giây. Đánh giá bằng grouped subject-wise 5-fold: mỗi fold có 9 người Train, 3 Validation, 3 Test. Chuẩn hóa chỉ fit trên Train; chọn checkpoint bằng Validation Macro-F1.
 
 E1 CNN-1D đã hoàn tất 5 folds. Trung bình Accuracy = 0.5072 ± 0.1117, Macro-F1 = 0.4493 ± 0.0933. Đây là mean/std giữa folds, không phải pooled OOF. GRU, CNN-GRU và sensor ablation chưa có kết quả để báo cáo.
@@ -41,7 +66,7 @@ Kiểm tra `missing_subjects` rỗng và đủ 15 người trong kết quả dry
 
 - **Chạy CNN mới:** `python -m scripts.run_grouped_cv --experiment experiments/e1_cnn/config.yaml`. Runner tạo GROUP_ID mới và lưu logs/config/source/checkpoints. Dòng lệnh này dùng cấu hình E1 hiện tại.
 - **Tiếp tục lượt chạy bị gián đoạn:** thêm `--resume --group-id GROUP_ID_DANG_DO`. Giữ nguyên cấu hình khoa học và split. Group E1 chính thức đã hoàn tất, không cần resume để train thêm.
-- **Thay siêu tham số CNN:** sao chép YAML sang một thư mục thí nghiệm mới trong `experiments/`, ghi giả thuyết và thay đổi vào Excel, rồi chạy runner với YAML mới. Hiện runner vẫn ghi dưới `runs/experiment_e1` và `results/experiment_e1`, kể cả đổi experiment ID; dùng GROUP_ID để truy xuất chính xác.
+- **Thay siêu tham số CNN:** sao chép YAML sang một thư mục thí nghiệm mới trong `experiments/`, ghi giả thuyết và thay đổi vào `research_journal/experiments.csv`, rồi chạy runner với YAML mới. Hiện runner vẫn ghi dưới `runs/experiment_e1` và `results/experiment_e1`, kể cả đổi experiment ID; dùng GROUP_ID để truy xuất chính xác.
 - **Thêm GRU/CNN-GRU:** triển khai tại `src/models/gru.py` hoặc `src/models/cnn_gru.py`; cập nhật chỗ tạo model trong `src/training/trainer.py`, validation trong `src/utils/config.py`, và runner `scripts/run_grouped_cv.py` để định tuyến output theo experiment. YAML tương ứng nằm tại `experiments/e2_gru/config.yaml` và `experiments/e3_cnn_gru/config.yaml`. Hiện chỉ đổi `planned` thành `implemented` chưa đủ vì trainer đang khởi tạo CNN trực tiếp và config chỉ nhận `cnn1d`.
 - **Bỏ từng cảm biến:** cấu hình dự kiến nằm trong `experiments/ablation/`; đọc và kiểm tra cấu hình trước khi chạy, ghi lượt chạy riêng.
 
@@ -51,14 +76,14 @@ Giữ nguyên baseline chính thức để so sánh. Thí nghiệm mới phải 
 
 E1 hiện chạy bằng `scripts/run_grouped_cv.py` (alias: `scripts/run_experiment.py`), không có notebook thí nghiệm. Thư mục `notebooks/` hiện chỉ có `.gitkeep`. Vì vậy dòng E1 trong Excel ghi rõ “Không dùng notebook”, kèm đường dẫn script.
 
-Nếu sau này dùng notebook, tạo ở `notebooks/`, đặt tên dễ truy xuất như `E2_GRU_YYYYMMDD.ipynb`, ghi đường dẫn và cell/section thực thi trong Excel. Sau khi chạy, lưu cả output notebook và GROUP_ID. Nếu notebook gọi runner thì logs vẫn lấy ở `runs/`, không chỉ dựa vào ảnh chụp output notebook.
+Nếu sau này dùng notebook, tạo ở `notebooks/`, đặt tên dễ truy xuất như `E2_GRU_YYYYMMDD.ipynb`, ghi đường dẫn và cell/section thực thi trong Research Journal. Sau khi chạy, lưu cả output notebook và GROUP_ID. Nếu notebook gọi runner thì logs vẫn lấy ở `runs/`, không chỉ dựa vào ảnh chụp output notebook.
 
 ## Mỗi lần làm cần ghi những gì?
 
 1. **Trước khi chạy:** ngày giờ UTC+07:00, người làm, mã thí nghiệm, mục tiêu/giả thuyết, thay đổi so với baseline, đường dẫn YAML và script/notebook, seed/folds và lệnh chạy.
 2. **Trong khi chạy:** ghi GROUP_ID thực tế; lưu log, checkpoint và hình trong thư mục của lượt chạy. Nếu lỗi, giữ nguyên thông báo/traceback và đường dẫn log.
 3. **Sau khi chạy:** ghi completed/partial/failed/interrupted, số folds đã xong, metrics và cách tổng hợp, nhận xét, liên kết hình/log/kết quả, kế hoạch tiếp theo.
-4. **Khi debug:** mỗi lỗi một dòng trong sheet Debug, liên kết cùng GROUP_ID; ghi nguyên nhân đã xác minh hay chỉ là giả thuyết, sửa file nào, kiểm tra bằng lệnh nào và kết quả. Chỉ đánh dấu đã sửa sau khi có bằng chứng kiểm tra lại. Nếu không gặp lỗi, ghi “Không ghi nhận lỗi trong lần chạy”; không bịa một lỗi để điền bảng.
+4. **Khi debug:** mỗi lỗi một dòng trong `debug.csv`, liên kết cùng GROUP_ID. Ghi nguyên nhân đã xác minh hay chỉ là giả thuyết, sửa file nào, kiểm tra bằng lệnh nào và kết quả. Chỉ đánh dấu đã sửa sau khi có bằng chứng kiểm tra lại.
 
 Ví dụ một thí nghiệm dự kiến: “Giảm learning rate của CNN từ 0.001 xuống 0.0005; giả thuyết giúp Validation ổn định hơn”. Trước khi chạy để trạng thái planned và để trống kết quả. Sau khi chạy mới điền GROUP_ID, ngày thực tế, metrics và đường dẫn minh chứng.
 
@@ -72,7 +97,7 @@ Với E1 chính thức, GROUP_ID là `20261108T154303Z_474b38f9`:
 - `results/experiment_e1/<GROUP_ID>/`: `summary.json`, `fold_results.csv`, `subject_metrics.csv`, `oof_predictions.csv`.
 - `results/experiment_e1/<GROUP_ID>/enhanced_visualizations/scientific-v2_44c886afdd32da86/`: hình E1 chính thức. Các lượt chạy sau có thư mục visualization riêng; điền đúng đường dẫn được tạo, không tái sử dụng tên thư mục E1.
 
-Excel là phần giải thích quá trình; CSV/JSON/events là log máy. Cần giữ cả hai. Nếu lỗi xảy ra trước lúc logger khởi tạo, lưu thêm toàn bộ output terminal vào file riêng và liên kết trong Debug.
+Research Journal giải thích quá trình. CSV/JSON/events trong thư mục run là log máy. Nếu lỗi xảy ra trước lúc logger khởi tạo, lưu output terminal vào file riêng và liên kết trong `debug.csv`.
 
 Để xem TensorBoard của các lượt đã lưu:
 
@@ -82,12 +107,6 @@ python -m tensorboard.main --logdir runs --port 6006
 
 Mở http://localhost:6006. Khi đưa hình vào báo cáo, ghi tên file, GROUP_ID và fold/seed tương ứng. Sheet Minh_chung đã có ví dụ liên kết thực tế cho E1.
 
-## Tạo lại mẫu ở file khác
+## Công cụ XLSX lưu trữ
 
-Workbook đã được tạo sẵn. Script hỗ trợ tạo một bản mẫu mới, cần `openpyxl` (chỉ phục vụ Excel, không phải dependency training):
-
-```powershell
-python experiments/journal/create_workbook.py --output experiments/journal/research_journal_new.xlsx
-```
-
-Script từ chối ghi đè file có sẵn để bảo vệ ghi chép thủ công. Nó chỉ đọc artifacts và tạo Excel; không huấn luyện mô hình hay sửa baseline.
+`create_workbook.py` là công cụ lịch sử dành cho hiện vật E1. Khi khởi tạo journal cho thí nghiệm mới, dùng trình ghi CSV ở đầu trang.
